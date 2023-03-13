@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
 import Members from './Members';
@@ -18,7 +18,10 @@ const projects = () => {
   return  <Projects/>
 }
 
+
+
 function App() {
+  
   return (
     <Router>
       <div>

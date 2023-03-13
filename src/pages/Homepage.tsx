@@ -34,12 +34,7 @@ const theme = createTheme({
 });
 
 
-function App() {
-
-  
-
-
-
+function Homepage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -59,4 +54,4 @@ function App() {
   );
 }
 
-export default App;
+export default Homepage;

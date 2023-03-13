@@ -10,7 +10,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const pages = ['Home', 'Projects', 'Members', 'About'];
 
 function ResponsiveAppBar() {
@@ -38,6 +38,7 @@ function ResponsiveAppBar() {
     contrastText?: string;
   }
 
+  const navigate = useNavigate();
   const theme = createTheme({
     palette: {
       primary: {
