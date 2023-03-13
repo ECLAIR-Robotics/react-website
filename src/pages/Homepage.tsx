@@ -8,6 +8,8 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { padding } from '@mui/system';
 import ECLAIRButton from '../components/ECLAIRButton';
+import { Slide, Fade } from '@mui/material';
+import placeholder from '../static/images/placeholder.png';
 // TODO : look up typography and popovers in the material-ui docs
 // TODO : look up how to use the material-ui theme
 // Copy the current eclair website and then make it responsive like Apple's website
@@ -36,7 +38,7 @@ const theme = createTheme({
 
 function Homepage() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <div className='box'>
           <ThemeProvider theme={theme}>
@@ -44,12 +46,25 @@ function Homepage() {
               <img className='left-img' src={Logo} alt='logo' />
             </div>
             <div className='header-right' >
-              <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
-              <ECLAIRButton text = "PROJECTS"/>
+              <Fade in={true} timeout={1000}>
+                <Slide direction="left" in={true} mountOnEnter unmountOnExit>
+                  <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
+                </Slide>
+              </Fade>
+              <ECLAIRButton text="PROJECTS" />
             </div>
           </ThemeProvider>
         </div>
       </header>
+
+      <div className='box2'>
+        <div className="box2-left">
+          <h3>LoreIpsum is not placeholder text. This placeholder text is placeholder text more than placeholder text.</h3>
+        </div>
+        <div className='box2-right'>
+          <img src={placeholder} alt='placeholder' className='placeholder-image'></img>
+        </div>
+      </div>
     </div>
   );
 }

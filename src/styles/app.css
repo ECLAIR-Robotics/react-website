@@ -1,8 +1,51 @@
 .box {
     display: flex;
     flex-direction: row;
-    background-color: #191825;
+    background-color: #1f2532;
 }
+
+.box2{
+    display: flex;
+    flex-direction: row;
+    background-color: #dbdbdb;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box2-left{
+    flex : 1 1 auto;
+    max-width: 75%;
+    align-items: space-around;
+    overflow: auto;
+    justify-content: left;
+    margin: auto;
+    align-items: center;
+}
+.box2-right{
+    flex : 1 1 auto;
+    max-width: 75%;
+    align-items: space-around;
+    overflow: visible;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.placeholder-image{
+    max-width: 50%;
+    max-height: 50%;
+    padding: 20rem;
+}
+.box3{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 .header-left {
     flex : 1 1 auto;
     max-width: 75%;
@@ -35,10 +78,8 @@
     font-size: 3em;
     font-weight: bold;
     font-family: titillium web, sans-serif;
-    text-align: center;
+    text-align: left;
     padding-left: 25rem;
     padding-right: 25rem;
-    
-   
     max-width: 50%;
 }

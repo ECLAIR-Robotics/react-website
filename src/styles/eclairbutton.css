@@ -7,11 +7,11 @@
     background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
     
     padding: 1rem;
-    border-radius: 1rem;
+    width: 35%;
     color: white;
     font-size: 2em;
     transition-duration: 1s;
-    font-family: titillium web, sans-serif;
+    font-family: sans-serif;
     text-align: center;
 }
 
@@ -21,16 +21,14 @@
     --magic-rainbow-color-2: hsl(216, 100%, 39%);
     /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-1)); */
     
-    background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-1));
-    
+    background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
     
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-color: white;
     transition-duration: 1s;
     color: white;
     font-size: 2em;
-    transition: --magic-rainbow-color-1 1000ms linear, --magic-rainbow-color-2
-    1000ms linear, --magic-rainbow-color-3 1000ms linear;
+    
     font-family: titillium web, sans-serif;
     text-align: center;
 }

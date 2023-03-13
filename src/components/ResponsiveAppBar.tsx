@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -22,8 +23,22 @@ function ResponsiveAppBar() {
   };
 
   const goToHome = () => {
-    
+    navigate('/homepage');
   }
+
+  const goToAbout = () => {
+    navigate('/about');
+  }
+
+  const goToMembers = () => {
+    navigate('/members');
+  }
+
+  const goToProjects = () => {
+    navigate('/projects');
+  }
+
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -39,6 +54,12 @@ function ResponsiveAppBar() {
   }
 
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    // This function will be called only once when the component is created
+    goToHome();
+  }, []);
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -53,14 +74,13 @@ function ResponsiveAppBar() {
       },
     },
   });
-
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               component="a"
               href="/"
@@ -102,16 +122,32 @@ function ResponsiveAppBar() {
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Link to = "/homepage" style={{
                 padding: '1em',
+                color: 'inherit',
+                paddingTop: '1em',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
               }}> HOME </Link>
              
               <Link to = "/about"  style={{
                 padding: '1em',
+                color: 'inherit',
+                paddingTop: '1em',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
               }}> ABOUT </Link>
               <Link to = "/members"  style={{
                 padding: '1em',
+                color: 'inherit',
+                paddingTop: '1em',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
               }}> MEMBERS </Link>
               <Link to = "/projets"  style={{
                 padding: '1em',
+                color: 'inherit',
+                paddingTop: '1em',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
               }}> PROJECTS </Link>
             </Box>
           </Toolbar>
