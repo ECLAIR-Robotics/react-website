@@ -1,0 +1,35 @@
+.fancybutton {
+    /*background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 51%, #0050c8 100%);*/
+    --magic-rainbow-color-1: hsl(275, 100%, 73%);
+    --magic-rainbow-color-2: hsl(216, 100%, 39%);
+
+
+    background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
+    transition: --magic-rainbow-color-1 1000ms linear, --magic-rainbow-color-2
+      1000ms linear, --magic-rainbow-color-3 1000ms linear;
+    
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 2em;
+    transition-duration: 1s;
+    font-family: titillium web, sans-serif;
+    text-align: center;
+}
+
+.soemthing:hover {
+    /* background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 80%, #0050c8 100%); */
+    --magic-rainbow-color-1: #c677ff;
+    --magic-rainbow-color-2: #0050c8;
+    --magic-rainbow-color-1: #c677ff;
+    /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-1)); */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition-duration: 1s;
+    color: white;
+    font-size: 2em;
+    transition: --magic-rainbow-color-1 1000ms linear, --magic-rainbow-color-2
+    1000ms linear, --magic-rainbow-color-3 1000ms linear;
+    font-family: titillium web, sans-serif;
+    text-align: center;
+}

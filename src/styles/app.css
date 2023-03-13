@@ -1,47 +1,44 @@
 .box {
     display: flex;
     flex-direction: row;
-    background-color: #212529;
+    background-color: #191825;
 }
 .header-left {
     flex : 1 1 auto;
-    max-width: 50%;
+    max-width: 75%;
     align-items: space-around;
-    overflow: hidden;
-    justify-content: center;
+    overflow: visible;
+    justify-content: right;
     margin: auto;
     align-items: center;
 }
 .left-img {
-    padding-left: 1em;
+    padding-left: 9em;
     max-width: 100%;
     max-height: 100%;    
 }
 
 .header-right {
     text-align: center;
-    flex : 1 1 auto;
+    flex : 2 1 auto;
+    width: max-content;
+    max-width: 75%;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
     padding-bottom: 5rem;
 }
 
-.right-btn {
-    background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 51%, #0050c8 100%);
-    padding: 2rem;
-    border-radius: 5rem;
-
-}
 .header-text {
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     font-family: titillium web, sans-serif;
     text-align: center;
     padding-left: 25rem;
     padding-right: 25rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    
+   
     max-width: 50%;
 }

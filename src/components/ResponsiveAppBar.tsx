@@ -10,6 +10,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
 
 const pages = ['Home', 'Products', 'Members', 'About'];
 
@@ -31,8 +33,30 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  interface PalleteColor {
+    light?: string;
+    main: string;
+    dark?: string;
+    contrastText?: string;
+  }
+  
+  const theme = createTheme({
+    palette: {
+      primary: {
+        // light: will be calculated from palette.primary.main,
+        main: '#865DFF',
+      },
+      secondary: {
+        light: '#0066ff',
+        main: '#0044ff',
+        // dark: will be calculated from palette.secondary.main,
+        contrastText: '#ffcc00',
+      },
+    },
+  });
 
   return (
+    <ThemeProvider theme={theme}>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -83,11 +107,7 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {/* {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))} */}
+              
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -107,7 +127,6 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -123,6 +142,7 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 }
 export default ResponsiveAppBar;
