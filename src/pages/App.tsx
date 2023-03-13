@@ -1,37 +1,63 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import About from './About';
-import Homepage from './Homepage';
-import Members from './Members';
-import Projects from './Projects';
+import React from 'react';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
-const homepage = () => {
-  return  <Homepage/>
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Logo from '../static/images/logo/ECLAIR_logo2.png';
+import '../styles/app.css';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react';
+import { padding } from '@mui/system';
+import ECLAIRButton from '../components/ECLAIRButton';
+// TODO : look up typography and popovers in the material-ui docs
+// TODO : look up how to use the material-ui theme
+// Copy the current eclair website and then make it responsive like Apple's website
+interface PalleteColor {
+  light?: string;
+  main: string;
+  dark?: string;
+  contrastText?: string;
 }
-const about = () => {
-  return  <About/>
-}
-const members = () => {
-  return  <Members/>
-}
-const projects = () => {
-  return  <Projects/>
-}
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // light: will be calculated from palette.primary.main,
+      main: '#ffffff',
+    },
+    secondary: {
+      light: '#0066ff',
+      main: '#0044ff',
+      // dark: will be calculated from palette.secondary.main,
+      contrastText: '#ffcc00',
+    },
+  },
+});
+
 
 function App() {
+
+  
+
+
+
   return (
-    <Router>
-      <div>
-      <ResponsiveAppBar />
-      </div>
-      <Routes>
-      <Route path="/homepage" Component={homepage} />
-      <Route path="/about" Component={about} />
-      <Route path="/members" Component={members} />
-      <Route path="/projects" Component={projects} />
-      </Routes>
-    </Router>
-  )
+    <div className="App">
+      <header className="App-header">
+        <ResponsiveAppBar />
+        <div className='box'>
+          <ThemeProvider theme={theme}>
+            <div className='header-left' >
+              <img className='left-img' src={Logo} alt='logo' />
+            </div>
+            <div className='header-right' >
+              <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
+              <ECLAIRButton text = "PROJECTS"/>
+            </div>
+          </ThemeProvider>
+        </div>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
