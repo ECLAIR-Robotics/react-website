@@ -17,20 +17,18 @@
 .box2-left{
     flex : 1 1 auto;
     max-width: 75%;
-    align-items: space-around;
+    align-items: center;
     overflow: auto;
-    justify-content: left;
-    margin: auto;
+    justify-content: center;
+    padding-left: 2rem;
     align-items: center;
 }
 .box2-right{
     flex : 1 1 auto;
     max-width: 75%;
-    align-items: space-around;
-    overflow: visible;
-    justify-content: center;
-    margin: auto;
     align-items: center;
+    overflow: visible;
+    justify-content: top;
 }
 
 .placeholder-image{

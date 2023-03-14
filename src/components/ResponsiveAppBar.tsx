@@ -54,7 +54,7 @@ function ResponsiveAppBar() {
   }
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     // This function will be called only once when the component is created
     goToHome();
@@ -120,29 +120,29 @@ function ResponsiveAppBar() {
               </Menu>
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Link to = "/homepage" style={{
+              <Link to="/homepage" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
               }}> HOME </Link>
-             
-              <Link to = "/about"  style={{
+
+              <Link to="/about" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
               }}> ABOUT </Link>
-              <Link to = "/members"  style={{
+              <Link to="/members" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
               }}> MEMBERS </Link>
-              <Link to = "/projets"  style={{
+              <Link to="/projets" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
