@@ -5,7 +5,7 @@ import Homepage from './Homepage';
 import Members from './Members';
 import Projects from './Projects';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
-
+import Contact from './Contact';
 
 
 const homepage = () => {
@@ -19,6 +19,9 @@ const members = () => {
 }
 const projects = () => {
   return  <Projects/>
+}
+const contact = () => {
+  return  <Contact/>
 }
 
 
@@ -35,6 +38,7 @@ function App() {
       <Route path="/about" Component={about} />
       <Route path="/members" Component={members} />
       <Route path="/projects" Component={projects} />
+      <Route path="/contact" Component={contact} />
       </Routes>
     </Router>
   )

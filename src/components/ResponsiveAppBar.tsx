@@ -145,14 +145,21 @@ function ResponsiveAppBar() {
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
-              }}> MEMBERS </Link>
+              }}> SPONSORS </Link>
               <Link to="/projets" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
-              }}> PROJECTS </Link>
+              }}> WHAT WE DO </Link>
+              <Link to="/contact" style={{
+                padding: '1em',
+                color: 'inherit',
+                paddingTop: '1em',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
+              }}> CONTACT US </Link>
             </Box>
           </Toolbar>
         </Container>
