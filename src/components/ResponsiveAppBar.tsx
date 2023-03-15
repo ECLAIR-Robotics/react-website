@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
               }}> SPONSORS </Link>
-              <Link to="/projets" style={{
+              <Link to="/projects" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
