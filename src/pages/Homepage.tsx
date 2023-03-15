@@ -10,6 +10,7 @@ import { padding } from '@mui/system';
 import ECLAIRButton from '../components/ECLAIRButton';
 import { Slide, Fade } from '@mui/material';
 import placeholder from '../static/images/placeholder.png';
+import YoutubeEmbed from '../components/YoutubeEmbed';
 // TODO : look up typography and popovers in the material-ui docs
 // TODO : look up how to use the material-ui theme
 // Copy the current eclair website and then make it responsive like Apple's website
@@ -62,7 +63,7 @@ function Homepage() {
           <h3>LoreIpsum is not placeholder text. This placeholder text is placeholder text more than placeholder text.</h3>
         </div>
         <div className='box2-right'>
-          <img src={placeholder} alt='placeholder' className='placeholder-image'></img>
+          <YoutubeEmbed/>
         </div>
       </div>
     </div>

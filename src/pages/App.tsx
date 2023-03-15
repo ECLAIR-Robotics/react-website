@@ -6,7 +6,7 @@ import Members from './Members';
 import Projects from './Projects';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Contact from './Contact';
-
+import Footer from '../components/Footer';
 
 const homepage = () => {
   return  <Homepage/>
@@ -40,6 +40,7 @@ function App() {
       <Route path="/projects" Component={projects} />
       <Route path="/contact" Component={contact} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

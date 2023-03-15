@@ -30,17 +30,7 @@ function ResponsiveAppBar() {
     navigate('/homepage');
   }
 
-  const goToAbout = () => {
-    navigate('/about');
-  }
-
-  const goToMembers = () => {
-    navigate('/members');
-  }
-
-  const goToProjects = () => {
-    navigate('/projects');
-  }
+ 
 
 
   const handleCloseNavMenu = () => {
