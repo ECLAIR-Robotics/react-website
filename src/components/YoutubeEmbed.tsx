@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card, CardMedia } from '@mui/material'
+import '../styles/youtubeEmbed.css';
 function YoutubeEmbed() {
     return (
-        <div>
+        <div className = 'youtube-embed'>
             <iframe width="560" height="315"
                 src="https://www.youtube.com/embed/on2EzsO3MpQ"
                 title="YouTube video player"
