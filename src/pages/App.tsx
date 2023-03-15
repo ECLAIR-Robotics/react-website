@@ -26,23 +26,18 @@ const projects = () => {
 function App() {
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <ResponsiveAppBar />
-        <div className='box'>
-          <ThemeProvider theme={theme}>
-            <div className='header-left' >
-              <img className='left-img' src={Logo} alt='logo' />
-            </div>
-            <div className='header-right' >
-              <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
-              <ECLAIRButton text = "PROJECTS"/>
-            </div>
-          </ThemeProvider>
-        </div>
-      </header>
-    </div>
-  );
+    <Router>
+      <div>
+      <ResponsiveAppBar />
+      </div>
+      <Routes>
+      <Route path="/homepage" Component={homepage} />
+      <Route path="/about" Component={about} />
+      <Route path="/members" Component={members} />
+      <Route path="/projects" Component={projects} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
