@@ -24,11 +24,12 @@
     background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
     
     padding: 1rem;
+    width: 35%;
     border-color: white;
     transition-duration: 1s;
     color: white;
     font-size: 2em;
-    
-    font-family: titillium web, sans-serif;
+    border-radius: 1rem;
+    font-family: sans-serif;
     text-align: center;
 }
