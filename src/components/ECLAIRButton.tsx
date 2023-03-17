@@ -15,7 +15,9 @@ function ECLAIRButton(props: Props) {
 
   return (
     <button onClick={ handleClick } className =  'fancybutton'>
-        {props.text}
+        <span className='fancytext'>
+          {props.text}
+        </span>
     </button>
   )
 }

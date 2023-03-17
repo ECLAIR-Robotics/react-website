@@ -52,7 +52,9 @@ function Homepage() {
                   <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
                 </Slide>
               </Fade>
-              <ECLAIRButton text="PROJECTS" />
+              <div className="buttonHolder">
+                <ECLAIRButton text="PROJECTS" />
+              </div>
             </div>
           </ThemeProvider>
         </div>

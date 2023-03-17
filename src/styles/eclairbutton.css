@@ -2,34 +2,70 @@
     /*background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 51%, #0050c8 100%);*/
     --magic-rainbow-color-1: hsl(275, 100%, 73%);
     --magic-rainbow-color-2: hsl(216, 100%, 39%);
-
+    display:inline-block;
+    position: relative;
 
     background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
     
-    padding: 1rem;
-    width: 35%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: fit-content;
     color: white;
     font-size: 2em;
     transition-duration: 1s;
     font-family: sans-serif;
     text-align: center;
+    z-index:1;
+}
+
+.fancybutton:after {
+    position: absolute;
+    content: 'PROJECTS';
+    top: 0;
+    left: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    display:inline-block;
+    border: inherit;
+    background-image: linear-gradient(to left, rgb(198, 117, 255), rgb(0, 80, 199));
+    transition: opacity 2s ease-out;
+    z-index: 2;
+    opacity: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    margin: inherit;
+    color:white;
+    /* scale: 1.02; */
+}
+
+.fancybutton:hover:after {
+    opacity: 1;
 }
 
 .fancybutton:hover {
+    /* border: none; */
+}
+
+/* .fancybutton:hover { */
     /* background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 80%, #0050c8 100%); */
-    --magic-rainbow-color-1: hsl(275, 100%, 73%);
-    --magic-rainbow-color-2: hsl(216, 100%, 39%);
+    /* --magic-rainbow-color-1: hsl(275, 100%, 73%); */
+    /* --magic-rainbow-color-2: hsl(216, 100%, 39%); */
     /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-1)); */
     
-    background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
+    /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2)); */
     
-    padding: 1rem;
-    width: 35%;
-    border-color: white;
-    transition-duration: 1s;
-    color: white;
-    font-size: 2em;
-    border-radius: 1rem;
-    font-family: sans-serif;
-    text-align: center;
-}
+    /* padding: 1rem; */
+    /* width: 35%; */
+    /* border-color: white; */
+    /* transition-duration: 1s; */
+    /* color: white; */
+    /* font-size: 2em; */
+    /* border-radius: 1rem; */
+    /* font-family: sans-serif; */
+    /* text-align: center; */
+/* } */
