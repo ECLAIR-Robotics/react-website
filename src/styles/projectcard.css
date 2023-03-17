@@ -1,0 +1,93 @@
+
+.entireCard {
+    overflow: hidden;
+    box-shadow: 0 2px 20px gray;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 5px solid;
+    border-color: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2)); */
+    /* transition:transform 200ms ease-in; */
+    /* transition: ease-in; */
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.entireCard:hover {
+    scale:1.02;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/* .entireCard:hover .moreButton {
+    background-image: linear-gradient(135deg, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
+    opacity: 100%;
+    
+    color: white;
+    transition-property: all;
+    transition-duration: 0.5s;
+} */
+
+.cardImage {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    /* padding: 0.5rem; */
+    text-align: center;
+}
+
+.buttonHolder {
+    /* align-items: center;
+    justify-items: center; */
+    /* text-align: center; */
+}
+
+.moreButton {
+    display: inline-block;
+    /* margin-top: 10%; */
+    padding: 1em 2em;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    font-family: arial, sans-serif;
+    text-decoration: none;
+    /* border-radius: 0.3em; */
+    position: relative;
+    background-color: rgb(255, 255, 255);
+
+    border-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
+    border-image-slice: 1;
+    /* background-image: linear-gradient(135deg, rgb(0, 80, 199), rgb(198, 117, 255)); */
+    /* -webkit-backface-visibility: hidden; */
+    z-index: 1;
+    /* padding: 0; */
+    /* margin: 0; */
+    /* width:80%; */
+    height:auto;
+}
+
+.moreButton:after {
+    position: absolute;
+    content: 'Learn More';
+    text-align: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    /* border-radius: inherit; */
+    background-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
+    transition: opacity 2s ease-out;
+    z-index: 2;
+    opacity: 0;
+    padding: inherit;
+    margin: inherit;
+    color:white;
+}
+
+.moreButton:hover:after {
+    opacity: 1;
+}
+
