@@ -42,14 +42,15 @@
 .buttonHolder {
     /* align-items: center;
     justify-items: center; */
-    /* text-align: center; */
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 .moreButton {
     display: inline-block;
     /* margin-top: 10%; */
-    padding: 1em 2em;
-    font-size: 2em;
+    /* padding: 1em 2em; */
+    font-size: 20px;
     color: rgb(0, 0, 0);
     font-family: arial, sans-serif;
     text-decoration: none;
@@ -71,15 +72,13 @@
 .moreButton:after {
     position: absolute;
     content: 'Learn More';
-    text-align: center;
-    align-content: center;
     top: 0;
     left: 0;
     width: inherit;
     height: inherit;
     /* border-radius: inherit; */
     background-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
     z-index: 2;
     opacity: 0;
     padding: inherit;
@@ -87,7 +86,7 @@
     color:white;
 }
 
-.moreButton:hover:after {
+.entireCard:hover .moreButton:after {
     opacity: 1;
 }
 
