@@ -1,5 +1,4 @@
 .fancybutton {
-    /*background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 51%, #0050c8 100%);*/
     --magic-rainbow-color-1: hsl(275, 100%, 73%);
     --magic-rainbow-color-2: hsl(216, 100%, 39%);
     display:inline-block;
@@ -18,23 +17,6 @@
     font-family: sans-serif;
     text-align: center;
     z-index:1;
-    /* --content: attr({data-content}); */
-
-    /* display: inline-block;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    font-family: arial, sans-serif;
-    text-decoration: none;
-    
-    position: relative;
-    background-color: rgb(255, 255, 255);
-
-    border-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
-    border-image-slice: 1;
-
-    
-    z-index: 1;    
-    height:auto; */
     
 }
 
@@ -45,8 +27,6 @@
     left: 0;
     width: inherit;
     height: inherit;
-    /* display:inline-block; */
-    /* border: none; */
     background-image: linear-gradient(to left, rgb(198, 117, 255), rgb(0, 80, 199));
     transition: opacity 2s ease-out;
     z-index: 2;
@@ -57,47 +37,8 @@
     padding-right: inherit;
     margin: inherit;
     color:white;
-    /* scale: 1.02; */
-
-    /* position: absolute;
-    content: 'Learn More';
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    /* border-radius: inherit; */
-    /* background-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
-    transition: opacity 2s ease-out;
-    z-index: 2;
-    opacity: 0;
-    padding: inherit;
-    margin: inherit;
-    color:white;  */
 }
 
 .fancybutton:hover:after {
     opacity: 1;
 }
-
-.fancybutton:hover {
-    /* border: none; */
-}
-
-/* .fancybutton:hover { */
-    /* background-image: linear-gradient(to right, #ff77ff 0%, #0050c8 80%, #0050c8 100%); */
-    /* --magic-rainbow-color-1: hsl(275, 100%, 73%); */
-    /* --magic-rainbow-color-2: hsl(216, 100%, 39%); */
-    /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-1)); */
-    
-    /* background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2)); */
-    
-    /* padding: 1rem; */
-    /* width: 35%; */
-    /* border-color: white; */
-    /* transition-duration: 1s; */
-    /* color: white; */
-    /* font-size: 2em; */
-    /* border-radius: 1rem; */
-    /* font-family: sans-serif; */
-    /* text-align: center; */
-/* } */
