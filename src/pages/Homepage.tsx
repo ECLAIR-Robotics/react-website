@@ -11,6 +11,7 @@ import ECLAIRButton from '../components/ECLAIRButton';
 import { Slide, Fade } from '@mui/material';
 import placeholder from '../static/images/placeholder.png';
 import YoutubeEmbed from '../components/YoutubeEmbed';
+import { Grid, Box } from '@mui/material';
 // TODO : look up typography and popovers in the material-ui docs
 // TODO : look up how to use the material-ui theme
 // Copy the current eclair website and then make it responsive like Apple's website
@@ -40,32 +41,65 @@ const theme = createTheme({
 function Homepage() {
   return (
     <div>
-      <header className="App-header">
-        <div className='box'>
-          <ThemeProvider theme={theme}>
-            <div className='header-left' >
-              <img className='left-img' src={Logo} alt='logo' />
-            </div>
-            <div className='header-right' >
-              <Fade in={true} timeout={1000}>
-                <Slide direction="left" in={true} mountOnEnter unmountOnExit>
-                  <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
-                </Slide>
-              </Fade>
-              <div className="buttonHolder">
-                <ECLAIRButton text="PROJECTS" />
-              </div>
-            </div>
-          </ThemeProvider>
-        </div>
-      </header>
+
+      <Grid item sx={{
+        display: { xs: 'block', md: 'flex' },
+        backgroundColor: '#1f2532',
+        minWidth: '100%',
+        paddingTop: '10em',
+        paddingBottom: '10em',
+      }}
+        container
+        maxWidth='lg'
+        justifyContent={'center'}
+        direction={'row'}
+        justifyItems={'center'}
+      >
+        <ThemeProvider theme={theme}>
+
+          <Grid item
+            sx={{
+              paddingTop: '5em',
+            }}
+            xs = {12}
+            md = {12}
+            xl = {3}
+          >
+            <img className='left-img' src={Logo} alt='logo' />
+          </Grid>
+
+          <Grid item className='header-right'
+           xs = {12}
+           md = {12}
+           xl = {9} >
+            <Fade in={true} timeout={1000}>
+              <Slide direction="left" in={true} mountOnEnter unmountOnExit>
+                <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
+              </Slide>
+            </Fade>
+            <Box  sx = {{
+              
+            }}>
+              <ECLAIRButton text="PROJECTS" />
+            </Box>
+          </Grid>
+
+        </ThemeProvider>
+      </Grid>
+
 
       <div className='box2'>
+
         <div className="box2-left">
-          <h3>LoreIpsum is not placeholder text. This placeholder text is placeholder text more than placeholder text.</h3>
+          <div className='small-line-thingy'></div>
+          <h3>The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR)
+            is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate
+            robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine
+            learning techiniques such as neural networks and reinforcement learning to give students the ability to
+            pursue their robotics projects. If you have a cool robot you want to build, come join us!</h3>
         </div>
         <div className='box2-right'>
-          <YoutubeEmbed/>
+          <YoutubeEmbed />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import React from 'react'
 import '../styles/eclairbutton.css'
 interface Props {
     text?: string;
+    something?: string;
 }
 
 const handleClick = () => {

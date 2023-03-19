@@ -30,7 +30,7 @@ function ResponsiveAppBar() {
     navigate('/homepage');
   }
 
- 
+
 
 
   const handleCloseNavMenu = () => {
@@ -58,7 +58,7 @@ function ResponsiveAppBar() {
     palette: {
       primary: {
         // light: will be calculated from palette.primary.main,
-        main: '#865DFF',
+        main: '#2d3549',
       },
       secondary: {
         light: '#0066ff',
@@ -68,31 +68,48 @@ function ResponsiveAppBar() {
       },
     },
   });
+
+  const titleStyle = {
+    background: 'linear-gradient(to right, #20c997, #ff77ff)',
+    backgroundClip: 'text',
+    WebkitBackgroundClip: 'text',
+    color: 'transparent'
+  }
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx = {{ 
+          paddingBottom : '0em',
+          }}>
           <Toolbar disableGutters>
             <Typography
               variant="h5"
+              style = {titleStyle}
               noWrap
               component="a"
               href="/"
               sx={{
                 mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                display: { xs: 'flex', md: 'flex' },
+                fontFamily: 'Titilium Web, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
+                overflow: 'visible',
               }}
 
               onClick={goToHome}
             >
               ECLAIR
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{
+              flexGrow: 1,
+              overflow: 'visible',
+              display: {
+                xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex',
+              }
+            }}>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -108,12 +125,12 @@ function ResponsiveAppBar() {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'block', md: 'none' },
+                  display: { xs: 'block', md: 'block' },
                 }}
               >
               </Menu>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'block', md: 'flex' } }}>
               <Link to="/homepage" style={{
                 padding: '1em',
                 color: 'inherit',

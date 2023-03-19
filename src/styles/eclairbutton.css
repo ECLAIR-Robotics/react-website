@@ -8,11 +8,12 @@
     
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    margin-left: 2.5em;
+    padding-left: 5em;
+    padding-right: 5em;
     width: fit-content;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     transition-duration: 1s;
     font-family: sans-serif;
     text-align: center;
@@ -27,18 +28,21 @@
     left: 0;
     width: inherit;
     height: inherit;
+    margin-left: 0em;
     background-image: linear-gradient(to left, rgb(198, 117, 255), rgb(0, 80, 199));
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
     z-index: 2;
     opacity: 0;
     padding-top: inherit;
     padding-bottom: inherit;
     padding-left: inherit;
     padding-right: inherit;
-    margin: inherit;
+
     color:white;
 }
 
 .fancybutton:hover:after {
     opacity: 1;
+
 }
+

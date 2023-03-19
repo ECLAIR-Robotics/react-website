@@ -1,28 +1,45 @@
-.box {
-    display: flex;
-    flex-direction: row;
-    background-color: #1f2532;
-}
+
 
 .box2{
     display: flex;
     flex-direction: row;
-    background-color: #dbdbdb;
+    background-color: white;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    color: black;
+    color: #2d3549;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+.small-line-thingy{
+    height: 0.5em;
+    width: 6em;
+    border-radius: 0.1em;
+    background: linear-gradient( 100deg, #ff77ff, #0050c8);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@200;300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
 .box2-left{
     flex : 1 1 auto;
-    max-width: 75%;
+    max-width: 100%;
     align-items: center;
-    overflow: auto;
     justify-content: center;
-    padding-left: 2rem;
+    padding-left: 2em;
     align-items: center;
+    font-style: bold;
+    /* font-family: 'Titillium Web', sans-serif;; */
+    font-family: 'Montserrat', sans-serif;
+    
+    margin-right: 15em;
+    margin-left: 5em;
+    overflow: visible;
+    font-size: 1.1em;
+    color: black;
 }
+
 .box2-right{
     flex : 1 1 auto;
     max-width: 75%;
@@ -44,19 +61,11 @@
     padding-bottom: 5rem;
 }
 
-.header-left {
-    flex : 1 1 auto;
-    max-width: 75%;
-    align-items: space-around;
-    overflow: visible;
-    justify-content: right;
-    margin: auto;
-    align-items: center;
-}
 .left-img {
     padding-left: 9em;
-    max-width: 100%;
-    max-height: 100%;    
+    max-width: 40em;  
+    overflow: visible; 
+    /* object-fit: fill; */
 }
 
 .header-right {
@@ -66,18 +75,20 @@
     max-width: 75%;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+   padding-left: 0em;
     margin-bottom: 5%;
     padding-bottom: 5rem;
 }
 
 .header-text {
     color: white;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bold;
     font-family: titillium web, sans-serif;
     text-align: left;
-    padding-left: 25rem;
-    padding-right: 25rem;
-    max-width: 50%;
+    padding-left: 9em;
+    padding-right: 5em;
+    overflow: visible;
+    max-width: 100%;
+    object-fit: fill;
 }

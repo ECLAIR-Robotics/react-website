@@ -40,7 +40,7 @@
     
     position: relative;
     background-color: rgb(255, 255, 255);
-
+    
     border-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
     border-image-slice: 1;
 
