@@ -7,6 +7,11 @@ interface Props {
 }
 
 function ProjectCard(props : Props) {
+    
+    const projectInfo = [
+        
+    ];
+    
     return (
         <div className="entireCard">
             <img src={props.img} className="cardImage"></img>

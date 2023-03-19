@@ -133,3 +133,19 @@
     transition: opacity, transform;
     transition: 0.5s, 0.5s ease-in-out;
 }
+
+.entireCard:active {
+    scale: 0.97;
+    /* transition-property: all; */
+    /* transition-duration: 0.5s; */
+}
+
+/* Popup {
+    z-index: 4;
+    border-color: rebeccapurple;
+    height: max-content;
+} */
+
+div {
+    /* height: 100%; */
+}
