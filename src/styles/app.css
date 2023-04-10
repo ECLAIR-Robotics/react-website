@@ -1,59 +1,103 @@
-
-
-.box2{
-    display: flex;
+.box2 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
     flex-direction: row;
+    gap: 2rem;
+    align-items: normal;
+    min-height: 25em;
     background-color: white;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
     color: #2d3549;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-shape-divider-top-1681028846 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1681028846 svg {
+    position: relative;
+    display: block;
+    width: calc(176% + 1.3px);
+    height: 87px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1681028846 .shape-fill {
+    fill: #1F2532;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .box2 {
+        grid-template-columns: 1fr;
+        /* a single column with a width of 1 fraction of the available space */
+        height: 50em;
+        
+        padding-top: 10em;
+        padding-bottom: 10em;
+    }
+
+    .box2-right {
+        height: 30em;
+        padding-left: 5em;
+    }
 }
 
 
 
-.small-line-thingy{
+.small-line-thingy {
     height: 0.5em;
-    width: 6em;
+    width: 75%;
     border-radius: 0.1em;
-    background: linear-gradient( 100deg, #ff77ff, #0050c8);
+    background: linear-gradient(100deg, #ff77ff, #0050c8);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@200;300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
-.box2-left{
-    flex : 1 1 auto;
+
+.box2-left {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-left: 2em;
-    align-items: center;
-    font-style: bold;
-    /* font-family: 'Titillium Web', sans-serif;; */
+    justify-content: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: flex-start;
     font-family: 'Montserrat', sans-serif;
-    
-    margin-right: 15em;
-    margin-left: 5em;
     overflow: visible;
     font-size: 1.1em;
     color: black;
+    border-radius: 1em;
 }
 
-.box2-right{
-    flex : 1 1 auto;
-    max-width: 75%;
+.box2-right {
+    flex: 1 1 auto;
+    max-width: 100%;
     align-items: center;
-    overflow: visible;
-    justify-content: top;
+    overflow: hidden;
+    justify-content: center;
+    padding-right: 5em;
+
 }
 
-.placeholder-image{
+.placeholder-image {
     max-width: 50%;
     max-height: 50%;
     padding: 20rem;
 }
-.box3{
+
+.box3 {
     display: flex;
     flex-direction: row;
     background-color: #ffffff;
@@ -62,22 +106,22 @@
 }
 
 .left-img {
-    padding-left: 9em;
-    max-width: 40em;  
-    overflow: visible; 
+    max-width: 100%;
+    overflow: visible;
+    position: relative;
     /* object-fit: fill; */
 }
 
 .header-right {
     text-align: center;
-    flex : 2 1 auto;
+    flex: 2 1 auto;
     width: max-content;
     max-width: 75%;
     align-items: center;
     justify-content: center;
-   padding-left: 0em;
     margin-bottom: 5%;
-    padding-bottom: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .header-text {
@@ -85,9 +129,7 @@
     font-size: 3rem;
     font-weight: bold;
     font-family: titillium web, sans-serif;
-    text-align: left;
-    padding-left: 9em;
-    padding-right: 5em;
+    text-align: center;
     overflow: visible;
     max-width: 100%;
     object-fit: fill;

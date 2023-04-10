@@ -30,16 +30,6 @@ function ResponsiveAppBar() {
     navigate('/homepage');
   }
 
-
-
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
   interface PalleteColor {
     light?: string;
     main: string;
@@ -78,13 +68,13 @@ function ResponsiveAppBar() {
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
-        <Container maxWidth="xl" sx = {{ 
-          paddingBottom : '0em',
-          }}>
+        <Container maxWidth="xl" sx={{
+          paddingBottom: '0em',
+        }}>
           <Toolbar disableGutters>
             <Typography
               variant="h5"
-              style = {titleStyle}
+              style={titleStyle}
               noWrap
               component="a"
               href="/"
@@ -104,33 +94,12 @@ function ResponsiveAppBar() {
               ECLAIR
             </Typography>
             <Box sx={{
-              flexGrow: 1,
-              overflow: 'visible',
-              display: {
-                xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex',
-              }
+              flexGrow: 1, 
+              paddingLeft: '2em',
+              display: { xs: 'block', md: 'flex' },
+              alignItems: 'flex-start',
+
             }}>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: 'block', md: 'block' },
-                }}
-              >
-              </Menu>
-            </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'block', md: 'flex' } }}>
               <Link to="/homepage" style={{
                 padding: '1em',
                 color: 'inherit',
@@ -146,7 +115,7 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
               }}> ABOUT </Link>
-              <Link to="/members" style={{
+              <Link to="/sponsors" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
