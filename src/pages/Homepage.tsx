@@ -11,8 +11,9 @@ import { Grid, Box } from '@mui/material';
 import KUTE from 'kute.js';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import blobBackground from '../static/vectors/blob-background.svg';
-import bubblesHeader from '../static/vectors/bubbles-header.svg';
+import polyHeader from '../static/vectors/polygon-header.svg';
+import wavesHeader from '../static/vectors/waves-header.svg';
+import box2blob from '../static/vectors/waves-blob.svg';
 // TODO : look up typography and popovers in the material-ui docs
 // TODO : look up how to use the material-ui theme
 // Copy the current eclair website and then make it responsive like Apple's website
@@ -22,10 +23,6 @@ interface PalleteColor {
   dark?: string;
   contrastText?: string;
 }
-
-
-
-
 
 const theme = createTheme({
   palette: {
@@ -63,7 +60,7 @@ function Homepage() {
 
       <Grid sx={{
         display: { xs: 'flex', md: 'flex' },
-        background: `url(${bubblesHeader})  right no-repeat fixed`,
+        background: `url(${polyHeader})  right no-repeat`,
         backgroundSize: 'cover',
         minWidth: '100%',
         paddingTop: '10em',
@@ -113,32 +110,18 @@ function Homepage() {
 
       <section className='box2'
         style={{
-          background: `url(${blobBackground})  center center no-repeat `,
+          background: `url(${wavesHeader})  center center no-repeat `,
           backgroundSize: 'cover',
         }}
       >
         <div className="custom-shape-divider-top-1681028846">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            {/* <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path> */}
-            {/* <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path> */}
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
         <div className="box2-left">
-
-
-          {/* <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <g transform="translate(463.8057756656726 294.08688214789896)">
-              <path id = "blob1" d="M112.7 -118.2C154.7 -70.7 203.4 -35.4 216.7 13.3C230 62 208 124 166 168.3C124 212.6 62 239.3 2.2 237.1C-57.5 234.8 -115 203.7 -165 159.4C-215 115 -257.5 57.5 -246.4 11.1C-235.4 -35.4 -170.7 -70.7 -120.7 -118.2C-70.7 -165.7 -35.4 -225.4 0 -225.4C35.4 -225.4 70.7 -165.7 112.7 -118.2" fill="#ff77ff">
-              </path>
-            </g>
-
-            <g transform="translate(463.8057756656726 294.08688214789896)">
-              <path id = "blob2" d="M112.7 -118.2C154.7 -70.7 203.4 -35.4 216.7 13.3C230 62 208 124 166 168.3C124 212.6 62 239.3 2.2 237.1C-57.5 234.8 -115 203.7 -165 159.4C-215 115 -257.5 57.5 -246.4 11.1C-235.4 -35.4 -170.7 -70.7 -120.7 -118.2C-70.7 -165.7 -35.4 -225.4 0 -225.4C35.4 -225.4 70.7 -165.7 112.7 -118.2" fill="#ff77ff">
-              </path>
-            </g>
-          </svg> */}
-
           <h3>The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR)
             is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate
             robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine
