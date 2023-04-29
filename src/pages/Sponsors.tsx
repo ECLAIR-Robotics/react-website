@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 
-function Members() {
+function Sponsors() {
   return (
     <div>
       <Grid>
@@ -11,4 +11,4 @@ function Members() {
   )
 }
 
-export default Members
+export default Sponsors

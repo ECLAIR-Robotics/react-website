@@ -17,7 +17,6 @@ function ProjectCard(props : Props) {
             <img src={props.img} className="cardImage"></img>
             <div className="cardText">
                 <h2 className="cardTitle">{props.h2}</h2>
-                {/* <p className="cardDesc">{props.p}</p> */}
             </div>
             <div className="buttonHolder">
                 <button className="moreButton">
