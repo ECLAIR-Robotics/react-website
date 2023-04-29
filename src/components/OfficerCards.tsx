@@ -1,9 +1,17 @@
 import React from 'react'
+import '../styles/officerCard.css'
 
-function OfficerCards() {
+interface Props {
+  name?: string;
+  position?: string;
+  img?: string;
+}
+function OfficerCards(props: Props) {
   return (
-    <div>
-      
+    <div className='baseOfficerCard'> 
+      <img src={props.img} className="officerImage"></img>
+      <div className="officerName">{props.name}</div>
+      <div className="officerPosition">{props.position}</div>
     </div>
   )
 }

@@ -8,12 +8,10 @@ import ECLAIRButton from '../components/ECLAIRButton';
 import { Slide, Fade } from '@mui/material';
 import YoutubeEmbed from '../components/YoutubeEmbed';
 import { Grid, Box } from '@mui/material';
-import KUTE from 'kute.js';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import polyHeader from '../static/vectors/polygon-header.svg';
 import wavesHeader from '../static/vectors/waves-header.svg';
-import box2blob from '../static/vectors/waves-blob.svg';
 // TODO : look up typography and popovers in the material-ui docs
 // TODO : look up how to use the material-ui theme
 // Copy the current eclair website and then make it responsive like Apple's website

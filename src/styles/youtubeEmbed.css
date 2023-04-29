@@ -1,14 +1,16 @@
-.youtube-embed{
+.youtube-embed {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    border-color: transparent;
+
     border-width: 0;
-    outline-color: transparent;
+
 }
 
 .youtube-iframe {
     width: 100%;
     height: 100%;
+    border-color: transparent;
     border-radius: 1rem;
+    outline-color: transparent;
 }
