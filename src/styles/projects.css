@@ -13,19 +13,22 @@
 h1 {
     text-align: center;
     width: 100%;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 .projectCards {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     display: grid;
     width: 100%;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 17rem));
+    
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-auto-rows: 200px;
-    gap: 2rem;
+    grid-auto-rows: 13rem;
+    /* gap: 2rem; */
+    row-gap: 3.25rem;
+    column-gap: 3.25rem;
     justify-content: center;
 }
