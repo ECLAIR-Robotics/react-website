@@ -6,16 +6,16 @@ import ImageProjectCard from '../components/ImageProjectCard';
 import Popup from '../components/Popup';
 import { Box } from '@mui/material';
 
-interface Info {
-  id : number;
-  img : String;
-  lName : String;
-  name : String;
-  members : String;
-  desc : String;
-  git : String;
-  gantt : String;
-}
+// interface Info {
+//   id : number;
+//   img : String;
+//   lName : String;
+//   name : String;
+//   members : String;
+//   desc : String;
+//   git : String;
+//   gantt : String;
+// }
 
 
 function Projects() {
@@ -102,9 +102,9 @@ function Projects() {
     },
     {
       id: 6,
-      img :"https://drive.google.com/uc?export=view&id=1DPXoEzWTZ6VwRIuxkaHGucIFBMXpH4J1" ,
-      name:'AI Nose', 
-      lName:"Mauricio", 
+      img :"https://drive.google.com/uc?export=view&id=1vkVR4KX7UvAiZ8ql0-3IWdPGacsSAsEq" ,
+      name:'Fitness Tracker', 
+      lName:"Kyrylo", 
       members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
@@ -115,16 +115,6 @@ function Projects() {
       img :"https://drive.google.com/uc?export=view&id=18k4112Of06u9Yb42pT8NL_o8Nk-GgEny" ,
       name:'Smart Mirror', 
       lName:"Sahil Jain", 
-      members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
-      git:"apple.com", 
-      gantt:"costco.com",
-    },
-    {
-      id: 8,
-      img :"https://drive.google.com/uc?export=view&id=1vkVR4KX7UvAiZ8ql0-3IWdPGacsSAsEq" ,
-      name:'Fitness Tracker', 
-      lName:"Kyrylo", 
       members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
