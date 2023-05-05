@@ -20,6 +20,16 @@ import { Box } from '@mui/material';
 
 function Projects() {
   const [showPopup, setShowPopup] = useState(false);
+  // const [cardInfo, setCardInfo] = useState<{
+  //   id: number;
+  //   img: string;
+  //   name: string;
+  //   lName: string;
+  //   members: string;
+  //   desc: string;
+  //   git: string;
+  //   gantt: string;
+  // } | null>(null);
   const [cardInfo, setCardInfo] = useState<{
     id: number;
     img: string;
@@ -29,7 +39,17 @@ function Projects() {
     desc: string;
     git: string;
     gantt: string;
-  } | null>(null);
+  }>({
+    id: 0,
+    img: "",
+    name: "Dummy Name",
+    lName: "Dummy Last Name",
+    members: "Dummy Members",
+    desc: "Dummy Description",
+    git: "https://github.com/dummy",
+    gantt: "https://dummy.com/gantt",
+  });
+
 
   const handleOpenPopup = (info : {
     id: number;
@@ -124,7 +144,7 @@ function Projects() {
 
   return (
     <div className='everything'>
-      <h1 className = 'title'>Projects</h1>
+      <h1 className = 'projectsTitle'>Projects</h1>
       <div className='gridContainer'>
         <div className='projectCards'>
           {cardData.map((card) => (
@@ -142,7 +162,7 @@ function Projects() {
           ))}
         </div>
       </div>
-      {showPopup && <Popup onClose={handleClosePopup} cardInfo={cardInfo} />}
+      <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
       <Box sx = {{paddingBottom:"10%"}}></Box>
     </div>
   )

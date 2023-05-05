@@ -19,13 +19,24 @@ interface Props {
         git: string;
         gantt: string;
     } | null;
+    // cardInfo : {
+    //     id: number | null;
+    //     img: string | null;
+    //     name: string | null;
+    //     lName: string | null;
+    //     members: string | null;
+    //     desc: string | null;
+    //     git: string | null;
+    //     gantt: string | null;
+    // } | null;
     onClose : () => void;
+    vis : boolean;
 }
 
 function Popup(props : Props) {
   return (
-    <div className="entirePopup">
-      <div className="popupContent">
+    <div className={`entirePopup ${props.vis ? "isVis" : ""}`}>
+      <div className={`popupContent ${props.vis ? "isVis" : ""}`}>
         <h1 className='pName'>{props.cardInfo!.name}</h1>
         <h3 className= 'subHeadings'>Contributors:</h3>
         <div className='lead'> 
