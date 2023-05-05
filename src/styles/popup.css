@@ -13,6 +13,9 @@
 
 
     pointer-events: none;
+    backdrop-filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0);
+    transition: backdrop-filter 0.3s ease-out, background-color 0.3s ease-out;
     /* scale:0.1; */
     /* opacity: 0; */
     /* backdrop-filter: blur(5px);
@@ -24,9 +27,8 @@
     /* transition: all 0.3s ease-in-out; */
     pointer-events: auto;
     backdrop-filter: blur(5px);
-    transition: backdrop-filter 1s ease-out, background-color 1s ease-out;
-    
     background-color: rgba(0, 0, 0, 0.35);
+    transition: backdrop-filter 1s ease-out, background-color 1s ease-out;
     /* transition: background-color 3s ease-out; */
     /* scale: 1; */
 }
