@@ -115,6 +115,11 @@
     font-size: 20px;
     cursor: pointer;
 }
+.popupCloseButtonHolder {
+    /* width: 50%; */
+    justify-content: right;
+    display: flex;
+}
 
 .closeButton:hover {
     color: rgb(203, 79, 79);
@@ -142,11 +147,11 @@
 
 .pName {
     padding: 0;
-    padding-top: 1%;
+    /* padding-top: 1%; */
     text-align: center;
     width: 100%;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     
     /* margin: 0; */
 }

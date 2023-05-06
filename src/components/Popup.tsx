@@ -73,6 +73,9 @@ function Popup(props : Props) {
           }}
         > */}
       <StyledPopup onClose={props.onClose} vis={props.vis} cardInfo={props.cardInfo} className={`popupContent ${props.vis ? "isVis" : ""}`}>
+      <div className="popupCloseButtonHolder">
+        <button className="closeButton" onClick={props.onClose}>X</button>
+      </div>
         <h1 className='pName'>{props.cardInfo!.name}</h1>
         <h3 className= 'subHeadings'>Contributors:</h3>
         <div className='lead'> 
@@ -134,7 +137,7 @@ function Popup(props : Props) {
             </span>
         </div> */}
         
-        <button className="closeButton" onClick={props.onClose}>X</button>
+        
       {/* </div> */}
       </StyledPopup>
     </div>
