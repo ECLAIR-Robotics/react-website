@@ -46,10 +46,10 @@ function Popup(props : Props) {
     //     },
     //   };
     const popupAnimation = (rect ?: DOMRect) => keyframes`
-    0% { transform: translateY(${ rect?.top + 'px' }) translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%)); transform-origin: ${props.cardInfo!.rect!.left > (window.innerWidth * 0.5) ? 'right' : (props.cardInfo!.rect!.left < (window.innerWidth * 0.5) ? 'left' : 'center')}; scale: 0.1;} 
+    0% { transform: translateY(${ props.cardInfo!.rect!.top + 'px' }) translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%)); transform-origin: ${props.cardInfo!.rect!.left > (window.innerWidth * 0.6) ? 'right' : (props.cardInfo!.rect!.left < (window.innerWidth * 0.4) ? 'left' : '')}  ${props.cardInfo!.rect!.top < (window.innerHeight * 0.3) ? 'top' : (props.cardInfo!.rect!.top > (window.innerHeight * 0.6) ? 'bottom' : '')}; scale: 0.1;} 
     100% { transform: translateY(0)  translateX(0px); transform-origin: center; scale: 1;}
     `;
-
+    // 0% { transform: translateY(${ props.cardInfo!.rect!.top + 'px' }) translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%)); transform-origin: ${props.cardInfo!.rect!.left > (window.innerWidth * 0.6) ? 'right' : (props.cardInfo!.rect!.left < (window.innerWidth * 0.4) ? 'left' : 'center')} ; scale: 0.1;} 
     const StyledPopup = styled.div<Props>`
         animation: ${({ cardInfo }) => popupAnimation(cardInfo?.rect)} 1s ease-in-out; 
     `;

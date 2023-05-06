@@ -52,7 +52,13 @@ function Projects() {
     rect: new DOMRect(10, 20, 30, 40)
   });
 
-  const cardLocation: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation0: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation1: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation2: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation3: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation4: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation5: RefObject<HTMLDivElement> = useRef(null);
+  const cardLocation6: RefObject<HTMLDivElement> = useRef(null);
   const handleOpenPopup = (info : {
     id: number;
     img: string;
@@ -150,7 +156,7 @@ function Projects() {
       <h1 className = 'projectsTitle'>Projects</h1>
       <div className='gridContainer'>
         <div className='projectCards'>
-          {cardData.map((card) => (
+          {/* {cardData.map((card) => (
             <ImageProjectCard
               key = {card.id}
               name = {card.name}
@@ -163,7 +169,91 @@ function Projects() {
               ref={cardLocation}
               onOpenPopup={() => handleOpenPopup(card, cardLocation.current?.getBoundingClientRect())}
             />
-          ))}
+          ))} */}
+          <ImageProjectCard 
+            key= {cardData[0].id}
+            name = {cardData[0].name}
+            img = {cardData[0].img}
+            lName  ={cardData[0].lName}
+            members = {cardData[0].members}
+            desc = {cardData[0].desc}
+            git = {cardData[0].git}
+            gantt = {cardData[0].gantt}
+            ref={cardLocation0}
+            onOpenPopup={() => handleOpenPopup(cardData[0], cardLocation0.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[1].id}
+            name = {cardData[1].name}
+            img = {cardData[1].img}
+            lName  ={cardData[1].lName}
+            members = {cardData[1].members}
+            desc = {cardData[1].desc}
+            git = {cardData[1].git}
+            gantt = {cardData[1].gantt}
+            ref={cardLocation1}
+            onOpenPopup={() => handleOpenPopup(cardData[1], cardLocation1.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[2].id}
+            name = {cardData[2].name}
+            img = {cardData[2].img}
+            lName  ={cardData[2].lName}
+            members = {cardData[2].members}
+            desc = {cardData[2].desc}
+            git = {cardData[2].git}
+            gantt = {cardData[2].gantt}
+            ref={cardLocation2}
+            onOpenPopup={() => handleOpenPopup(cardData[2], cardLocation2.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[3].id}
+            name = {cardData[3].name}
+            img = {cardData[3].img}
+            lName  ={cardData[3].lName}
+            members = {cardData[3].members}
+            desc = {cardData[3].desc}
+            git = {cardData[3].git}
+            gantt = {cardData[3].gantt}
+            ref={cardLocation3}
+            onOpenPopup={() => handleOpenPopup(cardData[3], cardLocation3.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[4].id}
+            name = {cardData[4].name}
+            img = {cardData[4].img}
+            lName  ={cardData[4].lName}
+            members = {cardData[4].members}
+            desc = {cardData[4].desc}
+            git = {cardData[4].git}
+            gantt = {cardData[4].gantt}
+            ref={cardLocation4}
+            onOpenPopup={() => handleOpenPopup(cardData[4], cardLocation4.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[5].id}
+            name = {cardData[5].name}
+            img = {cardData[5].img}
+            lName  ={cardData[5].lName}
+            members = {cardData[5].members}
+            desc = {cardData[5].desc}
+            git = {cardData[5].git}
+            gantt = {cardData[5].gantt}
+            ref={cardLocation5}
+            onOpenPopup={() => handleOpenPopup(cardData[5], cardLocation5.current?.getBoundingClientRect())}
+            />
+            <ImageProjectCard 
+            key= {cardData[6].id}
+            name = {cardData[6].name}
+            img = {cardData[6].img}
+            lName  ={cardData[6].lName}
+            members = {cardData[6].members}
+            desc = {cardData[6].desc}
+            git = {cardData[6].git}
+            gantt = {cardData[6].gantt}
+            ref={cardLocation6}
+            onOpenPopup={() => handleOpenPopup(cardData[6], cardLocation6.current?.getBoundingClientRect())}
+            />
         </div>
       </div>
       <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
