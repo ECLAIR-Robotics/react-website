@@ -1,3 +1,27 @@
+/* @keyframes popup-animation {
+    0% {
+        transform: scale(0.1);
+        transform-origin: left;
+        transform: translateX(calc(var(--transX) - 0));
+        transform: translateY(calc(var(--transY) * 1));
+    }
+    50% {
+        transform: scale(0.5);
+        transform-origin: left;
+        transform: translateX(var(--transX) / 2);
+        transform: translateY(var(--transY) / 2);
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: center;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+} */
+
+
+
+
 .entirePopup {
     position: fixed;
     top: 0;
@@ -35,6 +59,8 @@
 }
   
 .popupContent {
+    --transX: attr(data-x);
+    --transY: attr(data-y);
     background-color: #fff;
     padding-left: 3%;
     padding-right: 3%;
@@ -71,6 +97,10 @@
 .popupContent.isVis {
     /* scale:1; */
     opacity: 1;
+    --transX: attr(data-x);
+    --transY: attr(data-y);
+    /* animation: popup-animation 4s; */
+    /* animation-iteration-count: 1; */
     /* transition: scale 0.3s ease-out; */
 }
   

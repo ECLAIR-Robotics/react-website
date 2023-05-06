@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useRef, RefObject} from 'react';
+import {useState, useRef, RefObject, useEffect, createRef} from 'react';
 import '../styles/projects.css';
 import ProjectCard from '../components/ProjectCard';
 import ImageProjectCard from '../components/ImageProjectCard';
@@ -74,7 +74,7 @@ function Projects() {
 
   const cardData =[
     {
-      id: 1,
+      id: 0,
       img :"https://drive.google.com/uc?export=view&id=1ojkTwww4f-TAXY3-BtJfe7nlULWY4vE6" ,
       name:'PCR', 
       lName:"Sahil Jain, Conrad the Condad", 
@@ -84,7 +84,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 2,
+      id: 1,
       img :"https://drive.google.com/uc?export=view&id=1ViLB3YkHlQ2iQRTtHs7KU5Doxln0jLie" ,
       name:'Chess Teacher', 
       lName:"Vishal Kantharaju", 
@@ -94,7 +94,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 3,
+      id: 2,
       img :"https://drive.google.com/uc?export=view&id=1tUeRQorUFeg53gdXJBONz_j4ZDJ8b7Yf" ,
       name:'Autonomous Drone', 
       lName:"Carson", 
@@ -104,7 +104,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 4,
+      id: 3,
       img :"https://drive.google.com/uc?export=view&id=1O8Yc-Tdzh5RZK1Nydo2iRyje76NVpS66" ,
       name:'Music Mood', 
       lName:"Sahana Ganapathy", 
@@ -114,7 +114,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 5,
+      id: 4,
       img :"https://drive.google.com/uc?export=view&id=1PtCjDrhR-OSC-A-SYzJsvkjie_redgZI" ,
       name:'Robotic Arm', 
       lName:"Sahil Jain", 
@@ -124,7 +124,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 6,
+      id: 5,
       img :"https://drive.google.com/uc?export=view&id=1vkVR4KX7UvAiZ8ql0-3IWdPGacsSAsEq" ,
       name:'Fitness Tracker', 
       lName:"Kyrylo", 
@@ -134,7 +134,7 @@ function Projects() {
       gantt:"costco.com",
     },
     {
-      id: 7,
+      id: 6,
       img :"https://drive.google.com/uc?export=view&id=18k4112Of06u9Yb42pT8NL_o8Nk-GgEny" ,
       name:'Smart Mirror', 
       lName:"Sahil Jain", 
