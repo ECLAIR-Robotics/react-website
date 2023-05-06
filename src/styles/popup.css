@@ -25,6 +25,7 @@
 .entirePopup.isVis{
     /* opacity: 1; */
     /* transition: all 0.3s ease-in-out; */
+
     pointer-events: auto;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.35);
@@ -47,24 +48,30 @@
     border-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
     border-image-slice: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    max-width: 90%;
-    margin-left: 25%;
-    margin-right: 25%;
+    /* position: relative; */
+    max-width: 44%;
+    /* margin-left: 25%; */
+    /* margin-right: 25%; */
     max-height: 90%;
     overflow-y: auto;
+    overflow-x: scroll;
     /* overflow: visible; */
     font-size: medium;
     /* display: flex; */
     
-    scale:0.01;
+    /* scale:0.01; */
     opacity:0;
+    /* pointer-events: none; */
+
+    /* position: fixed;
+    top: 0;
+    left: 0; */
 }
 
 .popupContent.isVis {
-    scale:1;
+    /* scale:1; */
     opacity: 1;
-    transition: scale 0.3s ease-out;
+    /* transition: scale 0.3s ease-out; */
 }
   
 .closeButton {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useRef, RefObject} from 'react';
 import '../styles/projects.css';
 import ProjectCard from '../components/ProjectCard';
 import ImageProjectCard from '../components/ImageProjectCard';
@@ -39,6 +39,7 @@ function Projects() {
     desc: string;
     git: string;
     gantt: string;
+    rect?: DOMRect;
   }>({
     id: 0,
     img: "",
@@ -48,9 +49,10 @@ function Projects() {
     desc: "Dummy Description",
     git: "https://github.com/dummy",
     gantt: "https://dummy.com/gantt",
+    rect: new DOMRect(10, 20, 30, 40)
   });
 
-
+  const cardLocation: RefObject<HTMLDivElement> = useRef(null);
   const handleOpenPopup = (info : {
     id: number;
     img: string;
@@ -60,9 +62,10 @@ function Projects() {
     desc: string;
     git: string;
     gantt: string;
-    }) => {
-    setCardInfo(info);
+    }, ClientRect : DOMRect | undefined) => {
+    setCardInfo({...info, rect: ClientRect});
     setShowPopup(true);
+    console.log(ClientRect);
   };
 
   const handleClosePopup = () => {
@@ -148,17 +151,18 @@ function Projects() {
       <div className='gridContainer'>
         <div className='projectCards'>
           {cardData.map((card) => (
-          <ImageProjectCard
-          key = {card.id}
-          name = {card.name}
-          img = {card.img}
-          lName  ={card.lName}
-          members = {card.members}
-          desc = {card.desc}
-          git = {card.git}
-          gantt = {card.gantt}
-          onOpenPopup={() => handleOpenPopup(card)}
-          />
+            <ImageProjectCard
+              key = {card.id}
+              name = {card.name}
+              img = {card.img}
+              lName  ={card.lName}
+              members = {card.members}
+              desc = {card.desc}
+              git = {card.git}
+              gantt = {card.gantt}
+              ref={cardLocation}
+              onOpenPopup={() => handleOpenPopup(card, cardLocation.current?.getBoundingClientRect())}
+            />
           ))}
         </div>
       </div>

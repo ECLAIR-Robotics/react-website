@@ -18,6 +18,7 @@ interface Props {
         desc: string;
         git: string;
         gantt: string;
+        rect ?: DOMRect;
     } | null;
     // cardInfo : {
     //     id: number | null;
@@ -36,7 +37,11 @@ interface Props {
 function Popup(props : Props) {
   return (
     <div className={`entirePopup ${props.vis ? "isVis" : ""}`}>
-      <div className={`popupContent ${props.vis ? "isVis" : ""}`}>
+      {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', top:`${props.cardInfo!.rect!.top}px` }}> */} 
+      {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateY(${props.vis ? "0" :  (props.cardInfo!.rect!.top - (props.cardInfo!.rect!.height / 2))}px)`, scale:`0.1`, transition:"transform 1s" }}> */}
+      {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%))`, scale:`1`, transition:"transform 0s" }}> */}
+      <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateX(calc(${props.vis ? "0" : props.cardInfo!.rect!.left}px - ${props.vis ? "0" : "50"}vw + ${props.vis ? "0" : "50"}%))`, scale:`${"0.1"}`, transition:"transform 10s , scale 1s" }}>
+      {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateX(calc(${props.vis ? "0" : props.cardInfo!.rect!.left}px - ${props.vis ? "0" : "50"}vw + ${props.vis ? "0" : "50"}%)) translateY(${props.vis ? "0" :  (props.cardInfo!.rect!.top - (props.cardInfo!.rect!.height / 2))}px)`, scale:`${"0.1"}`, transition:"transform 10s , scale 1s" }}> */}
         <h1 className='pName'>{props.cardInfo!.name}</h1>
         <h3 className= 'subHeadings'>Contributors:</h3>
         <div className='lead'> 
