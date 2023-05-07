@@ -17,6 +17,7 @@ interface Props {
     desc : String;
     git : String;
     gantt : String;
+    vid : string;
 
     onOpenPopup : () => void;
 
@@ -44,7 +45,7 @@ const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) 
                 <div className="clickText">Click to learn more!</div>
             </div>
             <img src={props.img} className="cardImage"></img>
-            <img src={TestVid} className='projectVideo'></img>
+            <img src={props.vid} className='projectVideo'></img>
             {/* <video className='projectVideo' ref={videoRef} controls={false} muted={true}>
                 <source src={TestVid}></source>
             </video> */}

@@ -13,6 +13,13 @@ import fitnessP from '../static/images/fitnessP.jpg';
 import musicP from '../static/images/musicP.jpg';
 import robotarmP from '../static/images/robotarmP.jpg';
 
+import pcrVid from '../static/videos/pcrTest.gif';
+import chessVid from '../static/videos/chessTest.gif';
+import droneVid from '../static/videos/droneTest.gif';
+import fitnessVid from '../static/videos/fitnessTest.gif';
+import musicVid from '../static/videos/musicTest.gif';
+import robotarmVid from '../static/videos/robotarmTest.gif';
+
 // interface Info {
 //   id : number;
 //   img : String;
@@ -105,6 +112,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:0,
+      video: pcrVid,
     },
     {
       id: 1,
@@ -116,6 +124,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:0,
+      video: chessVid,
     },
     {
       id: 2,
@@ -127,6 +136,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:0,
+      video: droneVid,
     },
     {
       id: 3,
@@ -138,6 +148,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:1,
+      video: musicVid,
     },
     {
       id: 4,
@@ -149,6 +160,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:1,
+      video: chessVid,
     },
     {
       id: 5,
@@ -160,6 +172,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:0,
+      video: fitnessVid,
     },
     {
       id: 6,
@@ -171,6 +184,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:1,
+      video: chessVid,
     }
   ];
 
@@ -215,6 +229,7 @@ function Projects() {
               desc = {card.desc}
               git = {card.git}
               gantt = {card.gantt}
+              vid = {card.video}
               // ref={cardLocation}
               ref={el => cardLocations.current[index] = el}
               onOpenPopup={() => handleOpenPopup(card, cardLocations.current[index]?.getBoundingClientRect())}
