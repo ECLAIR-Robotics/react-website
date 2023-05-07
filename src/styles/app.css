@@ -1,3 +1,36 @@
+.box1-left {
+    padding: 10%;
+}
+
+
+.left-img {
+    max-width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&family=Poppins:wght@600&family=Titillium+Web:wght@200;300&display=swap');
+.header-right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 2 1 auto;
+    max-width: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: titillium web, sans-serif;
+    text-align: center;
+    overflow: visible;
+    max-width: 100%;
+    object-fit: fill;
+}
+
 .box2 {
     display: grid;
     position: relative;
@@ -6,7 +39,7 @@
     gap: 2rem;
     align-items: normal;
     min-height: 25em;
-    background-color: white;
+    background-color: #1F2532;
     padding-top: 10rem;
     padding-bottom: 5rem;
     color: #2d3549;
@@ -14,25 +47,54 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.custom-shape-divider-top-1681028846 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+.box2-override {
+    min-height: 5em;
+    height: fit-content;
+    background-color: #191e28;
 }
 
-.custom-shape-divider-top-1681028846 svg {
-    position: relative;
-    display: block;
-    width: calc(176% + 1.3px);
-    height: 87px;
-    transform: rotateY(180deg);
+.box2-override2 {
+    background-color: #202734;
+}
+.box2-override3 {
+    background-color: #272f3f;
 }
 
-.custom-shape-divider-top-1681028846 .shape-fill {
-    fill: #1F2532;
+
+
+.box1_5-textLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10%;
+    font-family: 'Poppins', 'Titilium Web';
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+}
+
+.infoImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1em;
+    box-shadow: 10px 10px 5px #191e28 ;
+}
+
+.box1_5-textRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: gray;
+}
+
+#boldText {
+    text-align: left;
 }
 
 
@@ -41,7 +103,7 @@
         grid-template-columns: 1fr;
         /* a single column with a width of 1 fraction of the available space */
         height: 50em;
-        
+
         padding-top: 10em;
         padding-bottom: 10em;
     }
@@ -53,16 +115,7 @@
 }
 
 
-
-.small-line-thingy {
-    height: 0.5em;
-    width: 75%;
-    border-radius: 0.1em;
-    background: linear-gradient(100deg, #ff77ff, #0050c8);
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@200;300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
 
 .box2-left {
@@ -105,32 +158,51 @@
     padding-bottom: 5rem;
 }
 
-.left-img {
-    max-width: 100%;
-    overflow: visible;
+
+
+/** everything below is divider css */
+
+/* Second and third section divider */
+.custom-shape-divider-top-1681028846 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1681028846 svg {
     position: relative;
-    /* object-fit: fill; */
+    display: block;
+    width: calc(176% + 1.3px);
+    height: 87px;
+    transform: rotateY(180deg);
 }
 
-.header-right {
-    text-align: center;
-    flex: 2 1 auto;
-    width: max-content;
-    max-width: 75%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5%;
-    padding-left: 0%;
-    padding-right: 20%;
+.custom-shape-divider-top-1681028846 .shape-fill {
+    fill: #272f3f;
 }
 
-.header-text {
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: titillium web, sans-serif;
-    text-align: center;
-    overflow: visible;
-    max-width: 100%;
-    object-fit: fill;
+/* First and second section divider */
+.custom-shape-divider-bottom-1683336780 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
+
+.custom-shape-divider-bottom-1683336780 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 178px;
+}
+
+.custom-shape-divider-bottom-1683336780 .shape-fill {
+    fill: #191e28;
+    /* fill: white; */
+}
+

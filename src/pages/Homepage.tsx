@@ -1,20 +1,16 @@
 import React from 'react';
 import Logo from '../static/images/logo/ECLAIR_logo2.png';
 import '../styles/app.css';
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from '@emotion/react';
-import { padding } from '@mui/system';
 import ECLAIRButton from '../components/ECLAIRButton';
 import { Slide, Fade } from '@mui/material';
 import YoutubeEmbed from '../components/YoutubeEmbed';
-import { Grid, Box } from '@mui/material';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import polyHeader from '../static/vectors/polygon-header.svg';
 import wavesHeader from '../static/vectors/waves-header.svg';
-// TODO : look up typography and popovers in the material-ui docs
-// TODO : look up how to use the material-ui theme
-// Copy the current eclair website and then make it responsive like Apple's website
+import headerBackground from '../static/vectors/polygon-header.svg';
+import headerImage_1 from '../static/images/drone_header.png';
+import headerImage_2 from '../static/images/eclair_group.png';
+
 interface PalleteColor {
   light?: string;
   main: string;
@@ -22,31 +18,10 @@ interface PalleteColor {
   contrastText?: string;
 }
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      // light: will be calculated from palette.primary.main,
-      main: '#ffffff',
-    },
-    secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: '#ffcc00',
-    },
-  },
-});
-
-// const tween = KUTE.fromTo('#blob1', 
-// { path: '#blob1' }, 
-// { path: '#blob2' },
-//  { repeat: 999, duration: 2000, yoyo: true });
-
 
 function Homepage() {
 
   useEffect(() => {
-    // tween.start();
   }, []);
   const handleClick = () => {
     navigate('/projects');
@@ -56,56 +31,75 @@ function Homepage() {
 
     <>
 
-      <Grid sx={{
-        display: { xs: 'flex', md: 'flex' },
-        background: `url(${polyHeader})  right no-repeat`,
-        backgroundSize: 'cover',
-        minWidth: '100%',
-        paddingTop: '10em',
-        paddingBottom: '10em',
-      }}
-        container
-        maxWidth='lg'
-        justifyContent={'center'}
-        direction={'row'}
-        justifyItems={'center'}
-      >
-        <ThemeProvider theme={theme}>
-
-          <Grid item
-            sx={{
-              paddingTop: '5em',
-              padddingLeft: '5em',
-              paddingRight: '5em',
-            }}
-            xs={12}
-            md={12}
-            xl={5}
-          >
+      {/* section 1 */}
+      <section >
+        <div className='box2' style={{
+          paddingTop: '15em',
+          paddingBottom: '15em',
+          background: `url(${headerBackground})  center center no-repeat `,
+          backgroundSize: 'cover',
+        }} >
+          <div className='box1-left'>
             <Fade in={true} timeout={2000}>
               <img className='left-img' src={Logo} alt='logo' />
             </Fade>
-          </Grid>
-
-          <Grid item className='header-right'
-            xs={12}
-            md={12}
-            xl={7} >
+          </div>
+          <div className='header-right'>
             <Fade in={true} timeout={1000}>
               <Slide direction="left" in={true} mountOnEnter unmountOnExit>
                 <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
               </Slide>
             </Fade>
-            <Box sx={{
-
-            }}>
+            <div>
               <ECLAIRButton handleClick={handleClick} text="PROJECTS" />
-            </Box>
-          </Grid>
+            </div>
+          </div>
+          <div className="custom-shape-divider-bottom-1683336780">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
+            </svg>
+          </div>
+        </div>
 
-        </ThemeProvider >
-      </Grid >
+      </section>
 
+      {/* Section 2 */}
+      <section className='box2 box2-override'>
+        <div className='box1_5-textLeft'> Geared Toward Helping Students Pursue Their Passion for Robotics </div>
+        <div className='box1_5-textRight'>
+          The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine learning techiniques such as neural networks and reinforcement learning to give students the ability to pursue their robotics projects. If you have a cool robot you want to build, come join us!
+        </div>
+      </section>
+
+      <section className='box2 box2-override2'>
+        <div className='box1_5-textRight'>
+          <img className="infoImage" src={headerImage_1}></img>
+        </div>
+        <div>
+          <div className='box1_5-textLeft' id='boldText'>
+            Situated at the Anna Hiss Gym at UT Austin - A leading Robotics and AI Institution
+          </div>
+          <div className='box1_5-textRight' id="informationText">
+            AT UT Austin, there is wide range of robotics research from surgical robotics to autonomous driving to artifical assistants. In ECLAIR, students can take advantage of all the resources UT Austin to explore their interests in robotics.
+          </div>
+        </div>
+      </section>
+
+      <section className='box2 box2-override3'>
+        <div>
+          <div className='box1_5-textLeft'>
+            State of the Art Facilities
+          </div>
+          <div className='box1_5-textRight' id="informationText">
+            Partnering with the Anna Hiss Gymnasium and UT Austin Makerspace, ECLAIR helps provide resources that students need to create and test their AI algorithms on physical robots
+          </div>
+        </div>
+        <div className='box1_5-textRight'>
+          <img className="infoImage" src={headerImage_2}></img>
+        </div>
+      </section>
+
+      {/* Section 3 */}
       <section className='box2'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
@@ -119,13 +113,14 @@ function Homepage() {
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
-        <div className="box2-left">
+        {/* <div className="box2-left">
           <h3>The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR)
             is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate
             robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine
             learning techiniques such as neural networks and reinforcement learning to give students the ability to
             pursue their robotics projects. If you have a cool robot you want to build, come join us!</h3>
-        </div>
+        </div> */}
+        <div></div>
         <div className='box2-right'>
           <YoutubeEmbed />
         </div>

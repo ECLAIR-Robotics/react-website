@@ -4,13 +4,6 @@ import styled, { keyframes, css } from 'styled-components';
 
 
 interface Props {
-    // pName : String;
-    // lName : String;
-    // members : String;
-    // desc : String;
-    // git : String;
-    // gantt : String;
-    // onClose : () => void;
     cardInfo : {
         id: number;
         img: string;
@@ -88,7 +81,6 @@ function Popup(props : Props) {
             </span>
         </div>
         <div className='members'>
-            {/* {props.cardInfo!.members} */}
             <span className='category'>
                 Members: 
             </span>
@@ -101,7 +93,6 @@ function Popup(props : Props) {
         </div>
         <h3 className= 'subHeadings'>Purpose:</h3>
         <div className='desc'>
-            {/* {props.cardInfo!.desc} */}
             <span className= 'displayContent'>
                 {props.cardInfo!.desc}
             </span>
