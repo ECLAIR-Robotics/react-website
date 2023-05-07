@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useRef, RefObject, useEffect, createRef} from 'react';
 import '../styles/projects.css';
-import ProjectCard from '../components/ProjectCard';
+// import ProjectCard from '../components/ProjectCard';
 import ImageProjectCard from '../components/ImageProjectCard';
 import Popup from '../components/Popup';
 import { Box } from '@mui/material';
@@ -52,16 +52,21 @@ function Projects() {
     rect: new DOMRect(10, 20, 30, 40)
   });
 
-  const cardLocation: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation0: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation1: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation2: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation3: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation4: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation5: RefObject<HTMLDivElement> = useRef(null);
-  const cardLocation6: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation0: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation1: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation2: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation3: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation4: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation5: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocation6: RefObject<HTMLDivElement> = useRef(null);
 
-  
+  const [curFilter, setCurFilter] = useState([0, 1]);
+
+  //@ts-ignore
+  const handleFilterChange = (newFilters ) => {
+    setCurFilter(newFilters);
+  };
 
   const handleOpenPopup = (info : {
     id: number;
@@ -92,6 +97,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:0,
     },
     {
       id: 1,
@@ -102,6 +108,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:0,
     },
     {
       id: 2,
@@ -112,6 +119,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:0,
     },
     {
       id: 3,
@@ -122,6 +130,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:1,
     },
     {
       id: 4,
@@ -132,6 +141,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:1,
     },
     {
       id: 5,
@@ -142,6 +152,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:0,
     },
     {
       id: 6,
@@ -152,8 +163,11 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"apple.com", 
       gantt:"costco.com",
+      finished:1,
     }
   ];
+
+  const filteredCardData = cardData.filter(card => curFilter.includes(card.finished));
   // const refs = Array.from({ length: cardData.length }, () => useRef<HTMLDivElement>(null));
   // const refs = Array.from({ length: cardData.length }, () => useRef<HTMLDivElement>(null));
   // const cardLocations
@@ -172,9 +186,19 @@ function Projects() {
   return (
     <div className='everything'>
       <h1 className = 'projectsTitle'>Projects</h1>
+      <div className='filterContainer'>
+        {/* <div className='filterHead'>
+          Filter By Status:
+        </div> */}
+        <ul className='filterOptions'>
+          <li className={`filterOption ${(curFilter.length == 2) ? 'currentSetFilter' : ""}`} onClick={() => handleFilterChange([0, 1])}>All</li>
+          <li className={`filterOption  ${((curFilter.length == 1) && curFilter.includes(0))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([0])}>In-Progress</li>
+          <li className={`filterOption  ${((curFilter.length == 1) && curFilter.includes(1))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([1])}>Completed</li>
+        </ul>
+      </div>
       <div className='gridContainer'>
         <div className='projectCards'>
-          {cardData.map((card, index) => (
+          {filteredCardData.map((card, index) => (
             <ImageProjectCard
               key = {card.id}
               name = {card.name}

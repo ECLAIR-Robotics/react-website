@@ -16,6 +16,56 @@
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     font-size: 3em;
+    margin-bottom: 0;
+}
+
+.currentSetFilter {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(198, 117, 255);
+    text-decoration-thickness: 3px;
+}
+
+.filterHead {
+    /* border: 1px solid blue; */
+    justify-content: center;
+    height: fit-content;
+    align-self: center;
+}
+
+.filterContainer {
+    display: flex;
+    /* border: 1px solid green; */
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.filterOptions {
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    /* border: 1px solid red; */
+    color: gray
+}
+
+.filterOption:hover {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(198, 117, 255);
+    text-decoration-thickness: 3px;
+    /* transition: all 0.5s; */
+}
+
+.filterOption {
+    /* border: 1px solid black; */
+    align-content: center;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .projectCards {
