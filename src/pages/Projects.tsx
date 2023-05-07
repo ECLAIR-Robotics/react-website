@@ -6,6 +6,13 @@ import ImageProjectCard from '../components/ImageProjectCard';
 import Popup from '../components/Popup';
 import { Box } from '@mui/material';
 
+import pcrP from '../static/images/pcrP.jpg';
+import chessP from '../static/images/chessP.jpg';
+import droneP from '../static/images/droneP.jpg';
+import fitnessP from '../static/images/fitnessP.jpg';
+import musicP from '../static/images/musicP.jpg';
+import robotarmP from '../static/images/robotarmP.jpg';
+
 // interface Info {
 //   id : number;
 //   img : String;
@@ -90,7 +97,7 @@ function Projects() {
   const cardData =[
     {
       id: 0,
-      img :"https://drive.google.com/uc?export=view&id=1ojkTwww4f-TAXY3-BtJfe7nlULWY4vE6" ,
+      img : pcrP,
       name:'PCR', 
       lName:"Sahil Jain, Conrad the Condad", 
       members:"Pranav, David, Oscar, Nicky, Sarah, Angelica Shawarma, Anjali Agrawal, Emerald, Namila",
@@ -101,7 +108,7 @@ function Projects() {
     },
     {
       id: 1,
-      img :"https://drive.google.com/uc?export=view&id=1ViLB3YkHlQ2iQRTtHs7KU5Doxln0jLie" ,
+      img :chessP ,
       name:'Chess Teacher', 
       lName:"Vishal Kantharaju", 
       members:"Alan Tran, Hursh Jha, Savvy Chezhian, Siddharth Kolukuluri, Tanay Garg, Zach Li",
@@ -112,7 +119,7 @@ function Projects() {
     },
     {
       id: 2,
-      img :"https://drive.google.com/uc?export=view&id=1tUeRQorUFeg53gdXJBONz_j4ZDJ8b7Yf" ,
+      img :droneP ,
       name:'Autonomous Drone', 
       lName:"Carson", 
       members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
@@ -123,7 +130,7 @@ function Projects() {
     },
     {
       id: 3,
-      img :"https://drive.google.com/uc?export=view&id=1O8Yc-Tdzh5RZK1Nydo2iRyje76NVpS66" ,
+      img :musicP ,
       name:'Music Mood', 
       lName:"Sahana Ganapathy", 
       members:"Mehul Murali, Seungwon Lee, Nikhil Kalidasu, Nidhi Thippana, Jason Ren, Sarah Wang-Zhou",
@@ -134,7 +141,7 @@ function Projects() {
     },
     {
       id: 4,
-      img :"https://drive.google.com/uc?export=view&id=1PtCjDrhR-OSC-A-SYzJsvkjie_redgZI" ,
+      img : robotarmP ,
       name:'Robotic Arm', 
       lName:"Sahil Jain", 
       members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
@@ -145,7 +152,7 @@ function Projects() {
     },
     {
       id: 5,
-      img :"https://drive.google.com/uc?export=view&id=1vkVR4KX7UvAiZ8ql0-3IWdPGacsSAsEq" ,
+      img :fitnessP ,
       name:'Fitness Tracker', 
       lName:"Kyrylo", 
       members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",

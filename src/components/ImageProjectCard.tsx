@@ -1,8 +1,13 @@
 import React from 'react';
 import {useState, useRef, forwardRef, useEffect} from 'react';
 import '../styles/imageprojectcard.css';
-import Popup from './Popup';
-import TestVid from '../static/videos/testvid.mp4'
+// import pcrP from '../static/images/pcrP.jpg';
+// import chessP from '../static/images/chessP.jpg';
+// import droneP from '../static/images/droneP.jpg';
+// import fitnessP from '../static/images/fitnessP.jpg';
+// import musicP from '../static/images/musicP.jpg';
+// import Popup from './Popup';
+// import TestVid from '../static/videos/testvid.mp4'
 
 interface Props {
     img: string;
@@ -39,9 +44,9 @@ const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) 
                 <div className="clickText">Click to learn more!</div>
             </div>
             <img src={props.img} className="cardImage"></img>
-            <video className='projectVideo' ref={videoRef} controls={false}>
+            {/* <video className='projectVideo' ref={videoRef} controls={false} muted={true}>
                 <source src={TestVid}></source>
-            </video>
+            </video> */}
         </div>
     )
 });
