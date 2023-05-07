@@ -2,13 +2,6 @@ import React, {ReactNode} from "react";
 import '../styles/popup.css';
 
 interface Props {
-    // pName : String;
-    // lName : String;
-    // members : String;
-    // desc : String;
-    // git : String;
-    // gantt : String;
-    // onClose : () => void;
     cardInfo : {
         id: number;
         img: string;
@@ -38,7 +31,6 @@ function Popup(props : Props) {
             </span>
         </div>
         <div className='members'>
-            {/* {props.cardInfo!.members} */}
             <span className='category'>
                 Members: 
             </span>
@@ -51,7 +43,6 @@ function Popup(props : Props) {
         </div>
         <h3 className= 'subHeadings'>Purpose:</h3>
         <div className='desc'>
-            {/* {props.cardInfo!.desc} */}
             <span className= 'displayContent'>
                 {props.cardInfo!.desc}
             </span>
@@ -77,16 +68,7 @@ function Popup(props : Props) {
             <span className= 'displayContent'>
                 {props.cardInfo!.gantt}
             </span>
-        </div>
-        {/* <div className='media'>
-            <span className='category'>
-                More photos: 
-            </span>
-            <span className= 'displayContent'>
-                {props.cardInfo!.drive}
-            </span>
-        </div> */}
-        
+        </div>        
         <button className="closeButton" onClick={props.onClose}>X</button>
       </div>
     </div>
