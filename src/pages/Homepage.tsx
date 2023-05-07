@@ -50,7 +50,7 @@ function Homepage() {
                 <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
               </Slide>
             </Fade>
-            <div>
+            <div className='eclairButton-container'>
               <ECLAIRButton handleClick={handleClick} text="PROJECTS" />
             </div>
           </div>
@@ -75,19 +75,20 @@ function Homepage() {
         <div className='box1_5-textRight'>
           <img className="infoImage" src={headerImage_1}></img>
         </div>
-        <div>
+        <div className="box2-encloser">
           <div className='box1_5-textLeft' id='boldText'>
             Situated at the Anna Hiss Gym at UT Austin - A leading Robotics and AI Institution
           </div>
           <div className='box1_5-textRight' id="informationText">
             AT UT Austin, there is wide range of robotics research from surgical robotics to autonomous driving to artifical assistants. In ECLAIR, students can take advantage of all the resources UT Austin to explore their interests in robotics.
           </div>
+
         </div>
       </section>
 
       <section className='box2 box2-override3'>
-        <div>
-          <div className='box1_5-textLeft'>
+        <div className='box2-encloser'>
+          <div className='box1_5-textLeft' id='boldText'>
             State of the Art Facilities
           </div>
           <div className='box1_5-textRight' id="informationText">
@@ -113,14 +114,32 @@ function Homepage() {
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
-        {/* <div className="box2-left">
-          <h3>The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR)
-            is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate
-            robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine
-            learning techiniques such as neural networks and reinforcement learning to give students the ability to
-            pursue their robotics projects. If you have a cool robot you want to build, come join us!</h3>
-        </div> */}
-        <div></div>
+        <div> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
+          <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+            version="1.1">
+            <defs>
+              <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#c675ff" />
+                <stop offset="100%" stop-color="#0050c7" />
+              </linearGradient>
+            </defs>
+            <defs>
+              <filter id="shadow">
+                <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.5" />
+              </filter>
+            </defs>
+            <g transform="translate(425.17812071839586 297.4107165965745)">
+              <path id='pathBefore'
+                d="M140.5 -95C189.2 -50.9 240.9 7.9 239 69.9C237.1 131.9 181.7 197 118.2 216.5C54.7 236.1 -16.9 209.9 -56.2 170.4C-95.6 130.9 -102.6 78 -124.2 18.3C-145.8 -41.3 -182 -107.6 -163.7 -144.8C-145.4 -182 -72.7 -190 -13.4 -179.3C45.9 -168.6 91.7 -139.2 140.5 -95"
+                fill="url(#myGradient)">
+              </path>
+              <rect x="-130" y="-50" rx="5" ry="5" width={270} height={65} fill='white' filter="url(#shadow)" />
+              <text x="-130" y="10" fill="url(#myGradient)" className='vectorText'>
+                ECLAIR
+              </text>
+            </g>
+          </svg>
+        </div>
         <div className='box2-right'>
           <YoutubeEmbed />
         </div>
