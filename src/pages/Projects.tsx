@@ -52,6 +52,7 @@ function Projects() {
     rect: new DOMRect(10, 20, 30, 40)
   });
 
+  const cardLocation: RefObject<HTMLDivElement> = useRef(null);
   const cardLocation0: RefObject<HTMLDivElement> = useRef(null);
   const cardLocation1: RefObject<HTMLDivElement> = useRef(null);
   const cardLocation2: RefObject<HTMLDivElement> = useRef(null);
@@ -59,6 +60,9 @@ function Projects() {
   const cardLocation4: RefObject<HTMLDivElement> = useRef(null);
   const cardLocation5: RefObject<HTMLDivElement> = useRef(null);
   const cardLocation6: RefObject<HTMLDivElement> = useRef(null);
+
+  
+
   const handleOpenPopup = (info : {
     id: number;
     img: string;
@@ -149,14 +153,28 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
     }
-  ]
+  ];
+  // const refs = Array.from({ length: cardData.length }, () => useRef<HTMLDivElement>(null));
+  // const refs = Array.from({ length: cardData.length }, () => useRef<HTMLDivElement>(null));
+  // const cardLocations
+  // const cardLocation: RefObject<HTMLDivElement> = useRef(null);
+  // const cardLocations: Array<RefObject<HTMLDivElement>> = []
+  const cardLocations = useRef<Array<HTMLDivElement | null>>([]);
+
+  useEffect(() => {
+    cardLocations.current = cardLocations.current.slice(0, cardData.length);
+ }, [cardData]);
+
+  // for (let i = 0; i < cardData.length; i++) {
+  //   cardLocations.push(useRef(null));
+  // }
 
   return (
     <div className='everything'>
       <h1 className = 'projectsTitle'>Projects</h1>
       <div className='gridContainer'>
         <div className='projectCards'>
-          {/* {cardData.map((card) => (
+          {cardData.map((card, index) => (
             <ImageProjectCard
               key = {card.id}
               name = {card.name}
@@ -166,11 +184,12 @@ function Projects() {
               desc = {card.desc}
               git = {card.git}
               gantt = {card.gantt}
-              ref={cardLocation}
-              onOpenPopup={() => handleOpenPopup(card, cardLocation.current?.getBoundingClientRect())}
+              // ref={cardLocation}
+              ref={el => cardLocations.current[index] = el}
+              onOpenPopup={() => handleOpenPopup(card, cardLocations.current[index]?.getBoundingClientRect())}
             />
-          ))} */}
-          <ImageProjectCard 
+          ))}
+          {/* <ImageProjectCard 
             key= {cardData[0].id}
             name = {cardData[0].name}
             img = {cardData[0].img}
@@ -253,7 +272,7 @@ function Projects() {
             gantt = {cardData[6].gantt}
             ref={cardLocation6}
             onOpenPopup={() => handleOpenPopup(cardData[6], cardLocation6.current?.getBoundingClientRect())}
-            />
+            /> */}
         </div>
       </div>
       <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
