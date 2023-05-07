@@ -13,10 +13,10 @@
 .header-right {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     flex: 2 1 auto;
     max-width: 75%;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 
@@ -25,10 +25,18 @@
     font-size: 3rem;
     font-weight: bold;
     font-family: titillium web, sans-serif;
-    text-align: center;
+    text-align: left;
     overflow: visible;
     max-width: 100%;
     object-fit: fill;
+}
+
+.eclairButton-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    
 }
 
 .box2 {
@@ -37,7 +45,7 @@
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     gap: 2rem;
-    align-items: normal;
+    
     min-height: 25em;
     background-color: #1F2532;
     padding-top: 10rem;
@@ -74,6 +82,8 @@
     color: white;
 }
 
+
+
 .infoImage {
     max-width: 100%;
     max-height: 100%;
@@ -97,21 +107,98 @@
     text-align: left;
 }
 
+#informationText {
+    min-height: 5em;
+}
+
+#visual path{
+    animation: blobbin 5s infinite alternate;
+    /* fill:  */
+
+    fill: linear-gradient(to right, #20c997, #ff77ff)
+}
+.vectorText {
+    /* fill: linear-gradient(to bottom, red, blue); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', 'Titilium Web';
+    font-style: normal;
+    font-size: 5rem;
+}
+
+@keyframes blobbin {
+    0% {
+        d: path("M140.5 -95C189.2 -50.9 240.9 7.9 239 69.9C237.1 131.9 181.7 197 118.2 216.5C54.7 236.1 -16.9 209.9 -56.2 170.4C-95.6 130.9 -102.6 78 -124.2 18.3C-145.8 -41.3 -182 -107.6 -163.7 -144.8C-145.4 -182 -72.7 -190 -13.4 -179.3C45.9 -168.6 91.7 -139.2 140.5 -95");
+    }
+    /* 50% {
+        d: path("M174.6 -169.5C192.9 -116.4 151.3 -45.7 121.2 4.1C91.1 53.9 72.4 82.8 40.7 106.6C9 130.3 -35.9 149 -67.3 135.5C-98.6 122 -116.6 76.3 -122 33.3C-127.5 -9.7 -120.4 -50 -98 -104.2C-75.6 -158.3 -37.8 -226.1 20.2 -242.2C78.2 -258.3 156.4 -222.7 174.6 -169.5");
+    } */
+    50% {
+        d : path("M179 -138.3C201.5 -114.4 168.5 -41.7 144.2 20.1C119.8 81.9 104.2 132.8 71.8 148.1C39.3 163.4 -9.8 143 -65.7 121.7C-121.6 100.5 -184.1 78.4 -198.8 38.4C-213.4 -1.5 -180.2 -59.4 -139.1 -87.5C-98 -115.6 -49 -114.1 14.6 -125.7C78.2 -137.4 156.4 -162.2 179 -138.3");
+    }
+    100% {
+        d: path("M129.4 -113.5C165 -58.6 189.2 -4.9 178.8 40.8C168.4 86.5 123.2 124.4 79.5 133.1C35.8 141.9 -6.5 121.6 -64.9 105C-123.2 88.3 -197.6 75.2 -228.6 27.1C-259.5 -21 -247 -104 -201.7 -161.2C-156.4 -218.4 -78.2 -249.7 -15.6 -237.2C46.9 -224.7 93.8 -168.5 129.4 -113.5")
+    }
+    /* 80% {
+        d: path("M109.1 -93.2C143.8 -74.5 175.9 -37.2 192.5 16.6C209.1 70.5 210.3 140.9 175.6 178.3C140.9 215.6 70.5 219.8 -0.1 219.9C-70.7 220 -141.4 216.1 -184.8 178.8C-228.1 141.4 -244 70.7 -234.1 9.9C-224.2 -50.9 -188.5 -101.8 -145.2 -120.6C-101.8 -139.3 -50.9 -125.9 -6.8 -119.1C37.2 -112.2 74.5 -112 109.1 -93.2")
+    } */
+    /* 100% {
+        d: path("M173.3 -205.6C226.7 -161.8 273.4 -109.1 293.5 -44.5C313.5 20.2 307 96.9 263.3 132.7C219.6 168.5 138.6 163.6 71.6 181.3C4.5 199.1 -48.7 239.5 -119.1 248.2C-189.5 256.9 -277 233.7 -298.5 180.2C-319.9 126.8 -275.2 43.1 -262.6 -49.5C-250 -142 -269.7 -243.4 -231.2 -289.8C-192.8 -336.1 -96.4 -327.6 -18.2 -305.9C60 -284.2 120 -249.3 173.3 -205.6")
+    } */
+
+}
 
 @media screen and (max-width: 1000px) {
+
+    .header-right {
+        align-items: center;
+        justify-content: center;
+    }
+
     .box2 {
         grid-template-columns: 1fr;
         /* a single column with a width of 1 fraction of the available space */
-        height: 50em;
-
+        height: 55em;
+        gap: 0em;
+        align-items: center;
         padding-top: 10em;
         padding-bottom: 10em;
+        justify-items: center;
+        min-height: fit-content;
+        overflow: hidden;
+    }
+
+    .infoImage {
+        padding: 0em;
+    }
+
+    .box1_5-textRight {
+        height: fit-content;
+        padding: 0%;
+    }
+
+    .box2-override {
+        padding-top: 0em;
+        padding-bottom: 0em;
     }
 
     .box2-right {
         height: 30em;
         padding-left: 5em;
     }
+
+    .box2-encloser {
+        max-height: fit-content;
+    }
+
+    #informationText {
+        min-height: fit-content;
+        padding-bottom: 5em;
+    }
+
+    
 }
 
 

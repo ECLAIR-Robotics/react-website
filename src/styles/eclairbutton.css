@@ -27,7 +27,7 @@
     width: inherit;
     height: inherit;
     margin-left: 0em;
-    background-image: linear-gradient(to left, rgb(198, 117, 255), rgb(0, 80, 199));
+    background-image: linear-gradient(to left, #c675ff, #0050c7);
     transition: opacity 1s ease-out;
     z-index: 2;
     opacity: 0;
