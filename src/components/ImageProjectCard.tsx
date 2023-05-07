@@ -7,7 +7,7 @@ import '../styles/imageprojectcard.css';
 // import fitnessP from '../static/images/fitnessP.jpg';
 // import musicP from '../static/images/musicP.jpg';
 // import Popup from './Popup';
-// import TestVid from '../static/videos/testvid.mp4'
+import TestVid from '../static/videos/chessTest.gif';
 
 interface Props {
     img: string;
@@ -44,6 +44,7 @@ const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) 
                 <div className="clickText">Click to learn more!</div>
             </div>
             <img src={props.img} className="cardImage"></img>
+            <img src={TestVid} className='projectVideo'></img>
             {/* <video className='projectVideo' ref={videoRef} controls={false} muted={true}>
                 <source src={TestVid}></source>
             </video> */}
