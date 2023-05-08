@@ -16,11 +16,12 @@
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     font-size: 3em;
-    margin-bottom: 0;
+    margin: 0;
+    color: white;
 }
 
 .currentSetFilter {
-    color: black;
+    color: white;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
     text-decoration-color: rgb(198, 117, 255);
@@ -38,7 +39,29 @@
     display: flex;
     /* border: 1px solid green; */
     justify-content: center;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    margin: 0;
+}
+
+.projectPageHeading {
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+    /* border: 1px solid pink; */
+    /* display: flex; */
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    background-color: #2d3549;
+
+}
+
+.projectBackToHome {
+    margin-right: 30px;
+}
+.slash {
+    margin-right: 30px;
 }
 
 .filterOptions {
@@ -47,11 +70,13 @@
     align-items: center;
     display: flex;
     /* border: 1px solid red; */
-    color: gray
+    color: gray;
+    margin: 0;
+    padding-bottom: 1.5rem;
 }
 
 .filterOption:hover {
-    color: black;
+    color: white;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
     text-decoration-color: rgb(198, 117, 255);
@@ -82,4 +107,5 @@
     row-gap: 3.25rem;
     column-gap: 3.25rem;
     justify-content: center;
+    /* background-color: #000539; */
 }
