@@ -26,6 +26,7 @@ import projectNormalBG1 from '../static/vectors/projectNormalBG1.svg';
 import projectNormalBG2 from '../static/vectors/projectNormalBG2.svg';
 import projectNormalBG3 from '../static/vectors/projectNormalBG3.png';
 import projectNormalBG4 from '../static/vectors/projectNormalBG4.png';
+import projectNormalBG5 from '../static/vectors/projectNormalBG5.svg';
 
 // interface Info {
 //   id : number;
