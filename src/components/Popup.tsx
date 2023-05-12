@@ -1,6 +1,6 @@
-import React, {ReactNode, FunctionComponent} from "react";
+import React, {ReactNode, FunctionComponent, useRef} from "react";
 import '../styles/popup.css';
-import styled, { keyframes, css } from 'styled-components'; 
+import styled, { keyframes, css,  } from 'styled-components'; 
 import ImageSlider from '../components/ImageSlider';
 
 
@@ -69,9 +69,21 @@ function Popup(props : Props) {
     const StyledPopup = styled.div<Props>`
         animation: ${({ cardInfo }) => popupAnimation(cardInfo?.rect)} 1s ease-in-out; 
     `;
+
+    const backgroundRef = useRef<HTMLDivElement>(null);
+
+    const handleClick: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        if (backgroundRef.current && event.target == backgroundRef.current) {
+          // clicked on component
+          props.onClose();
+        } else {
+          // clicked outside component
+          console.log('hi')
+        }
+      };
   
     return (
-    <div className={`entirePopup ${props.vis ? "isVis" : ""}`} onClick={props.onClose}>
+    <div className={`entirePopup ${props.vis ? "isVis" : ""}`} onClick={handleClick} ref={backgroundRef}>
       {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} > original */}
       {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateY(${props.vis ? "0" :  (props.cardInfo!.rect!.top - (props.cardInfo!.rect!.height / 2))}px)`, scale:`0.1`, transition:"transform 1s" }}> */}
       {/* <div className={`popupContent ${props.vis ? "isVis" : ""}`} style={{position:'fixed', transform: `translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%))`, scale:`1`, transition:"transform 0s" }}> */}
@@ -88,7 +100,7 @@ function Popup(props : Props) {
               : "none"}`
           }}
         > */}
-      <StyledPopup onClose={props.onClose} vis={props.vis} cardInfo={props.cardInfo} className={`popupContent ${props.vis ? "isVis" : ""}`}>
+      <StyledPopup onClose={props.onClose} vis={props.vis} cardInfo={props.cardInfo} className={`popupContent ${props.vis ? "isVis" : ""}`} >
       <div className="popupCloseButtonHolder">
         <button className="closeButton" onClick={props.onClose}>X</button>
       </div>
