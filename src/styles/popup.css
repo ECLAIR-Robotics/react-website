@@ -22,6 +22,11 @@
 
 
 
+.carHolder {
+    height: 20rem;
+    border: 1px solid black;
+}
+
 .entirePopup {
     position: fixed;
     top: 0;

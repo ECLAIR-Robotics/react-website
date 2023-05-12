@@ -9,6 +9,7 @@ import '../styles/imageprojectcard.css';
 // import Popup from './Popup';
 import TestVid from '../static/videos/chessTest.gif';
 
+
 interface Props {
     img: string;
     name: string;
@@ -25,6 +26,9 @@ interface Props {
 }
 
 const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
+
+
+    
 
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isHovering, setIsHovering] = useState(false);
