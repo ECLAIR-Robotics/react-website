@@ -88,6 +88,7 @@
     max-width: 100%;
     max-height: 100%;
     border-radius: 1em;
+    position: relative;
     box-shadow: 10px 10px 5px #191e28 ;
 }
 
@@ -114,9 +115,27 @@
 #visual path{
     animation: blobbin 5s infinite alternate;
     /* fill:  */
-
+    
     fill: linear-gradient(to right, #20c997, #ff77ff)
 }
+
+.animatedBlob {
+    display: flex;
+}
+
+.box2-override4 {
+    display: flex;
+    position: relative;
+    grid-template-columns: 0.5fr 1fr;
+    flex-direction: row;
+    background-color: #1F2532;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    color: #2d3549;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .vectorText {
     /* fill: linear-gradient(to bottom, red, blue); */
     display: flex;
@@ -186,7 +205,7 @@
 
     .box2-right {
         height: 30em;
-        padding-left: 5em;
+        padding-left: 10em;
     }
 
     .box2-encloser {
@@ -196,6 +215,10 @@
     #informationText {
         min-height: fit-content;
         padding-bottom: 5em;
+    }
+
+    #visual{
+        transform: translate(-100px, 0px);
     }
 
     

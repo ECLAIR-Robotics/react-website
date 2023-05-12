@@ -39,6 +39,7 @@ function Homepage() {
           background: `url(${headerBackground})  center center no-repeat `,
           backgroundSize: 'cover',
         }} >
+
           <div className='box1-left'>
             <Fade in={true} timeout={2000}>
               <img className='left-img' src={Logo} alt='logo' />
@@ -59,6 +60,7 @@ function Homepage() {
               <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
             </svg>
           </div>
+
         </div>
 
       </section>
@@ -114,7 +116,7 @@ function Homepage() {
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
-        <div> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
+        <div className = "animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
           <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             version="1.1">
             <defs>
@@ -131,6 +133,7 @@ function Homepage() {
             <g transform="translate(425.17812071839586 297.4107165965745)">
               <path id='pathBefore'
                 d="M140.5 -95C189.2 -50.9 240.9 7.9 239 69.9C237.1 131.9 181.7 197 118.2 216.5C54.7 236.1 -16.9 209.9 -56.2 170.4C-95.6 130.9 -102.6 78 -124.2 18.3C-145.8 -41.3 -182 -107.6 -163.7 -144.8C-145.4 -182 -72.7 -190 -13.4 -179.3C45.9 -168.6 91.7 -139.2 140.5 -95"
+                transform='translate(0,0)'
                 fill="url(#myGradient)">
               </path>
               <rect x="-130" y="-50" rx="5" ry="5" width={270} height={65} fill='white' filter="url(#shadow)" />
