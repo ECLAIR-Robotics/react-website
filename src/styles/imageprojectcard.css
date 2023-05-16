@@ -2,7 +2,7 @@
 .entireCard {
     overflow: hidden;
     /* box-shadow: 0 2px 20px rgb(107, 107, 107); */
-    /* border-radius: 5px; */
+    border-radius: 4px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
