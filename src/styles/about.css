@@ -1,3 +1,16 @@
+
+.aboutSectionHeader {
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+    /* border: 1px solid pink; */
+    /* display: flex; */
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    background-color: #2d3549;
+}
 .aboutContainer {
     display: flex;
     flex-direction: row;
@@ -9,7 +22,7 @@
     height: 100%;
     padding-top: 10em;
     padding-bottom: 10em;
-    background-color: gainsboro;
+    background-color: #191e28;
 }
 
 .cardContainer {
@@ -18,4 +31,26 @@
     justify-content: center;
     width: 100em;
     height: 40em;
+}
+
+/* Everything After this is divider css */
+
+.custom-shape-divider-bottom-1684440846 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1684440846 svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1684440846 .shape-fill {
+    fill: #191e28;
 }

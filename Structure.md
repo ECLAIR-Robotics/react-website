@@ -13,7 +13,6 @@
     - Founders (for future)
     - Where we meet 
     - Embedded Google Map
-    - When we meet
     - How to join
     
 * What we do

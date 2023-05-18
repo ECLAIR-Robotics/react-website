@@ -122,7 +122,7 @@ function Homepage() {
             <defs>
               <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#c675ff" />
-                <stop offset="100%" stop-color="c" />
+                <stop offset="100%" stop-color="#0050c7" />
               </linearGradient>
             </defs>
             <defs>

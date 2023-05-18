@@ -1,19 +1,135 @@
+:root {
+    --standard-gap: 0.5em;
+    --card-closed-height: 25em;
+    --card-extended-height: 40em;
+}
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 30em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
 .baseOfficerCard {
     border-radius: 1em;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 20em;
-    height: 25em;
+    background: white;
+    background: linear-gradient(to right, #c675ff, #0050c7);
+    max-width: 20em;
+    height: var(--card-closed-height);
+    position: absolute;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
+    animation: close 0.5s ease;
+}
+
+.baseOfficerCard.open {
+    animation: extend 0.5s ease;
+    height: var(--card-extended-height);
+}
+
+@keyframes extend {
+    0% {
+        height: var(--card-closed-height);
+    }
+    100% {
+        height: var(--card-extended-height);
+    }
+}
+
+@keyframes close {
+    0% {
+        height: var(--card-extended-height);
+    }
+    100% {
+        height: var(--card-closed-height);
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
 
+.officerCardOverlay {
+    position: relative;
+    border-radius: 1em;
+    margin: 1em;
+    height: 90%;
+    position: relative;
+    background: white;
+    box-shadow: 5px 5px 10px black;
+}
+
+.officerInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: var(--standard-gap);
+    padding-bottom: var(--standard-gap);
+    gap: var(--standard-gap);
+}
+
+.cardDrawerInvisible {
+    visibility: hidden;
+    
+    transition: visible 0.5s ease;
+}
+
+.cardDrawerVisible {
+    visibility: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+
+}
+
+.cardDrawerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 0.5em;
+    overflow: hidden;
+    height: 7em;
+    padding-left: 1em;
+    padding-right: 1em;
+   
+    padding-bottom: var(--standard-gap);
+}
+
+.imageContainer {
+    overflow: hidden;
+}
+
+.dividerOfficerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    width: 90%;
+    background: linear-gradient(to right, #c675ff, #0050c7);
+    border-radius: 1em;
+    margin-top: var(--standard-gap);
+    margin-bottom: var(--standard-gap);
+}
+
 .officerImage {
+    border-radius: 1em;
     width: 100%;
-    height: 85%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.officerImage:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s ease;
 }
 
 .officerName {

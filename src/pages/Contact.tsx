@@ -1,14 +1,7 @@
 import React from 'react'
-import Grid from '@mui/material/Grid'
 import '../styles/contact.css';
-import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
-// import idk from '../static/vectors/contact.svg';
 import idk from '../static/vectors/contact1.svg';
-import cBG from '../static/vectors/contactBG.svg';
-import cBG1 from '../static/vectors/contactBG1.svg';
 import cBG2 from '../static/vectors/contactBG2.svg';
-import { Box } from '@mui/material';
-
 function Contact() {
   return (
     <>
@@ -23,11 +16,8 @@ function Contact() {
               src="https://forms.gle/Y4zdbCFiC2G9arpL8"
               width="45%"
               height="700"
-              // frameBorder="0
-              // marginHeight="0"
-              // marginWidth="0"
               title="Google Form"
-              style={{paddingTop:'5rem', border:'none'}}
+              style={{paddingTop:'5rem', borderRadius:'1em' , border:'none'}}
             >
               Loading...
             </iframe>
