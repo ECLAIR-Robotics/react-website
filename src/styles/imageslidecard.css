@@ -1,0 +1,171 @@
+
+.entireCard1 {
+    overflow: hidden;
+    /* box-shadow: 0 2px 20px rgb(107, 107, 107); */
+    border-radius: 4px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-property: all;
+    transition-duration: 0.5s;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    /* opacity: 0; */
+}
+
+.entireCard1:hover {
+    scale:1.02;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.entireCard1:after {
+    background-image: linear-gradient(135deg, rgb(198, 117, 255), rgb(0, 80, 199));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    content: '';
+    color:white;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-out;
+}
+
+.projectVideo {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 2;
+    /* width: 100%; */
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: hidden;
+    opacity: 0;
+}
+
+.entireCard1:hover .projectVideo {
+    opacity: 1;
+    /* transition: opacity 0.5s; */
+}
+
+.entireCard1:hover:after {
+    opacity: 1;
+}
+
+.cardImage {
+    z-index: 2;
+    /* width: 100%; */
+    height: 100%;
+    overflow-x: hidden;
+    object-fit: cover;
+}
+
+.projectName {
+    content : attr(data-text);
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: xx-large;
+
+    margin-left: 1rem;
+    font-style: italic;
+    color:white;
+    margin-bottom: 3rem;
+
+    /* opacity: 0;
+    transition: all;
+    transition: 0.5s; */
+
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+}
+
+.divider {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    margin-left: 1rem;
+    /* font-style: italic; */
+    /* color:white; */
+    width: 60%;
+    height:0px;
+    margin-bottom: 2.5rem;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+}
+
+.clickText {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    margin-left: 1rem;
+    font-style: italic;
+    color:white;
+    margin-bottom: 1rem;
+
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+
+}
+
+.entireCard1:hover .projectName {
+    /* opacity: 1;
+    transition: all;
+    transition: 0.5s; */
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+}
+
+.entireCard1:hover .divider {
+    /* opacity: 1;
+    width: 60%;
+    transition-property: opacity, width;
+    transition: 0.5s, 0.5s ease-in-out; */
+
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+}
+
+.entireCard1:hover .clickText {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity, transform;
+    transition: 0.5s, 0.5s ease-in-out;
+}
+
+.entireCard1:active {
+    scale: 0.97;
+    /* transition-property: all; */
+    /* transition-duration: 0.5s; */
+}
+
+/* Popup {
+    z-index: 4;
+    border-color: rebeccapurple;
+    height: max-content;
+} */
+
+div {
+    /* height: 100%; */
+}
