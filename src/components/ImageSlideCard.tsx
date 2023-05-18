@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState, useRef, forwardRef, useEffect} from 'react';
-import '../styles/imageprojectcard.css';
+import '../styles/imageslidecard.css';
 
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
 const ImageSlideCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
     
     return (
-        <div className="entireCard" onClick={props.openSlides} ref ={ref} >
+        <div className="entireCard1" onClick={props.openSlides} ref ={ref} >
             <div className="overlayText">
                 <div className="projectName" data-text={props.name}>{props.name}</div>
                 <hr className="divider" />
