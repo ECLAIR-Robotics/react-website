@@ -9,7 +9,6 @@
 * About us
     - Officers
     - Leads
-    - Alumni
     - Founders (for future)
     - Where we meet 
     - Embedded Google Map

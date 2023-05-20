@@ -1,4 +1,3 @@
-
 .aboutSectionHeader {
     height: fit-content;
     padding-top: 5rem;
@@ -11,16 +10,23 @@
     color: white;
     background-color: #2d3549;
 }
+
+.sectionTitle {
+    color: white;
+    font-size: 4em;
+
+}
+
 .aboutContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 10em;
+
     padding-bottom: 10em;
     background-color: #191e28;
 }
@@ -31,6 +37,21 @@
     justify-content: center;
     width: 100em;
     height: 40em;
+}
+
+.aboutUsFoundersSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background: #2d3549;
+
 }
 
 /* Everything After this is divider css */
@@ -53,4 +74,25 @@
 
 .custom-shape-divider-bottom-1684440846 .shape-fill {
     fill: #191e28;
+}
+
+.custom-shape-divider-bottom-1684580367 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1684580367 svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1684580367 .shape-fill {
+    fill: #2D3549;
 }
