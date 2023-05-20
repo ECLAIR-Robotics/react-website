@@ -48,8 +48,8 @@
     
     min-height: 25em;
     background-color: #1F2532;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
+    /* padding-top: 10rem; */
+   
     color: #2d3549;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,16 +124,8 @@
 }
 
 .box2-override4 {
-    display: flex;
-    position: relative;
-    grid-template-columns: 0.5fr 1fr;
-    flex-direction: row;
-    background-color: #1F2532;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-    color: #2d3549;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 .vectorText {
@@ -288,7 +280,9 @@
 }
 
 /* First and second section divider */
-.custom-shape-divider-bottom-1683336780 {
+
+
+.custom-shape-divider-bottom-1684597940 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -297,15 +291,13 @@
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1683336780 svg {
+.custom-shape-divider-bottom-1684597940 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 178px;
+    height: 183px;
 }
 
-.custom-shape-divider-bottom-1683336780 .shape-fill {
-    fill: #191e28;
-    /* fill: white; */
+.custom-shape-divider-bottom-1684597940 .shape-fill {
+    fill: #191E28;
 }
-

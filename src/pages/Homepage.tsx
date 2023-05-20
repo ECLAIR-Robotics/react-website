@@ -55,8 +55,12 @@ function Homepage() {
               <ECLAIRButton handleClick={handleClick} text="PROJECTS" />
             </div>
           </div>
-          
 
+          <div className="custom-shape-divider-bottom-1684597940">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" className="shape-fill"></path>
+            </svg>
+          </div>
         </div>
 
       </section>
@@ -99,7 +103,7 @@ function Homepage() {
       </section>
 
       {/* Section 3 */}
-      <section className='box2'
+      <section className='box2 box2-override4'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
           backgroundSize: 'cover',
@@ -112,7 +116,7 @@ function Homepage() {
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
           </svg>
         </div>
-        <div className = "animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
+        <div className="animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
           <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
             version="1.1">
             <defs>

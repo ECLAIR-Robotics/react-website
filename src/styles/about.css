@@ -49,8 +49,47 @@
     height: 100%;
     padding-top: 5em;
     padding-bottom: 5em;
-    background: #202734;
+    background: #2d3549;
+}
 
+.embeddedGoogleMap {
+    height: 25em;
+    width: 40em;
+    border-radius: 1em;
+    position: relative;
+    box-shadow: 10px 10px 5px #191e28 ;
+}
+
+.joinInstructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: gray;
+}
+
+.locationInstructions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    margin: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: gray;
+}
+
+.discordLogo {
+    margin-top: 0.5rem;
+    max-width: 4rem;
+    max-height: 4rem;
+    padding-top: 1em;
 }
 
 /* Everything After this is divider css */
@@ -93,5 +132,5 @@
 }
 
 .custom-shape-divider-bottom-1684594327 .shape-fill {
-    fill: #202734;
+    fill: #2d3549;
 }
