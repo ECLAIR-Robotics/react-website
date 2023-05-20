@@ -1,0 +1,104 @@
+
+.tierCard {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199));
+    border-image-slice: 1;
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+}
+
+.sponsorText {
+    opacity: 0;
+    scale: 1.1;
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199));
+    border-image-slice: 1;
+    padding: 1rem;
+    color:'white';
+    font-family:'poppins';
+    width:'50%';
+    justify-self:'center';
+    align-self:'center';
+    text-align:'center';
+    /* font-weight: 100; */
+}
+
+.vis{
+    opacity: 1;
+    scale: 1;
+    background-color: black;
+    transition: all 1s ease-in-out;
+}
+
+.tierHolder {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding-bottom: 5rem;
+    transform: translateX(-200%);
+}
+
+.vi {
+    transform: translateX(00%);
+    transition: all 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.tierTitle {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.diamond {
+    color:#7fd6ff;
+}
+
+.gold {
+    color: #ffd700;
+}
+
+.silver {
+    color: #c7c7c7;
+}
+
+
+.perkList {
+    color: rgb(241, 241, 241);
+    font: lighter;
+}
+
+.perkList li {
+    margin-bottom: 1rem;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.cgE {
+    display: flex;
+}
+
+.cgPic {
+    width: 4rem;
+    margin-right: 1.5rem;
+}
+
+.cgTitle {
+    font-size: x-large;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.cgData {
+    font-size: large;
+}
