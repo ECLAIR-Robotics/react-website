@@ -1,5 +1,12 @@
-import React from 'react'
-import emailjs from '@emailjs/browser'
+import React from 'react';
+import emailjs from '@emailjs/browser';
+
+
+/*
+    THINGS TO DO:
+        * Make fields required
+        * Make the fields disappear once email has been successfully sent
+*/
 
 const Mailer = () => {
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
