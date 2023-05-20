@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/contact.css';
 import idk from '../static/vectors/contact1.svg';
 import cBG2 from '../static/vectors/contactBG2.svg';
-import Mailer from '../components/mailer';
 function Contact() {
   return (
     <>
@@ -13,7 +12,7 @@ function Contact() {
       <div style={{backgroundImage: `url(${cBG2})`, height: "fit-content", width: '100%',backgroundPosition:'top', backgroundSize:'100vw'}}>
         <div className='hiii' style={{width:'100%', height:'100%'}}>
           <div style={{width: '100%', height: 'fit-content', display:'flex', justifyContent:'center'}}>
-            <Mailer/>
+            {/* <Mailer/> */}
           </div>
           
           <div style={{display:'flex', justifyContent:'center'}}>

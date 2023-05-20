@@ -157,7 +157,7 @@
 @media screen and (max-width: 1000px) {
 
     .header-right {
-        align-items: center;
+        align-items: left;
         justify-content: center;
     }
 
