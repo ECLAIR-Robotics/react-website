@@ -18,7 +18,7 @@
 .baseOfficerCard {
     border-radius: 1em;
     background: white;
-    background: linear-gradient(to right, hsl(275, 100%, 73%), #0050c7);
+    background: linear-gradient(to right, #c675ff, #0050c7);
     max-width: 20em;
     height: var(--card-closed-height);
     position: absolute;
@@ -107,7 +107,7 @@
 .imageContainer {
     overflow: hidden;
     border-radius: 1em;
-    height: 80%;
+    height: 18em;
 }
 
 .dividerOfficerCard {
