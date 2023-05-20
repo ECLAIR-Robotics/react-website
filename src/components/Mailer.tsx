@@ -18,32 +18,66 @@ const Mailer = () => {
         <div className = "border"
         style = {{
             marginTop:"50px", 
-            width: "50%",
-            backgroundImage: "linear-gradient(135deg, #c675ff, #0050c7)",
+            width: "45%",
+            backgroundColor: '#424868',
             backgroundPosition: "center",
             backgroundSize: "cover",
         }}>
             <form 
+
                 className = "margins" 
-                style = {{margin:"25px 85px 75px 100px"}}
+                style = {{margin:"25px 85px 75px 100px", justifyContent:'center', paddingLeft: '80px', marginTop: "70px"}}
                 onSubmit = {sendEmail} >
             
-                <label>Name</label>
-                <input type = "text" name = "name" className = "form-control"/>
+                <label 
+                    style = {{display: 'flex', fontSize: '26px', }} 
+                    id = "boldText" >Name</label>
+                <input 
+                    type = "text" 
+                    name = "name" 
+                    className = "form-control"
+                    style = {{
+                        display: 'flex', 
+                        width: '500px',
+                        height: '30px',
+                        marginTop: "10px",
+                        justifyContent:'center'}} 
+                />
 
-                <label>Email</label>
-                <input type = "email" name = "user_email" className = "form-control"/>
+                <label 
+                    style = {{display: 'flex', fontSize: '26px', marginTop: "20px"}}
+                    id = "boldText" >Email</label>
+                <input 
+                    type = "email" 
+                    name = "user_email" 
+                    className = "form-control"
+                    style = {{
+                        display: 'flex', 
+                        width: '500px',
+                        height: '30px',
+                        marginTop: "10px"}} 
+                    />
 
-                <label>Message</label>
-                <textarea name = "message" className = "form-control"/>
-                
+                <label 
+                    id='boldText' 
+                    style = {{display: 'flex', fontSize: '26px', marginTop: "20px"}} >Message</label>
+                <textarea 
+                    name = "message" 
+                    className = "form-control"
+                    rows = {10}
+                    cols = {66} 
+                    style = {{
+                        display: 'flex', 
+                        marginTop: "10px"}} />
+
                 <input 
                     type = "submit" 
-                    value = "Send" 
                     className = "form-control"
-                    style = {{marginTop: "30px"}}
+                    style = {{marginTop: "30px", width: '100px',
+                    height: '40px', fontSize: '20px'}}
                 />
             </form>
+            
         </div>
 
     )
