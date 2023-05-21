@@ -1,6 +1,9 @@
 import React from 'react'
 import '../styles/officerCard.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {useRef} from 'react'
+import {useHover} from 'usehooks-ts'
+
 interface Props {
   name?: string;
   position?: string;
@@ -16,18 +19,35 @@ function OfficerCards(props: Props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const [drawerClass, setDrawerClass] = useState('cardDrawerInvisible')
 
+  const hoverRef = useRef(null);
+  const isHovering = useHover(hoverRef);
+
+  useEffect(() => {
+    if (!isHovering){
+      closeDrawer()
+    }
+  },[isHovering]);
+
   const handleClick = () => {
     if (!isDrawerOpen) {
-      setDrawerClass('cardDrawerVisible')
-      setIsDrawerOpen(true)
+      openDrawer()
     } else {
-      setDrawerClass('cardDrawerInvisible')
-      setIsDrawerOpen(false)
+      closeDrawer()
     }
+  }
+
+  const openDrawer = () => {
+    setDrawerClass('cardDrawerVisible')
+      setIsDrawerOpen(true)
+  }
+
+  const closeDrawer = () => {
+    setDrawerClass('cardDrawerInvisible')
+    setIsDrawerOpen(false)
   }
   return (
 
-    <div className={`baseOfficerCard ${isDrawerOpen ? 'open' : ''}`} onClick={handleClick}>
+    <div ref={hoverRef} className={`baseOfficerCard ${isDrawerOpen ? 'open' : ''}`} onClick={handleClick}>
       <div className='officerCardOverlay'>
         <div className="imageContainer">
           <img src={props.img} className="officerImage"></img>

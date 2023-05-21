@@ -4,10 +4,63 @@ import OfficerCards from '../components/OfficerCards'
 import '../styles/about.css'
 import placeholderImg from '../static/images/officer/placeholder.png'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
-import DiscordLogo from '../static/images/social-icons/Discord-Logo-White.png';
+import { ReactComponent as DiscordSVG } from '../static/vectors/social-vectors/discord-mark-white.svg';
 import foundersBackground from '../static/vectors/founders-background.svg'
+import discordPng from '../static/images/social-icons/Discord-Logo-White.png'
 
 function About() {
+
+  const officerCardsArray = [
+    {
+      name: 'Tanay Garg',
+      position: 'President',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    },
+    {
+      name: 'Angelica Sharma',
+      position: 'President',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    }, 
+    {
+      name: 'Vishal Kantharaju',
+      position: 'Vice President',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    },
+    {
+      name: 'TBD',
+      position: 'Historian',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    },
+    {
+      name: 'TBD',
+      position: 'Corporate Officer',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    },
+    {
+      name: 'TBD',
+      position: 'Freshman Representative',
+      img: placeholderImg,
+      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
+      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
+      email: 'tanay.garg@utexas.edu'
+    }
+  ]
+
   return (
     <>
       <section className="aboutSectionHeader">
@@ -24,7 +77,8 @@ function About() {
         backgroundSize: 'cover',
       }} >
         <div className="officerGridHolder">
-          <Grid container spacing={2} sx={{ paddingTop: '3em' }}>
+          <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
+            
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
                 name='Tanay Garg'
@@ -82,9 +136,9 @@ function About() {
           </Grid>
           <div className="custom-shape-divider-bottom-1684603760">
             <svg id="dividerVisual" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path id = "wave1" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
-              <path id = "wave2" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,95.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
-              <path id = "wave3" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
+              <path id="wave1" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
+              <path id="wave2" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,95.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
+              <path id="wave3" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="shape-fill"></path>
             </svg>
           </div>
         </div>
@@ -126,7 +180,14 @@ function About() {
           </div>
           <div>
             <a href='https://discord.gg/tgbvpCjNgV' target={'_blank'}>
-              <img className='discordLogo' src={DiscordLogo}></img>
+              {/* <img className='discordLogo' src={discordPng} /> */}
+              <svg className='discordSVG'>
+                <defs>
+                  <style>{`.cls-1{fill:#fff;}`}</style>
+                </defs>
+                <path className="cls-1"
+                  d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -137,7 +198,7 @@ function About() {
         <div className='box1_5-textRight'>
           <iframe className="embeddedGoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.6239260786679!2d-97.73857918622161!3d30.288576376509805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b583399f9331%3A0x4c1b35a5244fc3a7!2sAnna%20Hiss%20Gymnasium!5e0!3m2!1sen!2sin!4v1684598907576!5m2!1sen!2sin" ></iframe>
         </div>
-        <div className="box2-encloser">
+        <div className="joiningInstructionsEncloser">
           <div className='locationInstructionsTitle' id='boldText'>
             Where to find us!
           </div>

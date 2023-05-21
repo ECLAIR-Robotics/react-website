@@ -19,7 +19,7 @@
 
 #boldText {
     font-weight: bold;
-    
+
     color: white;
     text-align: left;
 }
@@ -40,7 +40,7 @@
     align-items: column;
     justify-content: center;
     width: 100%;
-    max-height: 40em;
+    max-height: 50em;
 }
 
 .cardContainerFounder {
@@ -52,17 +52,19 @@
     height: 30em;
     flex-direction: column;
     flex-wrap: wrap;
+
     align-content: space-around;
 }
 
 @keyframes slide-in {
     from {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
+
     to {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
 
 @media screen and (max-width: 900px) {
     .cardContainerFounder {
@@ -93,7 +95,40 @@
     width: 40em;
     border-radius: 1em;
     position: relative;
-    box-shadow: 10px 10px 5px #191e28 ;
+    box-shadow: 10px 10px 5px #191e28;
+}
+
+.discordSVG {
+    display: flex;
+    scale: 0.5;
+    transform: translateX(30%);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.discordSVG path {
+    animation: rave 1s ease-in-out infinite alternate;
+}
+
+@keyframes rave {
+    0% {
+        fill: #c675ff;
+        
+    }
+
+    100% {
+        fill: #0050c7;
+        
+    }
+}
+
+.joiningInstructionsEncloser {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .joinInstructions {
@@ -118,7 +153,7 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    margin: 10%;
+    margin-left: 10%;
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     line-height: 1.8;
@@ -130,10 +165,10 @@
     align-items: center;
     justify-content: left;
     text-align: left;
-    margin: 10%;
+    margin-top: 10%;
+    margin-left: 10%;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    line-height: 1.8;
+    font-size: 4rem;
     color: gray;
 }
 
@@ -174,7 +209,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-   
+
 }
 
 
@@ -200,16 +235,17 @@
 
 @keyframes divider {
     0% {
-        
+
         d: path("M0,0V5.63C14,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z")
     }
+
     50% {
-        
+
         d: path("M 0 0 V 5.63 C 14 59 151 132 449 42 c 43 -7.64 84.23 -20.12 127.61 -26.46 c 59 -8.63 112.48 12.24 165.56 35.4 C 827.93 77.22 886 95.24 951.2 90 c 86.53 -7 172.46 -45.71 248.8 -84.81 V 0 Z")
-    
     }
+
     100% {
-       
+
         d: path("M 0 0 V 5.63 C 14 59 380 81 449 42 c 43 -7.64 84.23 -20.12 168 -23 c 59 -8.63 112.48 12.24 202 48 C 898 92 886 95.24 991 88 c 86.53 -7 172.46 -45.71 248.8 -84.81 V 0 Z")
     }
 }
@@ -217,15 +253,17 @@
 
 @keyframes divider2 {
     0% {
-        
+
         d: path("M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z")
     }
+
     50% {
-        
+
         d: path("M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z")
     }
+
     100% {
-       
+
         d: path("M 0 0 V 15.81 C 13 36.92 27.64 56.86 48 71 C 79 85 191 101 233 91 c 31.15 -10.15 61.42 -22.58 90 -33 c 40.92 -19 87 -35 132 -39 c 36.26 -2.85 70.9 9.42 98.6 31.56 c 31.77 25.39 63.4 44.44 104.4 52.44 c 40.44 10.79 81.35 -6.69 119.13 -24.28 s 75.16 -39 116.92 -43.05 c 59.73 -5.85 113.28 22.88 168.9 38.84 c 30.2 8.66 59 6.17 87.09 -7.5 c 22.43 -10.89 48 -26.93 60.65 -49.24 V 0 Z")
     }
 }
