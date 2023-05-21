@@ -39,11 +39,6 @@ function ResponsiveAppBar() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // This function will be called only once when the component is created
-    goToHome();
-  }, []);
-
   const theme = createTheme({
     palette: {
       primary: {
@@ -89,7 +84,7 @@ function ResponsiveAppBar() {
                 overflow: 'visible',
               }}
 
-              onClick={goToHome}
+              // onClick={goToHome}
             >
               ECLAIR
             </Typography>
