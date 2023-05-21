@@ -121,13 +121,13 @@ function Homepage() {
             version="1.1">
             <defs>
               <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#c675ff" />
-                <stop offset="100%" stop-color="#0050c7" />
+                <stop offset="0%" stopColor="#c675ff" />
+                <stop offset="100%" stopColor="#0050c7" />
               </linearGradient>
             </defs>
             <defs>
               <filter id="shadow">
-                <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.5" />
+                <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.5" />
               </filter>
             </defs>
             <g transform="translate(425.17812071839586 297.4107165965745)">

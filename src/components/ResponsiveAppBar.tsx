@@ -27,7 +27,7 @@ function ResponsiveAppBar() {
   };
 
   const goToHome = () => {
-    navigate('/homepage');
+    navigate('/');
   }
 
   interface PalleteColor {
@@ -100,7 +100,7 @@ function ResponsiveAppBar() {
               alignItems: 'flex-start',
 
             }}>
-              <Link to="/homepage" style={{
+              <Link to="/" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',

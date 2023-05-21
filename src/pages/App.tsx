@@ -27,7 +27,7 @@ const contact = () => {
 
 
 
-function App() {
+const App: React.FC = () => {
   
   return (
     <Router>
@@ -35,11 +35,11 @@ function App() {
       <ResponsiveAppBar />
       </div>
       <Routes>
-      <Route path="/homepage" Component={homepage} />
-      <Route path="/about" Component={about} />
-      <Route path="/sponsors" Component={members} />
-      <Route path="/projects" Component={projects} />
-      <Route path="/contact" Component={contact} />
+        <Route path="/" Component={homepage} />
+        <Route path="/about" Component={about} />
+        <Route path="/sponsors" Component={members} />
+        <Route path="/projects" Component={projects} />
+        <Route path="/contact" Component={contact} />
       </Routes>
       <Footer />
     </Router>
