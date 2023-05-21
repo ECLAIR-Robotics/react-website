@@ -31,7 +31,7 @@ import robotarmVid from '../static/videos/robotarmTest.gif';
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import projectNormalBG4 from '../static/vectors/projectNormalBG4.png';
-import temp from '../static/vectors/projectNormalBG2.svg';
+import temp from '../static/vectors/projectNormalBG9.svg';
 
 function Projects() {
   const [showPopup, setShowPopup] = useState(false);
@@ -232,7 +232,7 @@ function Projects() {
         What We Do 
       </div>
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${projectTransHead})`, height: '10rem', backgroundPosition: 'center', backgroundSize: '200vw'}}></div>
-      <div className='projectPageBelowHeader' style={{backgroundImage: `url(${temp})`, backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', }}>
+      <div className='projectPageBelowHeader' style={{backgroundImage: `url(${temp})`, backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}}>
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
