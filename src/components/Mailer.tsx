@@ -33,7 +33,7 @@ const Mailer = () => {
             <form 
 
                 className = "margins" 
-                style = {{margin:"25px 85px 75px 100px", justifyContent:'center', paddingLeft: '80px', marginTop: "70px"}}
+                style = {{margin:"25px 85px 75px 100px", justifyContent:'center', marginTop: "70px"}}
                 onSubmit = {sendEmail} >
             
                 <label 
@@ -45,7 +45,7 @@ const Mailer = () => {
                     className = "form-control"
                     style = {{
                         display: 'flex', 
-                        width: '500px',
+                        width: '96%',
                         height: '30px',
                         marginTop: "10px",
                         justifyContent:'center'}} 
@@ -60,7 +60,7 @@ const Mailer = () => {
                     className = "form-control"
                     style = {{
                         display: 'flex', 
-                        width: '500px',
+                        width: '96%',
                         height: '30px',
                         marginTop: "10px"}} 
                     />
@@ -71,11 +71,11 @@ const Mailer = () => {
                 <textarea 
                     name = "message" 
                     className = "form-control"
-                    rows = {10}
-                    cols = {66} 
                     style = {{
                         display: 'flex', 
-                        marginTop: "10px"}} />
+                        marginTop: "10px",
+                        width: '96%', 
+                        height: '200px'}} />
 
                 <input 
                     type = "submit" 
