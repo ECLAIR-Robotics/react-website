@@ -27,7 +27,7 @@ function ResponsiveAppBar() {
   };
 
   const goToHome = () => {
-    navigate('/homepage');
+    navigate('/');
   }
 
   interface PalleteColor {
@@ -38,11 +38,6 @@ function ResponsiveAppBar() {
   }
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // This function will be called only once when the component is created
-    goToHome();
-  }, []);
 
   const theme = createTheme({
     palette: {
@@ -89,7 +84,7 @@ function ResponsiveAppBar() {
                 overflow: 'visible',
               }}
 
-              onClick={goToHome}
+              // onClick={goToHome}
             >
               ECLAIR
             </Typography>
@@ -100,7 +95,7 @@ function ResponsiveAppBar() {
               alignItems: 'flex-start',
 
             }}>
-              <Link to="/homepage" style={{
+              <Link to="/" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
