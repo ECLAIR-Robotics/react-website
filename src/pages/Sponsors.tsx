@@ -6,6 +6,7 @@ import bg from '../static/vectors/sponsors12.svg';
 
 import phone from '../static/images/phoneIcon1.png'
 import email from '../static/images/emailIcon1.png'
+import form from '../static/images/formIcon.png'
 
 import React, { useEffect, useRef, useState } from 'react';
 import { isElement } from 'react-dom/test-utils';
@@ -74,7 +75,7 @@ function Sponsors() {
       <div style={{backgroundImage: `url(${bg})`, height: "fit-content", width: '100%',backgroundPosition:'top', backgroundSize:'100vw', marginTop: '-12rem', zIndex: '1', position: 'relative'}}>
       <div style = {{paddingBottom:"12rem"}} ref ={elementRef}/>
         <div className={`tierHolder ${isVisible ? 'vi' : ''}`} >
-          <div className={`tierCard`} >
+          <div className={`tierCard`} style={{border:'2px solid #7fd6ff'}}>
             <div className='tierTitle diamond' > Diamond </div>
             
             <div style={{display:'flex', justifyContent:'center'}}>
@@ -97,7 +98,7 @@ function Sponsors() {
               <li>Filler</li>
             </ul>
           </div>
-          <div className='tierCard'>
+          <div className='tierCard' style={{ border: '2px solid #ffd700'}}>
             <div className='tierTitle gold' > Gold </div>
             <div style={{display:'flex', justifyContent:'center'}}>
               <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
@@ -119,7 +120,7 @@ function Sponsors() {
               <li>Filler</li>
             </ul>
           </div>
-          <div className='tierCard'>
+          <div className='tierCard' style={{border:'2px solid #c7c7c7'}}>
             <div className='tierTitle silver' > Silver </div>
             <div style={{display:'flex', justifyContent:'center'}}>
               <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
@@ -151,17 +152,19 @@ function Sponsors() {
         <div style = {{paddingBottom:"5%"}}/>
 
         <div className='contactGrid'>
-          <div className='cgE'>
-            <img src={email} className='cgPic'></img>
-            <div className='cgText'>
-              <div className='cgTitle'>
-                Email
+          <a href={`mailto:eclairrobotics@gmail.com`}>
+            <div className='cgE'>
+              <img src={email} className='cgPic'></img>
+              <div className='cgText'>
+                <div className='cgTitle'>
+                  Email
+                </div>
+                <div className='cgData'>
+                  eclairrobotics@gmail.com
+                </div>
               </div>
-              <div className='cgData'>
-                eclairrobotics@gmail.com
-              </div>
-            </div>
-          </div>            
+            </div>   
+          </a>
           <div className='cgE'>
             <img src={phone} className='cgPic'></img>
             <div className='cgText'>
@@ -173,6 +176,19 @@ function Sponsors() {
               </div>
             </div>
           </div>
+          <a href={`/contact`}>
+            <div className='cgE'>
+              <img src={form} className='cgPic'></img>
+              <div className='cgText'>
+                <div className='cgTitle'>
+                  Form
+                </div>
+                <div className='cgData'>
+                  Contact Us Page
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
 
 
