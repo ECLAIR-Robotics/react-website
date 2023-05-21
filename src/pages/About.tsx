@@ -4,62 +4,15 @@ import OfficerCards from '../components/OfficerCards'
 import '../styles/about.css'
 import placeholderImg from '../static/images/officer/placeholder.png'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
-import { ReactComponent as DiscordSVG } from '../static/vectors/social-vectors/discord-mark-white.svg';
 import foundersBackground from '../static/vectors/founders-background.svg'
-import discordPng from '../static/images/social-icons/Discord-Logo-White.png'
+import tanayImg from '../static/images/officer/tanay.png'
+import angelicaImg from '../static/images/officer/angelica.jpg'
+import vishalImg from '../static/images/officer/vishal.png'
+import conradImg from '../static/images/officer/conrad.jpg'
+import sahilImg from '../static/images/officer/sahil.jpg'
+import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
 
 function About() {
-
-  const officerCardsArray = [
-    {
-      name: 'Tanay Garg',
-      position: 'President',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    },
-    {
-      name: 'Angelica Sharma',
-      position: 'President',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    }, 
-    {
-      name: 'Vishal Kantharaju',
-      position: 'Vice President',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    },
-    {
-      name: 'TBD',
-      position: 'Historian',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    },
-    {
-      name: 'TBD',
-      position: 'Corporate Officer',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    },
-    {
-      name: 'TBD',
-      position: 'Freshman Representative',
-      img: placeholderImg,
-      bio: "Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface ",
-      linkedIn: 'https://www.linkedin.com/in/tanay-garg-89004b184/',
-      email: 'tanay.garg@utexas.edu'
-    }
-  ]
 
   return (
     <>
@@ -83,7 +36,7 @@ function About() {
               <OfficerCards
                 name='Tanay Garg'
                 position='President'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={tanayImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -92,7 +45,7 @@ function About() {
               <OfficerCards
                 name='Angelica Sharma'
                 position='President'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={angelicaImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -101,7 +54,7 @@ function About() {
               <OfficerCards
                 name='Vishal Kantharaju'
                 position='Vice President'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={vishalImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -110,7 +63,7 @@ function About() {
               <OfficerCards
                 name='TBD'
                 position='Corporate Officer'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -119,7 +72,7 @@ function About() {
               <OfficerCards
                 name='TBD'
                 position='Historian'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -128,7 +81,7 @@ function About() {
               <OfficerCards
                 name='TBD'
                 position='Freshman Representative'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -155,7 +108,7 @@ function About() {
               <OfficerCards
                 name='Sahil Jain'
                 position='Founder'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={sahilImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -163,7 +116,7 @@ function About() {
               <OfficerCards
                 name='Conrad Li'
                 position='Founder'
-                img={placeholderImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={conradImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>

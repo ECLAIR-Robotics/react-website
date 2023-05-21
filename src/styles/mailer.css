@@ -1,0 +1,12 @@
+.border {
+    background-color: #c675ff4d;
+    border-radius: 1em;
+    backdrop-filter: blur(10px);
+}
+
+.form-control {
+    border-radius: 1em;
+    border: 0;
+    box-shadow: 2px 5px 10px black;
+    background-color: #ffffff;;
+}

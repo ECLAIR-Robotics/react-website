@@ -1,16 +1,20 @@
+
+
 .fancybutton {
     --magic-rainbow-color-1: hsl(275, 100%, 73%);
     --magic-rainbow-color-2: hsl(216, 100%, 39%);
     display:inline-block;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(to right, var(--magic-rainbow-color-1), var(--magic-rainbow-color-2));
-    
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 5em;
     padding-right: 5em;
-    width: fit-content;
+    
+    width: -webkit-fill-available;
     color: white;
     font-size: 1.5em;
     transition-duration: 1s;
@@ -21,12 +25,16 @@
 
 .fancybutton:after {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     content: attr(data-text);
     top: 0;
     left: 0;
     width: inherit;
     height: inherit;
     margin-left: 0em;
+    border-radius: inherit;
     background-image: linear-gradient(to left, hsl(275, 100%, 73%), hsl(216, 100%, 39%));
     transition: opacity 1s ease-out;
     z-index: 2;

@@ -52,7 +52,7 @@ function Homepage() {
               </Slide>
             </Fade>
             <div className='eclairButton-container'>
-              <ECLAIRButton handleClick={handleClick} text="PROJECTS" />
+              <ECLAIRButton  handleClick={handleClick} text="PROJECTS" />
             </div>
           </div>
 

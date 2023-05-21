@@ -1,25 +1,31 @@
-import { Typography } from '@mui/material';
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/eclairbutton.css'
+
+export enum ECLAIRButtonType {
+}
 interface Props {
-    text?: string;
-    something?: string;
-    handleClick?: () => void;
+  type?: 'submit' | 'reset' | 'button';
+  text?: string;
+  something?: string;
+  radius?: string;
+  handleClick?: () => void;
 }
-
-const handleClick = () => {
-  
-}
-
 function ECLAIRButton(props: Props) {
 
-  
+  useEffect(() => {
+    console.log(props.radius);
+    const btn = document.getElementById('main-eclair-button');
+    if (btn) {
+      btn.style.borderRadius = props.radius!;
+    }
+    
+  }, [])
 
   return (
-    <button onClick={ props.handleClick } className =  'fancybutton' data-text={ props.text }>
-        <span className='fancytext'>
-          {props.text}
-        </span>
+    <button id="main-eclair-button" type={props.type} onClick={props.handleClick} className='fancybutton' data-text={props.text}>
+      <span className='fancytext'>
+        {props.text}
+      </span>
     </button>
   )
 }
