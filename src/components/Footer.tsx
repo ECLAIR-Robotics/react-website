@@ -49,7 +49,7 @@ export default function SimpleBottomNavigation() {
                         </Grid>
                         <Grid item xs={12} sx = {{ paddingTop:2}}>
                             <a href='mailto:eclairrobotics@gmail.com' className='social-icon' target={'_blank'}>
-                                <EmailIcon color={'primary'} sx={{ fontSize:40}} />
+                                <EmailIcon color={'primary'} sx={{ }} />
                             </a>
                         </Grid>
                     </Grid>
