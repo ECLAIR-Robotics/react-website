@@ -36,7 +36,7 @@ function About() {
               <OfficerCards
                 name='Tanay Garg'
                 position='President'
-                img={tanayImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={tanayImg} bio="Hi I am Tanay, and I believe that success is if you leave the world, even if ever so slightly, better than the state you found it in! I love Brooklyn 99. "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -46,8 +46,8 @@ function About() {
                 name='Angelica Sharma'
                 position='President'
                 img={angelicaImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
+                email='angelicasharma@utexas.edu' />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -55,35 +55,35 @@ function About() {
                 name='Vishal Kantharaju'
                 position='Vice President'
                 img={vishalImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
+                email='vishal.kantharaju@utexas.edu' />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
                 name='TBD'
                 position='Corporate Officer'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet. "
+                linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
+                email='eclairrobotics@gmail.com' />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
                 name='TBD'
                 position='Historian'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet. "
+                linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
+                email='eclairrobotics@gmail.com' />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
                 name='TBD'
                 position='Freshman Representative'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet."
+                linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
+                email='eclairrobotics@gmail.com' />
             </Grid>
 
           </Grid>
@@ -109,16 +109,16 @@ function About() {
                 name='Sahil Jain'
                 position='Founder'
                 img={sahilImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
                 name='Conrad Li'
                 position='Founder'
                 img={conradImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                linkedIn='https://www.linkedin.com/in/conradfli/'
+                email='conradliste@utexas.edu' />
             </Grid>
           </Grid>
         </div>

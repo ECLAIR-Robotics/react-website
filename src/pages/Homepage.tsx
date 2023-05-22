@@ -4,7 +4,7 @@ import '../styles/app.css';
 import ECLAIRButton from '../components/ECLAIRButton';
 import { Slide, Fade } from '@mui/material';
 import YoutubeEmbed from '../components/YoutubeEmbed';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
@@ -20,12 +20,33 @@ interface PalleteColor {
 
 
 function Homepage() {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension(){
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+  }
 
   useEffect(() => {
-  }, []);
+      const updateDimension = () => {
+          setScreenSize(getCurrentDimension())
+      }
+      window.addEventListener('resize', updateDimension);
+  
+  
+      return(() => {
+          window.removeEventListener('resize', updateDimension);
+      })
+  }, [screenSize])
+
   const handleClick = () => {
     navigate('/projects');
   }
+
+  console.log(screenSize.width);
+  console.log(screenSize.height);
   const navigate = useNavigate();
   return (
 
@@ -117,7 +138,7 @@ function Homepage() {
           </svg>
         </div>
         <div className="animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
-          <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+          <svg id="visual" viewBox="0 0 900 600" width={`${screenSize.width/2}`} height={`${screenSize.height/1.5}`} xmlns="http://www.w3.org/2000/svg"
             version="1.1">
             <defs>
               <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
