@@ -6,8 +6,9 @@ import { ThemeProvider } from '@emotion/react';
 import DiscordLogo from '../static/images/social-icons/Discord-Logo-White.png';
 import GithubLogo from '../static/images/social-icons/GitHub-Mark-Light-32px.png';
 import InstaIcon from '../static/images/social-icons/insta_icon.png';
+import EmailIcon from '../static/images/emailIcon2.png'
 import '../styles/footer.css'
-import EmailIcon from '@mui/icons-material/Email';
+// import EmailIcon from '@mui/icons-material/Email';
 
 export default function SimpleBottomNavigation() {
 
@@ -47,9 +48,9 @@ export default function SimpleBottomNavigation() {
                         <Grid item xs={12}>
                             Contact us
                         </Grid>
-                        <Grid item xs={12} sx = {{ paddingTop:2}}>
+                        <Grid item xs={12}>
                             <a href='mailto:eclairrobotics@gmail.com' className='social-icon' target={'_blank'}>
-                                <EmailIcon color={'primary'} sx={{ }} />
+                            <img className='social-icons' src={EmailIcon}></img>
                             </a>
                         </Grid>
                     </Grid>
@@ -58,7 +59,7 @@ export default function SimpleBottomNavigation() {
                             Follow us
                         </Grid>
                         <Grid item xs={12} spacing={1}>
-                            <a href='https://www.instagram.com/eclairrobotics/' target={'_blank'}>
+                            <a href='https://www.instagram.com/eclairrobotics/' className='social-icon'target={'_blank'}>
                                 <img className='social-icons' src={InstaIcon}></img>
                             </a>
                             <a href='https://github.com/ECLAIR-Robotics' target={'_blank'}>
