@@ -36,7 +36,7 @@ function About() {
               <OfficerCards
                 name='Tanay Garg'
                 position='President'
-                img={tanayImg} bio="Hi I am Tanay, and I believe that success is if you leave the world, even if ever so slightly, better than the state you found it in! I love Brooklyn 99. "
+                img={tanayImg} bio="Hi I am Tanay, amd I am a CS major at UT Austin. I am interested in AI and Robotics. I love Brookyn99, and I play the guitar! I want to revolutionize the field of eduational tehcnology! "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -45,7 +45,8 @@ function About() {
               <OfficerCards
                 name='Angelica Sharma'
                 position='President'
-                img={angelicaImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={angelicaImg} bio="
+                Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
                 linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
                 email='angelicasharma@utexas.edu' />
             </Grid>
