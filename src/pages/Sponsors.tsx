@@ -1,15 +1,12 @@
 import { Grid } from '@mui/material'
 import '../styles/sponsors.css'
-import spon from '../static/vectors/sponsors9.svg';
-// import bg from '../static/vectors/sponsors10.svg'; 
-import bg from '../static/vectors/sponsors12.svg'; 
+import spon from '../static/vectors/sponsorsDivider.svg';
+import bg from '../static/vectors/sponsorsBackground.svg'; 
 
-import phone from '../static/images/phoneIcon1.png'
-import email from '../static/images/emailIcon1.png'
-import form from '../static/images/formIcon.png'
-
+import phone from '../static/images/sponsor-images/phoneIcon1.png'
+import email from '../static/images/sponsor-images/emailIcon1.png'
+import form from '../static/images/sponsor-images/formIcon.png'
 import React, { useEffect, useRef, useState } from 'react';
-import { isElement } from 'react-dom/test-utils';
 
 function Sponsors() {
   
@@ -22,22 +19,18 @@ function Sponsors() {
       setIsVisible(entry.isIntersecting);
 
       if (entry.isIntersecting) {
-        // Remove the observer if the element becomes visible
         observer.unobserve(entry.target);
       }
     });
-
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
-
     return () => {
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
       }
     };
   }, []);
-
   
   const [isElementVisible, setElementVisible] = useState(false);
   const targetElementRef = useRef(null);
@@ -48,25 +41,18 @@ function Sponsors() {
       setElementVisible(entry.isIntersecting);
 
       if (entry.isIntersecting) {
-        // Remove the observer if the element becomes visible
         observer.unobserve(entry.target);
       }
     });
-
     if (targetElementRef.current) {
       observer.observe(targetElementRef.current);
     }
-
     return () => {
       if (targetElementRef.current) {
         observer.unobserve(targetElementRef.current);
       }
     };
   }, []);
-
-  
-
-  
   
   return (
     <div>

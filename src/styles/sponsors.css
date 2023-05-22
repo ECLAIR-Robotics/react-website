@@ -5,7 +5,7 @@
     border-image-slice: 1;
     background-color: black;
     width: 100%;
-    /* padding: 1rem; */
+    backdrop-filter: blur(10px);
     border-radius: 5px;
 }
 
@@ -78,14 +78,17 @@ a {
 
 .diamond {
     color:#7fd6ff;
+    /* color:#7fd6ff36; */
 }
 
 .gold {
     color: #ffd700;
+    /* color: #ffd90047; */
 }
 
 .silver {
     color: #c7c7c7;
+    /* color: #c7c7c722; */
 }
 
 
