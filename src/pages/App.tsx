@@ -8,6 +8,21 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Contact from './Contact';
 import Footer from '../components/Footer';
 import Sponsors from './Sponsors';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyApKv2_Muv15F14Vfuo04rwuqxUcTtMy9o",
+  authDomain: "eclair-website-387316.firebaseapp.com",
+  projectId: "eclair-website-387316",
+  storageBucket: "eclair-website-387316.appspot.com",
+  messagingSenderId: "664767979379",
+  appId: "1:664767979379:web:7904edda15a1350c3b6f06",
+  measurementId: "G-XVQ8FB05W1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 const homepage = () => {
   return  <Homepage/>
