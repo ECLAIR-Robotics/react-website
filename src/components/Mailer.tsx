@@ -27,12 +27,17 @@ const Mailer = () => {
     const [formTextClassName, setFormTextClassName] = useState('formTextHidden');
     const nameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
+    const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const formSubbmitted = () => {
         
         const name = nameRef.current?.value;
         const email = emailRef.current?.value;
         if ( name === "" || email === "") {
             alert("Please fill out all fields.");
+            return false;
+        } 
+        else if (email != null && !emailCheck.test(email)) {
+            alert("Please enter a valid email");
             return false;
         }
         setFormClassName('formContactUsHidden');
@@ -54,7 +59,9 @@ const Mailer = () => {
 
                 <label
                     style={{ display: 'flex', fontSize: '1.5em', }}
-                    className="formText" >Name</label>
+                    className="formText" >Name
+                    <span className='reqAsterisk'>*</span>
+                </label>
                 <input
                     type="text"
                     name="name"
@@ -74,7 +81,9 @@ const Mailer = () => {
 
                 <label
                     style={{ display: 'flex', fontSize: '1.5em', marginTop: "20px" }}
-                    className="formText" >Email</label>
+                    className="formText" >Email
+                    <span className='reqAsterisk'>*</span>
+                </label>
                 <input
                     type="email"
                     name="user_email"
