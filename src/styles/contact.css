@@ -1,8 +1,20 @@
-.hiii {
+.contactContent {
     justify-content: center;
     align-items: center;
 }
 
 .reqAsterisk {
     color: red;
+}
+
+.contactFormContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.divHolderHolder {
+    display:'flex';
+    justify-content: center;
 }
