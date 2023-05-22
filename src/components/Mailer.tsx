@@ -12,23 +12,24 @@ import { useState, useRef } from 'react';
 const Mailer = () => {
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        emailjs.sendForm(
-            'service_lf68y8i',
-            'template_a7v3kjq',
-            e.currentTarget,
-            "NIC61fRJW1mmr-YPC"
-        ).then(() => {
-            console.log("Email sent successfully!")
-        }).catch(() => { console.log("Email failed to send.") });
-        e.currentTarget.reset()
+        if(formSubmitted()) {
+            emailjs.sendForm(
+                'service_lf68y8i',
+                'template_a7v3kjq',
+                e.currentTarget,
+                "NIC61fRJW1mmr-YPC"
+            ).then(() => {
+                console.log("Email sent successfully!")
+            }).catch(() => { console.log("Email failed to send.") });
+            e.currentTarget.reset()
+        }
     };
 
     const [formClassName, setFormClassName] = useState('formContactUs');
     const [formTextClassName, setFormTextClassName] = useState('formTextHidden');
     const nameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
-    const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const formSubbmitted = () => {
+    const formSubmitted = () => {
         
         const name = nameRef.current?.value;
         const email = emailRef.current?.value;
@@ -36,19 +37,15 @@ const Mailer = () => {
             alert("Please fill out all fields.");
             return false;
         } 
-        else if (email != null && !emailCheck.test(email)) {
-            alert("Please enter a valid email");
-            return false;
-        }
         setFormClassName('formContactUsHidden');
         setFormTextClassName('boldText');
-        
+        return true;
     }
 
     return (
         <div className="border"
         >
-            <div className={`${formTextClassName}`}>Your Message has successfully been submitted!</div>
+            <div className={`${formTextClassName}`}>Your message has successfully been submitted!</div>
             <form
                 name="contact-form"
                 className={`${formClassName}`}
@@ -115,7 +112,7 @@ const Mailer = () => {
                     }} />
 
                 <br />
-                <ECLAIRButton handleClick={formSubbmitted} radius='1em' type="submit" text="Send" />
+                <ECLAIRButton radius='1em' type="submit" text="Send" />
 
             </form>
 

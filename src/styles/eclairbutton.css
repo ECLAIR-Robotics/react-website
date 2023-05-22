@@ -21,6 +21,7 @@
     font-family: sans-serif;
     text-align: center;
     z-index:1;
+    cursor: pointer;
 }
 
 .fancybutton:after {
@@ -48,5 +49,6 @@
 
 .fancybutton:hover:after {
     opacity: 1;
+    cursor: pointer;
 }
 
