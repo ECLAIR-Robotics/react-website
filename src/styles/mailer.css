@@ -38,6 +38,7 @@
 }
 .formContactUsHidden {
     visibility: hidden;
+    scale: 0.0;
     height: 0;
 }
 

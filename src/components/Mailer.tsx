@@ -3,11 +3,6 @@ import emailjs from '@emailjs/browser';
 import '../styles/mailer.css'
 import ECLAIRButton from './ECLAIRButton';
 import { useState, useRef } from 'react';
-/*
-    THINGS TO DO:
-        * Make fields required
-        * Make the fields disappear once email has been successfully sent
-*/
 
 const Mailer = () => {
     function sendEmail(e: React.FormEvent<HTMLFormElement>) {
