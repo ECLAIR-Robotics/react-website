@@ -1,15 +1,12 @@
 import { Grid } from '@mui/material'
 import '../styles/sponsors.css'
-import spon from '../static/vectors/sponsors9.svg';
-// import bg from '../static/vectors/sponsors10.svg'; 
-import bg from '../static/vectors/sponsors12.svg'; 
+import spon from '../static/vectors/sponsorsDivider.svg';
+import bg from '../static/vectors/sponsorsBackground.svg'; 
 
-import phone from '../static/images/phoneIcon1.png'
-import email from '../static/images/emailIcon1.png'
-import form from '../static/images/formIcon.png'
-
+import phone from '../static/images/sponsor-images/phoneIcon1.png'
+import email from '../static/images/sponsor-images/emailIcon1.png'
+import form from '../static/images/sponsor-images/formIcon.png'
 import React, { useEffect, useRef, useState } from 'react';
-import { isElement } from 'react-dom/test-utils';
 
 function Sponsors() {
   
@@ -22,22 +19,18 @@ function Sponsors() {
       setIsVisible(entry.isIntersecting);
 
       if (entry.isIntersecting) {
-        // Remove the observer if the element becomes visible
         observer.unobserve(entry.target);
       }
     });
-
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
-
     return () => {
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
       }
     };
   }, []);
-
   
   const [isElementVisible, setElementVisible] = useState(false);
   const targetElementRef = useRef(null);
@@ -48,23 +41,18 @@ function Sponsors() {
       setElementVisible(entry.isIntersecting);
 
       if (entry.isIntersecting) {
-        // Remove the observer if the element becomes visible
         observer.unobserve(entry.target);
       }
     });
-
     if (targetElementRef.current) {
       observer.observe(targetElementRef.current);
     }
-
     return () => {
       if (targetElementRef.current) {
         observer.unobserve(targetElementRef.current);
       }
     };
   }, []);
-
-  
   
   return (
     <div>
@@ -76,71 +64,75 @@ function Sponsors() {
       <div style = {{paddingBottom:"12rem"}} ref ={elementRef}/>
         <div className={`tierHolder ${isVisible ? 'vi' : ''}`} >
           <div className={`tierCard`} style={{border:'2px solid #7fd6ff'}}>
-            <div className='tierTitle diamond' > Diamond </div>
-            
-            <div style={{display:'flex', justifyContent:'center'}}>
-              <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                <span className='popupDivider'></span>
+            <div className='tierCardContent'>
+              <div className='tierTitle diamond' > Diamond </div>
+              <div style={{display:'flex', justifyContent:'center'}}>
+                <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                  <span className='popupDivider'></span>
+                </div>
               </div>
+              <ul className='perkList'>
+                <li className='gold'>All Gold Perks</li>
+                <li>Robot demo at company events</li>
+                <li>Eligible to recruit memebrs</li>
+                <li>Invitation to see demo days</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+              </ul>
             </div>
-
-            <ul className='perkList'>
-              <li style={{color:'#ffd700'}}>All Gold Perks</li>
-              <li>Robot demo at company events</li>
-              <li>Eligible to recruit memebrs</li>
-              <li>Invitation to see demo days</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-            </ul>
           </div>
           <div className='tierCard' style={{ border: '2px solid #ffd700'}}>
-            <div className='tierTitle gold' > Gold </div>
-            <div style={{display:'flex', justifyContent:'center'}}>
-              <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                <span className='popupDivider'></span>
+            <div className='tierCardContent'>
+              <div className='tierTitle gold' > Gold </div>
+              <div style={{display:'flex', justifyContent:'center'}}>
+                <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                  <span className='popupDivider'></span>
+                </div>
               </div>
+              <ul className='perkList'>
+                <li className='silver'>All Silver Perks</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+              </ul>
             </div>
-            <ul className='perkList'>
-              <li style={{color:'#c7c7c7'}}>All Silver Perks</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-            </ul>
           </div>
           <div className='tierCard' style={{border:'2px solid #c7c7c7'}}>
-            <div className='tierTitle silver' > Silver </div>
-            <div style={{display:'flex', justifyContent:'center'}}>
-              <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                <span className='popupDivider'></span>
+          <div className='tierCardContent'>
+              <div className='tierTitle silver' > Silver </div>
+              <div style={{display:'flex', justifyContent:'center'}}>
+                <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                  <span className='popupDivider'></span>
+                </div>
               </div>
+              <ul className='perkList'>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+                <li>Filler</li>
+              </ul>
             </div>
-            <ul className='perkList'>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-              <li>Filler</li>
-            </ul>
           </div>
         </div>
         <div style={{display:'flex', justifyContent:'center', alignContent:'center'}}>
@@ -153,8 +145,10 @@ function Sponsors() {
 
         <div className='contactGrid'>
           <a href={`mailto:eclairrobotics@gmail.com`}>
-            <div className='cgE'>
-              <img src={email} className='cgPic'></img>
+            <div className='cgE' style={{marginLeft:'0rem'}}>
+              <div className='cgPicHolder'>
+                <img src={email} className='cgPic'></img>
+              </div>
               <div className='cgText'>
                 <div className='cgTitle'>
                   Email
@@ -165,8 +159,10 @@ function Sponsors() {
               </div>
             </div>   
           </a>
-          <div className='cgE'>
-            <img src={phone} className='cgPic'></img>
+          <div className='cgE' style={{marginLeft:'2rem'}}>
+            <div className='cgPicHolder'>
+              <img src={phone} className='cgPic'></img>
+            </div>
             <div className='cgText'>
               <div className='cgTitle'>
                 Phone
@@ -177,8 +173,10 @@ function Sponsors() {
             </div>
           </div>
           <a href={`/contact`}>
-            <div className='cgE'>
-              <img src={form} className='cgPic'></img>
+            <div className='cgE' style={{marginLeft:'2rem'}}>
+              <div className='cgPicHolder'>
+                <img src={form} className='cgPic'></img>
+              </div>
               <div className='cgText'>
                 <div className='cgTitle'>
                   Form

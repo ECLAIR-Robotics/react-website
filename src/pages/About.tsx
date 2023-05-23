@@ -28,6 +28,7 @@ function About() {
       <section className='aboutContainer' style={{
         background: `url(${aboutUsBackground})  center center no-repeat `,
         backgroundSize: 'cover',
+        marginTop:'-1px'
       }} >
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
@@ -127,8 +128,8 @@ function About() {
         </div>
       </section>
 
-      <section className='box2 box2-override'>
-        <div className='box1_5-textLeft'> How to join us! </div>
+      <section className='box2 box2-override' style={{marginTop:'-1px'}}>
+        <div className='box1_5-textLeft' > How to join us! </div>
         <div className='joinInstructions'>
           <div>Feel free to drop in on one of our meetings!</div>
           <div>

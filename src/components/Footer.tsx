@@ -3,10 +3,10 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import { Grid } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import DiscordLogo from '../static/images/social-icons/Discord-Logo-White.png';
-import GithubLogo from '../static/images/social-icons/GitHub-Mark-Light-32px.png';
-import InstaIcon from '../static/images/social-icons/insta_icon.png';
-import EmailIcon from '../static/images/emailIcon2.png'
+import DiscordLogo from '../static/images/footer-icons/Discord-Logo-White.png';
+import GithubLogo from '../static/images/footer-icons/GitHub-Mark-Light-32px.png';
+import InstaIcon from '../static/images/footer-icons/insta_icon.png';
+import EmailIcon from '../static/images/footer-icons/emailIcon2.png'
 import '../styles/footer.css'
 // import EmailIcon from '@mui/icons-material/Email';
 

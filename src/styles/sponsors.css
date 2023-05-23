@@ -5,8 +5,12 @@
     border-image-slice: 1;
     background-color: black;
     width: 100%;
-    padding: 1rem;
+    backdrop-filter: blur(10px);
     border-radius: 5px;
+}
+
+.tierCardContent {
+    margin:1rem;
 }
 
 a {
@@ -19,10 +23,6 @@ a {
 .sponsorText {
     opacity: 0;
     scale: 1.1;
-    /* border: 2px solid; */
-    /* border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199)); */
-    /* border-image-slice: 1; */
-    /* border-radius: 10px; */
     padding: 1rem;
     color:'white';
     font-family:'poppins';
@@ -30,7 +30,6 @@ a {
     justify-self:'center';
     align-self:'center';
     text-align:'center';
-    /* font-weight: 100; */
 }
 
 .sponsorText:before {
@@ -56,11 +55,12 @@ a {
 
 .tierHolder {
     display: grid;
-    width: 70%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10%;
-    margin-right: 15%;
-    margin-left: 15%;
+    width: 100%;
+    justify-content: center;
+    margin: none;
+    padding: none;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 18rem));
+    grid-gap: 5rem;    
     padding-bottom: 5rem;
     transform: translateX(-200%);
 }
@@ -78,14 +78,17 @@ a {
 
 .diamond {
     color:#7fd6ff;
+    /* color:#7fd6ff36; */
 }
 
 .gold {
     color: #ffd700;
+    /* color: #ffd90047; */
 }
 
 .silver {
     color: #c7c7c7;
+    /* color: #c7c7c722; */
 }
 
 
@@ -101,20 +104,17 @@ a {
 
 .contactGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
+    grid-gap: 1rem;
     color: white;
-    margin-left: 20%;
-    margin-right: 20%;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+    justify-content: center;
+    width: 100%;
 }
 
 .cgE {
     display: flex;
-    cursor: pointer;
-    /* background-color: black; */
-    /* border: 1px solid orange; */
-    /* padding-left: 0.5rem; */
-    /* padding-right: 0.5rem; */
 }
 
 .cgE:hover {
@@ -122,17 +122,29 @@ a {
     /* pointer-events: ; */
 }
 
+.cgPicHolder {
+
+    /* border: 1px solid orange */
+}
+
 .cgPic {
-    width: 4rem;
-    margin-right: 1.5rem;
+    /* width: minmax(3rem, 5rem); */
+    height: 3rem;
+    /* margin-right: 1.5rem; */
+    /* border: 1px solid yellow */
 }
 
 .cgTitle {
     font-size: x-large;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    /* margin-bottom: 0.25rem; */
 }
 
 .cgData {
     font-size: large;
+    white-space: nowrap;
+}
+
+.cgText {
+    padding-left: 1rem;
 }
