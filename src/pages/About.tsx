@@ -99,6 +99,8 @@ function About() {
 
       </section >
 
+      
+
       <section className='aboutUsFoundersSection' style={{
         background: `url(${foundersBackground})  center center no-repeat `,
         backgroundSize: 'cover',
