@@ -5,6 +5,7 @@ import '../styles/about.css'
 import placeholderImg from '../static/images/officer/placeholder.png'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
 import foundersBackground from '../static/vectors/founders-background.svg'
+import foundersBackground2 from '../static/vectors/founders-background-2.svg'
 import tanayImg from '../static/images/officer/tanay.png'
 import angelicaImg from '../static/images/officer/angelica.jpg'
 import vishalImg from '../static/images/officer/vishal.png'
@@ -28,11 +29,11 @@ function About() {
       <section className='aboutContainer' style={{
         background: `url(${aboutUsBackground})  center center no-repeat `,
         backgroundSize: 'cover',
-        marginTop:'-1px'
+        marginTop: '-1px'
       }} >
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
-            
+
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
                 name='Tanay Garg'
@@ -100,10 +101,66 @@ function About() {
 
       </section >
 
-      
+
 
       <section className='aboutUsFoundersSection' style={{
         background: `url(${foundersBackground})  center center no-repeat `,
+        backgroundSize: 'cover',
+      }}>
+        <div>
+          <Grid container rowGap={10} spacing={2}>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Sahana Ganapaty'
+                position='Tech Lead, mood detector'
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Kyrylo Boiko'
+                position='Tech Lead, fitness tracker'
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Vishal Kantharaju'
+                position='Tech Lead, chess teacher'
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+              <OfficerCards
+                name='Carson Stark'
+                position='Tech Lead, Autonomous Drone'
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+              <OfficerCards
+                name='Conrad Li'
+                position='Tech Lead, PCR'
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                email='sahiljain11@utexas.edu ' />
+            </Grid>
+            
+          </Grid>
+        </div>
+        <div className="custom-shape-divider-bottom-1684840350">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
+          </svg>
+        </div>
+      </section>
+
+      <section className='aboutUsFoundersSection foundersSectionOverride ' style={{
+        background: `url(${foundersBackground2})  center center no-repeat `,
         backgroundSize: 'cover',
       }}>
         <div>
@@ -125,10 +182,12 @@ function About() {
                 email='conradliste@utexas.edu' />
             </Grid>
           </Grid>
+
         </div>
+
       </section>
 
-      <section className='box2 box2-override' style={{marginTop:'-1px'}}>
+      <section className='box2 box2-override' style={{ marginTop: '-1px' }}>
         <div className='box1_5-textLeft' > How to join us! </div>
         <div className='joinInstructions'>
           <div>Feel free to drop in on one of our meetings!</div>

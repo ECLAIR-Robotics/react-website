@@ -86,7 +86,7 @@
     width: 100%;
     height: 100%;
     padding-top: 10em;
-    padding-bottom: 10em;
+
     background: #2d3549;
 }
 
@@ -179,6 +179,10 @@
     padding-top: 1em;
 }
 
+.foundersSectionOverride {
+    padding-bottom: 10em;
+}
+
 /* Everything After this is divider css */
 
 .custom-shape-divider-bottom-1684440846 {
@@ -266,4 +270,24 @@
 
         d: path("M 0 0 V 15.81 C 13 36.92 27.64 56.86 48 71 C 79 85 191 101 233 91 c 31.15 -10.15 61.42 -22.58 90 -33 c 40.92 -19 87 -35 132 -39 c 36.26 -2.85 70.9 9.42 98.6 31.56 c 31.77 25.39 63.4 44.44 104.4 52.44 c 40.44 10.79 81.35 -6.69 119.13 -24.28 s 75.16 -39 116.92 -43.05 c 59.73 -5.85 113.28 22.88 168.9 38.84 c 30.2 8.66 59 6.17 87.09 -7.5 c 22.43 -10.89 48 -26.93 60.65 -49.24 V 0 Z")
     }
+}
+
+.custom-shape-divider-bottom-1684840350 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1684840350 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 112px;
+}
+
+.custom-shape-divider-bottom-1684840350 .shape-fill {
+    fill: #191E28;
 }

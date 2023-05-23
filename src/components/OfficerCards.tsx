@@ -23,9 +23,11 @@ function OfficerCards(props: Props) {
   const isHovering = useHover(hoverRef);
 
   useEffect(() => {
-    if (!isHovering){
+    if (isHovering){
+      openDrawer()
+    } else {
       closeDrawer()
-    }
+    } 
   },[isHovering]);
 
   const handleClick = () => {

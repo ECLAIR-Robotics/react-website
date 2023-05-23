@@ -1,7 +1,7 @@
 :root {
     --standard-gap: 0.5em;
     --card-closed-height: 25em;
-    --card-extended-height: 40em;
+    --card-extended-height: 41em;
 }
 
 .cardContainer {
@@ -98,7 +98,7 @@
     text-align: left;
     font-size: 0.5em;
     overflow: hidden;
-    height: 7em;
+    height: fit-content;
     padding-left: 1em;
     padding-right: 1em;
    
@@ -147,3 +147,4 @@
     justify-content: center;
     align-items: center;
 }
+
