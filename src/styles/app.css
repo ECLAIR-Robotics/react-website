@@ -211,6 +211,8 @@
 
     #informationText {
         min-height: fit-content;
+        justify-content: left;
+        text-align: left;
         padding-bottom: 5em;
     }
 

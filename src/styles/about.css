@@ -151,7 +151,7 @@
 .locationInstructions {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     margin-left: 10%;
     font-family: 'Poppins', sans-serif;
