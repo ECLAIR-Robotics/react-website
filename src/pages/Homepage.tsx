@@ -112,10 +112,10 @@ function Homepage() {
       <section className='box2 box2-override3'>
         <div className='box2-encloser'>
           <div className='box1_5-textLeft' id='boldText'>
-            State of the Art Facilities
+            Our Members enjoy access to State of the Art Facilities!
           </div>
           <div className='box1_5-textRight' id="informationText">
-            Partnering with the Anna Hiss Gymnasium and UT Austin Makerspace, ECLAIR helps provide resources that students need to create and test their AI algorithms on physical robots
+            Partnering with the Anna Hiss Gymnasium and UT Austin Makerspace, ECLAIR helps provide resources that students need to create and test their AI algorithms on physical robots. Our members are free to pitch any project they want to build and get it financed by ECLAIR.
           </div>
         </div>
         <div className='box1_5-textRight'>

@@ -38,7 +38,7 @@ function About() {
               <OfficerCards
                 name='Tanay Garg'
                 position='President'
-                img={tanayImg} bio="Hi I am Tanay, amd I am a CS major at UT Austin. I am interested in AI and Robotics. I love Brookyn99, and I play the guitar! I want to revolutionize the field of eduational tehcnology! "
+                img={tanayImg} bio="Hi I am Tanay, amd I am a CS major at UT Austin. I am interested in AI and Robotics. I love Brookyn99, and I play the guitar! I want to revolutionize the field of educational tehcnology! "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
