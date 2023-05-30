@@ -31,21 +31,20 @@ export default function SimpleBottomNavigation() {
     });
     return (
         <ThemeProvider theme={theme}>
-            <BottomNavigation>
+            <BottomNavigation style={{height:'fit-content', overflow:'hidden'}}>
                 <Grid sx={{
                     bottom: 0,
                     background: '#1f2532',
                     fontFamily: 'sans-serif',
                     paddingTop: 5,
-                    paddingBottom: 20,
                     textDecorationColor: 'white'
 
                 }}
                     container spacing={2}
                 >
-                    <Grid item xs={0.5}></Grid>
+                    <Grid item ></Grid>
                     <Grid item xs={3} color='white' alignItems={'center'}>
-                        <Grid item xs={12}>
+                        <Grid item xs={12}  paddingLeft={2}>
                             Contact us
                         </Grid>
                         <Grid item xs={12}>
@@ -58,18 +57,20 @@ export default function SimpleBottomNavigation() {
                         <Grid item xs={12} paddingLeft={2}>
                             Follow us
                         </Grid>
-                        <Grid item xs={12} spacing={1}>
+                        <Grid item xs={12}>
+                           
                             <a href='https://www.instagram.com/eclairrobotics/' className='social-icon'target={'_blank'}>
                                 <img className='social-icons' src={InstaIcon}></img>
                             </a>
-                            <a href='https://github.com/ECLAIR-Robotics' target={'_blank'}>
+                            <a href='https://github.com/ECLAIR-Robotics' target={'_blank'} className='social-icon' >
                                 <img className='social-icons' src={GithubLogo}></img>
                             </a>
+                            
                         </Grid>
                         
                     </Grid>
                     <Grid item xs={3} color='white' alignItems={'center'}>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} paddingLeft={1}>
                             Join us
                         </Grid>
                         <Grid item xs={12}>
