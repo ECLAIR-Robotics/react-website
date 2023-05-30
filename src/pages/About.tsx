@@ -188,7 +188,7 @@ function About() {
       </section>
 
       <section className='box2 box2-override' style={{ marginTop: '-1px' }}>
-        <div className='box1_5-textLeft' > How to join us! </div>
+        <div className='box1_5-textLeft' id="aboutus-howtoJoin"> How to join us! </div>
         <div className='joinInstructions'>
           <div>Feel free to drop in on one of our meetings!</div>
           <div>

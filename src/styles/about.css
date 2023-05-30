@@ -148,6 +148,11 @@
     width: 100%;
 }
 
+#aboutus-howtoJoin {
+    justify-content: center;
+    font-size: 3em;
+}
+
 .locationInstructions {
     display: flex;
     align-items: center;
