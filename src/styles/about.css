@@ -17,12 +17,7 @@
 
 }
 
-#boldText {
-    font-weight: bold;
 
-    color: white;
-    text-align: left;
-}
 
 .aboutContainer {
     display: flex;
@@ -74,6 +69,13 @@
         max-width: 100%;
         max-height: 100%;
     }
+
+    .locationInstructionsTitle {
+        margin-left: 10%;
+        font-size: 3rem;
+        padding-right: 10%;
+    }
+
 }
 
 .aboutUsFoundersSection {
@@ -90,9 +92,22 @@
     background: #2d3549;
 }
 
+.box1_5-textRight {
+    height: 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: gray;
+}
+
 .embeddedGoogleMap {
-    height: 25em;
-    width: 40em;
+    height: 30em;
+    width: 100%;
     border-radius: 1em;
     position: relative;
     box-shadow: 10px 10px 5px #191e28;
@@ -175,6 +190,16 @@
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
     color: gray;
+}
+
+#boldText {
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+    
 }
 
 .discordLogo {
