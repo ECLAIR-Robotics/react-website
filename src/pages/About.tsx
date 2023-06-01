@@ -12,7 +12,7 @@ import vishalImg from '../static/images/officer/vishal.png'
 import conradImg from '../static/images/officer/conrad.jpg'
 import sahilImg from '../static/images/officer/sahil.jpg'
 import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
-
+import sahanaImg from '../static/images/officer/sahana.jpeg'
 function About() {
 
   return (
@@ -38,7 +38,7 @@ function About() {
               <OfficerCards
                 name='Tanay Garg'
                 position='President'
-                img={tanayImg} bio="Hi I am Tanay, amd I am a CS major at UT Austin. I am interested in AI and Robotics. I love Brookyn99, and I play the guitar! I want to revolutionize the field of educational tehcnology! "
+                img={tanayImg} bio="Hi! I am Tanay, amd I am a CS major at UT Austin. I love Formula 1, Soccer, and playing the guitar! I want to use AI to revolutionize educational technology! "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
                 email='tanay.garg@utexas.edu' />
             </Grid>
@@ -57,7 +57,7 @@ function About() {
               <OfficerCards
                 name='Vishal Kantharaju'
                 position='Vice President'
-                img={vishalImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. Throughout my time in ECLAIR and beyond, I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
                 email='vishal.kantharaju@utexas.edu' />
             </Grid>
@@ -113,17 +113,17 @@ function About() {
               <OfficerCards
                 name='Sahana Ganapaty'
                 position='Tech Lead, mood detector'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
+                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI, and my hobbies outside of school include reading, visual arts, and journaling."
+                linkedIn='linkedin.com/in/sahana-ganapathy/'
                 email='sahiljain11@utexas.edu ' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Kyrylo Boiko'
                 position='Tech Lead, fitness tracker'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface"
                 linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahiljain11@utexas.edu ' />
+                email='sahanagana@utexas.edu' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
