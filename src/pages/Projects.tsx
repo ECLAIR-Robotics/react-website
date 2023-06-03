@@ -13,6 +13,22 @@ import musicP from '../static/images/musicP.jpg';
 // import robotarmP from '../static/images/robotarmP.jpg';
 import robotarmP from '../static/images/robotic_arm.png'
 
+import pcr1 from '../static/images/slideshows/pcrSPic1.jpg';
+import pcr2 from '../static/images/slideshows/pcrSPic2.jpg';
+import pcr3 from '../static/images/slideshows/pcrSPic3.jpg';
+import drone1 from '../static/images/slideshows/droneSPic1.jpg';
+import drone2 from '../static/images/slideshows/droneSPic2.jpg';
+import drone3 from '../static/images/slideshows/droneSPic3.jpg';
+import chess1 from '../static/images/slideshows/chessSPic1.jpg';
+import chess2 from '../static/images/slideshows/chessSPic2.jpg';
+import chess3 from '../static/images/slideshows/chessSPic3.jpg';
+import fitness1 from '../static/images/slideshows/fitnessSPic1.jpg';
+import fitness2 from '../static/images/slideshows/fitnessSPic2.jpg';
+import fitness3 from '../static/images/slideshows/fitnessSPic3.jpg';
+import music1 from '../static/images/slideshows/musicSPic1.jpg';
+import music2 from '../static/images/slideshows/musicSPic2.jpg';
+import music3 from '../static/images/slideshows/musicSPic3.jpg';
+
 import cv from '../static/images/cv.png';
 import deepLearning from '../static/images/deepLearning.png';
 import cvIntro from '../static/images/introToCV.png';
@@ -97,23 +113,15 @@ function Projects() {
       SliderData : [
         {
           image:
-            'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+            pcr1
         },
         {
           image:
-            'https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80'
+            pcr2
         },
         {
           image:
-            'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
-        },
-        {
-          image:
-            'https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80'
-        },
-        {
-          image:
-            'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+            pcr3
         }
       ] 
     },
@@ -128,6 +136,20 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
       finished:0,
       video: chessVid,
+      SliderData : [
+        {
+          image:
+            chess1
+        },
+        {
+          image:
+            chess2
+        },
+        {
+          image:
+            chess3
+        }
+      ] 
     },
     {
       id: 2,
@@ -140,6 +162,20 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/1HXZt8AaNJ8NgtD4zdfVyAx9iu88J-shJCg4XmMV2MSs/edit?usp=sharing",
       finished:0,
       video: droneVid,
+      SliderData : [
+        {
+          image:
+            drone1
+        },
+        {
+          image:
+            drone2
+        },
+        {
+          image:
+            drone3
+        }
+      ] 
     },
     {
       id: 3,
@@ -152,6 +188,20 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
       finished:1,
       video: musicVid,
+      SliderData : [
+        {
+          image:
+            music1
+        },
+        {
+          image:
+            music2
+        },
+        {
+          image:
+            music3
+        }
+      ] 
     },
     {
       id: 4,
@@ -176,6 +226,20 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/19foBPCCLEiLqI4vJ4cUKgb43mY644ruY5lhwpawIxis/edit?usp=sharing",
       finished:0,
       video: fitnessVid,
+      SliderData : [
+        {
+          image:
+            fitness1
+        },
+        {
+          image:
+            fitness2
+        },
+        {
+          image:
+            fitness3
+        }
+      ] 
     },
     {
       id: 6,
