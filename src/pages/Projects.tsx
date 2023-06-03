@@ -186,7 +186,7 @@ function Projects() {
       desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
       git:"https://github.com/ECLAIR-Robotics/Song-Analysis", 
       gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
-      finished:1,
+      finished:0,
       video: musicVid,
       SliderData : [
         {
@@ -219,9 +219,9 @@ function Projects() {
       id: 5,
       img :fitnessP ,
       name:'Fitness Tracker', 
-      lName:"Kyrylo", 
-      members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
+      lName:"Kyrylo Boiko", 
+      members:"Abbhinav Jayaraman and Annabel To",
+      desc: 'We worked on creating a smart fitness band that would assist gym goers with tracking reps and measuring their form. We used positional & movement data from an IMU sensor and an ML model to transfer findings. It can be further developed to provide real-time suggestions based on most common form errors that are similar to user’s movement patterns.',
       git:"https://github.com/ECLAIR-Robotics/fitness-tracker", 
       gantt:"https://docs.google.com/spreadsheets/d/19foBPCCLEiLqI4vJ4cUKgb43mY644ruY5lhwpawIxis/edit?usp=sharing",
       finished:0,
