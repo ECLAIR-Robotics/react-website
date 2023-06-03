@@ -183,7 +183,7 @@ function Projects() {
       name:'Music Mood', 
       lName:"Sahana Ganapathy", 
       members:"Mehul Murali, Seungwon Lee, Nikhil Kalidasu, Nidhi Thippana, Jason Ren, Sarah Wang-Zhou",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
+      desc: 'We trained and fine tuned a large language model to associate emotions with a song given  it’s lyrics, and used the model to gather emotion data on Spotify profiles/playlists. Our next steps are integrating this model into a usable application and further exploring its capabilities.',
       git:"https://github.com/ECLAIR-Robotics/Song-Analysis", 
       gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
       finished:0,
