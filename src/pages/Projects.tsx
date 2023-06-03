@@ -10,7 +10,8 @@ import chessP from '../static/images/chessP.jpg';
 import droneP from '../static/images/droneP.jpg';
 import fitnessP from '../static/images/fitnessP.jpg';
 import musicP from '../static/images/musicP.jpg';
-import robotarmP from '../static/images/robotarmP.jpg';
+// import robotarmP from '../static/images/robotarmP.jpg';
+import robotarmP from '../static/images/robotic_arm.png'
 
 import cv from '../static/images/cv.png';
 import deepLearning from '../static/images/deepLearning.png';
@@ -25,7 +26,8 @@ import chessVid from '../static/videos/chessTest.gif';
 import droneVid from '../static/videos/droneTest.gif';
 import fitnessVid from '../static/videos/fitnessTest.gif';
 import musicVid from '../static/videos/musicTest.gif';
-import robotarmVid from '../static/videos/robotarmTest.gif';
+// import robotarmVid from '../static/videos/robotarmTest.gif';
+import robotArmVid from '../static/videos/arm_project.gif'
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import temp from '../static/vectors/projectBackground.svg';
@@ -92,6 +94,28 @@ function Projects() {
       gantt:"costco.com",
       finished:0,
       video: pcrVid,
+      SliderData : [
+        {
+          image:
+            'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          image:
+            'https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80'
+        },
+        {
+          image:
+            'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          image:
+            'https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80'
+        },
+        {
+          image:
+            'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+        }
+      ]
     },
     {
       id: 1,
@@ -139,7 +163,7 @@ function Projects() {
       git:"apple.com", 
       gantt:"costco.com",
       finished:1,
-      video: chessVid,
+      video: robotArmVid,
     },
     {
       id: 5,
