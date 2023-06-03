@@ -43,7 +43,8 @@ import droneVid from '../static/videos/droneTest.gif';
 import fitnessVid from '../static/videos/fitnessTest.gif';
 import musicVid from '../static/videos/musicTest.gif';
 // import robotarmVid from '../static/videos/robotarmTest.gif';
-import robotArmVid from '../static/videos/arm_project.gif'
+import robotArmVid from '../static/videos/arm_project.gif';
+import smartMirrorVid from '../static/videos/smartMirrorVid.gif';
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import temp from '../static/vectors/projectBackground.svg';
@@ -251,7 +252,7 @@ function Projects() {
       git:"https://github.com/ECLAIR-Robotics/Smart-Mirror", 
       gantt:"https://docs.google.com/spreadsheets/d/1cCVkAxT6YRqcerKprb5HxVsnR_jYmP8Ai7Nvbnz0M0I/edit?usp=sharing",
       finished:1,
-      video: chessVid,
+      video: smartMirrorVid,
     }
   ];
 
