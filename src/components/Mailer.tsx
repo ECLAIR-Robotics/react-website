@@ -3,22 +3,59 @@ import emailjs from '@emailjs/browser';
 import '../styles/mailer.css'
 import ECLAIRButton from './ECLAIRButton';
 import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Mailer = () => {
-    function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+    async function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        if(formSubmitted()) {
-            emailjs.sendForm(
-                'service_lf68y8i',
-                'template_a7v3kjq',
-                e.currentTarget,
-                "NIC61fRJW1mmr-YPC"
-            ).then(() => {
-                console.log("Email sent successfully!")
-            }).catch(() => { console.log("Email failed to send.") });
+        if(captchaRef.current && formSubmitted()) {
+            // emailjs.sendForm(
+            //     'service_lf68y8i',
+            //     'template_a7v3kjq',
+            //     e.currentTarget,
+            //     "NIC61fRJW1mmr-YPC"
+            // ).then(() => {
+            //     console.log("Email sent successfully!")
+            // }).catch(() => { console.log("Email failed to send.") });
+            verifyResponse(captchaRef.current.getValue())
+            console.log(captchaRef.current.getValue())
+            console.log(typeof(captchaRef.current.getValue()))
             e.currentTarget.reset()
         }
     };
+
+    const verifyResponse = async (key : string) => {
+        var requestOptions = {
+            method: 'POST',
+            // redirect: 'follow'
+          };
+          
+          fetch(`https://www.google.com/recaptcha/api/siteverify?secret=6LeLRE8mAAAAAA4eH4Ciuj5LdiAs0K55cywLQ4RT&reponse=${key}`, requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+        // const ver = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=6LeLRE8mAAAAAA4eH4Ciuj5LdiAs0K55cywLQ4RT&response=` + key,
+        // {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Host' : 'localhost',
+
+        //     },
+            // body : JSON.stringify(
+            //     {
+            //         "event": {
+            //             "token": key,
+            //             "siteKey": "6LeLRE8mAAAAAA7E4akd1Pysi5Nbr1DCKvF9mI-i",
+            //             "expectedAction": "submit"
+            //         }
+                    
+            //     }
+            // )
+        // });
+        // console.log(ver);
+    }
+    const captchaRef = useRef<any>(null);
 
     const [formClassName, setFormClassName] = useState('formContactUs');
     const [formTextClassName, setFormTextClassName] = useState('formTextHidden');
@@ -107,8 +144,20 @@ const Mailer = () => {
                     }} />
 
                 <br />
-                <ECLAIRButton radius='1em' type="submit" text="Send" />
+                
+                <ReCAPTCHA sitekey='6LeLRE8mAAAAAA7E4akd1Pysi5Nbr1DCKvF9mI-i' ref={captchaRef}  />
+                {/* <script type="text/javascript">
+                    var onloadCallback = function() {
+                        alert("grecaptcha is ready!");
+                    };
+                    </script> <script type="text/javascript">
+                    var onloadCallback = function() {
+                        alert("grecaptcha is ready!");
+                    };
+                    </script>
+                <script async src="https://www.google.com/recaptcha/api.js"></script> */}
 
+                <ECLAIRButton radius='1em' type="submit" text="Send" />
             </form>
 
         </div>
