@@ -118,6 +118,11 @@
     /* font-style: italic; */
 }
 
+.displayContentLink {
+    color: blue;
+    text-decoration: underline;
+}
+
 .lead {
     font-style: italic;
 }
