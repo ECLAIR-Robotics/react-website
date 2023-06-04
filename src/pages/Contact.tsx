@@ -15,12 +15,6 @@ function Contact() {
           <div className='contactFormContainer'>
             { <Mailer/> }
           </div>
-          
-          <div className='divHolderHolder' style={{display:'flex', justifyContent:'center'}}>
-            <div className="divHolder" style={{width:'25%', paddingTop:'3rem'}}>
-              <span className='popupDivider'></span>
-            </div>
-          </div>
           <div style = {{paddingBottom:"7%"}}/>
         </div>
       </div>
