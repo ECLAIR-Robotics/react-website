@@ -25,12 +25,17 @@ const Mailer = () => {
     };
 
     const verifyResponse = async (key : string) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Accept", "*/*");
+        myHeaders.append("Accept-Encoding", "gzip, deflate, br");
+        myHeaders.append('Content-Type', 'application/json')
         var requestOptions = {
             method: 'POST',
+            headers : myHeaders
             // redirect: 'follow'
           };
           
-          fetch(`https://www.google.com/recaptcha/api/siteverify?secret=6LeLRE8mAAAAAA4eH4Ciuj5LdiAs0K55cywLQ4RT&reponse=${key}`, requestOptions)
+          fetch(`https://www.google.com/recaptcha/api/siteverify?secret=6LeLRE8mAAAAAA4eH4Ciuj5LdiAs0K55cywLQ4RT&response=${key}`, requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
