@@ -211,7 +211,7 @@ function About() {
       </section>
 
       <section className='box2 box2-override2'>
-        <div className='box1_5-textRight'>
+        <div className='box1_5-textRight' id="embeddedMapHolder">
           <iframe className="embeddedGoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1347.6239260786679!2d-97.73857918622161!3d30.288576376509805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b583399f9331%3A0x4c1b35a5244fc3a7!2sAnna%20Hiss%20Gymnasium!5e0!3m2!1sen!2sin!4v1684598907576!5m2!1sen!2sin" ></iframe>
         </div>
         <div className="joiningInstructionsEncloser">
