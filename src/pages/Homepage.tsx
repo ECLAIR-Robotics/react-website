@@ -45,8 +45,6 @@ function Homepage() {
     navigate('/projects');
   }
 
-  console.log(screenSize.width);
-  console.log(screenSize.height);
   const navigate = useNavigate();
   return (
 
