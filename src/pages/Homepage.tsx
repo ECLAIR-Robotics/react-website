@@ -45,8 +45,6 @@ function Homepage() {
     navigate('/projects');
   }
 
-  console.log(screenSize.width);
-  console.log(screenSize.height);
   const navigate = useNavigate();
   return (
 
@@ -95,7 +93,7 @@ function Homepage() {
       </section>
 
       <section className='box2 box2-override2'>
-        <div className='box1_5-textRight'>
+        <div className='box1_5-textRight' id="infoImageContainer">
           <img className="infoImage" src={headerImage_1}></img>
         </div>
         <div className="box2-encloser">
@@ -118,7 +116,7 @@ function Homepage() {
             Partnering with the Anna Hiss Gymnasium and UT Austin Makerspace, ECLAIR helps provide resources that students need to create and test their AI algorithms on physical robots. Our members are free to pitch any project they want to build and get it financed by ECLAIR.
           </div>
         </div>
-        <div className='box1_5-textRight'>
+        <div className='box1_5-textRight' id="infoImageContainer">
           <img className="infoImage" src={headerImage_2}></img>
         </div>
       </section>
