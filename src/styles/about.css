@@ -180,6 +180,10 @@
     color: gray;
 }
 
+#embeddedMapHolder {
+    height: 30em;
+}
+
 .locationInstructionsTitle {
     display: flex;
     align-items: center;
