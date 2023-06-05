@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/mailer.css'
 import ECLAIRButton from './ECLAIRButton';
 import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Mailer = () => {
-    function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+    async function sendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if(formSubmitted()) {
             emailjs.sendForm(
@@ -16,22 +17,45 @@ const Mailer = () => {
             ).then(() => {
                 console.log("Email sent successfully!")
             }).catch(() => { console.log("Email failed to send.") });
+            console.log(captchaRef.current.getValue())
+            console.log(typeof(captchaRef.current.getValue()))
             e.currentTarget.reset()
         }
     };
 
+    const captchaRef = useRef<any>(null);
     const [formClassName, setFormClassName] = useState('formContactUs');
     const [formTextClassName, setFormTextClassName] = useState('formTextHidden');
     const nameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
+
+    const [isHuman, setIsHuman] = useState(false);
+    const [token, setToken] = useState(" ");
+    useEffect (() => {
+        if (!token || token.length < 5) {
+            setIsHuman(false);
+        } else {
+            setIsHuman(true);
+        }
+    
+    }, [token]);
+
+    function handleCaptchaChange() {
+        setToken(captchaRef.current?.getValue());
+    }
+
     const formSubmitted = () => {
         
         const name = nameRef.current?.value;
-        const email = emailRef.current?.value;
+        const email = emailRef.current?.value;        
+        // setToken(captchaRef.current?.getValue());
         if ( name === "" || email === "") {
             alert("Please fill out all fields.");
             return false;
-        } 
+        } else if (!isHuman) {
+            alert("Please complete reCAPTCHA.");
+            return false;
+        }
         setFormClassName('formContactUsHidden');
         setFormTextClassName('boldText');
         return true;
@@ -107,8 +131,12 @@ const Mailer = () => {
                     }} />
 
                 <br />
-                <ECLAIRButton radius='1em' type="submit" text="Send" />
+                
+                <div className='contactCapHolder'>
+                    <ReCAPTCHA sitekey='6LeLRE8mAAAAAA7E4akd1Pysi5Nbr1DCKvF9mI-i' ref={captchaRef} onChange={handleCaptchaChange}/>
+                </div>
 
+                <ECLAIRButton radius='1em' type="submit" text="Send" />
             </form>
 
         </div>
