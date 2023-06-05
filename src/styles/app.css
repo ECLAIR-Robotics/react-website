@@ -83,7 +83,9 @@
     color: white;
 }
 
-
+#infoImageContainer {
+    height: 30em;
+}
 
 .infoImage {
     max-width: 100%;
