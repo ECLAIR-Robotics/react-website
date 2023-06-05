@@ -169,9 +169,9 @@ function About() {
               <OfficerCards
                 name='Sahil Jain'
                 position='Founder'
-                img={sahilImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={sahilImg} bio="Alo, I'm Sahil! I'm a software developer interested in robotics, creative writing, and pandas (especially those that know kung fu) "
                 linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahiljain11@utexas.edu ' />
+                email='sahil.jain.1@outlook.com' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
