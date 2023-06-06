@@ -407,6 +407,9 @@ function Projects() {
         <div style = {{paddingBottom:"10%"}}/>
       </div> 
       <div className={`projectPageLoading ${pBGLoaded ? "" : "pBGLoading"}`}>
+      <div className="loader-container">
+        <div className="spinner"></div>
+      </div>
       </div>
     </div>
   )
