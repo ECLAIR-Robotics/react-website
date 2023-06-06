@@ -314,17 +314,17 @@ function Projects() {
   }, [cardData]);
 
   const [pBGLoaded, setPBGLoaded] = useState(false);
-  const bgDivRef = useRef<HTMLDivElement>(null);
-  const elementRef = useRef<HTMLImageElement>(null);
+  const pBGDivRef = useRef<HTMLDivElement>(null);
+  const pElementRef = useRef<HTMLImageElement>(null);
   
   const[resize, isResized] = useState(false);
 
   useEffect(() => {
     // const bgDiv : HTMLDivElement | null = document.querySelector('.projectPageBelowHeader');
     // bgDiv?.addEventListener('load', pBGLateLoadWrapper);
-    if (bgDivRef.current && elementRef.current) {
-      const divHeight = bgDivRef.current.clientHeight;
-      elementRef.current.style.height = `${divHeight}px`;
+    if (pBGDivRef.current && pElementRef.current) {
+      const divHeight = pBGDivRef.current.clientHeight;
+      pElementRef.current.style.height = `${divHeight}px`;
     }
     // setPBGLoaded(true);
     // if (bgDiv && bgDiv.style.backgroundImage !== "") {
@@ -356,9 +356,9 @@ function Projects() {
         What We Do 
       </div>
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${projectTransHead})`, height: '10rem', backgroundPosition: 'center', backgroundSize: '200vw'}}></div>
-      {/* <div className='projectPageBelowHeader' style={{backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}} ref={bgDivRef}> */}
-      <div className='projectPageBelowHeader' ref={bgDivRef}>
-        <img className='huhhhhh' ref={elementRef}  src={temp} onLoad={handleLoad}></img>
+      {/* <div className='projectPageBelowHeader' style={{backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}} ref={pBGDivRef}> */}
+      <div className='projectPageBelowHeader' ref={pBGDivRef}>
+        <img className='projectBackground' ref={pElementRef}  src={temp} onLoad={handleLoad}></img>
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
@@ -407,7 +407,7 @@ function Projects() {
         <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
         <div style = {{paddingBottom:"10%"}}/>
       </div> 
-      <Loader pBGLoaded={pBGLoaded}/>
+      <Loader bGLoaded={pBGLoaded}/>
     </div>
   )
 }
