@@ -1,8 +1,8 @@
 
 
 .fancybutton {
-    --magic-rainbow-color-1: hsl(275, 100%, 73%);
-    --magic-rainbow-color-2: hsl(216, 100%, 39%);
+    --magic-rainbow-color-1: #c675ff;
+    --magic-rainbow-color-2: #0050c7;
     display:inline-block;
     position: relative;
     display: flex;
