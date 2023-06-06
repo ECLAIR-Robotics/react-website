@@ -325,6 +325,7 @@ function Projects() {
       const divHeight = bgDivRef.current.clientHeight;
       elementRef.current.style.height = `${divHeight}px`;
     }
+    // setPBGLoaded(true);
     // if (bgDiv && bgDiv.style.backgroundImage !== "") {
     //   setPBGLoaded(true);
     // } else {
@@ -334,19 +335,18 @@ function Projects() {
 
   
   function handleResize() {
+    // setPBGLoaded(false);
     isResized(!resize);
   }
   window.addEventListener('resize', handleResize);
  
-
-  function pBGLateLoadWrapper() {
-    setTimeout(pBGLateLoad, 1);
-  }
-  
-  function pBGLateLoad() {
+  function wrapperFunction() {
     setPBGLoaded(true);
-    const bgDiv : HTMLDivElement | null = document.querySelector('.projectPageBelowHeader');
-    bgDiv?.removeEventListener('load', pBGLateLoad);
+  }
+
+  async function handleLoad() {
+    setTimeout(wrapperFunction, 200)
+    
   }
 
   return (
@@ -357,7 +357,7 @@ function Projects() {
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${projectTransHead})`, height: '10rem', backgroundPosition: 'center', backgroundSize: '200vw'}}></div>
       {/* <div className='projectPageBelowHeader' style={{backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}} ref={bgDivRef}> */}
       <div className='projectPageBelowHeader' ref={bgDivRef}>
-        <img className='huhhhhh' ref={elementRef}  src={temp} style={{}}></img>
+        <img className='huhhhhh' ref={elementRef}  src={temp} onLoad={handleLoad}></img>
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
