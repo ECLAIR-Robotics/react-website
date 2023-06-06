@@ -1,5 +1,6 @@
-import React from 'react'
-import Grid from '@mui/material/Grid'
+import React, {useState, useRef, useEffect} from 'react'
+import Grid from '@mui/material/Grid';
+import Loader from '../components/Loader'
 import OfficerCards from '../components/OfficerCards'
 import '../styles/about.css'
 import placeholderImg from '../static/images/officer/placeholder.png'
@@ -14,7 +15,34 @@ import sahilImg from '../static/images/officer/sahil.jpg'
 import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
 import sahanaImg from '../static/images/officer/sahana.jpeg'
 function About() {
+  const [aBGLoaded, setABGLoaded] = useState(false);
+  const aBGDivRef = useRef<HTMLDivElement>(null);
+  const aElementRef = useRef<HTMLImageElement>(null);
+  
+  const[resize, isResized] = useState(false);
 
+  useEffect(() => {
+    if (aBGDivRef.current && aElementRef.current) {
+      const divHeight = aBGDivRef.current.clientHeight;
+      aElementRef.current.style.height = `${divHeight}px`;
+    }
+  }, [resize]);
+
+  
+  function handleResize() {
+    // setABGLoaded(false);
+    isResized(!resize);
+  }
+  window.addEventListener('resize', handleResize);
+ 
+  function wrapperFunction() {
+    setABGLoaded(true);
+  }
+
+  async function handleLoad() {
+    setTimeout(wrapperFunction, 0)
+    
+  }
   return (
     <>
       <section className="aboutSectionHeader">
@@ -31,6 +59,7 @@ function About() {
         backgroundSize: 'cover',
         marginTop: '-1px'
       }} >
+        <img className='contactBackground' ref={aElementRef}  src={aboutUsBackground} onLoad={handleLoad}></img>
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
 
@@ -224,6 +253,7 @@ function About() {
 
         </div>
       </section>
+      <Loader bGLoaded={aBGLoaded}/>
 
     </>
   )
