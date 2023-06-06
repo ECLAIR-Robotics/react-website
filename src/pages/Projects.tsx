@@ -4,6 +4,7 @@ import '../styles/projects.css';
 import ImageProjectCard from '../components/ImageProjectCard';
 import ImageSlideCard from '../components/ImageSlideCard';
 import Popup from '../components/Popup';
+import Loader from '../components/Loader';
 
 import pcrP from '../static/images/pcrP.jpg';
 import chessP from '../static/images/chessP.jpg';
@@ -345,7 +346,7 @@ function Projects() {
   }
 
   async function handleLoad() {
-    setTimeout(wrapperFunction, 200)
+    setTimeout(wrapperFunction, 0)
     
   }
 
@@ -406,11 +407,7 @@ function Projects() {
         <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
         <div style = {{paddingBottom:"10%"}}/>
       </div> 
-      <div className={`projectPageLoading ${pBGLoaded ? "" : "pBGLoading"}`}>
-      <div className="loader-container">
-        <div className="spinner"></div>
-      </div>
-      </div>
+      <Loader pBGLoaded={pBGLoaded}/>
     </div>
   )
 }
