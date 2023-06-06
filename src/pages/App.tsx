@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import React, { useEffect} from 'react'
+import { BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
 import Members from './Sponsors';
@@ -41,12 +41,11 @@ const contact = () => {
 }
 
 
-
 const App: React.FC = () => {
-  
+
   return (
     <Router>
-      <div>
+      <div style={{position:'fixed', zIndex:'100', width:'100%'}}>
       <ResponsiveAppBar />
       </div>
       <Routes>

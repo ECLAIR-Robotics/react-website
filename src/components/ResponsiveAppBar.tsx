@@ -39,6 +39,10 @@ function ResponsiveAppBar() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [navigate]);
+
   const theme = createTheme({
     palette: {
       primary: {
