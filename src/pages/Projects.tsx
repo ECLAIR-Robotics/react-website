@@ -346,7 +346,7 @@ function Projects() {
   }
 
   async function handleLoad() {
-    setTimeout(wrapperFunction, 0)
+    setTimeout(wrapperFunction, 200)
     
   }
 
