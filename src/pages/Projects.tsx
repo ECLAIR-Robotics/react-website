@@ -310,15 +310,54 @@ function Projects() {
 
   useEffect(() => {
     cardLocations.current = cardLocations.current.slice(0, cardData.length);
- }, [cardData]);
+  }, [cardData]);
+
+  const [pBGLoaded, setPBGLoaded] = useState(false);
+  const bgDivRef = useRef<HTMLDivElement>(null);
+  const elementRef = useRef<HTMLImageElement>(null);
+  
+  const[resize, isResized] = useState(false);
+
+  useEffect(() => {
+    // const bgDiv : HTMLDivElement | null = document.querySelector('.projectPageBelowHeader');
+    // bgDiv?.addEventListener('load', pBGLateLoadWrapper);
+    if (bgDivRef.current && elementRef.current) {
+      const divHeight = bgDivRef.current.clientHeight;
+      elementRef.current.style.height = `${divHeight}px`;
+    }
+    // if (bgDiv && bgDiv.style.backgroundImage !== "") {
+    //   setPBGLoaded(true);
+    // } else {
+      
+    // }
+  }, [resize]);
+
+  
+  function handleResize() {
+    isResized(!resize);
+  }
+  window.addEventListener('resize', handleResize);
+ 
+
+  function pBGLateLoadWrapper() {
+    setTimeout(pBGLateLoad, 1);
+  }
+  
+  function pBGLateLoad() {
+    setPBGLoaded(true);
+    const bgDiv : HTMLDivElement | null = document.querySelector('.projectPageBelowHeader');
+    bgDiv?.removeEventListener('load', pBGLateLoad);
+  }
 
   return (
-    <div className='everything'>
+    <div className={`everything `}>
       <div className='projectPageHeading'>
         What We Do 
       </div>
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${projectTransHead})`, height: '10rem', backgroundPosition: 'center', backgroundSize: '200vw'}}></div>
-      <div className='projectPageBelowHeader' style={{backgroundImage: `url(${temp})`, backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}}>
+      {/* <div className='projectPageBelowHeader' style={{backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}} ref={bgDivRef}> */}
+      <div className='projectPageBelowHeader' ref={bgDivRef}>
+        <img className='huhhhhh' ref={elementRef}  src={temp} style={{}}></img>
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
@@ -366,6 +405,8 @@ function Projects() {
         </div>
         <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
         <div style = {{paddingBottom:"10%"}}/>
+      </div> 
+      <div className={`projectPageLoading ${pBGLoaded ? "" : "pBGLoading"}`}>
       </div>
     </div>
   )
