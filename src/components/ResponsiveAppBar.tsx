@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,22 +8,109 @@ import Container from '@mui/material/Container';
 import NavbarElement from './NavbarElement';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import '../styles/navbar.css';
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
+  const location = useLocation();
 
-  // TODO mkae a nav bar element that returns a highlighted element if the boolean value is true other wise it returns a regular element
   // TODO create another dropdown style menu for mobile users
-   
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
+
+  const homeLinkRef = useRef<HTMLDivElement>(null);
+  const aboutLinkRef = useRef<HTMLDivElement>(null);
+  const sponsorsLinkRef = useRef<HTMLDivElement>(null);
+  const projectsLinkRef = useRef<HTMLDivElement>(null);
+  const contactLinkRef = useRef<HTMLDivElement>(null);
+  const spanRef = useRef<HTMLDivElement>(null);
+
+  // hardcoded value for the span position
+  const SPAN_POS = 532.765625;
+  const SPAN_TOP = 57;
+  const HOME_POS = 167;
+  const ABOUT_POS = 260;
+  const SPONSORS_POS = 359;
+  const PROJECTS_POS = 496;
+  const CONTACT_POS = 651;
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--span-position-top', `${SPAN_TOP}px`);
+    console.log(spanRef.current?.getBoundingClientRect().left);
+    const currentPath = location.pathname;
+    if ( currentPath === '/') {
+
+      navbarGoHome();
+    } else if ( currentPath === '/about') {
+      navbarGoAbout();
+    } else if ( currentPath === '/sponsors') {
+      navbarGoSponsors();
+    } else if ( currentPath === '/projects') {
+      navbarGoProjects();
+    } else if ( currentPath === '/contact') {
+      navbarGoContact();
+    }
+    
+  }, [])
 
 
+  const navbarGoHome = () => {
+    const root = document.documentElement;
+    const homeLink = homeLinkRef.current?.getBoundingClientRect();
+    const span = spanRef.current?.getBoundingClientRect();
+    if (homeLink && span) {
+      const pos = homeLink.left - SPAN_POS;
+      const width = homeLink?.width;
+      root.style.setProperty('--span-position', `${HOME_POS}px`);
+      root.style.setProperty('--span-width', `${width}px`);
+    }
+  }
 
+  const navbarGoAbout = () => {
+    const root = document.documentElement;
+    const aboutLink = aboutLinkRef.current?.getBoundingClientRect();
+    const span = spanRef.current?.getBoundingClientRect();
+    if (aboutLink && span) {
+      const pos = aboutLink.left - SPAN_POS;
+      const width = aboutLink?.width;
+      root.style.setProperty('--span-position', `${ABOUT_POS}px`);
+      root.style.setProperty('--span-width', `${width}px`);
+    }
+  }
+
+  const navbarGoSponsors = () => {
+    const root = document.documentElement;
+    const sponsorsLink = sponsorsLinkRef.current?.getBoundingClientRect();
+    const span = spanRef.current?.getBoundingClientRect();
+    if (sponsorsLink && span) {
+      const width = sponsorsLink?.width;
+      root.style.setProperty('--span-position', `${SPONSORS_POS}px`);
+      root.style.setProperty('--span-width', `${width}px`);
+    }
+  }
+
+  const navbarGoProjects = () => {
+    const root = document.documentElement;
+    const projectsLink = projectsLinkRef.current?.getBoundingClientRect();
+    const span = spanRef.current?.getBoundingClientRect();
+    if (projectsLink && span) {
+      const pos = projectsLink.left - SPAN_POS;
+      const width = projectsLink?.width;
+      root.style.setProperty('--span-position', `${PROJECTS_POS}px`);
+      root.style.setProperty('--span-width', `${width}px`);
+    }
+  }
+
+  const navbarGoContact = () => {
+    const root = document.documentElement;
+    const contactLink = contactLinkRef.current?.getBoundingClientRect();
+    const span = spanRef.current?.getBoundingClientRect();
+    if (contactLink && span) {
+      const pos = contactLink.left - SPAN_POS;
+      const width = contactLink?.width;
+      root.style.setProperty('--span-position', `${CONTACT_POS}px`);
+      root.style.setProperty('--span-width', `${width}px`);
+    }
+  }
 
   interface PalleteColor {
     light?: string;
@@ -57,7 +144,11 @@ function ResponsiveAppBar() {
     background: 'linear-gradient(to right, #20c997, #ff77ff)',
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
-    color: 'transparent'
+    color: 'transparent',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+
   }
   return (
     <ThemeProvider theme={theme}>
@@ -66,75 +157,54 @@ function ResponsiveAppBar() {
           paddingBottom: '0em',
         }}>
           <Toolbar disableGutters>
-            <Typography
-              variant="h5"
-              style={titleStyle}
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'flex' },
-                fontFamily: 'Titilium Web, sans-serif',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-                overflow: 'visible',
-              }}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Typography
+                  variant="h5"
+                  style={titleStyle}
+                  noWrap
+                  component="a"
+                  href="/"
+                  sx={{
+                    mr: 2,
+                    display: { xs: 'flex', md: 'flex' },
+                    fontFamily: 'Titilium Web, sans-serif',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    overflow: 'visible',
+                  }}
+                >
+                  ECLAIR
+                </Typography>
+                <Box sx={{
+                  flexGrow: 1,
+                  paddingLeft: '2em',
+                  display: { xs: 'block', md: 'flex' },
+                  alignItems: 'flex-start',
+                }}>
+                  <div ref={homeLinkRef} onClick={navbarGoHome} style={{ height: 'fit-content', width: 'fit-content' }}>
+                    <NavbarElement text="HOME" highlighted={false} href="/" />
+                  </div>
+                  <div ref={aboutLinkRef} onClick={navbarGoAbout}>
+                    <NavbarElement ref={aboutLinkRef} text="ABOUT" highlighted={false} href="/about" />
+                  </div>
+                  <div ref={sponsorsLinkRef} onClick={navbarGoSponsors} >
+                    <NavbarElement ref={sponsorsLinkRef} text="SPONSORS" highlighted={false} href="/sponsors" />
+                  </div>
+                  <div ref={projectsLinkRef} onClick={navbarGoProjects}>
+                    <NavbarElement ref={projectsLinkRef} text="WHAT WE DO" highlighted={false} href="/projects" />
+                  </div>
+                  <div ref={contactLinkRef} onClick={navbarGoContact}>
+                    <NavbarElement ref={contactLinkRef} text="CONTACT US" highlighted={false} href="/contact" />
+                  </div>
+                </Box>
+              </div>
 
-              
-            >
-              ECLAIR
-            </Typography>
-            <Box sx={{
-              flexGrow: 1, 
-              paddingLeft: '2em',
-              display: { xs: 'block', md: 'flex' },
-              alignItems: 'flex-start',
-            }}>
-              {/* <Link to="/" style={{
-                padding: '1em',
-                color: 'inherit',
-                paddingTop: '1em',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-              }}> HOME </Link>
+              <span ref={spanRef} className='navbarSpan'></span>
 
-              <Link to="/about" style={{
-                padding: '1em',
-                color: 'inherit',
-                paddingTop: '1em',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-              }}> ABOUT </Link>
-              <Link to="/sponsors" style={{
-                padding: '1em',
-                color: 'inherit',
-                paddingTop: '1em',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-              }}> SPONSORS </Link>
-              <Link to="/projects" style={{
-                padding: '1em',
-                color: 'inherit',
-                paddingTop: '1em',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-              }}> WHAT WE DO </Link>
-              <Link to="/contact" style={{
-                padding: '1em',
-                color: 'inherit',
-                paddingTop: '1em',
-                textDecoration: 'none',
-                fontFamily: 'sans-serif',
-              }}> CONTACT US </Link> */}
-              <NavbarElement text="HOME" highlighted={false} href="/"/>
-              <NavbarElement text="ABOUT" highlighted={false} href="/about"/>
-              <NavbarElement text="SPONSORS" highlighted={false} href="/sponsors"/>
-              <NavbarElement text="WHAT WE DO" highlighted={false} href="/projects"/>
-              <NavbarElement text="CONTACT US" highlighted={false} href="/contact"/>
-            </Box>
+            </div>
           </Toolbar>
         </Container>
       </AppBar>
