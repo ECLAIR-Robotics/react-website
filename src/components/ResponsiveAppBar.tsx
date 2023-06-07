@@ -3,32 +3,27 @@ import { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import NavbarElement from './NavbarElement';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-const pages = ['Home', 'Projects', 'Members', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
+
+  // TODO mkae a nav bar element that returns a highlighted element if the boolean value is true other wise it returns a regular element
+  // TODO create another dropdown style menu for mobile users
+   
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const goToHome = () => {
-    navigate('/');
-  }
+
+
 
   interface PalleteColor {
     light?: string;
@@ -88,7 +83,7 @@ function ResponsiveAppBar() {
                 overflow: 'visible',
               }}
 
-              // onClick={goToHome}
+              
             >
               ECLAIR
             </Typography>
@@ -97,9 +92,8 @@ function ResponsiveAppBar() {
               paddingLeft: '2em',
               display: { xs: 'block', md: 'flex' },
               alignItems: 'flex-start',
-
             }}>
-              <Link to="/" style={{
+              {/* <Link to="/" style={{
                 padding: '1em',
                 color: 'inherit',
                 paddingTop: '1em',
@@ -134,7 +128,12 @@ function ResponsiveAppBar() {
                 paddingTop: '1em',
                 textDecoration: 'none',
                 fontFamily: 'sans-serif',
-              }}> CONTACT US </Link>
+              }}> CONTACT US </Link> */}
+              <NavbarElement text="HOME" highlighted={false} href="/"/>
+              <NavbarElement text="ABOUT" highlighted={false} href="/about"/>
+              <NavbarElement text="SPONSORS" highlighted={false} href="/sponsors"/>
+              <NavbarElement text="WHAT WE DO" highlighted={false} href="/projects"/>
+              <NavbarElement text="CONTACT US" highlighted={false} href="/contact"/>
             </Box>
           </Toolbar>
         </Container>

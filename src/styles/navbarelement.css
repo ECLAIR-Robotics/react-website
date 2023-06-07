@@ -1,0 +1,17 @@
+.navElementContainer {
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    background: linear-gradient(to right, #20c997, #ff77ff);
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property */
+    color: transparent; /* Set text color to transparent */
+    
+    /* background-clip: 'text',
+    WebkitBackgroundClip: 'text',
+    color: 'transparent' */
+}
