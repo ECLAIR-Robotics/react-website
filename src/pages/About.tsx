@@ -13,6 +13,7 @@ import conradImg from '../static/images/officer/conrad.jpg'
 import sahilImg from '../static/images/officer/sahil.jpg'
 import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
 import sahanaImg from '../static/images/officer/sahana.jpeg'
+import carsonImg from '../static/images/officer/carson.jpg'
 function About() {
 
   return (
@@ -137,9 +138,9 @@ function About() {
               <OfficerCards
                 name='Carson Stark'
                 position='Tech Lead, Autonomous Drone'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
-                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahiljain11@utexas.edu ' />
+                img={carsonImg} bio="I am studying computer science and business. I have always had a passion for technology, and I've been experimenting with game development, AI, and robotics for many years."
+                linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
+                email='carsonstark@ymail.com' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
