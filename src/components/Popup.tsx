@@ -58,7 +58,7 @@ function Popup(props : Props) {
           props.onClose();
         } else {
           // clicked outside component
-          console.log('hi')
+          // console.log('hi')
         }
       };
   

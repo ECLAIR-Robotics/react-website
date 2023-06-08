@@ -1,0 +1,17 @@
+.trans {
+    opacity: 0;
+}
+
+.skeltrans {
+    opacity: 0;
+    
+}
+
+.skelnorm {
+    opacity: 1;
+    transform: translateX(-10rem);
+    position:'absolute';
+    z-index:110000;
+    top: 0;
+    bottom:0;
+}
