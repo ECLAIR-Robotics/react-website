@@ -1,13 +1,13 @@
-import React, { memo, useEffect} from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
+import React, { memo, useState, useEffect} from 'react'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
-import Members from './Sponsors';
 import Projects from './Projects';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Contact from './Contact';
 import Footer from '../components/Footer';
 import Sponsors from './Sponsors';
+import EclairDrawer from '../components/EclairDrawer';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
@@ -44,12 +44,31 @@ const contact = () => {
 
 const App: React.FC = () => {
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [ isSmol, setIsSmol ] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth);
+      setIsSmol(window.innerWidth < 1000);
+    };
+    const userAgent = navigator.userAgent.toLowerCase();
+    console.log(userAgent);
+    setIsMobile(/iphone|ipad|ipod|android|blackberry|windows phone/.test(userAgent));
+    // Attach event listener for window resize
+    window.addEventListener('resize', handleResize);
+    console.log(isMobile);
+    console.log(isSmol);
+  }, []);
   return (
     <Router>
 
       <div style={{position:'fixed', zIndex:'100', width:'100%'}}>
-      <ResponsiveAppBar />
       
+      { isMobile || isSmol? (<EclairDrawer/>) : (<ResponsiveAppBar/>)}
+      
+      {/* <ResponsiveAppBar /> */}
+      {/* <EclairDrawer /> */}
       </div>
       <Routes>
         <Route path="/" Component={homepage} />

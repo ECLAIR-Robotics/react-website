@@ -10,7 +10,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/navbar.css';
-import { initializeApp } from 'firebase/app';
+
 
 function ResponsiveAppBar() {
 
