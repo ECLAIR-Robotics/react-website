@@ -1,5 +1,5 @@
-import React, { memo, useState, useEffect} from 'react'
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { memo, useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
 import Projects from './Projects';
@@ -26,49 +26,48 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const homepage = () => {
-  return  <Homepage/>
+  return <Homepage />
 }
 const about = () => {
-  return  <About/>
+  return <About />
 }
 const members = () => {
-  return  <Sponsors/>
+  return <Sponsors />
 }
 const projects = () => {
-  return  <Projects/>
+  return <Projects />
 }
 const contact = () => {
-  return  <Contact/>
+  return <Contact />
 }
 
 
 const App: React.FC = () => {
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [ isSmol, setIsSmol ] = useState<boolean>(false);
+  const [isSmol, setIsSmol] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
+
       setIsSmol(window.innerWidth < 1000);
     };
     const userAgent = navigator.userAgent.toLowerCase();
-    console.log(userAgent);
+
     setIsMobile(/iphone|ipad|ipod|android|blackberry|windows phone/.test(userAgent));
     // Attach event listener for window resize
     window.addEventListener('resize', handleResize);
-    console.log(isMobile);
-    console.log(isSmol);
+
   }, []);
   return (
     <Router>
 
-      <div style={{position:'fixed', zIndex:'100', width:'100%'}}>
-      
-      { isMobile || isSmol? (<EclairDrawer/>) : (<ResponsiveAppBar/>)}
-      
-      {/* <ResponsiveAppBar /> */}
-      {/* <EclairDrawer /> */}
+      <div style={{ position: 'fixed', zIndex: '100', width: '100%' }}>
+
+        {isMobile || isSmol ? (<EclairDrawer />) : (<ResponsiveAppBar />)}
+
+        {/* <ResponsiveAppBar /> */}
+        {/* <EclairDrawer /> */}
       </div>
       <Routes>
         <Route path="/" Component={homepage} />
