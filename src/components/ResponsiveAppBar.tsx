@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import { memo, useState, useRef, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +10,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/navbar.css';
+import { initializeApp } from 'firebase/app';
 
 function ResponsiveAppBar() {
 
@@ -49,7 +50,7 @@ function ResponsiveAppBar() {
     } else if ( currentPath === '/contact') {
       navbarGoContact();
     }
-    
+    setInitialRender(false);
   }, [])
 
 
@@ -150,6 +151,9 @@ function ResponsiveAppBar() {
     justifyContent: 'center',
 
   }
+
+  const [inititalRender, setInitialRender] = useState(true);
+
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static">
@@ -202,7 +206,7 @@ function ResponsiveAppBar() {
                 </Box>
               </div>
 
-              <span ref={spanRef} className='navbarSpan'></span>
+              <span ref={spanRef} className={`navbarSpan ${inititalRender ? 'initial' : ''}`}></span>
 
             </div>
           </Toolbar>
@@ -211,4 +215,4 @@ function ResponsiveAppBar() {
     </ThemeProvider>
   );
 }
-export default ResponsiveAppBar;
+export default memo(ResponsiveAppBar);

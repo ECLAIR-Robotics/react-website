@@ -13,5 +13,10 @@
     position: absolute;
     left: var(--span-position);
     top: var(--span-position-top);
-    transition: transform 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.navbarSpan.initial {
+    transition: none;
 }

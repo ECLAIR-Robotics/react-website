@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { memo, useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import Sponsors from './Sponsors';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyApKv2_Muv15F14Vfuo04rwuqxUcTtMy9o",
@@ -45,8 +46,10 @@ const App: React.FC = () => {
 
   return (
     <Router>
+
       <div style={{position:'fixed', zIndex:'100', width:'100%'}}>
       <ResponsiveAppBar />
+      
       </div>
       <Routes>
         <Route path="/" Component={homepage} />
