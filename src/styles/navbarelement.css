@@ -1,9 +1,26 @@
+:root {
+    --background-highlight: #ffffff00;
+}
+
+.navContainer{
+    width: fit-content;
+    
+}
+
+.highlighted {
+    transition: 1s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 0.3em;
+}
+
+
 .navElementContainer {
     display: flex;
-    padding-left: 1em;
-    padding-right: 1em;
+    width: fit-content;
+    margin-left: 1em;
+    margin-right: 1em;
     padding-top: 1em;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto', sans-serif;
@@ -12,5 +29,16 @@
     -webkit-background-clip: text;
     background-clip: text; /* Standard property */
     color: transparent; /* Set text color to transparent */
+    overflow: hidden;
 
+}
+.navbarSpan {
+    background: linear-gradient(to right, #20c997, #ff77ff);
+    height: 0.4em;
+    width: var(--span-width);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    position: absolute;
+    transition: left 0.5s ease-in-out;
+    transition-delay: 0.1s;
 }

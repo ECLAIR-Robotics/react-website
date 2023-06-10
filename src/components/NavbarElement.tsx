@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom';
 import '../styles/navbarelement.css'
 import { Link } from 'react-router-dom';
 
@@ -12,29 +13,36 @@ interface Props {
 }
 
 function NavbarElement(props: Props) {
-
-  const [highlighted, setHighlighted] = useState(false);
-  const [elementClassName, setElementClassName] = useState('navElementContainer');
+  const location = useLocation();
+  const [currentUrl, setCurrentUrl] = useState<string>('');
+  const elementRef = useRef<HTMLAnchorElement>(null);
+ 
   useEffect(() => {
-    if( highlighted) {
-      setElementClassName('navElementContainerHighlighted');
-    } else {
-      setElementClassName('navElementContainer');
-    }
-  },[highlighted]);
+    
+    
+    const elementBounds = elementRef.current?.getBoundingClientRect();
+    console.log(elementBounds?.width);
+    const width = elementBounds?.width;
+  }, []); 
 
-  // console.log(props.highlighted);
-  // console.log(highlighted);
-  // console.log(elementClassName);
-  const elementClicked = () => {
-    props.onclick!();
-    setHighlighted(true);
-  }
+  useEffect(() => {
+
+    setCurrentUrl(location.pathname);
+
+  }, [location.pathname]);
   
   return (
-    <Link ref= {props.ref} className={elementClassName} to={props.href} onClick={elementClicked}>
+    <div   className={`navContainer ${currentUrl==props.href ? 'highlighted' : ''}`}>
+    <Link ref= {elementRef}  className="navElementContainer" to={props.href}>
+      <div  style={{
+      }}
+      
+      >
       {props.text}
+      </div>
     </Link>
+    { props.href===currentUrl &&(<span className="navbarSpan"></span>)}
+    </div>
   )
 }
 

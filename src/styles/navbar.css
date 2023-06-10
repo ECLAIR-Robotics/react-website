@@ -1,22 +1,3 @@
-:root {
-    --span-position: 0;
-    --span-position-top: 0;
-    --span-width: 0;
-}
 
-.navbarSpan {
-    background: linear-gradient(to right, #20c997, #ff77ff);
-    height: 0.4em;
-    width: var(--span-width);
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    position: absolute;
-    left: var(--span-position);
-    top: var(--span-position-top);
-    transition: left 0.5s ease-in-out;
-    transition-delay: 0.1s;
-}
 
-.navbarSpan.initial {
-    transition: none;
-}
+

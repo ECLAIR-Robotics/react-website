@@ -18,7 +18,7 @@ function EclairDrawer() {
         }
     }
 
-    const [currentPath, setCurrentPath] = useState<{[key: string]: boolean}>({
+    const [currentPath, setCurrentPath] = useState<{ [key: string]: boolean }>({
         '/': false,
         '/about': false,
         '/sponsors': false,
@@ -59,9 +59,9 @@ function EclairDrawer() {
         console.log(currentUrl);
 
         setCurrentPath(
-            (prevCurrentPath: {[key: string]: boolean}) => {
-                const updatedPath : {[key: string] : boolean} = Object.keys(prevCurrentPath).reduce((acc : {[key : string] : boolean}, key : string) => {
-                    if ( key === currentUrl) {
+            (prevCurrentPath: { [key: string]: boolean }) => {
+                const updatedPath: { [key: string]: boolean } = Object.keys(prevCurrentPath).reduce((acc: { [key: string]: boolean }, key: string) => {
+                    if (key === currentUrl) {
                         acc[key] = true;
                     } else {
                         acc[key] = false;
@@ -72,7 +72,7 @@ function EclairDrawer() {
                 return updatedPath;
             }
         );
-        
+
     }, [currentUrl]);
 
     useEffect(() => {
@@ -154,36 +154,46 @@ function EclairDrawer() {
                                 ECLAIR
                             </Typography>
                         </div>
-                        <div className='drawerElement'>
-                            <Link to='/'>
-                                Home
-                            </Link>
-                        </div>
-                        { currentPath['/'] && (<span className="divierDrawer"></span>)}
-                        <div className='drawerElement'>
-                            <Link to='/about'>
-                                About
-                            </Link>
-                        </div>
-                        { currentPath['/about'] && (<span className="divierDrawer"></span>)}
-                        <div className='drawerElement'>
-                            <Link to='/sponsors'>
-                                Sponsors
-                            </Link>
-                        </div>
-                        { currentPath['/sponsors'] && (<span className="divierDrawer"></span>)}
-                        <div className='drawerElement'>
-                            <Link to='/projects'>
-                                What We Do
-                            </Link>
-                        </div>
-                        { currentPath['/projects'] && (<span className="divierDrawer"></span>)}
-                        <div className='drawerElement'>
-                            <Link to='/contact'>
-                                Contact Us
-                            </Link>
-                        </div>
-                        { currentPath['/contact'] && (<span className="divierDrawer"></span>)}
+                        <a href="/">
+                            <div className='drawerElement'>
+                                <Link to='/'>
+                                    Home
+                                </Link>
+                            </div>
+                        </a>
+                        {currentPath['/'] && (<span className="divierDrawer"></span>)}
+                        <a href="/about">
+                            <div className='drawerElement'>
+                                <Link to='/about'>
+                                    About
+                                </Link>
+                            </div>
+                        </a>
+                        {currentPath['/about'] && (<span className="divierDrawer"></span>)}
+                        <a href="/sponsors">
+                            <div className='drawerElement'>
+                                <Link to='/sponsors'>
+                                    Sponsors
+                                </Link>
+                            </div>
+                        </a>
+                        {currentPath['/sponsors'] && (<span className="divierDrawer"></span>)}
+                        <a href="/projects">
+                            <div className='drawerElement'>
+                                <Link to='/projects'>
+                                    What We Do
+                                </Link>
+                            </div>
+                        </a>
+                        {currentPath['/projects'] && (<span className="divierDrawer"></span>)}
+                        <a href="/contact">
+                            <div className='drawerElement'>
+                                <Link to='/contact'>
+                                    Contact Us
+                                </Link>
+                            </div>
+                        </a>
+                        {currentPath['/contact'] && (<span className="divierDrawer"></span>)}
                     </div>
 
 

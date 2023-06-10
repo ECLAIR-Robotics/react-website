@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react'
+import React, {  useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
@@ -21,6 +21,8 @@ const firebaseConfig = {
   appId: "1:664767979379:web:7904edda15a1350c3b6f06",
   measurementId: "G-XVQ8FB05W1"
 };
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
