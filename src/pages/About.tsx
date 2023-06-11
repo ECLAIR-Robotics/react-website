@@ -15,6 +15,7 @@ import sahilImg from '../static/images/officer/sahil.jpg'
 import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
 import sahanaImg from '../static/images/officer/sahana.jpeg'
 import carsonImg from '../static/images/officer/carson.jpg'
+import kyryloImg from '../static/images/officer/kyrylo.png'
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
   const aBGDivRef = useRef<HTMLDivElement>(null);
@@ -145,15 +146,15 @@ function About() {
                 position='Tech Lead, mood detector'
                 img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI, and my hobbies outside of school include reading, visual arts, and journaling."
                 linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahiljain11@utexas.edu ' />
+                email='sahanagana@utexas.edu' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Kyrylo Boiko'
                 position='Tech Lead, fitness tracker'
-                img={eclairLogo} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface"
-                linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahanagana@utexas.edu' />
+                img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of his hobbies are active, such as hiking, playing soccer, and karate, but he also enjoys board & video games."
+                linkedIn='https://www.linkedin.com/in/kyryloboiko/'
+                email='kyrylo.boiko@gmail.com' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
@@ -175,7 +176,7 @@ function About() {
               <OfficerCards
                 name='Conrad Li'
                 position='Tech Lead, PCR'
-                img={conradImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={conradImg} bio="Conrad is a recently graduated computer science, neuroscience, and chemistry major from UT Austin. He aspires to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
                 email='conradliste@utexas.edu' />
             </Grid>
@@ -207,7 +208,7 @@ function About() {
               <OfficerCards
                 name='Conrad Li'
                 position='Founder'
-                img={conradImg} bio="Hi I like to do random stuff. Lore Ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface "
+                img={conradImg} bio="Conrad is a recently graduated computer science, neuroscience, and chemistry major from UT Austin. He aspires to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
                 email='conradliste@utexas.edu' />
             </Grid>
