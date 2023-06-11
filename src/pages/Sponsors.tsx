@@ -37,6 +37,29 @@ function Sponsors() {
   const [isElementVisible, setElementVisible] = useState(false);
   const targetElementRef = useRef(null);
 
+  const bronze = [
+    // "",
+    "Listed as a sponsor on our club T-shirt worn by 30+ members (name only)",
+    "Featured on a once-per-semester appreciation shoutout on our Instagram with 150+ followers",
+    "Highlighted as a sponsor on our club website",
+    "Provide us with your swag and flyers to distribute at our faculty talks and club meetings with a regular attendance of 30+"
+  ];
+
+  const silver =[
+    // "",
+    "Listed as a sponsor on our club T-shirt worn by 30+ members (logo)",
+    "Secure a booth to advertise your company at our twice-semesterly Demo Days, which are attended by professors and 40+ UT Austin CS students",
+    "Obtain invitations to host workshops & recruiting events for our members up to 2 times a semester and with a potential turnout of 30+ students"
+  ];
+
+  const gold =[
+    // "",
+    "Gain access to our resume book containing the profiles of the 30+ members active on our engineering projects",
+    "Attain higher priority for invitations to host workshops & recruiting events for our members",
+    "Showcase your logo on ~50 club flyers posted around campus in areas such as the CS and engineering buildings, garnering ~10,000 views",
+    "Advertise your campus events and other opportunities on our Discord and mailing list, reaching a network of 500+ UT Austin students and alumni"
+  ]
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
@@ -95,81 +118,73 @@ function Sponsors() {
         <img className='sponsorBackground' ref={sElementRef}  src={bg} onLoad={handleLoad}></img>
         <div style = {{paddingBottom:"12rem"}} ref ={elementRef}/>
           <div className={`tierHolder ${isVisible ? 'vi' : ''}`} >
-            <div className={`tierCard`} style={{border:'2px solid #7fd6ff'}}>
-              <div className='tierCardContent'>
-                <div className='tierTitle diamond' > Diamond </div>
-                <div style={{display:'flex', justifyContent:'center'}}>
-                  <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                    <span className='popupDivider'></span>
+            <div>
+              <div className='tierCardHolder' style={{border: '0px solid #7fd6ff'}}>
+                <div className={`tierCard`} style={{}}>
+                  <div className='tierCardContent'>
+                    <div className='tierTitle diamond' > Diamond </div>
+                    <div style={{display:'flex', justifyContent:'center'}}>
+                      <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                        <span className='popupDividerSD' style={{borderColor:""}}></span>
+                      </div>
+                    </div>
+                    <ul className='perkList'>
+                      <li className='gold'>All Gold Perks</li>
+                      {gold.map((perk, index) =>
+                        <li key={index}>{perk}</li>
+                      )}
+                    </ul>
                   </div>
                 </div>
-                <ul className='perkList'>
-                  <li className='gold'>All Gold Perks</li>
-                  <li>Robot demo at company events</li>
-                  <li>Eligible to recruit memebrs</li>
-                  <li>Invitation to see demo days</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                </ul>
               </div>
             </div>
-            <div className='tierCard' style={{ border: '2px solid #ffd700'}}>
-              <div className='tierCardContent'>
-                <div className='tierTitle gold' > Gold </div>
-                <div style={{display:'flex', justifyContent:'center'}}>
-                  <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                    <span className='popupDivider'></span>
+            <div>
+              <div className='tierCardHolder'>
+                <div className='tierCard' style={{ }}>
+                  <div className='tierCardContent'>
+                    <div className='tierTitle gold' > Gold </div>
+                    <div style={{display:'flex', justifyContent:'center'}}>
+                      <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                        <span className='popupDividerSG' style={{}}></span>
+                      </div>
+                    </div>
+                    <ul className='perkList'>
+                      <li className='silver'>All Silver Perks</li>
+                      {silver.map((perk, index) =>
+                        <li key={index}>{perk}</li>
+                      )}
+                    </ul>
                   </div>
                 </div>
-                <ul className='perkList'>
-                  <li className='silver'>All Silver Perks</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                </ul>
               </div>
             </div>
-            <div className='tierCard' style={{border:'2px solid #c7c7c7'}}>
-              <div className='tierCardContent'>
-                <div className='tierTitle silver' > Silver </div>
-                <div style={{display:'flex', justifyContent:'center'}}>
-                  <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
-                   <span className='popupDivider'></span>
-                 </div>
+            <div>
+              <div className='tierCardHolder'>
+                <div className='tierCard' style={{borderColor:'#c7c7c7'}}>
+                  <div className='tierCardContent'>
+                    <div className='tierTitle silver' > Silver </div>
+                    <div style={{display:'flex', justifyContent:'center'}}>
+                      <div className="divHolder" style={{width:'70%', paddingTop:'0.5rem', paddingBottom:'0.6rem'}}>
+                      <span className='popupDividerSS'></span>
+                    </div>
+                    </div>
+                    <ul className='perkList'>
+                      {bronze.map((perk, index) =>
+                        <li key={index}>{perk}</li>
+                      )}
+                    </ul>
                 </div>
-                <ul className='perkList'>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                  <li>Filler</li>
-                </ul>
-             </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div style={{display:'flex', justifyContent:'center', alignContent:'center'}}>
-            <div className={`sponsorText ${isElementVisible ? 'vis' : ''}`} ref={targetElementRef} style={{color:'white', fontFamily:'poppins', width:'50%', justifySelf:'center', alignSelf:'center', textAlign:'center'}}>
-              We are always trying to provide our members with the most cutting-edge robotics hardware available and would greatly appreciate any potential sponsorships. If you are interested in sponsoring UT ECLAIR, please contact us at the email below and we can send you our sponsor packet!
+          {/* <div style={{display:'flex', justifyContent:'center', alignContent:'center'}}> */}
+          <div style={{display:'flex', justifyContent:'center', alignContent:'center', width:'100%'}}>
+            <div className={`sponsorTextHolder ${isElementVisible ? 'vis' : ''}`} ref={targetElementRef} style={{}}>
+              {/* <div className={`sponsorText`} style={{color:'black', fontFamily:'poppins', width:'50%', justifySelf:'center', alignSelf:'center', textAlign:'center'}}> */}
+              <div className={`sponsorText`} style={{fontFamily:'montserrat', justifySelf:'center', alignSelf:'center', textAlign:'center'}}>
+                We are always trying to provide our members with the most cutting-edge robotics hardware available and would greatly appreciate any potential sponsorships. If you are interested in sponsoring UT ECLAIR, please contact us at the email below and we can send you our sponsor packet!
+              </div>
             </div>
           </div>
 
