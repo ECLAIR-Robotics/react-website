@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
     palette: {
       primary: {
         // light: will be calculated from palette.primary.main,
-        main: '#2d3549',
+        main: '#2d354948',
       },
       secondary: {
         light: '#0066ff',
@@ -64,7 +64,14 @@ function ResponsiveAppBar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static">
+      <AppBar position="static" style={{
+        background: "linear-gradient(to right, #c675ff32, #0050c74e)",
+        backdropFilter: 'blur(15px)',
+        WebkitBackdropFilter: 'blur(15px)',
+        boxShadow: '10px 10px 10px rgba(30, 30, 30, 0.1)',
+        borderBottomLeftRadius: '1em',
+        borderBottomRightRadius: '1em',
+      }}>
         <Container maxWidth="xl" sx={{
           paddingBottom: '0em',
         }}>

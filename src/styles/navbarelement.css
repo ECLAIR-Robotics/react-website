@@ -1,5 +1,5 @@
 :root {
-    --background-highlight: #ffffff00;
+    --background-highlight: #2d3549ae;
 }
 
 .navContainer{
@@ -8,8 +8,8 @@
 }
 
 .highlighted {
-    transition: 1s ease-in-out;
-    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+    background-color: #ffffff14;
     border-radius: 0.3em;
 }
 
