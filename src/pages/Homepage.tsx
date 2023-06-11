@@ -2,9 +2,10 @@ import React from 'react';
 import Logo from '../static/images/logo/ECLAIR_logo2.png';
 import '../styles/app.css';
 import ECLAIRButton from '../components/ECLAIRButton';
+import Loader from '../components/Loader';
 import { Slide, Fade } from '@mui/material';
 import YoutubeEmbed from '../components/YoutubeEmbed';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
@@ -46,6 +47,35 @@ function Homepage() {
   }
 
   const navigate = useNavigate();
+
+  const [hBGLoaded, setHBGLoaded] = useState(false);
+  const hBGDivRef = useRef<HTMLDivElement>(null);
+  const hElementRef = useRef<HTMLImageElement>(null);
+  
+  const[resize, isResized] = useState(false);
+
+  useEffect(() => {
+    if (hBGDivRef.current && hElementRef.current) {
+      const divHeight = hBGDivRef.current.clientHeight;
+      hElementRef.current.style.height = `${divHeight}px`;
+    }
+  }, [resize]);
+
+  
+  function handleResize() {
+    // setHBGLoaded(false);
+    isResized(!resize);
+  }
+  window.addEventListener('resize', handleResize);
+ 
+  function wrapperFunction() {
+    setHBGLoaded(true);
+  }
+
+  async function handleLoad() {
+    setTimeout(wrapperFunction, 0)
+    
+  }
   return (
 
     <>
@@ -58,6 +88,7 @@ function Homepage() {
           background: `url(${headerBackground})  center center no-repeat `,
           backgroundSize: 'cover',
         }} >
+          <img className='contactBackground' ref={hElementRef}  src={headerBackground} onLoad={handleLoad}></img>
 
           <div className='box1-left'>
             <Fade in={true} timeout={2000}>
@@ -166,6 +197,7 @@ function Homepage() {
           <YoutubeEmbed />
         </div>
       </section>
+      <Loader bGLoaded={hBGLoaded}/>
     </>
   );
 }

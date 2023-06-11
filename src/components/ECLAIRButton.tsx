@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import '../styles/eclairbutton.css'
 
-export enum ECLAIRButtonType {
-}
+
 interface Props {
   type?: 'submit' | 'reset' | 'button';
   text?: string;
@@ -13,7 +12,6 @@ interface Props {
 function ECLAIRButton(props: Props) {
 
   useEffect(() => {
-    console.log(props.radius);
     const btn = document.getElementById('main-eclair-button');
     if (btn) {
       btn.style.borderRadius = props.radius!;

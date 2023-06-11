@@ -1,0 +1,30 @@
+.drawerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawerElement {
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property */
+    transition: 0.3s;
+}
+
+.drawerElement:hover {
+    background: #bcfde916;
+}
+.divierDrawer {
+    margin-left: 5%;
+    width: 90%;
+    height: 0.1em;
+    background: linear-gradient(to right, #20c997, #ff77ff);
+    border-radius: 1em;
+}

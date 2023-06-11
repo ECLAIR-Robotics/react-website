@@ -1,5 +1,5 @@
 .border {
-    background-color: #c675ff4d;
+    background-color: #c675ff7b;
     border-radius: 1em;
     backdrop-filter: blur(10px);
     width: 45%;
@@ -43,3 +43,11 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&family=Poppins:wght@600&family=Titillium+Web:wght@200;300&display=swap');
+
+.contactCapHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 1rem;
+}

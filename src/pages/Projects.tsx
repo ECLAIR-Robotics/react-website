@@ -4,13 +4,31 @@ import '../styles/projects.css';
 import ImageProjectCard from '../components/ImageProjectCard';
 import ImageSlideCard from '../components/ImageSlideCard';
 import Popup from '../components/Popup';
+import Loader from '../components/Loader';
 
 import pcrP from '../static/images/pcrP.jpg';
 import chessP from '../static/images/chessP.jpg';
 import droneP from '../static/images/droneP.jpg';
 import fitnessP from '../static/images/fitnessP.jpg';
 import musicP from '../static/images/musicP.jpg';
-import robotarmP from '../static/images/robotarmP.jpg';
+// import robotarmP from '../static/images/robotarmP.jpg';
+import robotarmP from '../static/images/robotic_arm.png'
+
+import pcr1 from '../static/images/slideshows/pcrSPic1.jpg';
+import pcr2 from '../static/images/slideshows/pcrSPic2.jpg';
+import pcr3 from '../static/images/slideshows/pcrSPic3.jpg';
+import drone1 from '../static/images/slideshows/droneSPic1.jpg';
+import drone2 from '../static/images/slideshows/droneSPic2.jpg';
+import drone3 from '../static/images/slideshows/droneSPic3.jpg';
+import chess1 from '../static/images/slideshows/chessSPic1.jpg';
+import chess2 from '../static/images/slideshows/chessSPic2.jpg';
+import chess3 from '../static/images/slideshows/chessSPic3.jpg';
+import fitness1 from '../static/images/slideshows/fitnessSPic1.jpg';
+import fitness2 from '../static/images/slideshows/fitnessSPic2.jpg';
+import fitness3 from '../static/images/slideshows/fitnessSPic3.jpg';
+import music1 from '../static/images/slideshows/musicSPic1.jpg';
+import music2 from '../static/images/slideshows/musicSPic2.jpg';
+import music3 from '../static/images/slideshows/musicSPic3.jpg';
 
 import cv from '../static/images/cv.png';
 import deepLearning from '../static/images/deepLearning.png';
@@ -25,7 +43,9 @@ import chessVid from '../static/videos/chessTest.gif';
 import droneVid from '../static/videos/droneTest.gif';
 import fitnessVid from '../static/videos/fitnessTest.gif';
 import musicVid from '../static/videos/musicTest.gif';
-import robotarmVid from '../static/videos/robotarmTest.gif';
+// import robotarmVid from '../static/videos/robotarmTest.gif';
+import robotArmVid from '../static/videos/arm_project.gif';
+import smartMirrorVid from '../static/videos/smartMirrorVid.gif';
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import temp from '../static/vectors/projectBackground.svg';
@@ -88,10 +108,24 @@ function Projects() {
       lName:"Sahil Jain, Conrad Li", 
       members:"Pranav, David, Oscar, Nicky, Sarah, Angelica Shawarma, Anjali Agrawal, Emerald, Namila",
       desc: 'To automate the polymerase chain reaction (PCR) process used in wet labs, we implemented various technologies such as detecting the pressure exerted by pipettes and automating a gripper that can grip the pipettes. Additionally, we have utilized computer vision techniques to detect the difference between filled and non-filled vials. In the future, we envision a fully functioning robotic arm that can perform the PCR process independently.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      git:"https://github.com/ECLAIR-Robotics/PCR_Automation", 
+      gantt:"https://docs.google.com/spreadsheets/d/1qEEfA078V_SaOaCuu-pih-EUJhn9BdbRNVKUYMlfKlY/edit?usp=sharing",
       finished:0,
       video: pcrVid,
+      SliderData : [
+        {
+          image:
+            pcr1
+        },
+        {
+          image:
+            pcr2
+        },
+        {
+          image:
+            pcr3
+        }
+      ] 
     },
     {
       id: 1,
@@ -100,10 +134,24 @@ function Projects() {
       lName:"Vishal Kantharaju", 
       members:"Alan Tran, Hursh Jha, Savvy Chezhian, Siddharth Kolukuluri, Tanay Garg, Zach Li",
       desc: 'We aim to develop a comprehensive chess teaching program that plays games with users via a robotic arm, provides personalized feedback, recognizes areas of improvement, and dynamically adapts future games to maximize learning opportunities.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
+      gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
       finished:0,
       video: chessVid,
+      SliderData : [
+        {
+          image:
+            chess1
+        },
+        {
+          image:
+            chess2
+        },
+        {
+          image:
+            chess3
+        }
+      ] 
     },
     {
       id: 2,
@@ -112,10 +160,24 @@ function Projects() {
       lName:"Carson Stark", 
       members:"Justin Sasek",
       desc: 'For our project, we’re programming a hexacopter drone to navigate and preform tasks autonomously using a suite of cameras and sensors. Missions may include indoor navigation and mapping, trash pickup, or military-style search and destroy. We use the python programming language, Robot Operating System, and ArduCopter firmware. No experience is necessary.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      git:"https://github.com/ECLAIR-Robotics/Drone_Prooject", 
+      gantt:"https://docs.google.com/spreadsheets/d/1HXZt8AaNJ8NgtD4zdfVyAx9iu88J-shJCg4XmMV2MSs/edit?usp=sharing",
       finished:0,
       video: droneVid,
+      SliderData : [
+        {
+          image:
+            drone1
+        },
+        {
+          image:
+            drone2
+        },
+        {
+          image:
+            drone3
+        }
+      ] 
     },
     {
       id: 3,
@@ -123,47 +185,75 @@ function Projects() {
       name:'Music Mood', 
       lName:"Sahana Ganapathy", 
       members:"Mehul Murali, Seungwon Lee, Nikhil Kalidasu, Nidhi Thippana, Jason Ren, Sarah Wang-Zhou",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
-      git:"apple.com", 
-      gantt:"costco.com",
-      finished:1,
+      desc: 'We trained and fine tuned a large language model to associate emotions with a song given  it’s lyrics, and used the model to gather emotion data on Spotify profiles/playlists. Our next steps are integrating this model into a usable application and further exploring its capabilities.',
+      git:"https://github.com/ECLAIR-Robotics/Song-Analysis", 
+      gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
+      finished:0,
       video: musicVid,
+      SliderData : [
+        {
+          image:
+            music1
+        },
+        {
+          image:
+            music2
+        },
+        {
+          image:
+            music3
+        }
+      ] 
     },
     {
       id: 4,
       img : robotarmP ,
       name:'Robotic Arm', 
       lName:"Sahil Jain", 
-      members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      members:"Conrad Li",
+      desc: 'By utilizing a simple robotic arm, we aim to implement inverse kinematics and more advanced software features to further our understanding of robotic arm construction.',
+      git:"https://github.com/ECLAIR-Robotics/RoboticArm-", 
+      gantt:"https://github.com/ECLAIR-Robotics/RoboticArm555-",
       finished:1,
-      video: chessVid,
+      video: robotArmVid,
     },
     {
       id: 5,
       img :fitnessP ,
       name:'Fitness Tracker', 
-      lName:"Kyrylo", 
-      members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      lName:"Kyrylo Boiko", 
+      members:"Abbhinav Jayaraman and Annabel To",
+      desc: 'We worked on creating a smart fitness band that would assist gym goers with tracking reps and measuring their form. We used positional & movement data from an IMU sensor and an ML model to transfer findings. It can be further developed to provide real-time suggestions based on most common form errors that are similar to user’s movement patterns.',
+      git:"https://github.com/ECLAIR-Robotics/fitness-tracker", 
+      gantt:"https://docs.google.com/spreadsheets/d/19foBPCCLEiLqI4vJ4cUKgb43mY644ruY5lhwpawIxis/edit?usp=sharing",
       finished:0,
       video: fitnessVid,
+      SliderData : [
+        {
+          image:
+            fitness1
+        },
+        {
+          image:
+            fitness2
+        },
+        {
+          image:
+            fitness3
+        }
+      ] 
     },
     {
       id: 6,
       img :"https://drive.google.com/uc?export=view&id=18k4112Of06u9Yb42pT8NL_o8Nk-GgEny" ,
       name:'Smart Mirror', 
       lName:"Sahil Jain", 
-      members:"Elon Musk, Bill Gates, Michael Dell, Greg Tanyk, Shawarma Anjelika, Vi Herma",
-      desc: 'By utilizing how cracked each of these individuals are, this project is a simple three step plan. The first step is curing cancer. The second is bringing about world peace. And the last is creating a new world order in which AI rules supreme.',
-      git:"apple.com", 
-      gantt:"costco.com",
+      members:"Conrad Li",
+      desc: 'We aim to modify a Samsung infrared TV in order to make a functional smart mirror capable of interacting with a user and performing basic utility functions.',
+      git:"https://github.com/ECLAIR-Robotics/Smart-Mirror", 
+      gantt:"https://docs.google.com/spreadsheets/d/1cCVkAxT6YRqcerKprb5HxVsnR_jYmP8Ai7Nvbnz0M0I/edit?usp=sharing",
       finished:1,
-      video: chessVid,
+      video: smartMirrorVid,
     }
   ];
 
@@ -221,15 +311,54 @@ function Projects() {
 
   useEffect(() => {
     cardLocations.current = cardLocations.current.slice(0, cardData.length);
- }, [cardData]);
+  }, [cardData]);
+
+  const [pBGLoaded, setPBGLoaded] = useState(false);
+  const pBGDivRef = useRef<HTMLDivElement>(null);
+  const pElementRef = useRef<HTMLImageElement>(null);
+  
+  const[resize, isResized] = useState(false);
+
+  useEffect(() => {
+    // const bgDiv : HTMLDivElement | null = document.querySelector('.projectPageBelowHeader');
+    // bgDiv?.addEventListener('load', pBGLateLoadWrapper);
+    if (pBGDivRef.current && pElementRef.current) {
+      const divHeight = pBGDivRef.current.clientHeight;
+      pElementRef.current.style.height = `${divHeight}px`;
+    }
+    // setPBGLoaded(true);
+    // if (bgDiv && bgDiv.style.backgroundImage !== "") {
+    //   setPBGLoaded(true);
+    // } else {
+      
+    // }
+  }, [resize]);
+
+  
+  function handleResize() {
+    // setPBGLoaded(false);
+    isResized(!resize);
+  }
+  window.addEventListener('resize', handleResize);
+ 
+  function wrapperFunction() {
+    setPBGLoaded(true);
+  }
+
+  async function handleLoad() {
+    setTimeout(wrapperFunction, 200)
+    
+  }
 
   return (
-    <div className='everything'>
+    <div className={`everything `}>
       <div className='projectPageHeading'>
         What We Do 
       </div>
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${projectTransHead})`, height: '10rem', backgroundPosition: 'center', backgroundSize: '200vw'}}></div>
-      <div className='projectPageBelowHeader' style={{backgroundImage: `url(${temp})`, backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}}>
+      {/* <div className='projectPageBelowHeader' style={{backgroundSize: "auto 100%", height: "fit-content", backgroundRepeat: "repeat-x", backgroundPosition: 'top left', marginTop:'-1px'}} ref={pBGDivRef}> */}
+      <div className='projectPageBelowHeader' ref={pBGDivRef}>
+        <img className='projectBackground' ref={pElementRef}  src={temp} onLoad={handleLoad}></img>
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
@@ -277,7 +406,8 @@ function Projects() {
         </div>
         <Popup vis ={showPopup} onClose={handleClosePopup} cardInfo={cardInfo} />
         <div style = {{paddingBottom:"10%"}}/>
-      </div>
+      </div> 
+      <Loader bGLoaded={pBGLoaded}/>
     </div>
   )
 }
