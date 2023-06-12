@@ -1,34 +1,16 @@
 
 .tierCard {
-    /* border: 10px solid; */
-    /* border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199)); */
-    /* border-image-slice: 1; */
-    /* background-color: white; */
-    /* width: 90%; */
-    /* height: fit-content; */
-    background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.2), rgb(0, 80, 199, 0.2));
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199));
+    border-image-slice: 1;
+    background-color: black;
+    width: 100%;
     backdrop-filter: blur(10px);
-    border-radius: 10px;
-
-    
-}
-
-.tierCardHolder {
-    /* border: 1px solid pink; */
-    background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.6), rgb(0, 80, 199, 0.6));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 0.8rem;
-    
-    /* opac */
+    border-radius: 5px;
 }
 
 .tierCardContent {
     margin:1rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 a {
@@ -38,41 +20,36 @@ a {
     color:white;
 }
 
-.sponsorTextHolder {
-    /* background-color: blue; */
-    background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.2), rgb(0, 80, 199, 0.2));
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    width: 50%;
-    border-radius: 3px;
+.sponsorText {
     opacity: 0;
+    scale: 1.1;
+    padding: 1rem;
+    color:'white';
+    font-family:'poppins';
+    width:'50%';
+    justify-self:'center';
+    align-self:'center';
+    text-align:'center';
 }
 
-.sponsorText {
-    /* opacity: 0; */
-    /* scale: 1.1; */
-    padding: 1rem;
-    margin: 0.4rem;
-    border-radius: 3px;
-    color: rgb(225, 223, 223);
-    /* color:'white'; */
-    /* background-color: white; */
-    background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.5), rgb(0, 80, 199, 0.5));
-    font-family:'monserrat';
-    font-weight: 600;
-    /* width: fit-content; */
-    /* width:'50%'; */
-    /* justify-self:'center'; */
-    /* align-self:'center'; */
-    /* text-align:'center'; */
-}
+.sponsorText:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 5px; 
+    padding: 2px; 
+    background:linear-gradient(135deg, #c675ff, rgb(0, 80, 199)); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+  }
 
 .vis{
     opacity: 1;
     scale: 1;
-    /* background-color: black; */
+    background-color: black;
     transition: all 1s ease-in-out;
 }
 
@@ -82,9 +59,9 @@ a {
     justify-content: center;
     margin: none;
     padding: none;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 21rem));
-    grid-gap: 6%;    
-    margin-bottom: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 18rem));
+    grid-gap: 5rem;    
+    padding-bottom: 5rem;
     transform: translateX(-200%);
 }
 
@@ -93,12 +70,10 @@ a {
     transition: all 2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap');
 .tierTitle {
     text-align: center;
     font-size: 2.5em;
-    font-weight: 300;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-weight: lighter;
 }
 
 .diamond {
@@ -116,53 +91,24 @@ a {
     /* color: #c7c7c722; */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap');
+
 .perkList {
-    /* color: rgb(241, 241, 241); */
-    /* color: white; */
-    color: rgb(225, 223, 223);
+    color: rgb(241, 241, 241);
     font: lighter;
-    font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.popupDividerSG {
-    height: 0;
-    width: 85%;
-    border: 1px solid;
-    border-color: rgb(150, 138, 70);
-    border-image-slice: 1;
-    margin-top: 20px;
-}
-
-.popupDividerSS {
-    height: 0;
-    width: 85%;
-    border: 1px solid;
-    border-color: #858585;
-    border-image-slice: 1;
-    margin-top: 20px;
-}
-
-.popupDividerSD {
-    height: 0;
-    width: 85%;
-    border: 1px solid;
-    border-color: #4685a2;
-    border-image-slice: 1;
-    margin-top: 20px;
 }
 
 .perkList li {
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 250;
 }
 
 .contactGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 15rem));
     grid-gap: 1rem;
     color: white;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
     justify-content: center;
     width: 100%;
 }
@@ -173,15 +119,25 @@ a {
 
 .cgE:hover {
     transition: all 0.2s ;
+    /* pointer-events: ; */
+}
+
+.cgPicHolder {
+
+    /* border: 1px solid orange */
 }
 
 .cgPic {
-    height: 3rem;    
+    /* width: minmax(3rem, 5rem); */
+    height: 3rem;
+    /* margin-right: 1.5rem; */
+    /* border: 1px solid yellow */
 }
 
 .cgTitle {
     font-size: x-large;
     font-weight: 700;
+    /* margin-bottom: 0.25rem; */
 }
 
 .cgData {
@@ -195,6 +151,8 @@ a {
 
 .sponsorBackground {
     position: absolute;
+    /* top: 0; */
+    /* left: 0; */
     width: 100%;
     height: 100%;
     z-index: -1;
