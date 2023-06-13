@@ -9,6 +9,7 @@
     padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
+    width: 150%;
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto', sans-serif;
@@ -25,6 +26,6 @@
     margin-left: 5%;
     width: 90%;
     height: 0.1em;
-    background: linear-gradient(to right, #20c997, #ff77ff);
+    background: linear-gradient(to right, #20c996, #ff77ff);
     border-radius: 1em;
 }
