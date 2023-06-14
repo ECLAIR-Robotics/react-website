@@ -178,6 +178,7 @@ function Sponsors() {
               </div>
             </div>
           </div>
+          <div style = {{height:"5rem"}}></div>
           {/* <div style={{display:'flex', justifyContent:'center', alignContent:'center'}}> */}
           <div style={{display:'flex', justifyContent:'center', alignContent:'center', width:'100%'}}>
             <div className={`sponsorTextHolder ${isElementVisible ? 'vis' : ''}`} ref={targetElementRef} style={{}}>
