@@ -1,11 +1,5 @@
 
 .tierCard {
-    /* border: 10px solid; */
-    /* border-image: linear-gradient(135deg, #c675ff, rgb(0, 80, 199)); */
-    /* border-image-slice: 1; */
-    /* background-color: white; */
-    /* width: 90%; */
-    /* height: fit-content; */
     background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.2), rgb(0, 80, 199, 0.2));
     backdrop-filter: blur(10px);
     border-radius: 10px;
@@ -14,15 +8,12 @@
 }
 
 .tierCardHolder {
-    /* border: 1px solid pink; */
     background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.6), rgb(0, 80, 199, 0.6));
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     padding: 0.8rem;
-    
-    /* opac */
 }
 
 .tierCardContent {
@@ -51,22 +42,13 @@ a {
 }
 
 .sponsorText {
-    /* opacity: 0; */
-    /* scale: 1.1; */
     padding: 1rem;
     margin: 0.4rem;
     border-radius: 3px;
     color: rgb(225, 223, 223);
-    /* color:'white'; */
-    /* background-color: white; */
     background-image: linear-gradient(135deg, rgb(198, 117, 255, 0.5), rgb(0, 80, 199, 0.5));
     font-family:'monserrat';
     font-weight: 600;
-    /* width: fit-content; */
-    /* width:'50%'; */
-    /* justify-self:'center'; */
-    /* align-self:'center'; */
-    /* text-align:'center'; */
 }
 
 .vis{
@@ -84,7 +66,7 @@ a {
     padding: none;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 21rem));
     grid-gap: 6%;    
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     transform: translateX(-200%);
 }
 
