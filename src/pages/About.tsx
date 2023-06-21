@@ -88,7 +88,7 @@ function About() {
               <OfficerCards
                 name='Vishal Kantharaju'
                 position='Vice President'
-                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. Throughout my time in ECLAIR and beyond, I look forward to exploring innovative applications of AI and robotics."
+                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
                 email='vishal.kantharaju@utexas.edu' />
             </Grid>
@@ -138,29 +138,29 @@ function About() {
         background: `url(${foundersBackground})  center center no-repeat `,
         backgroundSize: 'cover',
       }}>
-        <div>
+        <div style={{paddingTop:"1em", paddingBottom:"1em"}}>
           <Grid container rowGap={10} spacing={2}>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Sahana Ganapaty'
-                position='Tech Lead, mood detector'
-                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI, and my hobbies outside of school include reading, visual arts, and journaling."
+                position='Tech Lead, Mood detector'
+                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
                 linkedIn='linkedin.com/in/sahana-ganapathy/'
                 email='sahanagana@utexas.edu' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Kyrylo Boiko'
-                position='Tech Lead, fitness tracker'
-                img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of his hobbies are active, such as hiking, playing soccer, and karate, but he also enjoys board & video games."
+                position='Tech Lead, Fitness tracker'
+                img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of my hobbies are active, such as hiking, playing soccer, and karate, but I also enjoy board & video games."
                 linkedIn='https://www.linkedin.com/in/kyryloboiko/'
                 email='kyrylo.boiko@gmail.com' />
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Vishal Kantharaju'
-                position='Tech Lead, chess teacher'
-                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. Throughout my time in ECLAIR and beyond, I look forward to exploring innovative applications of AI and robotics."
+                position='Tech Lead, Chess teacher'
+                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
                 email='vishal.kantharaju@utexas.edu' />
             </Grid>
@@ -176,7 +176,7 @@ function About() {
               <OfficerCards
                 name='Conrad Li'
                 position='Tech Lead, PCR'
-                img={conradImg} bio="Conrad is a recently graduated computer science, neuroscience, and chemistry major from UT Austin. He aspires to be a physician working at this intersection of medicine and technology."
+                img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
                 email='conradliste@utexas.edu' />
             </Grid>
@@ -208,7 +208,7 @@ function About() {
               <OfficerCards
                 name='Conrad Li'
                 position='Founder'
-                img={conradImg} bio="Conrad is a recently graduated computer science, neuroscience, and chemistry major from UT Austin. He aspires to be a physician working at this intersection of medicine and technology."
+                img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
                 email='conradliste@utexas.edu' />
             </Grid>
