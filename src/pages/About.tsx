@@ -151,7 +151,7 @@ function About() {
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Kyrylo Boiko'
-                position='Tech Lead, Fitness tracker'
+                position='Tech Lead, Fitness Tracker'
                 img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of my hobbies are active, such as hiking, playing soccer, and karate, but I also enjoy board & video games."
                 linkedIn='https://www.linkedin.com/in/kyryloboiko/'
                 email='kyrylo.boiko@gmail.com' />
@@ -159,7 +159,7 @@ function About() {
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Vishal Kantharaju'
-                position='Tech Lead, Chess teacher'
+                position='Tech Lead, Chess Teacher'
                 img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
                 email='vishal.kantharaju@utexas.edu' />
