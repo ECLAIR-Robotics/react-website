@@ -138,6 +138,7 @@ function About() {
       <section className='aboutUsFoundersSection' style={{
         background: `url(${foundersBackground})  center center no-repeat `,
         backgroundSize: 'cover',
+        marginTop: '-1rem'
       }}>
         <div style={{paddingTop:"1em", paddingBottom:"1em"}}>
           <Grid container rowGap={10} spacing={2}>
