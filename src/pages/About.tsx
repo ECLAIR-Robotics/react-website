@@ -16,6 +16,7 @@ import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
 import sahanaImg from '../static/images/officer/sahana.jpeg'
 import carsonImg from '../static/images/officer/carson.jpg'
 import kyryloImg from '../static/images/officer/kyrylo.png'
+import anjaliImg from '../static/images/officer/anjali.png'
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
   const aBGDivRef = useRef<HTMLDivElement>(null);
@@ -104,11 +105,11 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='TBD'
+                name='Anjali Agrawal'
                 position='Secretary'
-                img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet. "
-                linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
-                email='eclairrobotics@gmail.com' />
+                img={anjaliImg} bio="Hello! I'm studying CS at UT Austin with an interest in bioinformatics & cancer research. In my free time, I like painting, reading, and walking outside."
+                linkedIn='https://www.linkedin.com/in/anjaliagrawal-utaustin'
+                email='anjaliagrawal@utexas.edu' />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
