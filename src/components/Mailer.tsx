@@ -16,7 +16,8 @@ const Mailer = () => {
                 "NIC61fRJW1mmr-YPC"
             ).then(() => {
                 console.log("Email sent successfully!")
-            }).catch(() => { console.log("Email failed to send.") });
+            }).catch((error) => { console.log("Email failed to send."); console.log(error) });
+            
             console.log(captchaRef.current.getValue())
             console.log(typeof(captchaRef.current.getValue()))
             e.currentTarget.reset()

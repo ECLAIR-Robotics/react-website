@@ -72,7 +72,7 @@ function About() {
                 position='President'
                 img={tanayImg} bio="Hi! I am Tanay, and I am a CS major at UT Austin. I love Formula 1, soccer, and playing the guitar! I want to use AI to revolutionize educational technology! "
                 linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' />
+                email='tanay.garg@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -82,7 +82,7 @@ function About() {
                 img={angelicaImg} bio="
                 Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
                 linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
-                email='angelicasharma@utexas.edu' />
+                email='angelicasharma@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -91,7 +91,7 @@ function About() {
                 position='Vice President'
                 img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' />
+                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -100,7 +100,7 @@ function About() {
                 position='Historian'
                 img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
                 linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahanagana@utexas.edu' />
+                email='sahanagana@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -109,7 +109,7 @@ function About() {
                 position='Secretary'
                 img={anjaliImg} bio="Hello! I'm studying CS at UT Austin with an interest in bioinformatics & cancer research. In my free time, I like painting, reading, and walking outside."
                 linkedIn='https://www.linkedin.com/in/anjaliagrawal-utaustin'
-                email='anjaliagrawal@utexas.edu' />
+                email='anjaliagrawal@utexas.edu' topAlignImage={true} />
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
@@ -118,7 +118,7 @@ function About() {
                 position='Freshman Representative'
                 img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet."
                 linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
-                email='eclairrobotics@gmail.com' />
+                email='eclairrobotics@gmail.com' topAlignImage={false}/>
             </Grid>
 
           </Grid>
@@ -148,7 +148,7 @@ function About() {
                 position='Tech Lead, Mood detector'
                 img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
                 linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahanagana@utexas.edu' />
+                email='sahanagana@utexas.edu' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
@@ -156,7 +156,7 @@ function About() {
                 position='Tech Lead, Fitness Tracker'
                 img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of my hobbies are active, such as hiking, playing soccer, and karate, but I also enjoy board & video games."
                 linkedIn='https://www.linkedin.com/in/kyryloboiko/'
-                email='kyrylo.boiko@gmail.com' />
+                email='kyrylo.boiko@gmail.com' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
@@ -164,7 +164,7 @@ function About() {
                 position='Tech Lead, Chess Teacher'
                 img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' />
+                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
@@ -172,7 +172,7 @@ function About() {
                 position='Tech Lead, Autonomous Drone'
                 img={carsonImg} bio="I am studying computer science and business. I have always had a passion for technology, and I've been experimenting with game development, AI, and robotics for many years."
                 linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
-                email='carsonstark@ymail.com' />
+                email='carsonstark@ymail.com' topAlignImage={true}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
@@ -180,7 +180,7 @@ function About() {
                 position='Tech Lead, PCR'
                 img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
-                email='conradliste@utexas.edu' />
+                email='conradliste@utexas.edu' topAlignImage={true}/>
             </Grid>
             
           </Grid>
@@ -204,7 +204,7 @@ function About() {
                 position='Founder'
                 img={sahilImg} bio="Alo, I'm Sahil! I'm a software developer interested in robotics, creative writing, and pandas (especially those that know kung fu) "
                 linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahil.jain.1@outlook.com' />
+                email='sahil.jain.1@outlook.com' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
@@ -212,7 +212,7 @@ function About() {
                 position='Founder'
                 img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
-                email='conradliste@utexas.edu' />
+                email='conradliste@utexas.edu' topAlignImage={true}/>
             </Grid>
           </Grid>
 
