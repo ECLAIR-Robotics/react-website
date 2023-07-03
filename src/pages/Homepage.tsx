@@ -11,29 +11,31 @@ import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/drone_header.png';
 import headerImage_2 from '../static/images/eclair_group.png';
+import CalendarEmbed from '../components/CalendarEmbed';
 
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
-  function getCurrentDimension(){
+  function getCurrentDimension() {
     return {
-        width: window.innerWidth,
-        height: window.innerHeight
+      width: window.innerWidth,
+      height: window.innerHeight
     }
   }
 
   useEffect(() => {
-      const updateDimension = () => {
-          setScreenSize(getCurrentDimension())
-      }
-      window.addEventListener('resize', updateDimension);
-  
-  
-      return(() => {
-          window.removeEventListener('resize', updateDimension);
-      })
-  }, [screenSize])
+    const updateDimension = () => {
+      
+      setScreenSize(getCurrentDimension())
+      console.log(screenSize.width);
+    }
+    window.addEventListener('resize', updateDimension);
+
+    return (() => {
+      window.removeEventListener('resize', updateDimension);
+    })
+  }, [])
 
   const handleClick = () => {
     navigate('/projects');
@@ -44,8 +46,8 @@ function Homepage() {
   const [hBGLoaded, setHBGLoaded] = useState(false);
   const hBGDivRef = useRef<HTMLDivElement>(null);
   const hElementRef = useRef<HTMLImageElement>(null);
-  
-  const[resize, isResized] = useState(false);
+
+  const [resize, isResized] = useState(false);
 
   useEffect(() => {
     if (hBGDivRef.current && hElementRef.current) {
@@ -54,20 +56,20 @@ function Homepage() {
     }
   }, [resize]);
 
-  
+
   function handleResize() {
     // setHBGLoaded(false);
     isResized(!resize);
   }
   window.addEventListener('resize', handleResize);
- 
+
   function wrapperFunction() {
     setHBGLoaded(true);
   }
 
   async function handleLoad() {
     setTimeout(wrapperFunction, 0)
-    
+
   }
   return (
 
@@ -81,7 +83,7 @@ function Homepage() {
           background: `url(${headerBackground})  center center no-repeat `,
           backgroundSize: 'cover',
         }} >
-          <img className='contactBackground' ref={hElementRef}  src={headerBackground} onLoad={handleLoad}></img>
+          <img className='contactBackground' ref={hElementRef} src={headerBackground} onLoad={handleLoad}></img>
 
           <div className='box1-left'>
             <Fade in={true} timeout={2000}>
@@ -95,7 +97,7 @@ function Homepage() {
               </Slide>
             </Fade>
             <div className='eclairButton-container'>
-              <ECLAIRButton  handleClick={handleClick} text="PROJECTS" radius='1em' />
+              <ECLAIRButton handleClick={handleClick} text="PROJECTS" radius='1em' />
             </div>
           </div>
 
@@ -110,8 +112,8 @@ function Homepage() {
 
       {/* Section 2 */}
       <section className='box2 box2-override'>
-        <div className='box1_5-textLeft'> Geared Toward Helping Students Pursue Their Passion for Robotics </div>
-        <div className='box1_5-textRight'>
+        <div className='box1_5-textLeft' id="informationHeading"> Geared Toward Helping Students Pursue Their Passion for Robotics </div>
+        <div className='box1_5-textRight' id="informationSubtext">
           The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine learning techiniques such as neural networks and reinforcement learning to give students the ability to pursue their robotics projects. If you have a cool robot you want to build, come join us!
         </div>
       </section>
@@ -152,7 +154,7 @@ function Homepage() {
           backgroundSize: 'cover',
         }}
       >
-        <div className="custom-shape-divider-top-1681028846" style={{marginTop:'-1px'}}>
+        <div className="custom-shape-divider-top-1681028846" style={{ marginTop: '-1px' }}>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
             <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" className="shape-fill"></path>
@@ -160,7 +162,7 @@ function Homepage() {
           </svg>
         </div>
         <div className="animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
-          <svg id="visual" viewBox="0 0 900 600" width={`${screenSize.width/2}`} height={`${screenSize.height/1.5}`} xmlns="http://www.w3.org/2000/svg"
+          <svg id="visual" viewBox={`0 0 900 600`} width={`${(screenSize.width / 2) + 100}`} height={`${(screenSize.height / 1.5)+50}`} xmlns="http://www.w3.org/2000/svg"
             version="1.1">
             <defs>
               <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -176,7 +178,7 @@ function Homepage() {
             <g transform="translate(425.17812071839586 297.4107165965745)">
               <path id='pathBefore'
                 d="M140.5 -95C189.2 -50.9 240.9 7.9 239 69.9C237.1 131.9 181.7 197 118.2 216.5C54.7 236.1 -16.9 209.9 -56.2 170.4C-95.6 130.9 -102.6 78 -124.2 18.3C-145.8 -41.3 -182 -107.6 -163.7 -144.8C-145.4 -182 -72.7 -190 -13.4 -179.3C45.9 -168.6 91.7 -139.2 140.5 -95"
-                transform='translate(0,0)'
+                transform='translate(20,0) scale(1.2)'
                 fill="url(#myGradient)">
               </path>
               <rect x="-130" y="-50" rx="5" ry="5" width={270} height={65} fill='white' filter="url(#shadow)" />
@@ -190,7 +192,20 @@ function Homepage() {
           <YoutubeEmbed />
         </div>
       </section>
-      <Loader bGLoaded={hBGLoaded}/>
+      {/* <section className='box2 box2-override4'
+        style={{
+          background: `url(${wavesHeader})  center center no-repeat `,
+          backgroundSize: 'cover',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+
+        }}
+      >
+        <CalendarEmbed />
+      </section> */}
+      <Loader bGLoaded={hBGLoaded} />
     </>
   );
 }
