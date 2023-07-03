@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+
 import '../styles/sponsors.css';
 import spon from '../static/vectors/sponsorsDivider.svg';
 import bg from '../static/vectors/sponsorsBackground.svg'; 
@@ -115,7 +115,7 @@ function Sponsors() {
       </div>
       <div className='projectHeaderTrans' style={{backgroundImage: `url(${spon})`, height: '12rem', backgroundPosition: 'center', backgroundSize: '200vw', zIndex: '3', position: 'relative'}}></div>
       <div style={{marginTop: '-12rem', zIndex: '1', position: 'relative'}}>
-        <img className='sponsorBackground' ref={sElementRef}  src={bg} onLoad={handleLoad}></img>
+        <img className='sponsorBackground' ref={sElementRef}  src={bg} onLoad={handleLoad} alt="load animation"></img>
         <div style = {{paddingBottom:"12rem"}} ref ={elementRef}/>
           <div className={`tierHolder ${isVisible ? 'vi' : ''}`} >
             <div>
@@ -195,7 +195,7 @@ function Sponsors() {
             <a href={`mailto:eclairrobotics@gmail.com`}>
              <div className='cgE' style={{marginLeft:'0rem'}}>
                <div className='cgPicHolder'>
-                 <img src={email} className='cgPic'></img>
+                 <img src={email} className='cgPic' alt="email button"></img>
                 </div>
                 <div className='cgText'>
                   <div className='cgTitle'>
@@ -209,7 +209,7 @@ function Sponsors() {
             </a>
             <div className='cgE' style={{marginLeft:'2rem'}}>
              <div className='cgPicHolder'>
-               <img src={phone} className='cgPic'></img>
+               <img src={phone} className='cgPic' alt="phone icon"></img>
               </div>
               <div className='cgText'>
                 <div className='cgTitle'>

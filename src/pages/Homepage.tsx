@@ -12,13 +12,6 @@ import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/drone_header.png';
 import headerImage_2 from '../static/images/eclair_group.png';
 
-interface PalleteColor {
-  light?: string;
-  main: string;
-  dark?: string;
-  contrastText?: string;
-}
-
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());

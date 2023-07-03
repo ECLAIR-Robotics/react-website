@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { memo, useState, useRef, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,25 +8,11 @@ import Container from '@mui/material/Container';
 import NavbarElement from './NavbarElement';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/navbar.css';
 
 
 function ResponsiveAppBar() {
-
-
-
-
-
- 
-
-
-  interface PalleteColor {
-    light?: string;
-    main: string;
-    dark?: string;
-    contrastText?: string;
-  }
 
   const navigate = useNavigate();
 
@@ -59,8 +45,6 @@ function ResponsiveAppBar() {
     justifyContent: 'center',
 
   }
-
-  const [inititalRender, setInitialRender] = useState(true);
 
   return (
     <ThemeProvider theme={theme}>

@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Loader from '../components/Loader'
 import OfficerCards from '../components/OfficerCards'
 import '../styles/about.css'
-import placeholderImg from '../static/images/officer/placeholder.png'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
 import foundersBackground from '../static/vectors/founders-background.svg'
 import foundersBackground2 from '../static/vectors/founders-background-2.svg'
@@ -17,6 +16,7 @@ import sahanaImg from '../static/images/officer/sahana.jpeg'
 import carsonImg from '../static/images/officer/carson.jpg'
 import kyryloImg from '../static/images/officer/kyrylo.png'
 import anjaliImg from '../static/images/officer/anjali.png'
+import henryImg from '../static/images/officer/henry.jpg'
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
   const aBGDivRef = useRef<HTMLDivElement>(null);
@@ -114,11 +114,11 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='TBD'
-                position='Freshman Representative'
-                img={eclairLogo} bio="Hi we are ECLAIR, and this position has not been decided yet."
-                linkedIn='https://www.linkedin.com/in/eclair-robotics-b2582725a/'
-                email='eclairrobotics@gmail.com' topAlignImage={false}/>
+                name='Henry Castillo'
+                position='AI/ML Officer'
+                img={henryImg} bio="Hey! I'm Henry, a CS/Math major researching AI and deep learning. Outside of school, I like climbing, gaming, and working out!"
+                linkedIn='https://www.linkedin.com/in/henryandrecastillo/'
+                email='henryandrecastillo@gmail.com' topAlignImage={false}/>
             </Grid>
 
           </Grid>

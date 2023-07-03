@@ -1,6 +1,6 @@
-import React, {ReactNode, FunctionComponent, useRef} from "react";
+import React, {useRef} from "react";
 import '../styles/popup.css';
-import styled, { keyframes, css,  } from 'styled-components'; 
+import styled, { keyframes } from 'styled-components'; 
 import ImageSlider from '../components/ImageSlider';
 
 interface Image {
@@ -20,27 +20,11 @@ interface Props {
         rect ?: DOMRect;
         SliderData ?: Array<Image>;
     } | null;
-    // cardInfo : {
-    //     id: number | null;
-    //     img: string | null;
-    //     name: string | null;
-    //     lName: string | null;
-    //     members: string | null;
-    //     desc: string | null;
-    //     git: string | null;
-    //     gantt: string | null;
-    // } | null;
     onClose : () => void;
     vis : boolean;
 }
 
 function Popup(props : Props) {
-    // const popupAnimation = {
-    //     '@keyframes popupAnimation': {
-    //       from: { transform: "translateY(100)" },
-    //       to: { transform: "translateY(0)" },
-    //     },
-    //   };
     const popupAnimation = (rect ?: DOMRect) => keyframes`
     0% { transform: translateY(${ props.cardInfo!.rect!.top + 'px' }) translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%)); transform-origin: ${props.cardInfo!.rect!.left > (window.innerWidth * 0.6) ? 'right' : (props.cardInfo!.rect!.left < (window.innerWidth * 0.4) ? 'left' : '')}  ${props.cardInfo!.rect!.top < (window.innerHeight * 0.3) ? 'top' : (props.cardInfo!.rect!.top > (window.innerHeight * 0.6) ? 'bottom' : '')}; scale: 0.1;} 
     100% { transform: translateY(0)  translateX(0px); transform-origin: center; scale: 1;}
