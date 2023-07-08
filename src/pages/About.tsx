@@ -105,20 +105,20 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='Anjali Agrawal'
-                position='Secretary'
-                img={anjaliImg} bio="Hello! I'm studying CS at UT Austin with an interest in bioinformatics & cancer research. In my free time, I like painting, reading, and walking outside."
-                linkedIn='https://www.linkedin.com/in/anjaliagrawal-utaustin'
-                email='anjaliagrawal@utexas.edu' topAlignImage={true} />
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
                 name='Henry Castillo'
                 position='AI/ML Officer'
                 img={henryImg} bio="Hey! I'm Henry, a CS/Math major researching AI and deep learning. Outside of school, I like climbing, gaming, and working out!"
                 linkedIn='https://www.linkedin.com/in/henryandrecastillo/'
                 email='henryandrecastillo@gmail.com' topAlignImage={false}/>
+            </Grid>
+
+            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
+              <OfficerCards
+                name='To Be Decided'
+                position='Freshman Representative'
+                img={eclairLogo} bio=""
+                linkedIn=''
+                email='' topAlignImage={true} />
             </Grid>
 
           </Grid>
