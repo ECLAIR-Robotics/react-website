@@ -164,7 +164,15 @@
 
 @media screen and (max-width: 1000px) {
 
+    .header-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
     .header-right {
+        display: flex;
         align-items: left;
         justify-content: center;
     }
@@ -172,11 +180,10 @@
     .box2 {
         grid-template-columns: 1fr;
         /* a single column with a width of 1 fraction of the available space */
-        height: 55em;
+        height: auto;
         gap: 0em;
         align-items: center;
-        padding-top: 10em;
-        padding-bottom: 10em;
+        /* padding-bottom: 10em; */
         justify-items: center;
         min-height: fit-content;
         overflow: hidden;
@@ -184,35 +191,56 @@
 
     .infoImage {
         padding: 0em;
+        width: 45em;
     }
 
     .box1_5-textRight {
         height: fit-content;
+
+        margin-top: 0%;
+        margin-bottom: 0%;
+
+        font-size: 1em;
+    }
+    .box1_5-textLeft {
+        height: fit-content;
         padding: 0%;
+        margin-top: 0%;
+        margin-bottom: 0%;
     }
 
     .box2-override {
         padding-top: 0em;
         padding-bottom: 0em;
+        height: fit-content;
     }
 
     .box2-right {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        height: fit-content;
-        width: 100%;
-        padding: 10%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /* padding: 10%; */
 
     }
 
+    .animatedBlob {
+        height: 20em;
+        padding-bottom: 5em;
+        width: 100vw;
+    }
+
     .box2-encloser {
-        overflow: hidden;
-        max-height: fit-content;
-        display: flex;
-        justify-content: center;
+        grid-template-columns: 1fr;
+        /* a single column with a width of 1 fraction of the available space */
+        height: auto;
+        gap: 0em;
         align-items: center;
+        /* padding-top: 10em; */
+        /* padding-bottom: 10em; */
+        justify-items: center;
+        min-height: fit-content;
+        overflow: hidden;
     }
 
     #informationText {
@@ -226,6 +254,29 @@
         transform: translate(-100px, 0px);
     }
 
+    #infoImageContainer{
+        padding-top: 5em;
+        padding-bottom: 5em;
+        height: 30em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #informationSubtext{
+        padding-bottom:3em;
+    }
+
+    #informationHeading{
+        padding-bottom: 0em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #boldText {
+        padding-top: 3em;
+    }
     
 }
 
@@ -256,7 +307,6 @@
     align-items: center;
     overflow: hidden;
     justify-content: center;
-    padding-right: 10em;
     margin-bottom: 10em;
 
 }
