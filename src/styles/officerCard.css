@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
+
 :root {
     --standard-gap: 0.5em;
     --card-closed-height: 25em;
@@ -51,8 +53,6 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
-
 .officerCardOverlay {
     position: relative;
     border-radius: 1em;
@@ -74,7 +74,7 @@
 
 .cardDrawerInvisible {
     visibility: hidden;
-    
+
     transition: visible 0.5s ease;
 }
 
@@ -101,7 +101,7 @@
     height: fit-content;
     padding-left: 1em;
     padding-right: 1em;
-   
+
     padding-bottom: var(--standard-gap);
 }
 
@@ -155,4 +155,3 @@
     justify-content: center;
     align-items: center;
 }
-

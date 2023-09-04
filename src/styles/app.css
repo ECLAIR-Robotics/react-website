@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&family=Poppins:wght@600&family=Titillium+Web:wght@200;300&display=swap');
+
 .box1-left {
     padding: 10%;
 }
@@ -9,7 +11,6 @@
     position: relative;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:wght@300&family=Poppins:wght@600&family=Titillium+Web:wght@200;300&display=swap');
 .header-right {
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    
+
 }
 
 .box2 {
@@ -46,11 +47,11 @@
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     gap: 2rem;
-    
+
     min-height: 25em;
     background-color: #1F2532;
     /* padding-top: 10rem; */
-   
+
     color: #2d3549;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -120,7 +121,7 @@
 #visual path{
     animation: blobbin 5s infinite alternate;
     /* fill:  */
-    
+
     fill: linear-gradient(to right, #20c997, #ff77ff)
 }
 
@@ -277,12 +278,8 @@
     #boldText {
         padding-top: 3em;
     }
-    
+
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Titillium+Web:wght@200;300&display=swap');
 
 .box2-left {
     display: flex;
