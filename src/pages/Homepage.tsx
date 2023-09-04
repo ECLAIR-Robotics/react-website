@@ -9,8 +9,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
-import headerImage_1 from '../static/images/drone_header.png';
-import headerImage_2 from '../static/images/eclair_group.png';
+import headerImage_1 from '../static/images/drone_header.png.webp';
+import headerImage_2 from '../static/images/eclair_group.png.webp';
 import CalendarEmbed from '../components/CalendarEmbed';
 
 
