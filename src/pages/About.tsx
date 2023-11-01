@@ -114,9 +114,9 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='To Be Decided'
+                name='Sarvesh Chezhian'
                 position='Freshman Representative'
-                img={eclairLogo} bio=""
+                img={"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*c-dqFshaooL-sAB1lg9bnQ.jpeg"} bio=""
                 linkedIn=''
                 email='' topAlignImage={true} />
             </Grid>
@@ -160,11 +160,19 @@ function About() {
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Vishal Kantharaju'
+                name='Sarvesh Chezhian'
                 position='Tech Lead, Chess Teacher'
-                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
-                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
+                img={"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*c-dqFshaooL-sAB1lg9bnQ.jpeg"} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
+                linkedIn='https://www.linkedin.com/in/sarvesh-chezhian-4a598b217/'
+                email='schezhian@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+              <OfficerCards
+                name='Hursh Jha'
+                position='Tech Lead, Chess Teacher'
+                img={"https://miro.medium.com/v2/resize:fit:1400/0*EWwJ0VRPSaJGmP0F"} bio="I am studying computer science and business. I have always had a passion for technology, and I've been experimenting with game development, AI, and robotics for many years."
+                linkedIn='https://www.linkedin.com/in/hursh-jha-713820220/'
+                email='hursh.jha@gmail.com' topAlignImage={true}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
@@ -174,7 +182,7 @@ function About() {
                 linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
                 email='carsonstark@ymail.com' topAlignImage={true}/>
             </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+            <Grid className="cardContainerFounder conrad" item xs={12} sm={12} md={6}>
               <OfficerCards
                 name='Conrad Li'
                 position='Tech Lead, PCR'
