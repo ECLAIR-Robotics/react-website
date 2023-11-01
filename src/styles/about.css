@@ -38,6 +38,10 @@
     max-height: 50em;
 }
 
+.conrad {
+    margin: 0 auto;
+}
+
 .cardContainerFounder {
     display: flex;
     align-items: center;
