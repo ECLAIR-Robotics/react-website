@@ -17,6 +17,12 @@ import carsonImg from '../static/images/officer/carson.jpg'
 import kyryloImg from '../static/images/officer/kyrylo.png'
 import anjaliImg from '../static/images/officer/anjali.png'
 import henryImg from '../static/images/officer/henry.jpg'
+import nikhilImg from '../static/images/officer/nikhil.jpeg'
+import abbhinavImg from '../static/images/officer/abbhinav.jpeg'
+import annabelImg from '../static/images/officer/annabel.png'
+import HurshImg from '../static/images/officer/hursh.jpeg'
+import SavvyImg from '../static/images/officer/savvy.jpg'
+
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
   const aBGDivRef = useRef<HTMLDivElement>(null);
@@ -142,31 +148,23 @@ function About() {
       }}>
         <div style={{paddingTop:"1em", paddingBottom:"1em"}}>
           <Grid container rowGap={10} spacing={2}>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+          <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Sahana Ganapaty'
-                position='Tech Lead, Mood detector'
-                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
-                linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahanagana@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Kyrylo Boiko'
-                position='Tech Lead, Fitness Tracker'
-                img={kyryloImg} bio="I graduated with a BSc in Computer Science in May '23. Most of my hobbies are active, such as hiking, playing soccer, and karate, but I also enjoy board & video games."
-                linkedIn='https://www.linkedin.com/in/kyryloboiko/'
-                email='kyrylo.boiko@gmail.com' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Vishal Kantharaju'
+                name='Savvy Chezhain'
                 position='Tech Lead, Chess Teacher'
-                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
-                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
+                img={SavvyImg} bio="Hey, I'm Savvy! I'm a Computer Science major and I love donuts, robots, and artificial intelligence."
+                linkedIn='https://www.linkedin.com/in/sarvesh-chezhian-4a598b217/'
+                email='schezhian@utexas.edu' topAlignImage={true}/>
             </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Hursh Jha'
+                position='Tech Lead, Chess Teacher'
+                img={HurshImg} bio="Hey there! I'm Hursh and I'm majoring in Computer Science and Math at UT. I'm particularly interested in cryptography and AI and how we can apply math to these fields to get the most out of them. Outside of school, my hobbies include reading, TCG's, and swimming."
+                linkedIn='https://www.linkedin.com/in/hursh-jha-713820220/'
+                email='hursh.jha@gmail.com' topAlignImage={true}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Carson Stark'
                 position='Tech Lead, Autonomous Drone'
@@ -174,14 +172,62 @@ function About() {
                 linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
                 email='carsonstark@ymail.com' topAlignImage={true}/>
             </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Angelica Sharma'
+                position='Tech Lead, PCR'
+                img={angelicaImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
+                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
+                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Vishal Kantharaju'
+                position='Tech Lead, PCR'
+                img={vishalImg} bio="Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
+                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
+                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Abbhinav Jayaraman'
+                position='Tech Lead, Fitness Tracker'
+                img={abbhinavImg} bio="I am a Computer Science major, I like pizza so much I learned how to make it healthier and from home so chain pizza joints are dead to me :) "
+                linkedIn='https://www.linkedin.com/in/abbhinav-jayaraman/'
+                email='aj29927@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Annabel To'
+                position='Tech Lead, Fitness Tracker'
+                img={annabelImg} bio="I'm Annabel, an integrated Master's student studying Computer Science; my focus is on modeling climate systems using machine learning. Outside of the labs, I enjoy cooking and playing rogue-likes, and you might see me rollerblading around campus."
+                linkedIn='https://www.linkedin.com/in/annabelto/'
+                email='att959@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Sahana Ganapaty'
+                position='Tech Lead, Mood Detector'
+                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
+                linkedIn='linkedin.com/in/sahana-ganapathy/'
+                email='sahanagana@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Nikhil Kalidasu'
+                position='Tech Lead, Mood Detector'
+                img={nikhilImg} bio="I’m a CS major working to solve complex problems across domains using AI and ML. My areas of experience include computational biology, software engineering, and aerospace"
+                linkedIn='https://www.linkedin.com/in/nikhil-kalidasu'
+                email='srikarnikhil.kaidasu@gmail.com' topAlignImage={false}/>
+            </Grid>
+            {/* <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
                 name='Conrad Li'
                 position='Tech Lead, PCR'
                 img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
                 email='conradliste@utexas.edu' topAlignImage={true}/>
-            </Grid>
+            </Grid> */}
             
           </Grid>
         </div>
