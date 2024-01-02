@@ -22,6 +22,7 @@ import abbhinavImg from '../static/images/officer/abbhinav.jpeg'
 import annabelImg from '../static/images/officer/annabel.png'
 import HurshImg from '../static/images/officer/hursh.jpeg'
 import SavvyImg from '../static/images/officer/savvy.jpg'
+import RileyImg from '../static/images/officer/riley.jpg'
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -120,11 +121,11 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='To Be Decided'
+                name='Riley Gonzalez'
                 position='Freshman Representative'
-                img={eclairLogo} bio=""
-                linkedIn=''
-                email='' topAlignImage={true} />
+                img={RileyImg} bio="Hello!! I'm Riley a first year CS major. I enjoy shoegaze, silent hill, and MMA; with the hopes that one day I can contribute to medical robotics utilizing AI in order to better heal humanity. ^_^"
+                linkedIn='https://www.linkedin.com/in/rileygonzalez/'
+                email='rileydeechase@hotmail.com' topAlignImage={true} />
             </Grid>
 
           </Grid>

@@ -20,6 +20,7 @@
     border-radius: 1em;
     background: white;
     background: linear-gradient(to right, #c675ff, #0050c7);
+    min-width: 20em;
     max-width: 20em;
     height: var(--card-closed-height);
     position: absolute;
