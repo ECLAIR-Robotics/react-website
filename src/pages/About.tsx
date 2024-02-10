@@ -23,6 +23,12 @@ import annabelImg from '../static/images/officer/annabel.png'
 import HurshImg from '../static/images/officer/hursh.jpeg'
 import SavvyImg from '../static/images/officer/savvy.jpg'
 import RileyImg from '../static/images/officer/riley.jpg'
+import VivekImg from "../static/images/officer/Vivek.jpg"
+import MatthewImg from "../static/images/officer/Matthew.jpeg"
+import ArnavImg from "../static/images/officer/Arnav.jpg"
+import AniketImg from "../static/images/officer/Aniket Gupta.png"
+import JustinImg from "../static/images/officer/Justin.jpg"
+import AnikImg from "../static/images/officer/Anik.jpg"
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -86,8 +92,7 @@ function About() {
               <OfficerCards
                 name='Angelica Sharma'
                 position='President'
-                img={angelicaImg} bio="
-                Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
+                img={angelicaImg} bio="Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
                 linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
                 email='angelicasharma@utexas.edu' topAlignImage={false}/>
             </Grid>
@@ -167,11 +172,11 @@ function About() {
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Carson Stark'
-                position='Tech Lead, Autonomous Drone'
-                img={carsonImg} bio="I am studying computer science and business. I have always had a passion for technology, and I've been experimenting with game development, AI, and robotics for many years."
-                linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
-                email='carsonstark@ymail.com' topAlignImage={true}/>
+                name='Tanay Garg'
+                position='Tech Lead, CRACKLE'
+                img={tanayImg} bio="Hi! I am Tanay, and I am a CS major at UT Austin. I love Formula 1, soccer, and playing the guitar! I want to use AI to revolutionize educational technology! "
+                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
+                email='tanay.garg@utexas.edu' topAlignImage={true}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
@@ -191,24 +196,24 @@ function About() {
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Abbhinav Jayaraman'
+                name='Matthew Zhao'
                 position='Tech Lead, Fitness Tracker'
-                img={abbhinavImg} bio="I am a Computer Science major, I like pizza so much I learned how to make it healthier and from home so chain pizza joints are dead to me :) "
-                linkedIn='https://www.linkedin.com/in/abbhinav-jayaraman/'
-                email='aj29927@utexas.edu' topAlignImage={false}/>
+                img={MatthewImg} bio="Hi! I'm Matthew, a Computer Science major interested in reinforcement learning and robotics. In my free time, I like basketball, skateboarding, and video games. "
+                linkedIn=''
+                email='matthewzhao420@gmail.com' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Annabel To'
+                name='Vivek Keval'
                 position='Tech Lead, Fitness Tracker'
-                img={annabelImg} bio="I'm Annabel, an integrated Master's student studying Computer Science; my focus is on modeling climate systems using machine learning. Outside of the labs, I enjoy cooking and playing rogue-likes, and you might see me rollerblading around campus."
-                linkedIn='https://www.linkedin.com/in/annabelto/'
-                email='att959@utexas.edu' topAlignImage={false}/>
+                img={VivekImg} bio="I'm an electrical and computer engineering major at UT Austin. I'm interested in Embedded Systems and Computer Architecture and I enjoy playing chess and automating tasks with python."
+                linkedIn='https://www.linkedin.com/in/vivek-keval/'
+                email='kevalvivek4@gmail.com' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Sahana Ganapaty'
-                position='Tech Lead, Mood Detector'
+                position='Tech Lead, Autonomous Car'
                 img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
                 linkedIn='linkedin.com/in/sahana-ganapathy/'
                 email='sahanagana@utexas.edu' topAlignImage={false}/>
@@ -216,19 +221,52 @@ function About() {
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Nikhil Kalidasu'
-                position='Tech Lead, Mood Detector'
+                position='Tech Lead, Autonomous Car'
                 img={nikhilImg} bio="I’m a CS major working to solve complex problems across domains using AI and ML. My areas of experience include computational biology, software engineering, and aerospace"
                 linkedIn='https://www.linkedin.com/in/nikhil-kalidasu'
                 email='srikarnikhil.kaidasu@gmail.com' topAlignImage={false}/>
             </Grid>
-            {/* <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Conrad Li'
-                position='Tech Lead, PCR'
-                img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
-                linkedIn='https://www.linkedin.com/in/conradfli/'
-                email='conradliste@utexas.edu' topAlignImage={true}/>
-            </Grid> */}
+                 name='Henry Castillo'
+                 position='Teck Lead, Minecraft AI'
+                 img={henryImg} bio="Hey! I'm Henry, a CS/Math major researching AI and deep learning. Outside of school, I like climbing, gaming, and working out!"
+                 linkedIn='https://www.linkedin.com/in/henryandrecastillo/'
+                 email='henryandrecastillo@gmail.com' topAlignImage={true}/>
+            </Grid> 
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                 name='Arnav Josh'
+                 position='Tech Lead, Hydroponics'
+                 img={ArnavImg} bio="I'm a computer science major with a particular interest in robotics and cameras. I also really like spacecraft and photography."
+                 linkedIn='https://www.linkedin.com/in/arnavsjoshi'
+                 email='arnavjoshi@utexas.edu' topAlignImage={true}/>
+            </Grid> 
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                 name='Aniket Gupta'
+                 position='Tech Lead, Beginners Track'
+                 img={AniketImg} bio="Hi! My name is Aniket and I'm majoring in CS at UT Austin. My primary interests lie in Machine Learning, and I'm always looking to solve real world problems through this exciting field. Also, I'm always up for a game of ping-pong!"
+                 linkedIn='www.linkedin.com/in/aniketgupta25'
+                 email='aniketg@utexas.edu' topAlignImage={true}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                 name='Anik Patel'
+                 position='Tech Lead, Chess Teacher'
+                 img={AnikImg} bio="Hi there! I'm Anik, an Electrical and Computer Engineer student here at UT. I really enjoy working with computers and 3D printing. Outside of academics, I enjoy motorsports and gaming."
+                 linkedIn='www.linkedin.com/in/anik-patel-800a8322a'
+                 email='anikpatel118@gmail.com' topAlignImage={true}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                 name='Justin Chang'
+                 position='Tech Lead, Chess Teacher'
+                 img={JustinImg} bio="I'm Justin and I'm majoring in computer science at UT Austin. I love solving puzzles, so I enjoy spending my free time doing competitive programming, playing chess, and solving Rubik's cubes."
+                 linkedIn='https://www.linkedin.com/in/justinchang12/'
+                 email='didijustin04@gmail.com' topAlignImage={true}/>
+            </Grid>
+            
             
           </Grid>
         </div>

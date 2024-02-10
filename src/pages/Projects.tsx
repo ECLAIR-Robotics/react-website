@@ -162,7 +162,7 @@ function Projects() {
       desc: 'For our project, we’re programming a hexacopter drone to navigate and preform tasks autonomously using a suite of cameras and sensors. Missions may include indoor navigation and mapping, trash pickup, or military-style search and destroy. We use the python programming language, Robot Operating System, and ArduCopter firmware. No experience is necessary.',
       git:"https://github.com/ECLAIR-Robotics/Drone_Prooject", 
       gantt:"https://docs.google.com/spreadsheets/d/1HXZt8AaNJ8NgtD4zdfVyAx9iu88J-shJCg4XmMV2MSs/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: droneVid,
       SliderData : [
         {
@@ -188,7 +188,7 @@ function Projects() {
       desc: 'We trained and fine tuned a large language model to associate emotions with a song given  it’s lyrics, and used the model to gather emotion data on Spotify profiles/playlists. Our next steps are integrating this model into a usable application and further exploring its capabilities.',
       git:"https://github.com/ECLAIR-Robotics/Song-Analysis", 
       gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: musicVid,
       SliderData : [
         {
@@ -254,7 +254,7 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/1cCVkAxT6YRqcerKprb5HxVsnR_jYmP8Ai7Nvbnz0M0I/edit?usp=sharing",
       finished:1,
       video: smartMirrorVid,
-    }
+    },
   ];
 
   const MLData = [
