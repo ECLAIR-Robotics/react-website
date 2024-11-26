@@ -13,10 +13,10 @@ interface Props {
         img: string;
         name: string;
         lName: string;
-        members: string;
+        members ?: string;
         desc: string;
-        git: string;
-        gantt: string;
+        git ?: string;
+        gantt ?: string;
         rect ?: DOMRect;
         SliderData ?: Array<Image>;
     } | null;
@@ -63,14 +63,14 @@ function Popup(props : Props) {
                 {props.cardInfo!.lName}
             </span>
         </div>
-        <div className='members'>
+        {props.cardInfo!.members && (<div className='members'>
             <span className='category'>
                 Members: 
             </span>
             <span className= 'displayContent'>
                 {props.cardInfo!.members}
             </span>
-        </div>
+        </div>)}
         <div className="divHolder">
             <span className='popupDivider'></span>
         </div>
@@ -83,25 +83,23 @@ function Popup(props : Props) {
         <div className="divHolder">
             <span className='popupDivider'></span>
         </div>
-        <h3 className= 'subHeadings'>Project Management:</h3>
-        <div className='git'>
-            {/* {props.cardInfo!.git} */}
+        {(props.cardInfo!.git || props.cardInfo!.gantt) && (<h3 className= 'subHeadings'>Project Management:</h3>)}
+        {props.cardInfo!.git && (<div className='git'>
             <span className='category'>
                 Codebase: 
             </span>
             <a className='displayContentLink' href={props.cardInfo!.git} target="_blank">
               GitHub
             </a>
-        </div>
-        <div className='gantt'>
-            {/* {props.cardInfo!.gantt} */}
+        </div>)}
+        {props.cardInfo!.gantt && (<div className='gantt'>
             <span className='category'>
                 Project Planning: 
             </span>
             <a className='displayContentLink' href={props.cardInfo!.gantt} target='_blank'>
-              Gantt Chart
+              Team Page
             </a>
-        </div>
+        </div>)}
         {props.cardInfo!.SliderData && (<div style={{paddingTop:'3rem'}}>
             <ImageSlider slides={props.cardInfo!.SliderData}/>
         </div>)}
