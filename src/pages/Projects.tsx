@@ -269,7 +269,7 @@ function Projects() {
       img : carP,
       name:'Autonomous Car', 
       lName:"Sahana Ganapathy, Nikhil Kalidasu", 
-      members:"alekxander, marcus, diego, jana, masamu, jerry, noah",
+      members:"Alekxander, Marcus, Diego, Jana, Masamu, Jerry, Noah",
       desc: 'The goal is to build an autonomous RC car with a raspberry pi computer and limited sensor hardware that can accept natural language input. We will be using neuroevolution techniques to try and maximize performance on minimal hardware support.',
       git: "https://github.com/ECLAIR-Robotics/nlp-car", 
       gantt:"",

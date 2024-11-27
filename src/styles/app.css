@@ -83,6 +83,17 @@
     color: white;
 }
 
+.box1_5-textCenter{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    font-family: 'Poppins', 'Titilium Web';
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+}
+
 #infoImageContainer {
     height: 30em;
 }
@@ -372,4 +383,8 @@
 
 .custom-shape-divider-bottom-1684597940 .shape-fill {
     fill: #191E28;
+}
+
+.sponsorSectionTitle {
+    
 }
