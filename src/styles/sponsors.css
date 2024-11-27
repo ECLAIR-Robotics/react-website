@@ -85,17 +85,17 @@ a {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.diamond {
+.Diamond {
     color:#7fd6ff;
     /* color:#7fd6ff36; */
 }
 
-.gold {
+.Gold {
     color: #ffd700;
     /* color: #ffd90047; */
 }
 
-.silver {
+.Silver {
     color: #c7c7c7;
     /* color: #c7c7c722; */
 }
@@ -183,4 +183,25 @@ a {
     height: 100%;
     z-index: -1;
     object-fit:cover;
+}
+.currentSponsorRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 12em;
+    padding-right: 12em;
+    min-width: 94em;
+}
+.currentSponsorCard{
+    border-radius: 1em;
+    
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 1em 1em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.currentSponsorCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2em 2em rgba(0,0,0, 0.2);
+    cursor: pointer;
 }
