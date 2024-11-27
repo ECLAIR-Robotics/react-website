@@ -12,7 +12,12 @@ import droneP from '../static/images/droneP.jpg';
 import fitnessP from '../static/images/fitnessP.jpg';
 import musicP from '../static/images/musicP.jpg';
 // import robotarmP from '../static/images/robotarmP.jpg';
+import carP from '../static/images/carP.jpg'
+import crackleP from '../static/images/crackleP.jpg'
 import robotarmP from '../static/images/robotic_arm.png'
+import texelArtsP from '../static/images/texelArtsP.png'
+import placeholder from '../static/images/placeholder.png'
+
 
 import pcr1 from '../static/images/slideshows/pcrSPic1.jpg';
 import pcr2 from '../static/images/slideshows/pcrSPic2.jpg';
@@ -46,6 +51,8 @@ import musicVid from '../static/videos/musicTest.gif';
 // import robotarmVid from '../static/videos/robotarmTest.gif';
 import robotArmVid from '../static/videos/arm_project.gif';
 import smartMirrorVid from '../static/videos/smartMirrorVid.gif';
+import carVid from '../static/videos/carVid.gif'
+
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import temp from '../static/vectors/projectBackground.svg';
@@ -74,11 +81,13 @@ function Projects() {
     rect: new DOMRect(10, 20, 30, 40)
   });
 
-  const [curFilter, setCurFilter] = useState([0, 1]);
+  const [curFilter, setCurFilter] = useState([0]);
 
   //@ts-ignore
   const handleFilterChange = (newFilters ) => {
+    handleResize();
     setCurFilter(newFilters);
+    
   };
 
   const handleOpenPopup = (info : {
@@ -101,12 +110,12 @@ function Projects() {
   };
 
   const cardData =[
-    {
+    {//PCR
       id: 0,
       img : pcrP,
       name:'PCR', 
-      lName:"Sahil Jain, Conrad Li", 
-      members:"Pranav, David, Oscar, Nicky, Sarah, Angelica Shawarma, Anjali Agrawal, Emerald, Namila",
+      lName:"Angelica Sharma, Vishal Kantahraju", 
+      members:"Pranav, David, Oscar, Nicky, Sarah, Anjali, Emerald, Namila",
       desc: 'To automate the polymerase chain reaction (PCR) process used in wet labs, we implemented various technologies such as detecting the pressure exerted by pipettes and automating a gripper that can grip the pipettes. Additionally, we have utilized computer vision techniques to detect the difference between filled and non-filled vials. In the future, we envision a fully functioning robotic arm that can perform the PCR process independently.',
       git:"https://github.com/ECLAIR-Robotics/PCR_Automation", 
       gantt:"https://docs.google.com/spreadsheets/d/1qEEfA078V_SaOaCuu-pih-EUJhn9BdbRNVKUYMlfKlY/edit?usp=sharing",
@@ -127,13 +136,13 @@ function Projects() {
         }
       ] 
     },
-    {
+    {//chess
       id: 1,
       img :chessP ,
       name:'Chess Teacher', 
-      lName:"Vishal Kantharaju", 
+      lName:"Savvy Chezhian, Hursh Jha, Anik Patel", 
       members:"Alan Tran, Hursh Jha, Savvy Chezhian, Siddharth Kolukuluri, Tanay Garg, Zach Li",
-      desc: 'We aim to develop a comprehensive chess teaching program that plays games with users via a robotic arm, provides personalized feedback, recognizes areas of improvement, and dynamically adapts future games to maximize learning opportunities.',
+      desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled iwth computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess enginge to play the game - enabling the robot to have a comprehensive understanding over every position.',
       git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
       finished:0,
@@ -153,7 +162,7 @@ function Projects() {
         }
       ] 
     },
-    {
+    {//autonomous drone
       id: 2,
       img :droneP ,
       name:'Autonomous Drone', 
@@ -162,7 +171,7 @@ function Projects() {
       desc: 'For our project, we’re programming a hexacopter drone to navigate and preform tasks autonomously using a suite of cameras and sensors. Missions may include indoor navigation and mapping, trash pickup, or military-style search and destroy. We use the python programming language, Robot Operating System, and ArduCopter firmware. No experience is necessary.',
       git:"https://github.com/ECLAIR-Robotics/Drone_Prooject", 
       gantt:"https://docs.google.com/spreadsheets/d/1HXZt8AaNJ8NgtD4zdfVyAx9iu88J-shJCg4XmMV2MSs/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: droneVid,
       SliderData : [
         {
@@ -179,7 +188,7 @@ function Projects() {
         }
       ] 
     },
-    {
+    {//music
       id: 3,
       img :musicP ,
       name:'Music Mood', 
@@ -188,7 +197,7 @@ function Projects() {
       desc: 'We trained and fine tuned a large language model to associate emotions with a song given  it’s lyrics, and used the model to gather emotion data on Spotify profiles/playlists. Our next steps are integrating this model into a usable application and further exploring its capabilities.',
       git:"https://github.com/ECLAIR-Robotics/Song-Analysis", 
       gantt:"https://docs.google.com/spreadsheets/d/1X8J35_nY-nvYd4q41Xf4_2WzTLX5uL0LTaCeWgZsZ2c/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: musicVid,
       SliderData : [
         {
@@ -205,7 +214,7 @@ function Projects() {
         }
       ] 
     },
-    {
+    {//robot arm
       id: 4,
       img : robotarmP ,
       name:'Robotic Arm', 
@@ -217,7 +226,7 @@ function Projects() {
       finished:1,
       video: robotArmVid,
     },
-    {
+    {//fitness tracker
       id: 5,
       img :fitnessP ,
       name:'Fitness Tracker', 
@@ -226,7 +235,7 @@ function Projects() {
       desc: 'We worked on creating a smart fitness band that would assist gym goers with tracking reps and measuring their form. We used positional & movement data from an IMU sensor and an ML model to transfer findings. It can be further developed to provide real-time suggestions based on most common form errors that are similar to user’s movement patterns.',
       git:"https://github.com/ECLAIR-Robotics/fitness-tracker", 
       gantt:"https://docs.google.com/spreadsheets/d/19foBPCCLEiLqI4vJ4cUKgb43mY644ruY5lhwpawIxis/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: fitnessVid,
       SliderData : [
         {
@@ -243,7 +252,7 @@ function Projects() {
         }
       ] 
     },
-    {
+    {//smart mirror
       id: 6,
       img :"https://drive.google.com/uc?export=view&id=18k4112Of06u9Yb42pT8NL_o8Nk-GgEny" ,
       name:'Smart Mirror', 
@@ -254,7 +263,51 @@ function Projects() {
       gantt:"https://docs.google.com/spreadsheets/d/1cCVkAxT6YRqcerKprb5HxVsnR_jYmP8Ai7Nvbnz0M0I/edit?usp=sharing",
       finished:1,
       video: smartMirrorVid,
-    }
+    },
+    {//autonomous car
+      id: 7,
+      img : carP,
+      name:'Autonomous Car', 
+      lName:"Sahana Ganapathy, Nikhil Kalidasu", 
+      members:"alekxander, marcus, diego, jana, masamu, jerry, noah",
+      desc: 'The goal is to build an autonomous RC car with a raspberry pi computer and limited sensor hardware that can accept natural language input. We will be using neuroevolution techniques to try and maximize performance on minimal hardware support.',
+      git: "https://github.com/ECLAIR-Robotics/nlp-car", 
+      gantt:"",
+      finished:0,
+      video: carVid,
+      SliderData : [] 
+
+    },
+    {//CRACKLE
+      id: 8,
+      img : crackleP,
+      name:'CRACKLE', 
+      lName:"Tanay Garg", 
+      members:"",
+      desc: 'Crackle is a contextual robotic arm that uses voice, gestures, and spatial context clues to dynamically plan and execute instructions. We use LLMs to connect voice input with functions that we have made. The functions let the arm interact with the real world (locate objects, move end effector, etc.) in basic, generalized, ways, and are also given as building blocks to ChatGPT-4. We use the LLM to generate new functions to handle the complex dynamic requests made by the user.',
+      git:"https://github.com/ECLAIR-Robotics/crackle", 
+      gantt:"",
+      finished:0,
+      video: "",
+      SliderData : [] 
+
+    },
+    {//Texel Arts
+      id: 9,
+      img : texelArtsP,
+      name:'Texel Arts', 
+      lName:"Umer Khan",
+      members:"",
+      desc: 'The goal of the texel arts project is to create an animation library that takes in normal video input and converts them to GLTF animation files. We currently have a successfully implemented model that produces 3D points in space, and our next steps are using blender in which we can make smoother animations. This usage can one day be used for smoother video game interactivity, such as the Wii or Kinect interfaces',
+      git:"", 
+      gantt:"",
+      finished:0,
+      video: "",
+      SliderData : [] 
+    },
+    // {//Hydroponics
+
+    // },
   ];
 
   const MLData = [
@@ -362,9 +415,9 @@ function Projects() {
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
-            <li className={`filterOption ${(curFilter.length === 2) ? 'currentSetFilter' : ""}`} onClick={() => handleFilterChange([0, 1])}>All</li>
-            <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(0))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([0])}>In-Progress</li>
+            <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(0))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([0])}>Current</li>
             <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(1))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([1])}>Completed</li>
+            <li className={`filterOption ${(curFilter.length === 2) ? 'currentSetFilter' : ""}`} onClick={() => handleFilterChange([0, 1])}>All</li>
           </ul>
         </div>
         <div className='gridContainer'>
