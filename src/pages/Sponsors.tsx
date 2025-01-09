@@ -9,8 +9,9 @@ import phone from '../static/images/sponsor-images/phoneIcon1.png';
 import email from '../static/images/sponsor-images/emailIcon1.png';
 import form from '../static/images/sponsor-images/formIcon.png';
 import React, { useEffect, useRef, useState } from 'react';
-import SponsorPackageRow from '../components/SponsorPackageRow';
+//import SponsorPackageRow from '../components/SponsorPackageRow';
 import CurrentSponsorRow from '../components/CurrentSponsorRow';
+import ContactInformationContainer from '../components/ContactInformationContainer';
 
 function Sponsors() {
   
@@ -113,53 +114,28 @@ function Sponsors() {
           
 
           <div style = {{paddingBottom:"5%"}}/>
-
           <div className='contactGrid'>
-            <a href={`mailto:eclairrobotics@gmail.com`}>
-             <div className='cgE' style={{marginLeft:'0rem'}}>
-               <div className='cgPicHolder'>
-                 <img src={email} className='cgPic' alt="email button"></img>
-                </div>
-                <div className='cgText'>
-                  <div className='cgTitle'>
-                    Email
-                  </div>
-                  <div className='cgData'>
-                   eclairrobotics@gmail.com
-                  </div>
-               </div>
-              </div>   
-            </a>
-            <div className='cgE' style={{marginLeft:'2rem'}}>
-             <div className='cgPicHolder'>
-               <img src={phone} className='cgPic' alt="phone icon"></img>
-              </div>
-              <div className='cgText'>
-                <div className='cgTitle'>
-                 Phone
-               </div>
-                <div className='cgData'>
-                  +1 (513)-237-2165
-                </div>
-              </div>
-           </div>
-           <a href={`/contact`}>
-              <div className='cgE' style={{marginLeft:'2rem'}}>
-                <div className='cgPicHolder'>
-                 <img src={form} className='cgPic'></img>
-               </div>
-               <div className='cgText'>
-                 <div className='cgTitle'>
-                   Form
-                </div>
-                <div className='cgData'>
-                  Contact Us Page
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div style = {{paddingBottom:"7%"}}/>
+            <ContactInformationContainer
+              href='mailto:eclairrobotics@gmail.com'
+              altTxt='email button'
+              title='Email'
+              body='eclairrobotics@gmail.com'
+              img={email}
+            />
+            <ContactInformationContainer
+              altTxt='phone icon'
+              title='Phone'
+              body='+1 (513)-237-2165'
+              img={phone}
+            />
+            <ContactInformationContainer
+              href='/contact'
+              title='Form'
+              body='Contact Us Page'
+              img={form}
+            />
+          </div>
+        <div style = {{paddingBottom:"12%"}} />
       </div>
       <Loader bGLoaded={sBGLoaded}/>
     </div>

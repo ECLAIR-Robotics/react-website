@@ -199,6 +199,7 @@ function Homepage() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          paddingTop: '2px',
         }}
       >
         <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>

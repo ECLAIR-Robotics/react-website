@@ -188,13 +188,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-left: 12em;
-    padding-right: 12em;
-    min-width: 94em;
 }
 .currentSponsorCard{
-    border-radius: 1em;
+    width: 25%; /* Let the image fill its container's width */
     
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+  
+    border-radius: 1em;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 1em 1em rgba(0, 0, 0, 0.1);
     overflow: hidden;
