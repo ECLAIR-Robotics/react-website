@@ -12,7 +12,7 @@ import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/drone_header.png';
 import headerImage_2 from '../static/images/eclair_group.png';
 import CalendarEmbed from '../components/CalendarEmbed';
-
+import CurrentSponsorRow from '../components/CurrentSponsorRow';
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -75,7 +75,7 @@ function Homepage() {
 
     <>
 
-      {/* section 1 */}
+      {/* Section 1 */}
       <section >
         <div className='box2' style={{
           paddingTop: '15em',
@@ -117,22 +117,23 @@ function Homepage() {
           The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine learning techiniques such as neural networks and reinforcement learning to give students the ability to pursue their robotics projects. If you have a cool robot you want to build, come join us!
         </div>
       </section>
-
+      {/* Section 3*/}
       <section className='box2 box2-override2'>
         <div className='box1_5-textRight' id="infoImageContainer">
           <img className="infoImage" src={headerImage_1}></img>
         </div>
         <div className="box2-encloser">
           <div className='box1_5-textLeft' id='boldText'>
-            Situated at the Anna Hiss Gym at UT Austin - A leading Robotics and AI Institution
+            Situated at the Gates-Dell Complex at UT Austin - A leading Robotics and AI Institution
           </div>
           <div className='box1_5-textRight' id="informationText">
-            AT UT Austin, there is wide range of robotics research from surgical robotics to autonomous driving to artifical assistants. In ECLAIR, students can take advantage of all the resources UT Austin to explore their interests in robotics.
+            Come find us every Monday and Thursday from 6 to 8 PM at the Gates-Dell Complex at UT Austin. Here, there is a wide range of robotics research, from surgical robotics to autonomous driving to artificial assistants. In ECLAIR, students can take advantage of all the resources at UT to explore their interests in robotics.
           </div>
 
         </div>
       </section>
 
+      {/* Section  4*/}
       <section className='box2 box2-override3'>
         <div className='box2-encloser'>
           <div className='box1_5-textLeft' id='boldText'>
@@ -146,8 +147,30 @@ function Homepage() {
           <img className="infoImage" src={headerImage_2}></img>
         </div>
       </section>
+      {/* Section 5*/}
+      <section className='box2 box2-override' style={{ marginTop: '-1px' }}>
+        <div className='box1_5-textLeft' id="aboutus-howtoJoin"> How to join us! </div>
+        <div className='joinInstructions'>
+          <div>Feel free to drop in on one of our meetings!</div>
+          <div>
+            Or join our discord server to and reach out to one of our officers to get more information!
+          </div>
+          <div>
+            <a href='https://discord.gg/tgbvpCjNgV' target={'_blank'}>
+              {/* <img className='discordLogo' src={discordPng} /> */}
+              <svg className='discordSVG'>
+                <defs>
+                  <style>{`.cls-1{fill:#fff;}`}</style>
+                </defs>
+                <path className="cls-1"
+                  d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
 
-      {/* Section 3 */}
+      </section>
+      {/* Section 6*/}
       <section className='box2 box2-override4'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
@@ -192,7 +215,25 @@ function Homepage() {
           <YoutubeEmbed />
         </div>
       </section>
-      {/* <section className='box2 box2-override4'
+      
+      {/* Section 7*/}
+      <section className='box2 box2-override4'
+        style={{
+          backgroundSize: 'cover',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingTop: '2px',
+        }}
+      >
+        <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>
+        <CurrentSponsorRow/>
+      </section>
+
+
+      {/*{/* Section 8 }
+      <section className='box2 box2-override4'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
           backgroundSize: 'cover',

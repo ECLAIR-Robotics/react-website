@@ -145,7 +145,7 @@ function Projects() {
       desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled iwth computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess enginge to play the game - enabling the robot to have a comprehensive understanding over every position.',
       git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: chessVid,
       SliderData : [
         {
@@ -269,7 +269,7 @@ function Projects() {
       img : carP,
       name:'Autonomous Car', 
       lName:"Sahana Ganapathy, Nikhil Kalidasu", 
-      members:"alekxander, marcus, diego, jana, masamu, jerry, noah",
+      members:"Alekxander, Marcus, Diego, Jana, Masamu, Jerry, Noah",
       desc: 'The goal is to build an autonomous RC car with a raspberry pi computer and limited sensor hardware that can accept natural language input. We will be using neuroevolution techniques to try and maximize performance on minimal hardware support.',
       git: "https://github.com/ECLAIR-Robotics/nlp-car", 
       gantt:"",
@@ -415,7 +415,7 @@ function Projects() {
         <h1 className = 'projectsTitle'>Projects</h1>
         <div className='filterContainer'>
           <ul className='filterOptions'>
-            <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(0))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([0])}>Current</li>
+            <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(0))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([0])}>In-Progress</li>
             <li className={`filterOption  ${((curFilter.length === 1) && curFilter.includes(1))? 'currentSetFilter' : ""}     `} onClick={() => handleFilterChange([1])}>Completed</li>
             <li className={`filterOption ${(curFilter.length === 2) ? 'currentSetFilter' : ""}`} onClick={() => handleFilterChange([0, 1])}>All</li>
           </ul>
