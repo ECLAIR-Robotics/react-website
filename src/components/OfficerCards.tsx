@@ -8,7 +8,7 @@ interface Props {
   name?: string;
   position?: string;
   img?: string;
-  linkedIn: string;
+  linkedIn?: string;
   email: string;
   bio: string;
   topAlignImage: boolean;
@@ -68,16 +68,29 @@ function OfficerCards(props: Props) {
         
         <div className={drawerClass}>
         <div className='dividerOfficerCard'><span></span></div>
-          <div className='cardDrawerContent'>
-            {props.bio}
-          </div>
-          <div >
-            <a href={props.linkedIn} target="_blank" rel="noreferrer">
-              <img src="https://img.icons8.com/color/48/000000/linkedin.png" className="socialMediaIcon"></img>
-            </a>
-            <a href={`mailto:${props.email}`} target="_blank" rel="noreferrer">
-              <img src="https://img.icons8.com/color/48/000000/gmail.png" className="socialMediaIcon"></img>
-            </a>
+          <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '13rem',
+          }}>
+            <div className='cardDrawerContent'>
+              {props.bio}
+            </div>
+            <div 
+            style={{
+              display:'flex',
+              gap: '0.2em',
+              justifyContent:'center'
+            }}>
+              {props.linkedIn && (<a href={props.linkedIn} target="_blank" rel="noreferrer">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" className="socialMediaIcon"></img>
+              </a>)}
+              <a href={`mailto:${props.email}`} target="_blank" rel="noreferrer">
+                <img src="https://img.icons8.com/color/48/000000/gmail.png" className="socialMediaIcon"></img>
+              </a>
+            </div>
           </div>
         </div>
       </div>

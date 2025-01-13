@@ -20,9 +20,17 @@ import henryImg from '../static/images/officer/henry.jpg'
 import nikhilImg from '../static/images/officer/nikhil.jpeg'
 import abbhinavImg from '../static/images/officer/abbhinav.jpeg'
 import annabelImg from '../static/images/officer/annabel.png'
-import HurshImg from '../static/images/officer/hursh.jpeg'
-import SavvyImg from '../static/images/officer/savvy.jpg'
-import RileyImg from '../static/images/officer/riley.jpg'
+import hurshImg from '../static/images/officer/hursh.jpeg'
+import savvyImg from '../static/images/officer/savvy.jpg'
+import rileyImg from '../static/images/officer/riley.jpg'
+import cameronImg from '../static/images/officer/cameron.jpg'
+import manasImg from '../static/images/officer/manas.jpg'
+import nathanImg from '../static/images/officer/nathan.jpg'
+import alexzanderImg from '../static/images/officer/alexzander.jpg'
+import arnavImg from '../static/images/officer/arnav.jpg'
+import thidaImg from '../static/images/officer/thida.jpg'
+import zoeImg from '../static/images/officer/zoe.png'
+import placeholderImg from '../static/images/officer/placeholder.png'
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -86,8 +94,7 @@ function About() {
               <OfficerCards
                 name='Angelica Sharma'
                 position='President'
-                img={angelicaImg} bio="
-                Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
+                img={angelicaImg} bio="Hi I'm Angelica! I'm a computer science & pre-medical student with a love for music and entrepreneurship. I love ECLAIR for its vibes and amazing robotics projects and look foward to meeting you all!"
                 linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
                 email='angelicasharma@utexas.edu' topAlignImage={false}/>
             </Grid>
@@ -103,29 +110,65 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='Sahana Ganapaty'
-                position='Historian'
-                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
-                linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahanagana@utexas.edu' topAlignImage={false}/>
+                name='Cameron Cox'
+                position='Corporate Director'
+                img={cameronImg} bio="Hey y'all, I'm Cameron. I'm a computer Science Major with a passion for robotics and in my freetime I play D&D, piano and cook a lot."
+                linkedIn='https://www.linkedin.com/in/cameron-cox-ut/'
+                email='cameron.cox@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='Henry Castillo'
-                position='AI/ML Officer'
-                img={henryImg} bio="Hey! I'm Henry, a CS/Math major researching AI and deep learning. Outside of school, I like climbing, gaming, and working out!"
-                linkedIn='https://www.linkedin.com/in/henryandrecastillo/'
-                email='henryandrecastillo@gmail.com' topAlignImage={false}/>
+                name='Thida Lay-Sok'
+                position='Outreach Director'
+                img={thidaImg} bio="Hello, my name is Thida because my actual name is too long. I'm an Aerospace Engineering and Physics double major. But when I'm not struggling, I enjoy reading and drawing. My goal in life is to marry Zoe Vo <3...but too bad she doesn't want me back"
+                linkedIn='https://www.linkedin.com/in/thidalaysok/'
+                email='laysok@utexas.edu' topAlignImage={false}/>
             </Grid>
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='Riley Gonzalez'
+                name='Arnav Joshi'
+                position='Event Director'
+                img={arnavImg} bio="Hi, my name is Arnav. I'm a Computer Science major with a Robotics minor. I've led hydroponics and currently lead the ball balancer subteam. I'm also an officer in Texas Aerial Robotics!"
+                linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
+                email='arnavjoshi@utexas.edu' topAlignImage={false}/>
+            </Grid>
+
+            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
+              <OfficerCards
+                name='Zoe Vo'
+                position='Outreach Director'
+                img={zoeImg} bio="Hi I'm Zoe and I'm a pyschology major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida"
+                linkedIn='https://www.linkedin.com/in/zoe-vo-b73b9b317/'
+                email='zk4thyv@gmail.com' topAlignImage={true} />
+            </Grid>
+
+            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
+              <OfficerCards
+                name='Manas Agrawal'
+                position='Technology Director'
+                img={manasImg} bio="Hi, my name is Manas! I'm a Computer Science and Mathematics double major. I enjoy chess, strategy video games, and am interested in Computer Vision applications in Robotics."
+                linkedIn='https://www.linkedin.com/in/manas-agrawal-41231a245/'
+                email='manas.agrawal2@utexas.edu' topAlignImage={true} />
+            </Grid>
+
+            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
+              <OfficerCards
+                name='Nathan Chase'
+                position='Financial Director'
+                img={nathanImg} bio="Hey, the name is Nathan. I'm a double major in Computer Science and Asian Languages and Cultures. On my free time I enjoy engaging in community organizing, reading history, and cooking comfort food like Gumbo. And yes, it's okay to have tomatoes in your Gumbo!"
+                linkedIn='https://www.linkedin.com/in/nathan-t-chase/'
+                email='ntc477@utexas.edu' topAlignImage={true} />
+            </Grid>
+
+            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
+              <OfficerCards
+                name='Alexzander Wilburr'
                 position='Freshman Representative'
-                img={RileyImg} bio="Hello!! I'm Riley a first year CS major. I enjoy shoegaze, silent hill, and MMA; with the hopes that one day I can contribute to medical robotics utilizing AI in order to better heal humanity. ^_^"
-                linkedIn='https://www.linkedin.com/in/rileygonzalez/'
-                email='rileydeechase@hotmail.com' topAlignImage={true} />
+                img={alexzanderImg} bio="Wassup, everyone! It's Alexzander! I'm a computer science major who loves playing games and sports (especially baseball). I am an avid note-taker because I have an atrocious memory :D. "
+                linkedIn=''
+                email='alexzanderwilburn2424@outlook.com' topAlignImage={true} />
             </Grid>
 
           </Grid>
@@ -149,11 +192,11 @@ function About() {
       }}>
         <div style={{paddingTop:"1em", paddingBottom:"1em"}}>
           <Grid container rowGap={10} spacing={2}>
-          <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Savvy Chezhain'
                 position='Tech Lead, Chess Teacher'
-                img={SavvyImg} bio="Hey, I'm Savvy! I'm a Computer Science major and I love donuts, robots, and artificial intelligence."
+                img={savvyImg} bio="Hey, I'm Savvy! I'm a Computer Science major and I love donuts, robots, and artificial intelligence."
                 linkedIn='https://www.linkedin.com/in/sarvesh-chezhian-4a598b217/'
                 email='schezhian@utexas.edu' topAlignImage={true}/>
             </Grid>
@@ -161,7 +204,7 @@ function About() {
               <OfficerCards
                 name='Hursh Jha'
                 position='Tech Lead, Chess Teacher'
-                img={HurshImg} bio="Hey there! I'm Hursh and I'm majoring in Computer Science and Math at UT. I'm particularly interested in cryptography and AI and how we can apply math to these fields to get the most out of them. Outside of school, my hobbies include reading, TCG's, and swimming."
+                img={hurshImg} bio="Hey there! I'm Hursh and I'm majoring in Computer Science and Math at UT. I'm interested in cryptography and AI and how we can apply math to these fields to get the most out of them. Outside of school, my hobbies include reading, TCG's, and swimming."
                 linkedIn='https://www.linkedin.com/in/hursh-jha-713820220/'
                 email='hursh.jha@gmail.com' topAlignImage={true}/>
             </Grid>

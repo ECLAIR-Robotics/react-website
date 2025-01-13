@@ -12,7 +12,7 @@ import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/drone_header.png';
 import headerImage_2 from '../static/images/eclair_group.png';
 import CalendarEmbed from '../components/CalendarEmbed';
-
+import CurrentSponsorRow from '../components/CurrentSponsorRow';
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -191,6 +191,19 @@ function Homepage() {
         <div className='box2-right'>
           <YoutubeEmbed />
         </div>
+      </section>
+       <section className='box2 box2-override4'
+        style={{
+          backgroundSize: 'cover',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingTop: '2px',
+        }}
+      >
+        <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>
+        <CurrentSponsorRow/>
       </section>
       {/* <section className='box2 box2-override4'
         style={{
