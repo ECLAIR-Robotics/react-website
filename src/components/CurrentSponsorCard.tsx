@@ -4,12 +4,15 @@ import React from 'react';
 interface CurrentSponsorCardProps {
   img: string,
   color: string,
+  link: string,
 }
 
 function CurrentSponsorCard(props: CurrentSponsorCardProps) {
 
   return (
-    <img className='currentSponsorCard' src={props.img} style={{backgroundColor: props.color}}/>
+    <a className='currentSponsorCard' href={props.link}>
+      <img className='currentSponsorImg' src={props.img} style={{backgroundColor: props.color}}/>    
+    </a>
   )
 }
 
