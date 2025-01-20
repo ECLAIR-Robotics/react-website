@@ -121,7 +121,7 @@ function About() {
               <OfficerCards
                 name='Thida Lay-Sok'
                 position='Outreach Director'
-                img={thidaImg} bio="Hello, my name is Thida because my actual name is too long. I'm an Aerospace Engineering and Physics double major. But when I'm not struggling, I enjoy reading and drawing. My goal in life is to marry Zoe Vo <3...but too bad she doesn't want me back"
+                img={thidaImg} bio="Hello, my name is Thida because my actual name is too long. I'm an Aerospace Engineering and Physics double major. But when I'm not struggling, I enjoy fencing and drawing. My goal in life is to marry Zoe Vo <3"
                 linkedIn='https://www.linkedin.com/in/thidalaysok/'
                 email='laysok@utexas.edu' topAlignImage={false}/>
             </Grid>
@@ -139,7 +139,7 @@ function About() {
               <OfficerCards
                 name='Zoe Vo'
                 position='Public Relations Director'
-                img={zoeImg} bio="Hi I'm Zoe and I'm a pyschology major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida"
+                img={zoeImg} bio="Hi I'm Zoe and I'm a pyschology and aspiring Mechanical Engineering major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida"
                 linkedIn='https://www.linkedin.com/in/zoe-vo-b73b9b317/'
                 email='zk4thyv@gmail.com' topAlignImage={true} />
             </Grid>
@@ -164,7 +164,7 @@ function About() {
 
             <Grid className="cardContainer" item xs={12} sm={6} md={4}>
               <OfficerCards
-                name='Alexzander Wilburr'
+                name='Alexzander Wilburn'
                 position='Freshman Representative'
                 img={alexzanderImg} bio="Wassup, everyone! It's Alexzander! I'm a computer science major who loves playing games and sports (especially baseball). I am an avid note-taker because I have an atrocious memory :D. "
                 linkedIn=''
@@ -302,6 +302,32 @@ function About() {
         </div>
 
       </section>
+
+      
+      <section className='box2 box2-override' style={{ marginTop: '-1px' }}>
+        <div className='box1_5-textLeft' id="aboutus-howtoJoin"> How to join us! </div>
+        <div className='joinInstructions'>
+          <div>Feel free to drop in on one of our meetings!</div>
+          <div>
+            Or join our discord server to and reach out to one of our officers to get more information!
+          </div>
+          <div>
+            <a href='https://discord.gg/tgbvpCjNgV' target={'_blank'}>
+              {/* <img className='discordLogo' src={discordPng} /> */}
+              <svg className='discordSVG'>
+                <defs>
+                  <style>{`.cls-1{fill:#fff;}`}</style>
+                </defs>
+                <path className="cls-1"
+                  d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+
       <section className='box2 box2-override2'>
         <div className='box1_5-textRight' id="embeddedMapHolder">
           <iframe className="embeddedGoogleMap" src="https://www.google.com/maps/place/Gates+Dell+Complex,+2317+Speedway,+Austin,+TX+78712/@30.2860334,-97.739347,16.46z/data=!4m6!3m5!1s0x8644b59c98544379:0x1a0c2b90248ca2ed!8m2!3d30.2862723!4d-97.7365931!16s%2Fg%2F1s04fpwff?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D" ></iframe>
