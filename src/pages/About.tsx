@@ -7,8 +7,11 @@ import aboutUsBackground from '../static/vectors/about-us-background.svg'
 import foundersBackground from '../static/vectors/founders-background.svg'
 import foundersBackground2 from '../static/vectors/founders-background-2.svg'
 import tanayImg from '../static/images/officer/tanay.png'
+import tanayTechImg from '../static/images/officer/tanayTech.jpg'
 import angelicaImg from '../static/images/officer/angelica.jpg'
+import angelicaTechImg from '../static/images/officer/angelicaTech.jpeg'
 import vishalImg from '../static/images/officer/vishal.png'
+import vishalTechImg from '../static/images/officer/vishalTech.jpg'
 import conradImg from '../static/images/officer/conrad.jpg'
 import sahilImg from '../static/images/officer/sahil.jpg'
 import eclairLogo from '../static/images/logo/ECLAIR_logo3.png'
@@ -30,6 +33,7 @@ import alexzanderImg from '../static/images/officer/alexzander.jpg'
 import arnavImg from '../static/images/officer/arnav.jpg'
 import thidaImg from '../static/images/officer/thida.jpg'
 import zoeImg from '../static/images/officer/zoe.png'
+import rizkyImg from '../static/images/officer/rizky.jpg'
 import placeholderImg from '../static/images/officer/placeholder.png'
 
 function About() {
@@ -130,7 +134,7 @@ function About() {
               <OfficerCards
                 name='Arnav Joshi'
                 position='Event Director'
-                img={arnavImg} bio="Hi, my name is Arnav. I'm a Computer Science major with a Robotics minor. I've led hydroponics and currently lead the ball balancer subteam. I'm also an officer in Texas Aerial Robotics!"
+                img={arnavImg} bio="Hi, my name is Arnav. I'm a Computer Science major with a Robotics minor. I've led hydroponics and currently lead the TRACE subteam. I'm also an officer in Texas Aerial Robotics!"
                 linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
                 email='arnavjoshi@utexas.edu' topAlignImage={false}/>
             </Grid>
@@ -194,81 +198,75 @@ function About() {
           <Grid container rowGap={10} spacing={2}>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Savvy Chezhain'
-                position='Tech Lead, Chess Teacher'
-                img={savvyImg} bio="Hey, I'm Savvy! I'm a Computer Science major and I love donuts, robots, and artificial intelligence."
-                linkedIn='https://www.linkedin.com/in/sarvesh-chezhian-4a598b217/'
-                email='schezhian@utexas.edu' topAlignImage={true}/>
+                name='Rizky Pratama'
+                position='Tech Lead, T.R.A.C.E'
+                img={rizkyImg} bio="Hi! I’m Rizky. I’m a computer science major from Katy, Texas with an interest in Robotics and Computer Vision. Apart from that I enjoy D&D, collecting Bicycle Cards, and Big Backing. Never play against me in a board game :D"
+                linkedIn='https://www.linkedin.com/in/rapratama1/'
+                email='rapratama2005@gmail.com' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Arnav Joshi'
+                position='Tech Lead, T.R.A.C.E'
+                img={arnavImg} bio="Hi, I'm Arnav, a second-year CS student minoring in Robotics. I'm really passionate about working on the intersection between hardware and software, with interests in controls, simulation, embedded software, and computer vision. In my spare time, I like playing music and running!"
+                linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
+                email='arnavjoshi@utexas.edu' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Hursh Jha'
                 position='Tech Lead, Chess Teacher'
-                img={hurshImg} bio="Hey there! I'm Hursh and I'm majoring in Computer Science and Math at UT. I'm interested in cryptography and AI and how we can apply math to these fields to get the most out of them. Outside of school, my hobbies include reading, TCG's, and swimming."
+                img={hurshImg} bio="Hi my name is Hursh! I am a senior studying computer science and mathematics. In my own time I play TCG's and strategy games and like reading."
                 linkedIn='https://www.linkedin.com/in/hursh-jha-713820220/'
                 email='hursh.jha@gmail.com' topAlignImage={true}/>
             </Grid>
+            
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Carson Stark'
-                position='Tech Lead, Autonomous Drone'
-                img={carsonImg} bio="I am studying computer science and business. I have always had a passion for technology, and I've been experimenting with game development, AI, and robotics for many years."
-                linkedIn='https://www.linkedin.com/in/carson-s-869a531a7/'
-                email='carsonstark@ymail.com' topAlignImage={true}/>
+                name='Sahana Ganapaty'
+                position='Tech Lead, Autonomous Car'
+                img={sahanaImg} bio="Sahana is a junior from Houston, currently pursuing her Bachelor’s in Computer Science. She wants to specialize in AI and cybersecurity. Beyond academics, Sahana enjoys reading, drawing and painting, sports, and trying out new cooking recipes."
+                linkedIn='https://www.linkedin.com/in/sahana-ganapathy/'
+                email='' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Nikhil Kalidasu'
+                position='Tech Lead, Autonomous Car'
+                img={nikhilImg} bio="I’m a CS major working to solve complex problems across domains using AI and ML. My areas of experience include computational biology, software engineering, and aerospace"
+                linkedIn='https://www.linkedin.com/in/nikhil-kalidasu'
+                email='srikarnikhil.kaidasu@gmail.com' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Tanay Garg'
+                position='Tech Lead, C.R.A.C.K.L.E'
+                img={tanayTechImg} bio="I am a Junior in Computer Science and Robotics at UT Austin. I can do a really sick Doofenshmirtz impression."
+                linkedIn='https://www.linkedin.com/in/tanay-garg/'
+                email='tanay.garg@utexas.edu' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Angelica Sharma'
                 position='Tech Lead, PCR'
-                img={angelicaImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
+                img={angelicaTechImg} bio="I’m a third year computer science and pre-medical student passionate about computers, medicine, and entrepreneurship. In my free time, I love to play the violin and paint!"
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
+                email='angelicasharma@utexas.edu' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
                 name='Vishal Kantharaju'
                 position='Tech Lead, PCR'
-                img={vishalImg} bio="Hi!! I’m a computer science & pre-medical student at UT. In my free time, I love to play the violin & piano, run, hike, and skateboard - I am also really passionate about edtech & biotech! "
+                img={vishalTechImg} bio="Hey, I'm Vishal! I'm a pre-medical computer science student aspiring to be a physician scientist. In my free time, I love painting & reading. I'm excited to be working on the PCR project and other projects with real-world impacts at ECLAIR. :)"
                 linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
                 email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
             </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Abbhinav Jayaraman'
-                position='Tech Lead, Fitness Tracker'
-                img={abbhinavImg} bio="I am a Computer Science major, I like pizza so much I learned how to make it healthier and from home so chain pizza joints are dead to me :) "
-                linkedIn='https://www.linkedin.com/in/abbhinav-jayaraman/'
-                email='aj29927@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Annabel To'
-                position='Tech Lead, Fitness Tracker'
-                img={annabelImg} bio="I'm Annabel, an integrated Master's student studying Computer Science; my focus is on modeling climate systems using machine learning. Outside of the labs, I enjoy cooking and playing rogue-likes, and you might see me rollerblading around campus."
-                linkedIn='https://www.linkedin.com/in/annabelto/'
-                email='att959@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Sahana Ganapaty'
-                position='Tech Lead, Mood Detector'
-                img={sahanaImg} bio="I’m Sahana and I’m majoring in computer science. I’m interested in cybersecurity and AI. My hobbies outside of school include reading, visual arts, and journaling."
-                linkedIn='linkedin.com/in/sahana-ganapathy/'
-                email='sahanagana@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Nikhil Kalidasu'
-                position='Tech Lead, Mood Detector'
-                img={nikhilImg} bio="I’m a CS major working to solve complex problems across domains using AI and ML. My areas of experience include computational biology, software engineering, and aerospace"
-                linkedIn='https://www.linkedin.com/in/nikhil-kalidasu'
-                email='srikarnikhil.kaidasu@gmail.com' topAlignImage={false}/>
-            </Grid>
+            
             
             
           </Grid>
         </div>
-        <div className="custom-shape-divider-bottom-1684840350">
+        <div className="custom-shape-divider-bottom-168484035ab0">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
           </svg>
@@ -330,7 +328,7 @@ function About() {
 
       <section className='box2 box2-override2'>
         <div className='box1_5-textRight' id="embeddedMapHolder">
-          <iframe className="embeddedGoogleMap" src="https://www.google.com/maps/place/Gates+Dell+Complex,+2317+Speedway,+Austin,+TX+78712/@30.2860334,-97.739347,16.46z/data=!4m6!3m5!1s0x8644b59c98544379:0x1a0c2b90248ca2ed!8m2!3d30.2862723!4d-97.7365931!16s%2Fg%2F1s04fpwff?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D" ></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.273583027798!2d-97.73916802475219!3d30.286272274802734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b59c98544379%3A0x1a0c2b90248ca2ed!2sGates%20Dell%20Complex%2C%202317%20Speedway%2C%20Austin%2C%20TX%2078712!5e0!3m2!1sen!2sus!4v1737357273958!5m2!1sen!2sus" width="600" height="450" ></iframe>
         </div>
         <div className="joiningInstructionsEncloser">
           <div className='locationInstructionsTitle' id='boldText'>

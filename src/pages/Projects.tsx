@@ -16,6 +16,7 @@ import carP from '../static/images/carP.jpg'
 import crackleP from '../static/images/crackleP.jpg'
 import robotarmP from '../static/images/robotic_arm.png'
 import texelArtsP from '../static/images/texelArtsP.png'
+import traceP from '../static/images/traceP.png'
 import placeholder from '../static/images/placeholder.png'
 
 
@@ -56,6 +57,7 @@ import carVid from '../static/videos/carVid.gif'
 
 import projectTransHead from '../static/vectors/projectHeaderTransition.svg';
 import temp from '../static/vectors/projectBackground.svg';
+import { finished } from 'stream';
 
 function Projects() {
   const [showPopup, setShowPopup] = useState(false);
@@ -116,7 +118,7 @@ function Projects() {
       name:'PCR', 
       lName:"Angelica Sharma, Vishal Kantahraju", 
       members:"Pranav, David, Oscar, Nicky, Sarah, Anjali, Emerald, Namila",
-      desc: 'To automate the polymerase chain reaction (PCR) process used in wet labs, we implemented various technologies such as detecting the pressure exerted by pipettes and automating a gripper that can grip the pipettes. Additionally, we have utilized computer vision techniques to detect the difference between filled and non-filled vials. In the future, we envision a fully functioning robotic arm that can perform the PCR process independently.',
+      desc: 'We are automating PCR, a medical technique used to duplicate DNA. We have most individual components working, so this semester, we will focus on putting it all together, testing it with PCR, and writing a research paper to publish our robot',
       git:"https://github.com/ECLAIR-Robotics/PCR_Automation", 
       gantt:"https://docs.google.com/spreadsheets/d/1qEEfA078V_SaOaCuu-pih-EUJhn9BdbRNVKUYMlfKlY/edit?usp=sharing",
       finished:0,
@@ -142,10 +144,10 @@ function Projects() {
       name:'Chess Teacher', 
       lName:"Savvy Chezhian, Hursh Jha, Anik Patel", 
       members:"Alan Tran, Hursh Jha, Savvy Chezhian, Siddharth Kolukuluri, Tanay Garg, Zach Li",
-      desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled iwth computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess enginge to play the game - enabling the robot to have a comprehensive understanding over every position.',
+      desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled with computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess engine to play the game - enabling the robot to have a comprehensive understanding over every position.',
       git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
-      finished:1,
+      finished:0,
       video: chessVid,
       SliderData : [
         {
@@ -264,13 +266,26 @@ function Projects() {
       finished:1,
       video: smartMirrorVid,
     },
+    {//TRACE
+      id: 10,
+      img : traceP,
+      name: "TRACE",
+      lName: "Arnav Joshi, Rizky Pratama",
+      members: "",
+      desc: "TRACE is a project to track and control control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
+      git: "",
+      gantt: "",
+      finished: 0,
+      video: "",
+      SliderData : []
+    },
     {//autonomous car
       id: 7,
       img : carP,
       name:'Autonomous Car', 
       lName:"Sahana Ganapathy, Nikhil Kalidasu", 
       members:"Alekxander, Marcus, Diego, Jana, Masamu, Jerry, Noah",
-      desc: 'The goal is to build an autonomous RC car with a raspberry pi computer and limited sensor hardware that can accept natural language input. We will be using neuroevolution techniques to try and maximize performance on minimal hardware support.',
+      desc: 'The goal of the autonomous car project is to build a fully autonomous RC car that has support for natural language intake and feedback. Overall, we are trying to establish a greater bond of trust between the user and the car, something that the industry is still working on today.',
       git: "https://github.com/ECLAIR-Robotics/nlp-car", 
       gantt:"",
       finished:0,
@@ -278,15 +293,16 @@ function Projects() {
       SliderData : [] 
 
     },
+    
     {//CRACKLE
       id: 8,
       img : crackleP,
       name:'CRACKLE', 
       lName:"Tanay Garg", 
       members:"",
-      desc: 'Crackle is a contextual robotic arm that uses voice, gestures, and spatial context clues to dynamically plan and execute instructions. We use LLMs to connect voice input with functions that we have made. The functions let the arm interact with the real world (locate objects, move end effector, etc.) in basic, generalized, ways, and are also given as building blocks to ChatGPT-4. We use the LLM to generate new functions to handle the complex dynamic requests made by the user.',
+      desc: "Crackle's goal is to emulate DUM-E from Iron Man. This means fully resolving voice commands spoken into dynamically generated plans using GPT. The finished product will be able to perform any physically possible task requested by a user",
       git:"https://github.com/ECLAIR-Robotics/crackle", 
-      gantt:"",
+      gantt:"https://befitting-galliform-d9c.notion.site/Crackle-Teamspace-Home-9e32fd2ea0ca4e4695607c16f522433f",
       finished:0,
       video: "",
       SliderData : [] 
@@ -305,6 +321,7 @@ function Projects() {
       video: "",
       SliderData : [] 
     },
+    
     // {//Hydroponics
 
     // },
