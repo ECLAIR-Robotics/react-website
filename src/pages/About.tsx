@@ -223,7 +223,7 @@ function About() {
             
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards
-                name='Sahana Ganapaty'
+                name='Sahana Ganapathy'
                 position='Tech Lead, Autonomous Car'
                 img={sahanaImg} bio="Hi, I'm a junior from Houston, currently pursuing my Bachelor’s in Computer Science. I want to specialize in AI and cybersecurity. Beyond academics, I enjoy reading, drawing and painting, sports, and trying out new cooking recipes."
                 linkedIn='https://www.linkedin.com/in/sahana-ganapathy/'
