@@ -9,7 +9,7 @@ interface Props {
   position?: string;
   img?: string;
   linkedIn?: string;
-  email: string;
+  email?: string;
   bio: string;
   topAlignImage: boolean;
 }
@@ -73,7 +73,7 @@ function OfficerCards(props: Props) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '13rem',
+            height: '14rem',
           }}>
             <div className='cardDrawerContent'>
               {props.bio}
@@ -87,9 +87,9 @@ function OfficerCards(props: Props) {
               {props.linkedIn && (<a href={props.linkedIn} target="_blank" rel="noreferrer">
                 <img src="https://img.icons8.com/color/48/000000/linkedin.png" className="socialMediaIcon"></img>
               </a>)}
-              <a href={`mailto:${props.email}`} target="_blank" rel="noreferrer">
+              {props.email && (<a href={`mailto:${props.email}`} target="_blank" rel="noreferrer">
                 <img src="https://img.icons8.com/color/48/000000/gmail.png" className="socialMediaIcon"></img>
-              </a>
+              </a>)}
             </div>
           </div>
         </div>

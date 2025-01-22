@@ -75,7 +75,7 @@ function Homepage() {
 
     <>
 
-      {/* section 1 */}
+      {/* Section 1 */}
       <section >
         <div className='box2' style={{
           paddingTop: '15em',
@@ -117,22 +117,23 @@ function Homepage() {
           The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine learning techiniques such as neural networks and reinforcement learning to give students the ability to pursue their robotics projects. If you have a cool robot you want to build, come join us!
         </div>
       </section>
-
+      {/* Section 3*/}
       <section className='box2 box2-override2'>
         <div className='box1_5-textRight' id="infoImageContainer">
           <img className="infoImage" src={headerImage_1}></img>
         </div>
         <div className="box2-encloser">
           <div className='box1_5-textLeft' id='boldText'>
-            Situated at the Anna Hiss Gym at UT Austin - A leading Robotics and AI Institution
+            Situated at the Gates-Dell Complex at UT Austin - A leading Robotics and AI Institution
           </div>
           <div className='box1_5-textRight' id="informationText">
-            AT UT Austin, there is wide range of robotics research from surgical robotics to autonomous driving to artifical assistants. In ECLAIR, students can take advantage of all the resources UT Austin to explore their interests in robotics.
+            Come find us every Monday and Thursday from 6 to 8 PM at the Gates-Dell Complex at UT Austin. Here, there is a wide range of robotics research, from surgical robotics to autonomous driving to artificial assistants. In ECLAIR, students can take advantage of all the resources at UT to explore their interests in robotics.
           </div>
 
         </div>
       </section>
 
+      {/* Section  4*/}
       <section className='box2 box2-override3'>
         <div className='box2-encloser'>
           <div className='box1_5-textLeft' id='boldText'>
@@ -146,8 +147,8 @@ function Homepage() {
           <img className="infoImage" src={headerImage_2}></img>
         </div>
       </section>
-
-      {/* Section 3 */}
+      
+      {/* Section 5*/}
       <section className='box2 box2-override4'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
@@ -192,7 +193,9 @@ function Homepage() {
           <YoutubeEmbed />
         </div>
       </section>
-       <section className='box2 box2-override4'
+      
+      {/* Section 6*/}
+      <section className='box2 box2-override4'
         style={{
           backgroundSize: 'cover',
           display: 'flex',
@@ -205,7 +208,10 @@ function Homepage() {
         <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>
         <CurrentSponsorRow/>
       </section>
-      {/* <section className='box2 box2-override4'
+
+
+      {/*
+      <section className='box2 box2-override4'
         style={{
           background: `url(${wavesHeader})  center center no-repeat `,
           backgroundSize: 'cover',
