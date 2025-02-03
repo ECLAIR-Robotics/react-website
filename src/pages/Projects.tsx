@@ -272,7 +272,7 @@ function Projects() {
       name: "TRACE",
       lName: "Arnav Joshi, Rizky Pratama",
       members: "",
-      desc: "TRACE is a project to track and control control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
+      desc: "TRACE is a project to track and control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
       git: "",
       gantt: "",
       finished: 0,
