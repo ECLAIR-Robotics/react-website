@@ -5,9 +5,9 @@ import bg from '../static/vectors/sponsorsBackground.svg';
 
 import Loader from '../components/Loader';
 
-import phone from '../static/images/sponsor-images/phoneIcon1.png';
-import email from '../static/images/sponsor-images/emailIcon1.png';
-import form from '../static/images/sponsor-images/formIcon.png';
+import phone from '../static/images/sponsor-images/phoneIcon1.webp';
+import email from '../static/images/sponsor-images/emailIcon1.webp';
+import form from '../static/images/sponsor-images/formIcon.webp';
 import React, { useEffect, useRef, useState } from 'react';
 //import SponsorPackageRow from '../components/SponsorPackageRow';
 import CurrentSponsorRow from '../components/CurrentSponsorRow';

@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/sponsors.css';
-import texelArts from '../static/images/sponsor-images/texelArts.png'
-import texasRobotics from '../static/images/sponsor-images/texasRobotics.jpg'
-import serviceNow from '../static/images/sponsor-images/serviceNow.png'
+import texelArts from '../static/images/sponsor-images/texelArts.webp'
+import texasRobotics from '../static/images/sponsor-images/texasRobotics.webp'
+import serviceNow from '../static/images/sponsor-images/serviceNow.webp'
 import CurrentSponsorCard from './CurrentSponsorCard';
 function CurrentSponsorRow() {
 
