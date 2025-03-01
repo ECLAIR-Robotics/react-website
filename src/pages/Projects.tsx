@@ -6,43 +6,42 @@ import ImageSlideCard from '../components/ImageSlideCard';
 import Popup from '../components/Popup';
 import Loader from '../components/Loader';
 
-import pcrP from '../static/images/pcrP.jpg';
-import chessP from '../static/images/chessP.jpg';
-import droneP from '../static/images/droneP.jpg';
-import fitnessP from '../static/images/fitnessP.jpg';
-import musicP from '../static/images/musicP.jpg';
-// import robotarmP from '../static/images/robotarmP.jpg';
-import carP from '../static/images/carP.jpg'
-import crackleP from '../static/images/crackleP.jpg'
-import robotarmP from '../static/images/robotic_arm.png'
-import texelArtsP from '../static/images/texelArtsP.png'
-import traceP from '../static/images/traceP.png'
-import placeholder from '../static/images/placeholder.png'
+import pcrP from '../static/images/projects/pcrP.webp';
+import chessP from '../static/images/projects/chessP.webp';
+import droneP from '../static/images/projects/droneP.webp';
+import fitnessP from '../static/images/projects/fitnessP.webp';
+import musicP from '../static/images/projects/musicP.webp';
+import carP from '../static/images/projects/carP.webp'
+import crackleP from '../static/images/projects/crackleP.webp'
+import robotarmP from '../static/images/projects/robotic_armP.webp'
+import texelArtsP from '../static/images/projects/texelArtsP.webp'
+import traceP from '../static/images/projects/traceP.webp'
+import placeholder from '../static/images/projects/placeholder.png'
 
 
-import pcr1 from '../static/images/slideshows/pcrSPic1.jpg';
-import pcr2 from '../static/images/slideshows/pcrSPic2.jpg';
-import pcr3 from '../static/images/slideshows/pcrSPic3.jpg';
-import drone1 from '../static/images/slideshows/droneSPic1.jpg';
-import drone2 from '../static/images/slideshows/droneSPic2.jpg';
-import drone3 from '../static/images/slideshows/droneSPic3.jpg';
-import chess1 from '../static/images/slideshows/chessSPic1.jpg';
-import chess2 from '../static/images/slideshows/chessSPic2.jpg';
-import chess3 from '../static/images/slideshows/chessSPic3.jpg';
-import fitness1 from '../static/images/slideshows/fitnessSPic1.jpg';
-import fitness2 from '../static/images/slideshows/fitnessSPic2.jpg';
-import fitness3 from '../static/images/slideshows/fitnessSPic3.jpg';
-import music1 from '../static/images/slideshows/musicSPic1.jpg';
-import music2 from '../static/images/slideshows/musicSPic2.jpg';
-import music3 from '../static/images/slideshows/musicSPic3.jpg';
+import pcr1 from '../static/images/slideshows/pcrSPic1.webp';
+import pcr2 from '../static/images/slideshows/pcrSPic2.webp';
+import pcr3 from '../static/images/slideshows/pcrSPic3.webp';
+import drone1 from '../static/images/slideshows/droneSPic1.webp';
+import drone2 from '../static/images/slideshows/droneSPic2.webp';
+import drone3 from '../static/images/slideshows/droneSPic3.webp';
+import chess1 from '../static/images/slideshows/chessSPic1.webp';
+import chess2 from '../static/images/slideshows/chessSPic2.webp';
+import chess3 from '../static/images/slideshows/chessSPic3.webp';
+import fitness1 from '../static/images/slideshows/fitnessSPic1.webp';
+import fitness2 from '../static/images/slideshows/fitnessSPic2.webp';
+import fitness3 from '../static/images/slideshows/fitnessSPic3.webp';
+import music1 from '../static/images/slideshows/musicSPic1.webp';
+import music2 from '../static/images/slideshows/musicSPic2.webp';
+import music3 from '../static/images/slideshows/musicSPic3.webp';
 
-import cv from '../static/images/cv.png';
-import deepLearning from '../static/images/deepLearning.png';
-import cvIntro from '../static/images/introToCV.png';
-import mlIntro from '../static/images/introToML.png';
-import rlIntro from '../static/images/introToRL.png';
-import qL from '../static/images/qL.png';
-import markov from '../static/images/markovModelFree.png';
+import cv from '../static/images/lectures/cv.webp';
+import deepLearning from '../static/images/lectures/deepLearning.webp';
+import cvIntro from '../static/images/lectures/introToCV.webp';
+import mlIntro from '../static/images/lectures/introToML.webp';
+import rlIntro from '../static/images/lectures/introToRL.webp';
+import qL from '../static/images/lectures/qL.webp';
+import markov from '../static/images/lectures/markovModelFree.webp';
 
 import pcrVid from '../static/videos/pcrTest.gif';
 import chessVid from '../static/videos/chessTest.gif';
@@ -272,7 +271,7 @@ function Projects() {
       name: "TRACE",
       lName: "Arnav Joshi, Rizky Pratama",
       members: "",
-      desc: "TRACE is a project to track and control control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
+      desc: "TRACE is a project to track and control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
       git: "",
       gantt: "",
       finished: 0,

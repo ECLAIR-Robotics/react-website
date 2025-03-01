@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../static/images/logo/ECLAIR_logo2.png';
+import Logo from '../static/images/logo/ECLAIR_logo2.webp';
 import '../styles/app.css';
 import ECLAIRButton from '../components/ECLAIRButton';
 import Loader from '../components/Loader';
@@ -9,8 +9,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
-import headerImage_1 from '../static/images/drone_header.png';
-import headerImage_2 from '../static/images/eclair_group.png';
+import headerImage_1 from '../static/images/homepage/drone.webp';
+import headerImage_2 from '../static/images/homepage/eclair_group.webp';
 import CalendarEmbed from '../components/CalendarEmbed';
 import CurrentSponsorRow from '../components/CurrentSponsorRow';
 
