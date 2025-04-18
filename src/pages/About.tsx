@@ -25,7 +25,9 @@ import arnavImg from '../static/images/officer/arnav.webp'
 import thidaImg from '../static/images/officer/thida.webp'
 import zoeImg from '../static/images/officer/zoe.webp'
 import rizkyImg from '../static/images/officer/rizky.webp'
-import placeholderImg from '../static/images/officer/placeholder.png'
+import anikImage from '../static/images/officer/anik.webp'
+import umerImage from '../static/images/officer/umer.webp'
+import placeholderImg from '../static/images/officer/placeholder.webp'
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -202,6 +204,22 @@ function About() {
                 img={arnavImg} bio="Hi, I'm Arnav, a second-year CS student minoring in Robotics. I'm really passionate about working on the intersection between hardware and software, with interests in controls, simulation, embedded software, and computer vision. In my spare time, I like playing music and running!"
                 linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
                 email='arnavjoshi@utexas.edu' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Anik Patel'
+                position='Tech Lead, Chess Teacher'
+                img={anikImage} bio="Hi, I'm Anik Patel, a junior majoring in Electrical and Computer Engineering. Outside of school, I have a passion for working on cars and tinkering with 3d printers. My goal in life is to hopefully restore a 1966 Jaguar E-type."
+                linkedIn='www.linkedin.com/in/anik-patel-800a8322a'
+                email='' topAlignImage={false}/>
+            </Grid>
+            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
+              <OfficerCards
+                name='Umer Khan'
+                position='Tech Lead, Texel Arts'
+                img={umerImage} bio="Hi! I am a Computer Science Sophomore who likes doing silly projects"
+                linkedIn='https://www.linkedin.com/in/umerkhan000/'
+                email='umerkhan5110@gmail.com' topAlignImage={false}/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
               <OfficerCards

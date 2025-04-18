@@ -16,6 +16,7 @@ import crackleP from '../static/images/projects/crackleP.webp'
 import robotarmP from '../static/images/projects/robotic_armP.webp'
 import texelArtsP from '../static/images/projects/texelArtsP.webp'
 import traceP from '../static/images/projects/traceP.webp'
+import hydroponicsP from '../static/images/projects/hydroponicsP.webp'
 import placeholder from '../static/images/projects/placeholder.png'
 
 
@@ -34,7 +35,9 @@ import fitness3 from '../static/images/slideshows/fitnessSPic3.webp';
 import music1 from '../static/images/slideshows/musicSPic1.webp';
 import music2 from '../static/images/slideshows/musicSPic2.webp';
 import music3 from '../static/images/slideshows/musicSPic3.webp';
-
+import hydroponics1 from '../static/images/slideshows/hydroponicSPic1.webp';
+import hydroponics2 from '../static/images/slideshows/hydroponicSPic2.webp';
+import hydroponics3  from '../static/images/slideshows/hydroponicSPic3.webp';
 import cv from '../static/images/lectures/cv.webp';
 import deepLearning from '../static/images/lectures/deepLearning.webp';
 import cvIntro from '../static/images/lectures/introToCV.webp';
@@ -49,6 +52,7 @@ import droneVid from '../static/videos/droneTest.gif';
 import fitnessVid from '../static/videos/fitnessTest.gif';
 import musicVid from '../static/videos/musicTest.gif';
 // import robotarmVid from '../static/videos/robotarmTest.gif';
+import texelArtsVid from '../static/videos/TexelArtsTest.gif'
 import robotArmVid from '../static/videos/arm_project.gif';
 import smartMirrorVid from '../static/videos/smartMirrorVid.gif';
 import carVid from '../static/videos/carVid.gif'
@@ -116,7 +120,7 @@ function Projects() {
       img : pcrP,
       name:'PCR', 
       lName:"Angelica Sharma, Vishal Kantahraju", 
-      members:"Pranav, David, Oscar, Nicky, Sarah, Anjali, Emerald, Namila",
+      members:"Angelica, Vishal, Andrew, Thida, Nathan, Kritika, Harshita, Harish, Archit, Aarya, James",
       desc: 'We are automating PCR, a medical technique used to duplicate DNA. We have most individual components working, so this semester, we will focus on putting it all together, testing it with PCR, and writing a research paper to publish our robot',
       git:"https://github.com/ECLAIR-Robotics/PCR_Automation", 
       gantt:"https://docs.google.com/spreadsheets/d/1qEEfA078V_SaOaCuu-pih-EUJhn9BdbRNVKUYMlfKlY/edit?usp=sharing",
@@ -141,8 +145,8 @@ function Projects() {
       id: 1,
       img :chessP ,
       name:'Chess Teacher', 
-      lName:"Savvy Chezhian, Hursh Jha, Anik Patel", 
-      members:"Alan Tran, Hursh Jha, Savvy Chezhian, Siddharth Kolukuluri, Tanay Garg, Zach Li",
+      lName:"Hursh Jha, Anik Patel", 
+      members:"Hursh, Anik, Caleb",
       desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled with computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess engine to play the game - enabling the robot to have a comprehensive understanding over every position.',
       git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
@@ -265,25 +269,13 @@ function Projects() {
       finished:1,
       video: smartMirrorVid,
     },
-    {//TRACE
-      id: 10,
-      img : traceP,
-      name: "TRACE",
-      lName: "Arnav Joshi, Rizky Pratama",
-      members: "",
-      desc: "TRACE is a project to track and control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
-      git: "",
-      gantt: "",
-      finished: 0,
-      video: "",
-      SliderData : []
-    },
+    
     {//autonomous car
       id: 7,
       img : carP,
       name:'Autonomous Car', 
       lName:"Sahana Ganapathy, Nikhil Kalidasu", 
-      members:"Alekxander, Marcus, Diego, Jana, Masamu, Jerry, Noah",
+      members:"Sahana, Nikhil, Ayaan, Jerry, Vinaenae, Cameron, Alexzander, Marcus, Miles, Tommy, Masamu, Hannah",
       desc: 'The goal of the autonomous car project is to build a fully autonomous RC car that has support for natural language intake and feedback. Overall, we are trying to establish a greater bond of trust between the user and the car, something that the industry is still working on today.',
       git: "https://github.com/ECLAIR-Robotics/nlp-car", 
       gantt:"",
@@ -298,7 +290,7 @@ function Projects() {
       img : crackleP,
       name:'CRACKLE', 
       lName:"Tanay Garg", 
-      members:"",
+      members:"Tanay, Manas, Leo, Yash, Gaurav, Tanay, Manav, Shalani, Ayaan, Isabella, Keshav, Sanskar",
       desc: "Crackle's goal is to emulate DUM-E from Iron Man. This means fully resolving voice commands spoken into dynamically generated plans using GPT. The finished product will be able to perform any physically possible task requested by a user",
       git:"https://github.com/ECLAIR-Robotics/crackle", 
       gantt:"https://befitting-galliform-d9c.notion.site/Crackle-Teamspace-Home-9e32fd2ea0ca4e4695607c16f522433f",
@@ -312,18 +304,54 @@ function Projects() {
       img : texelArtsP,
       name:'Texel Arts', 
       lName:"Umer Khan",
-      members:"",
-      desc: 'The goal of the texel arts project is to create an animation library that takes in normal video input and converts them to GLTF animation files. We currently have a successfully implemented model that produces 3D points in space, and our next steps are using blender in which we can make smoother animations. This usage can one day be used for smoother video game interactivity, such as the Wii or Kinect interfaces',
+      members:"Kevin, Anna, Umer",
+      desc: 'The Texel Arts project is a machine learning system that takes videos and transforms them into animation files applied on given rigs. The final goal is an online library of animations that can be readily downloaded, where processed animations are continuously added to the website',
       git:"", 
       gantt:"",
       finished:0,
-      video: "",
+      video: texelArtsVid,
       SliderData : [] 
     },
+    {//TRACE
+      id: 10,
+      img : traceP,
+      name: "TRACE",
+      lName: "Arnav Joshi, Rizky Pratama",
+      members: "Arnav, Rizky, Chris, Dan, Rishab, Isabella, Cameron",
+      desc: "TRACE is a project to track and control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
+      git: "",
+      gantt: "",
+      finished: 0,
+      video: "",
+      SliderData : []
+    },
     
-    // {//Hydroponics
-
-    // },
+    {//Hydroponics
+      id: 11,
+      img: hydroponicsP,
+      name: "Hydroponics",
+      lName: "Arnav Joshi",
+      members: "Isabella, Sanskar, Markus",
+      desc: "We aim to create an automated hydroponic garden.",
+      git: "",
+      gantt: "https://www.notion.so/Autonomous-Hydroponics-de7db5da18214e42a170f000432b0deb",
+      finished: 1,
+      video: "", 
+      SliderData : [
+        {
+          image:
+            hydroponics1
+        },
+        {
+          image:
+            hydroponics2
+        },
+        {
+          image:
+            hydroponics3
+        }
+      ] 
+    },
   ];
 
   const MLData = [
