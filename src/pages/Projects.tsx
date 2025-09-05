@@ -124,7 +124,7 @@ function Projects() {
       desc: 'We are automating PCR, a medical technique used to duplicate DNA. We have most individual components working, so this semester, we will focus on putting it all together, testing it with PCR, and writing a research paper to publish our robot',
       git:"https://github.com/ECLAIR-Robotics/PCR_Automation", 
       gantt:"https://docs.google.com/spreadsheets/d/1qEEfA078V_SaOaCuu-pih-EUJhn9BdbRNVKUYMlfKlY/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: pcrVid,
       SliderData : [
         {
@@ -150,7 +150,7 @@ function Projects() {
       desc: 'Chess Teacher is a robot that is designed to not only play a game of chess, but also teach the player how to improve, and adjust its style to allow the player to maximize their learning opportunities. We use an overhead camera coupled with computer vision to enable the robot to have an accurate understanding of the game, while using our own in house chess engine to play the game - enabling the robot to have a comprehensive understanding over every position.',
       git:"https://github.com/ECLAIR-Robotics/Chess_Teacher", 
       gantt:"https://docs.google.com/spreadsheets/d/1CbTH5hqcQgmXZnDkoqhe9yYVnaWjdlhSyqxfz_0mcEA/edit?usp=sharing",
-      finished:0,
+      finished:1,
       video: chessVid,
       SliderData : [
         {
@@ -274,7 +274,7 @@ function Projects() {
       id: 7,
       img : carP,
       name:'Autonomous Car', 
-      lName:"Sahana Ganapathy, Nikhil Kalidasu", 
+      lName:"", 
       members:"Sahana, Nikhil, Ayaan, Jerry, Vinaenae, Cameron, Alexzander, Marcus, Miles, Tommy, Masamu, Hannah",
       desc: 'The goal of the autonomous car project is to build a fully autonomous RC car that has support for natural language intake and feedback. Overall, we are trying to establish a greater bond of trust between the user and the car, something that the industry is still working on today.',
       git: "https://github.com/ECLAIR-Robotics/nlp-car", 
@@ -289,7 +289,7 @@ function Projects() {
       id: 8,
       img : crackleP,
       name:'CRACKLE', 
-      lName:"Tanay Garg", 
+      lName:"", 
       members:"Tanay, Manas, Leo, Yash, Gaurav, Tanay, Manav, Shalani, Ayaan, Isabella, Keshav, Sanskar",
       desc: "Crackle's goal is to emulate DUM-E from Iron Man. This means fully resolving voice commands spoken into dynamically generated plans using GPT. The finished product will be able to perform any physically possible task requested by a user",
       git:"https://github.com/ECLAIR-Robotics/crackle", 
@@ -303,7 +303,7 @@ function Projects() {
       id: 9,
       img : texelArtsP,
       name:'Texel Arts', 
-      lName:"Umer Khan",
+      lName:"",
       members:"Kevin, Anna, Umer",
       desc: 'The Texel Arts project is a machine learning system that takes videos and transforms them into animation files applied on given rigs. The final goal is an online library of animations that can be readily downloaded, where processed animations are continuously added to the website',
       git:"", 
@@ -316,7 +316,7 @@ function Projects() {
       id: 10,
       img : traceP,
       name: "TRACE",
-      lName: "Arnav Joshi, Rizky Pratama",
+      lName: "",
       members: "Arnav, Rizky, Chris, Dan, Rishab, Isabella, Cameron",
       desc: "TRACE is a project to track and control the position of a ball on a tilting platform. The goals of this project are to exhibit a basic control system with two degrees of freedom that also implements computer vision. This will help develop member skills with CV, controls, simulation, and hardware design.",
       git: "",

@@ -11,7 +11,6 @@ interface Props {
   linkedIn?: string;
   email?: string;
   bio: string;
-  topAlignImage: boolean;
 }
 
 
@@ -53,12 +52,7 @@ function OfficerCards(props: Props) {
     <div ref={hoverRef} className={`baseOfficerCard ${isDrawerOpen ? 'open' : ''}`} onClick={handleClick}>
       <div className='officerCardOverlay'>
         <div className="imageContainer">
-          {props.topAlignImage ?
-          <img src={props.img} className="officerImageTopAlign"/>
-          :
-          <img src={props.img} className="officerImage"/>  
-        }
-          
+          <img src={props.img} className="officerImage"/>
         </div>
         <div className="officerInformation">
           <div className="officerName">{props.name}</div>
@@ -73,7 +67,7 @@ function OfficerCards(props: Props) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            height: '14rem',
+            height: '20rem',
           }}>
             <div className='cardDrawerContent'>
               {props.bio}

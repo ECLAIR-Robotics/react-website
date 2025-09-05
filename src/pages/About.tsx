@@ -6,28 +6,29 @@ import '../styles/about.css'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
 import foundersBackground from '../static/vectors/founders-background.svg'
 import foundersBackground2 from '../static/vectors/founders-background-2.svg'
-import tanayImg from '../static/images/officer/tanay.webp'
-import tanayTechImg from '../static/images/officer/tanayTech.webp'
-import angelicaImg from '../static/images/officer/angelica.webp'
-import angelicaTechImg from '../static/images/officer/angelicaTech.webp'
-import vishalImg from '../static/images/officer/vishal.webp'
-import vishalTechImg from '../static/images/officer/vishalTech.webp'
+import {
+  OFFICER_KEYS,
+  OFFICER_NAMES,
+  OFFICER_POSITIONS,
+  OFFICER_EMAILS,
+  OFFICER_LINKED_INS,
+  OFFICER_DESCS,
+  OFFICER_FUN_IMAGES,
+  TECH_LEAD_KEYS,
+  TECH_LEAD_NAMES,
+  TECH_LEAD_EMAILS,
+  TECH_LEAD_LINKED_INS,
+  TECH_LEAD_DESCS,
+  TECH_LEAD_FUN_IMAGES,
+} from "../static/constants/About";
+
+import {
+  PROJECT_NAMES
+} from "../static/constants/Projects"
+
 import conradImg from '../static/images/officer/conrad.webp'
 import sahilImg from '../static/images/officer/sahil.webp'
-import sahanaImg from '../static/images/officer/sahana.webp'
-import nikhilImg from '../static/images/officer/nikhil.webp'
-import hurshImg from '../static/images/officer/hursh.webp'
-import cameronImg from '../static/images/officer/cameron.webp'
-import manasImg from '../static/images/officer/manas.webp'
-import nathanImg from '../static/images/officer/nathan.webp'
-import alexzanderImg from '../static/images/officer/alexzander.webp'
-import arnavImg from '../static/images/officer/arnav.webp'
-import thidaImg from '../static/images/officer/thida.webp'
-import zoeImg from '../static/images/officer/zoe.webp'
-import rizkyImg from '../static/images/officer/rizky.webp'
-import anikImage from '../static/images/officer/anik.webp'
-import umerImage from '../static/images/officer/umer.webp'
-import placeholderImg from '../static/images/officer/placeholder.webp'
+import JoinUs from '../components/JoinUs';
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -76,99 +77,20 @@ function About() {
       }} >
         <img className='contactBackground' ref={aElementRef}  src={aboutUsBackground} onLoad={handleLoad}></img>
         <div className="officerGridHolder">
-          <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Tanay Garg'
-                position='President'
-                img={tanayImg} bio="Hi! I am Tanay, and I am a CS major at UT Austin. I love Formula 1, soccer, and playing the guitar! I want to use AI to revolutionize educational technology! "
-                linkedIn='https://www.linkedin.com/in/tanay-garg-89004b184/'
-                email='tanay.garg@utexas.edu' topAlignImage={false}/>
+            <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
+              {OFFICER_KEYS.map((key) => (
+                <Grid key={key} className="cardContainer" item xs={12} sm={6} md={4}>
+                  <OfficerCards
+                    name={OFFICER_NAMES[key]}
+                    position={OFFICER_POSITIONS[key]}
+                    img={OFFICER_FUN_IMAGES[key]}
+                    bio={OFFICER_DESCS[key]}
+                    linkedIn={OFFICER_LINKED_INS[key]}
+                    email={OFFICER_EMAILS[key]}
+                  />
+                </Grid>
+              ))}
             </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Angelica Sharma'
-                position='President'
-                img={angelicaImg} bio="Hi I'm Angelica! I'm a computer science & pre-medical student with a love for music and entrepreneurship. I love ECLAIR for its vibes and amazing robotics projects and look foward to meeting you all!"
-                linkedIn='https://www.linkedin.com/in/angelica-s-sharma/'
-                email='angelicasharma@utexas.edu' topAlignImage={false}/>
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Vishal Kantharaju'
-                position='Vice President'
-                img={vishalImg} bio="Hi! I'm a computer science major at UT Austin, and some of my hobbies include playing the violin, running, and reading. I look forward to exploring innovative applications of AI and robotics."
-                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Cameron Cox'
-                position='Corporate Director'
-                img={cameronImg} bio="Hey y'all, I'm Cameron. I'm a computer Science Major with a passion for robotics and in my freetime I play D&D, piano and cook a lot."
-                linkedIn='https://www.linkedin.com/in/cameron-cox-ut/'
-                email='cameron.cox@utexas.edu' topAlignImage={false}/>
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Thida Lay-Sok'
-                position='Outreach Director'
-                img={thidaImg} bio="Hello, my name is Thida because my actual name is too long. I'm an Aerospace Engineering and Physics double major. But when I'm not struggling, I enjoy fencing and drawing. My goal in life is to marry Zoe Vo <3"
-                linkedIn='https://www.linkedin.com/in/thidalaysok/'
-                email='laysok@utexas.edu' topAlignImage={false}/>
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Arnav Joshi'
-                position='Event Director'
-                img={arnavImg} bio="Hi, my name is Arnav. I'm a Computer Science major with a Robotics minor. I've led hydroponics and currently lead the TRACE subteam. I'm also an officer in Texas Aerial Robotics!"
-                linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
-                email='arnavjoshi@utexas.edu' topAlignImage={false}/>
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Zoe Vo'
-                position='Public Relations Director'
-                img={zoeImg} bio="Hi I'm Zoe and I'm a pyschology and aspiring Mechanical Engineering major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida"
-                linkedIn='https://www.linkedin.com/in/zoe-vo-b73b9b317/'
-                email='zk4thyv@gmail.com' topAlignImage={true} />
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Manas Agrawal'
-                position='Technology Director'
-                img={manasImg} bio="Hi, my name is Manas! I'm a Computer Science and Mathematics double major. I enjoy chess, strategy video games, and am interested in Computer Vision applications in Robotics."
-                linkedIn='https://www.linkedin.com/in/manas-agrawal-41231a245/'
-                email='manas.agrawal2@utexas.edu' topAlignImage={true} />
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Nathan Chase'
-                position='Financial Director'
-                img={nathanImg} bio="Hey, the name is Nathan. I'm a double major in Computer Science and Asian Languages and Cultures. On my free time I enjoy engaging in community organizing, reading history, and cooking comfort food like Gumbo. And yes, it's okay to have tomatoes in your Gumbo!"
-                linkedIn='https://www.linkedin.com/in/nathan-t-chase/'
-                email='ntc477@utexas.edu' topAlignImage={true} />
-            </Grid>
-
-            <Grid className="cardContainer" item xs={12} sm={6} md={4}>
-              <OfficerCards
-                name='Alexzander Wilburn'
-                position='Freshman Representative'
-                img={alexzanderImg} bio="Wassup, everyone! It's Alexzander! I'm a computer science major who loves playing games and sports (especially baseball). I am an avid note-taker because I have an atrocious memory :D. "
-                linkedIn=''
-                email='alexzanderwilburn2424@outlook.com' topAlignImage={true} />
-            </Grid>
-
-          </Grid>
           <div className="custom-shape-divider-bottom-1684603760">
             <svg id="dividerVisual" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path id="wave1" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -185,95 +107,30 @@ function About() {
       <section className='aboutUsFoundersSection' style={{
         background: `url(${foundersBackground})  center center no-repeat `,
         backgroundSize: 'cover',
-        marginTop: '-1rem'
+        marginTop: '-1px'
       }}>
-        <div style={{paddingTop:"1em", paddingBottom:"1em"}}>
-          <Grid container rowGap={10} spacing={2}>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Rizky Pratama'
-                position='Tech Lead, T.R.A.C.E'
-                img={rizkyImg} bio="Hi! I’m Rizky. I’m a computer science major from Katy, Texas with an interest in Robotics and Computer Vision. Apart from that I enjoy D&D, collecting Bicycle Cards, and Big Backing. Never play against me in a board game :D"
-                linkedIn='https://www.linkedin.com/in/rapratama1/'
-                email='rapratama2005@gmail.com' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Arnav Joshi'
-                position='Tech Lead, T.R.A.C.E'
-                img={arnavImg} bio="Hi, I'm Arnav, a second-year CS student minoring in Robotics. I'm really passionate about working on the intersection between hardware and software, with interests in controls, simulation, embedded software, and computer vision. In my spare time, I like playing music and running!"
-                linkedIn='https://www.linkedin.com/in/arnavsjoshi/'
-                email='arnavjoshi@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Anik Patel'
-                position='Tech Lead, Chess Teacher'
-                img={anikImage} bio="Hi, I'm Anik Patel, a junior majoring in Electrical and Computer Engineering. Outside of school, I have a passion for working on cars and tinkering with 3d printers. My goal in life is to hopefully restore a 1966 Jaguar E-type."
-                linkedIn='www.linkedin.com/in/anik-patel-800a8322a'
-                email='' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Umer Khan'
-                position='Tech Lead, Texel Arts'
-                img={umerImage} bio="Hi! I am a Computer Science Sophomore who likes doing silly projects"
-                linkedIn='https://www.linkedin.com/in/umerkhan000/'
-                email='umerkhan5110@gmail.com' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Hursh Jha'
-                position='Tech Lead, Chess Teacher'
-                img={hurshImg} bio="Hi my name is Hursh! I am a senior studying computer science and mathematics. In my own time I play TCG's and strategy games and like reading."
-                linkedIn='https://www.linkedin.com/in/hursh-jha-713820220/'
-                email='hursh.jha@gmail.com' topAlignImage={true}/>
-            </Grid>
-            
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Sahana Ganapathy'
-                position='Tech Lead, Autonomous Car'
-                img={sahanaImg} bio="Hi, I'm a junior from Houston, currently pursuing my Bachelor’s in Computer Science. I want to specialize in AI and cybersecurity. Beyond academics, I enjoy reading, drawing and painting, sports, and trying out new cooking recipes."
-                linkedIn='https://www.linkedin.com/in/sahana-ganapathy/'
-                email='' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Nikhil Kalidasu'
-                position='Tech Lead, Autonomous Car'
-                img={nikhilImg} bio="I’m a CS major working to solve complex problems across domains using AI and ML. My areas of experience include computational biology, software engineering, and aerospace"
-                linkedIn='https://www.linkedin.com/in/nikhil-kalidasu'
-                email='srikarnikhil.kaidasu@gmail.com' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Tanay Garg'
-                position='Tech Lead, C.R.A.C.K.L.E'
-                img={tanayTechImg} bio="I am a Junior in Computer Science and Robotics at UT Austin. I can do a really sick Doofenshmirtz impression."
-                linkedIn='https://www.linkedin.com/in/tanay-garg/'
-                email='tanay.garg@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Angelica Sharma'
-                position='Tech Lead, PCR'
-                img={angelicaTechImg} bio="I’m a third year computer science and pre-medical student passionate about computers, medicine, and entrepreneurship. In my free time, I love to play the violin and paint!"
-                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='angelicasharma@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            <Grid className="cardContainerFounder" item xs={12} sm={12} md={4}>
-              <OfficerCards
-                name='Vishal Kantharaju'
-                position='Tech Lead, PCR'
-                img={vishalTechImg} bio="Hey, I'm Vishal! I'm a pre-medical computer science student aspiring to be a physician scientist. In my free time, I love painting & reading. I'm excited to be working on the PCR project and other projects with real-world impacts at ECLAIR. :)"
-                linkedIn='https://www.linkedin.com/in/vishal-kantharaju/'
-                email='vishal.kantharaju@utexas.edu' topAlignImage={false}/>
-            </Grid>
-            
-            
-            
-          </Grid>
+        <div className="officerGridHolder">
+          <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
+          {TECH_LEAD_KEYS.map((key) => {
+            // remove trailing numbers from key
+            const projectKey = key.replace(/[0-9]/g, "");
+            const projectName = PROJECT_NAMES[projectKey];
+
+            return (
+              <Grid key={key} className="cardContainer" item xs={12} sm={6} md={4}>
+                <OfficerCards
+                  name={TECH_LEAD_NAMES[key]}
+                  position={`Tech Lead, ${projectName}`}
+                  img={TECH_LEAD_FUN_IMAGES[key]}
+                  bio={TECH_LEAD_DESCS[key]}
+                  linkedIn={TECH_LEAD_LINKED_INS[key]}
+                  email={TECH_LEAD_EMAILS[key]}
+                />
+              </Grid>
+            );
+          })}
+        </Grid>
+
         </div>
         <div className="custom-shape-divider-bottom-168484035ab0">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -294,7 +151,7 @@ function About() {
                 position='Founder'
                 img={sahilImg} bio="Alo, I'm Sahil! I'm a software developer interested in robotics, creative writing, and pandas (especially those that know kung fu) "
                 linkedIn='https://www.linkedin.com/in/sahil-jain-ab012614b/'
-                email='sahil.jain.1@outlook.com' topAlignImage={false}/>
+                email='sahil.jain.1@outlook.com'/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
               <OfficerCards
@@ -302,7 +159,7 @@ function About() {
                 position='Founder'
                 img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
                 linkedIn='https://www.linkedin.com/in/conradfli/'
-                email='conradliste@utexas.edu' topAlignImage={true}/>
+                email='conradliste@utexas.edu'/>
             </Grid>
           </Grid>
 
@@ -311,28 +168,7 @@ function About() {
       </section>
 
       
-      <section className='box2 box2-override' style={{ marginTop: '-1px' }}>
-        <div className='box1_5-textLeft' id="aboutus-howtoJoin"> How to join us! </div>
-        <div className='joinInstructions'>
-          <div>Feel free to drop in on one of our meetings!</div>
-          <div>
-            Or join our discord server to and reach out to one of our officers to get more information!
-          </div>
-          <div>
-            <a href='https://discord.gg/tgbvpCjNgV' target={'_blank'}>
-              {/* <img className='discordLogo' src={discordPng} /> */}
-              <svg className='discordSVG'>
-                <defs>
-                  <style>{`.cls-1{fill:#fff;}`}</style>
-                </defs>
-                <path className="cls-1"
-                  d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </section>
+      <JoinUs/>
 
 
       <section className='box2 box2-override2'>
