@@ -1,7 +1,7 @@
 :root {
     --standard-gap: 0.5em;
     --card-closed-height: 25em;
-    --card-extended-height: 43em;
+    --card-extended-height: 50em;
 }
 
 .cardContainer {
