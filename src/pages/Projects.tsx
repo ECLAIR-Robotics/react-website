@@ -331,7 +331,7 @@ function Projects() {
       img: hydroponicsP,
       name: "Hydroponics",
       lName: "Arnav Joshi",
-      members: "Isabella, Sanskar, Markus",
+      members: "Isabella, Sanskar, Markus, Anisha",
       desc: "We aim to create an automated hydroponic garden.",
       git: "",
       gantt: "https://www.notion.so/Autonomous-Hydroponics-de7db5da18214e42a170f000432b0deb",

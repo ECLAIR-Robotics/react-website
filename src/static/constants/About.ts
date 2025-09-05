@@ -1,5 +1,5 @@
 import arnavImg from '../images/officer/arnav.webp'
-import cameronImg from '../images/officer/cameron.webp'
+import cameronImg from '../images/officer/cameronProfessional.webp'
 import manasImg from '../images/officer/manas.webp'
 import zoeImg from '../images/officer/zoe.webp'
 import rizkyImg from '../images/officer/rizky.webp'
@@ -85,7 +85,7 @@ export const OFFICER_LINKED_INS: { [key: string]: string } = {
 }
 
 export const OFFICER_DESCS: { [key: string]: string } = {
-    PRESIDENT: "Our unprofessional president does not know how to send descriptions on time so the technology director is leaving this here until he fixes it",
+    PRESIDENT: "Hi, I'm Arnav! I'm a third year C.S. major minoring in robotics. I've been making robots going on six years now, and particularly enjoy being somewhere in between the hardware and the software. In other news, I like running, climbing, hiking (motion may be a trend here), and playing music, and just about any sport. Open to song reccomendations, welcome to ECLAIR",
     VICE_PRESIDENT: "Hey y'all, my name is Cameron! I'm a CS major minoring in robotics. I love combat robotics but my end goal is to make robots that improve our home lives. In my free time I play the piano, sing, ballroom dance, and play chess, D&D, and Zelda games.",
     CORPORATE: "Hi, I’m Aniket Gupta, a junior majoring in Computer Science at UT Austin, from Bentonville, Arkansas. I previously led ECLAIR’s Beginner’s Track for two semesters and enjoy delivering technical lectures at hackathons. I’m passionate about AI and SWE, and I’m excited to help expand ECLAIR’s corporate footprint this year (please dm me on LinkedIn!)",
     OUTREACH: "Hi y’all, I’m Anna! I’m a Mathematics and Plan II dual major pursing a minor in SDS and way too many certificates (all related to scientific computing, my hopeful career field!). In my free time, I love to read and write screenplays, develop interactive fiction games, and GM tabletop RPGs. Honk if you love computer vision :)",
