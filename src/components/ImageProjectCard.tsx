@@ -14,7 +14,6 @@ interface Props {
 
     onOpenPopup : () => void;
 
-    key: number;
 }
 
 const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
