@@ -1,13 +1,13 @@
 import '../styles/sponsors.css'
 import React from 'react';
 
-interface CurrentSponsorCardProps {
+interface SponsorCardProps {
   img: string,
   color: string,
   link: string,
 }
 
-function CurrentSponsorCard(props: CurrentSponsorCardProps) {
+function SponsorCard(props: SponsorCardProps) {
 
   return (
     <a className='currentSponsorCard' href={props.link}>
@@ -16,4 +16,4 @@ function CurrentSponsorCard(props: CurrentSponsorCardProps) {
   )
 }
 
-export default CurrentSponsorCard
+export default SponsorCard

@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState, useRef, useEffect} from 'react';
 import '../styles/projects.css';
-import ImageProjectCard from '../components/ImageProjectCard';
-import ImageSlideCard from '../components/ImageSlideCard';
+import ProjectCard from '../components/projects/ProjectCard';
+import ResourcesCard from '../components/projects/ResourcesCard';
 import Popup from '../components/Popup';
 import Loader from '../components/Loader';
 
@@ -467,7 +467,7 @@ function Projects() {
         <div className='gridContainer'>
           <div className='projectCards'>
             {filteredCardData.map((card, index) => (
-              <ImageProjectCard
+              <ProjectCard
                 key = {card.id}
                 name = {card.name}
                 img = {card.img}
@@ -492,7 +492,7 @@ function Projects() {
         <div className='gridContainer'>
           <div className='projectCards'>
             {MLData.map((card, index) => (
-              <ImageSlideCard
+              <ResourcesCard
                 key = {card.id}
                 name = {card.name}
                 img = {card.img}

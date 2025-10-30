@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState, useRef, forwardRef, useEffect} from 'react';
-import '../styles/imageprojectcard.css';
+import '../../styles/projects/projectcard.css';
 
 interface Props {
     img: string;
@@ -16,7 +16,7 @@ interface Props {
 
 }
 
-const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
+const ProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
     const [imgLoaded, setImgLoaded] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isHovering, setIsHovering] = useState(false);
@@ -49,4 +49,4 @@ const ImageProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) 
     )
 });
 
-export default ImageProjectCard
+export default ProjectCard

@@ -69,7 +69,7 @@ function About() {
           </svg>
         </div>
       </section>
-
+      
       <section className='aboutContainer' style={{
         background: `url(${aboutUsBackground})  center center no-repeat `,
         backgroundSize: 'cover',
@@ -99,7 +99,6 @@ function About() {
             </svg>
           </div>
         </div>
-
       </section >
 
 
@@ -112,7 +111,6 @@ function About() {
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
           {TECH_LEAD_KEYS.map((key) => {
-            // remove trailing numbers from key
             const projectKey = key.replace(/[0-9]/g, "");
             const projectName = PROJECT_NAMES[projectKey];
 

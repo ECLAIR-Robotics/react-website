@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/mailer.css'
-import ECLAIRButton from './ECLAIRButton';
+import ECLAIRButton from './general/ECLAIRButton';
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 

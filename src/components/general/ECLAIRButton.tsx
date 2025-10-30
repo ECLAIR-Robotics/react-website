@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import '../styles/eclairbutton.css'
+import '../../styles/eclairbutton.css'
+import '../../styles/app.css';
 
 
 interface Props {
@@ -20,11 +21,13 @@ function ECLAIRButton(props: Props) {
   }, [])
 
   return (
-    <button id="main-eclair-button" type={props.type} onClick={props.handleClick} className='fancybutton' data-text={props.text}>
-      <span className='fancytext'>
-        {props.text}
-      </span>
-    </button>
+    <div className='eclairButton-container'>
+      <button id="main-eclair-button" type={props.type} onClick={props.handleClick} className='fancybutton' data-text={props.text}>
+        <span className='fancytext'>
+          {props.text}
+        </span>
+      </button>
+    </div>
   )
 }
 

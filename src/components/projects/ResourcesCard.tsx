@@ -1,6 +1,6 @@
 import React from 'react';
-import {useState, useRef, forwardRef, useEffect} from 'react';
-import '../styles/imageslidecard.css';
+import {forwardRef} from 'react';
+import '../../styles/projects/resourcescard.css';
 
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
     key: number;
 }
 
-const ImageSlideCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
+const ResourcesCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
     
     return (
         <div className="entireCard1" onClick={props.openSlides} ref ={ref} >
@@ -22,12 +22,8 @@ const ImageSlideCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) =>
                 <div className="clickText">Click to view slides!</div>
             </div>
             <img src={props.img} className="cardImage"></img>
-            {/* <img src={props.vid} className='projectVideo'></img> */}
-            {/* <video className='projectVideo' ref={videoRef} controls={false} muted={true}>
-                <source src={TestVid}></source>
-            </video> */}
         </div>
     )
 });
 
-export default ImageSlideCard
+export default ResourcesCard
