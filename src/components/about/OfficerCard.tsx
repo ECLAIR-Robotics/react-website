@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/officerCard.css'
+import '../../styles/about/officerCard.css'
 import { useState, useEffect } from 'react';
 import {useRef} from 'react'
 import {useHover} from 'usehooks-ts'
@@ -14,7 +14,7 @@ interface Props {
 }
 
 
-function OfficerCards(props: Props) {
+function OfficerCard(props: Props) {
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const [drawerClass, setDrawerClass] = useState('cardDrawerInvisible')
@@ -92,4 +92,4 @@ function OfficerCards(props: Props) {
   )
 }
 
-export default OfficerCards
+export default OfficerCard

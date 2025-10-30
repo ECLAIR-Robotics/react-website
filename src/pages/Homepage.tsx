@@ -12,8 +12,8 @@ import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/homepage/drone.webp';
 import headerImage_2 from '../static/images/homepage/eclair_group.webp';
 //import CalendarEmbed from '../components/CalendarEmbed';
-import SponsorRow from '../components/SponsorRow';
-import JoinUs from '../components/JoinUs';
+import SponsorRow from '../components/sponsors/SponsorRow';
+import JoinUs from '../components/general/JoinUs';
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());

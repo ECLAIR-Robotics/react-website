@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
-import '../styles/popup.css';
+import '../../styles/projects/popup.css';
 import styled, { keyframes } from 'styled-components'; 
-import ImageSlider from '../components/ImageSlider';
+import ImageSlider from '../general/ImageSlider';
 
 interface Image {
   image: string;
@@ -24,7 +24,7 @@ interface Props {
     vis : boolean;
 }
 
-function Popup(props : Props) {
+function ProjectPopup(props : Props) {
     const popupAnimation = (rect ?: DOMRect) => keyframes`
     0% { transform: translateY(${ props.cardInfo!.rect!.top + 'px' }) translateX(calc(${props.cardInfo!.rect!.left}px - 50vw + 50%)); transform-origin: ${props.cardInfo!.rect!.left > (window.innerWidth * 0.6) ? 'right' : (props.cardInfo!.rect!.left < (window.innerWidth * 0.4) ? 'left' : '')}  ${props.cardInfo!.rect!.top < (window.innerHeight * 0.3) ? 'top' : (props.cardInfo!.rect!.top > (window.innerHeight * 0.6) ? 'bottom' : '')}; scale: 0.1;} 
     100% { transform: translateY(0)  translateX(0px); transform-origin: center; scale: 1;}
@@ -108,4 +108,4 @@ function Popup(props : Props) {
   );
 }
 
-export default Popup;
+export default ProjectPopup;

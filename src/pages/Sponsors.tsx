@@ -1,5 +1,5 @@
 
-import '../styles/sponsors.css';
+import '../styles/sponsors/sponsors.css';
 import spon from '../static/vectors/sponsorsDivider.svg';
 import bg from '../static/vectors/sponsorsBackground.svg'; 
 
@@ -10,7 +10,7 @@ import email from '../static/images/sponsor-images/emailIcon1.webp';
 import form from '../static/images/sponsor-images/formIcon.webp';
 import React, { useEffect, useRef, useState } from 'react';
 //import SponsorPackageRow from '../components/SponsorPackageRow';
-import SponsorRow from '../components/SponsorRow';
+import SponsorRow from '../components/sponsors/SponsorRow';
 import ContactInformationContainer from '../components/general/ContactInformationContainer';
 
 function Sponsors() {

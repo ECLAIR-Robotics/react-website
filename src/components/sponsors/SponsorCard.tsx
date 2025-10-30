@@ -1,4 +1,4 @@
-import '../styles/sponsors.css'
+import '../../styles/sponsors/sponsors.css'
 import React from 'react';
 
 interface SponsorCardProps {

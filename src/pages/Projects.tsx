@@ -1,9 +1,9 @@
 import React from 'react';
 import {useState, useRef, useEffect} from 'react';
-import '../styles/projects.css';
+import '../styles/projects/projects.css';
 import ProjectCard from '../components/projects/ProjectCard';
 import ResourcesCard from '../components/projects/ResourcesCard';
-import Popup from '../components/Popup';
+import Popup from '../components/projects/ProjectPopup';
 import Loader from '../components/Loader';
 
 import pcrP from '../static/images/projects/pcrP.webp';

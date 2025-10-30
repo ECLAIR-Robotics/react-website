@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/sponsors.css';
+import '../../styles/sponsors/sponsors.css';
 
 interface ContactInformationContainerProps {
     href?: string
