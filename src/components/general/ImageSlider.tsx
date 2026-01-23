@@ -4,12 +4,10 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 
 
-interface Image {
-  image: string;
-}
+
 
 interface ImageSliderProps {
-  slides: Image[]; // Change the type of the 'slides' prop to be an array of objects with an 'image' property
+  slides: string[]; // Change the type of the 'slides' prop to be an array of objects with an 'image' property
 }
 
 const ImageSlider: FunctionComponent<ImageSliderProps> = ({ slides }) => {
@@ -39,7 +37,7 @@ const ImageSlider: FunctionComponent<ImageSliderProps> = ({ slides }) => {
                 key={index}
               >
                 {index === current && (
-                  <img src={slide.image} alt='travel image' className='image' style={{maxHeight: '15rem', maxWidth:'20rem'}}/>
+                  <img src={slide} alt='travel image' className='image' style={{maxHeight: '15rem', maxWidth:'20rem'}}/>
                 )}
               </div>
             );

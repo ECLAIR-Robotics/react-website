@@ -33,7 +33,6 @@ function Contact() {
 
   async function handleLoad() {
     setTimeout(wrapperFunction, 0)
-    
   }
   
   return (

@@ -5,12 +5,7 @@ import '../../styles/projects/projectcard.css';
 interface Props {
     img: string;
     name: string;
-    lName : String;
-    members : String;
-    desc : String;
-    git : String;
-    gantt : String;
-    vid : string;
+    vid?: string;
 
     onOpenPopup : () => void;
 
@@ -41,10 +36,8 @@ const ProjectCard = forwardRef<HTMLDivElement, Props>((props : Props, ref) => {
                 <div className="clickText">Click to learn more!</div>
             </div>
             <img src={props.img} onLoad={loadComplete} className="cardImage"></img>
-            <img src={props.vid} className='projectVideo'></img>
-            {/* <video className='projectVideo' ref={videoRef} controls={false} muted={true}>
-                <source src={TestVid}></source>
-            </video> */}
+            {props.vid && <img src={props.vid} className='projectVideo'></img>}
+
         </div>
     )
 });

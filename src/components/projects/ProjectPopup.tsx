@@ -3,9 +3,6 @@ import '../../styles/projects/popup.css';
 import styled, { keyframes } from 'styled-components'; 
 import ImageSlider from '../general/ImageSlider';
 
-interface Image {
-  image: string;
-}
 
 interface Props {
     cardInfo : {
@@ -14,11 +11,11 @@ interface Props {
         name: string;
         lName: string;
         members ?: string;
-        desc: string;
+        desc ?: string;
         git ?: string;
         gantt ?: string;
         rect ?: DOMRect;
-        SliderData ?: Array<Image>;
+        SliderData ?: Array<string>;
     } | null;
     onClose : () => void;
     vis : boolean;
@@ -53,7 +50,6 @@ function ProjectPopup(props : Props) {
         <button className="closeButton" onClick={props.onClose}>X</button>
       </div>
         <h1 className='pName'>{props.cardInfo!.name}</h1>
-        <h3 className= 'subHeadings'>Contributors:</h3>
         <div className='lead'> 
             {/* {props.cardInfo!.lName} */}
             <span className='category'>
@@ -75,11 +71,11 @@ function ProjectPopup(props : Props) {
             <span className='popupDivider'></span>
         </div>
         <h3 className= 'subHeadings'>Purpose:</h3>
-        <div className='desc'>
+        {props.cardInfo?.desc && <div className='desc'>
             <span className= 'displayContent'>
                 {props.cardInfo!.desc}
             </span>
-        </div>
+        </div>}
         <div className="divHolder">
             <span className='popupDivider'></span>
         </div>

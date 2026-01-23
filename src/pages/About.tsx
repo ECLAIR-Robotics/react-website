@@ -14,7 +14,7 @@ import {
   OFFICER_LINKED_INS,
   OFFICER_DESCS,
   OFFICER_FUN_IMAGES,
-  TECH_LEAD_KEYS,
+  CUR_TECH_LEAD_KEYS,
   TECH_LEAD_NAMES,
   TECH_LEAD_EMAILS,
   TECH_LEAD_LINKED_INS,
@@ -110,7 +110,7 @@ function About() {
       }}>
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
-          {TECH_LEAD_KEYS.map((key) => {
+          {CUR_TECH_LEAD_KEYS.map((key) => {
             const projectKey = key.replace(/[0-9]/g, "");
             const projectName = PROJECT_NAMES[projectKey];
 
