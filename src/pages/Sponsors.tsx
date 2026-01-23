@@ -1,5 +1,5 @@
 
-import '../styles/sponsors.css';
+import '../styles/sponsors/sponsors.css';
 import spon from '../static/vectors/sponsorsDivider.svg';
 import bg from '../static/vectors/sponsorsBackground.svg'; 
 
@@ -10,8 +10,8 @@ import email from '../static/images/sponsor-images/emailIcon1.webp';
 import form from '../static/images/sponsor-images/formIcon.webp';
 import React, { useEffect, useRef, useState } from 'react';
 //import SponsorPackageRow from '../components/SponsorPackageRow';
-import CurrentSponsorRow from '../components/CurrentSponsorRow';
-import ContactInformationContainer from '../components/ContactInformationContainer';
+import SponsorRow from '../components/sponsors/SponsorRow';
+import ContactInformationContainer from '../components/general/ContactInformationContainer';
 
 function Sponsors() {
   
@@ -96,8 +96,7 @@ function Sponsors() {
       <div style={{marginTop: '-12rem', zIndex: '1', position: 'relative'}}>
         <img className='sponsorBackground' ref={sElementRef}  src={bg} onLoad={handleLoad} alt="load animation"></img>
         <div style = {{paddingBottom:"12rem"}}/>
-          {/* <SponsorPackageRow isVisible={isVisible}/> */}
-          <CurrentSponsorRow/>
+          <SponsorRow/>
 
           
           <div style = {{height:"5rem"}}></div>

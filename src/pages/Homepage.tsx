@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../static/images/logo/ECLAIR_logo2.webp';
 import '../styles/app.css';
-import ECLAIRButton from '../components/ECLAIRButton';
+import ECLAIRButton from '../components/general/ECLAIRButton';
 import Loader from '../components/Loader';
 import { Slide, Fade } from '@mui/material';
 import YoutubeEmbed from '../components/YoutubeEmbed';
@@ -11,9 +11,9 @@ import wavesHeader from '../static/vectors/waves-header.svg';
 import headerBackground from '../static/vectors/polygon-header.svg';
 import headerImage_1 from '../static/images/homepage/drone.webp';
 import headerImage_2 from '../static/images/homepage/eclair_group.webp';
-import CalendarEmbed from '../components/CalendarEmbed';
-import CurrentSponsorRow from '../components/CurrentSponsorRow';
-import JoinUs from '../components/JoinUs';
+//import CalendarEmbed from '../components/CalendarEmbed';
+import SponsorRow from '../components/sponsors/SponsorRow';
+import JoinUs from '../components/general/JoinUs';
 
 function Homepage() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -96,9 +96,8 @@ function Homepage() {
                 <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
               </Slide>
             </Fade>
-            <div className='eclairButton-container'>
-              <ECLAIRButton handleClick={handleClick} text="PROJECTS" radius='1em' />
-            </div>
+            
+            <ECLAIRButton handleClick={handleClick} text="PROJECTS" radius='1em' />
           </div>
 
           <div className="custom-shape-divider-bottom-1684597940">
@@ -204,7 +203,7 @@ function Homepage() {
         }}
       >
         <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>
-        <CurrentSponsorRow/>
+        <SponsorRow/>
       </section>
 
 

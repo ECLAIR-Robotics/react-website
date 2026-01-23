@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import '../styles/contact.css';
 import divider from '../static/vectors/contactDivider.svg';
 import cBG from '../static/vectors/contactBackground.svg';
-import Mailer from '../components/Mailer';
+import Mailer from '../components/contact/Mailer';
 import Loader from '../components/Loader';
 
 
@@ -33,7 +33,6 @@ function Contact() {
 
   async function handleLoad() {
     setTimeout(wrapperFunction, 0)
-    
   }
   
   return (

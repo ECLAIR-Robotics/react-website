@@ -1,8 +1,8 @@
 import React, {useState, useRef, useEffect} from 'react'
 import Grid from '@mui/material/Grid';
 import Loader from '../components/Loader'
-import OfficerCards from '../components/OfficerCards'
-import '../styles/about.css'
+import OfficerCard from '../components/about/OfficerCard'
+import '../styles/about/about.css'
 import aboutUsBackground from '../static/vectors/about-us-background.svg'
 import foundersBackground from '../static/vectors/founders-background.svg'
 import foundersBackground2 from '../static/vectors/founders-background-2.svg'
@@ -14,7 +14,7 @@ import {
   OFFICER_LINKED_INS,
   OFFICER_DESCS,
   OFFICER_FUN_IMAGES,
-  TECH_LEAD_KEYS,
+  CUR_TECH_LEAD_KEYS,
   TECH_LEAD_NAMES,
   TECH_LEAD_EMAILS,
   TECH_LEAD_LINKED_INS,
@@ -28,7 +28,7 @@ import {
 
 import conradImg from '../static/images/officer/conrad.webp'
 import sahilImg from '../static/images/officer/sahil.webp'
-import JoinUs from '../components/JoinUs';
+import JoinUs from '../components/general/JoinUs';
 
 function About() {
   const [aBGLoaded, setABGLoaded] = useState(false);
@@ -69,7 +69,7 @@ function About() {
           </svg>
         </div>
       </section>
-
+      
       <section className='aboutContainer' style={{
         background: `url(${aboutUsBackground})  center center no-repeat `,
         backgroundSize: 'cover',
@@ -80,7 +80,7 @@ function About() {
             <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
               {OFFICER_KEYS.map((key) => (
                 <Grid key={key} className="cardContainer" item xs={12} sm={6} md={4}>
-                  <OfficerCards
+                  <OfficerCard
                     name={OFFICER_NAMES[key]}
                     position={OFFICER_POSITIONS[key]}
                     img={OFFICER_FUN_IMAGES[key]}
@@ -99,7 +99,6 @@ function About() {
             </svg>
           </div>
         </div>
-
       </section >
 
 
@@ -111,14 +110,13 @@ function About() {
       }}>
         <div className="officerGridHolder">
           <Grid container rowSpacing={10} columnSpacing={0} sx={{ paddingTop: '8em', paddingBottom: '8em' }}>
-          {TECH_LEAD_KEYS.map((key) => {
-            // remove trailing numbers from key
+          {CUR_TECH_LEAD_KEYS.map((key) => {
             const projectKey = key.replace(/[0-9]/g, "");
             const projectName = PROJECT_NAMES[projectKey];
 
             return (
               <Grid key={key} className="cardContainer" item xs={12} sm={6} md={4}>
-                <OfficerCards
+                <OfficerCard
                   name={TECH_LEAD_NAMES[key]}
                   position={`Tech Lead, ${projectName}`}
                   img={TECH_LEAD_FUN_IMAGES[key]}
@@ -146,7 +144,7 @@ function About() {
         <div>
           <Grid container spacing={2}>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
-              <OfficerCards
+              <OfficerCard
                 name='Sahil Jain'
                 position='Founder'
                 img={sahilImg} bio="Alo, I'm Sahil! I'm a software developer interested in robotics, creative writing, and pandas (especially those that know kung fu) "
@@ -154,7 +152,7 @@ function About() {
                 email='sahil.jain.1@outlook.com'/>
             </Grid>
             <Grid className="cardContainerFounder" item xs={12} sm={12} md={6}>
-              <OfficerCards
+              <OfficerCard
                 name='Conrad Li'
                 position='Founder'
                 img={conradImg} bio="I am a recently graduated computer science, neuroscience, and chemistry major from UT Austin. I aspire to be a physician working at this intersection of medicine and technology."
