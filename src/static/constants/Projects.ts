@@ -13,6 +13,10 @@ import placeholderP from "../images/projects/placeholder.png";
 import mcqueenP from "../images/projects/mcqueenP.webp";
 import takosP from "../images/projects/takosP.webp";
 import eyetrackerP from "../images/projects/eyeTrackerP.webp";
+import duckduckflowP from "../images/projects/duckduckflowP.webp";
+import epicP from '../images/projects/epicP.webp';
+import beginnersTrackP from '../images/projects/beginnerstrackP.webp';
+import smartMirrorP from '../images/projects/smartmirrorP.webp';
 
 import placeholder from '../images/projects/placeholder.png'
 
@@ -138,16 +142,16 @@ export const PROJECT_IMAGES: { [key: string]: string } = {
   TRACE: traceP,
   AUTONOMOUS_CAR: carP,
   TEXEL_ARTS: texelArtsP,
-  BEGINNERS_TRACK: placeholderP,
-  EPIC: placeholderP,
-  DUCKDUCKFLOW: placeholderP,
+  BEGINNERS_TRACK: beginnersTrackP,
+  EPIC: epicP,
+  DUCKDUCKFLOW: duckduckflowP,
   PCR: pcrP,
   CHESS_TEACHER: chessP,
   AUTONOMOUS_DRONE: droneP,
   MUSIC_MOOD: musicP,
   ROBOTIC_ARM: robotic_armP,
   FITNESS_TRACKER: fitnessP,
-  SMART_MIRROR: placeholderP,
+  SMART_MIRROR: smartMirrorP,
   HYDROPONICS: hydroponicsP,
   MCQUEEN: mcqueenP,
   TAKOS: takosP,
