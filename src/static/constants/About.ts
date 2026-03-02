@@ -6,6 +6,8 @@ import rizkyImg from '../images/officer/rizky.webp'
 import aniketImg from '../images/officer/aniket.webp'
 import annaImg from '../images/officer/anna.webp'
 import manavImg from '../images/officer/manav.webp'
+import nogaImg from '../images/officer/noga.webp'
+import nuzhatImg from '../images/officer/nuzhat.webp'
 
 import tanayImg from '../images/officer/tanay.webp'
 import sahanaImg from '../images/officer/sahana.webp'
@@ -29,6 +31,7 @@ export const OFFICER_KEYS = [
   "PR",
   "TECHNOLOGY",
   "FINANCIAL",
+//   "FRESHMAN_REP",
 ];
 
 export const OFFICER_POSITIONS: { [key: string]: string } = {
@@ -40,60 +43,65 @@ export const OFFICER_POSITIONS: { [key: string]: string } = {
     PR: "Public Relations Director",
     TECHNOLOGY: "Technology Director",
     FINANCIAL: "Financial Director",
+    // FRESHMAN_REP: "Freshman Representative"
 }
 
 export const OFFICER_NAMES: { [key: string]: string } = {
     PRESIDENT: "Arnav Joshi",
     VICE_PRESIDENT: "Cameron Cox",
-    CORPORATE: "Aniket Gupta",
-    OUTREACH: "Anna Iskra",
+    CORPORATE: "Manas Agrawal",
+    OUTREACH: "Nosa Rosenberg",
     EVENT: "Manav Karonde",
     PR: "Zoe Vo",
-    TECHNOLOGY: "Manas Agrawal",
+    TECHNOLOGY: "Nuzhat Nabi",
     FINANCIAL: "Rizky Pratama",
+    // FRESHMAN_REP: "Vishnu Sharma",
 }
 
 export const OFFICER_EMAILS: { [key: string]: string } = {
     PRESIDENT: "arnavjoshi@utexas.edu",
-    VICE_PRESIDENT: "campatcox@gmail.com",
-    CORPORATE: "aniketg@utexas.edu",
-    OUTREACH: "anna.iskra@utexas.edu",
+    VICE_PRESIDENT: "cameron.cox@utexas.edu",
+    CORPORATE: "manas.agrawal2@utexas.edu",
+    OUTREACH: "anoga.rosenberg007@gmail.com",
     EVENT: "karonde.manav@gmail.com",
     PR: "zk4thyv@gmail.com",
-    TECHNOLOGY: "manas.agrawal2@utexas.edu",
+    TECHNOLOGY: "nuzhat.nabi@utexas.edu",
     FINANCIAL: "rizkyapratama100@gmail.com",
+    // FRESHMAN_REP: "vishnuamogha.sharma@gmail.com",
 }
 
 export const OFFICER_LINKED_INS: { [key: string]: string } = {
     PRESIDENT: "https://www.linkedin.com/in/arnavsjoshi/",
     VICE_PRESIDENT: "https://www.linkedin.com/in/cameron-cox-ut/",
-    CORPORATE: "https://www.linkedin.com/in/aniketgupta25/",
-    OUTREACH: "https://www.linkedin.com/in/a-spark/",
+    CORPORATE: "https://www.linkedin.com/in/manas-agrawal-41231a245/",
+    OUTREACH: "https://www.linkedin.com/in/nogarosenberg/",
     EVENT: "https://www.linkedin.com/in/manav-karonde-678b39319/",
     PR: "https://www.linkedin.com/in/zoe-vo-b73b9b317/",
-    TECHNOLOGY: "https://www.linkedin.com/in/manas-agrawal-41231a245/",
+    TECHNOLOGY: "https://www.linkedin.com/in/nuzhat-nabi-b3111b368/",
     FINANCIAL: "https://www.linkedin.com/in/rapratama1/",
+    // FRESHMAN_REP: "";
 }
 
 export const OFFICER_DESCS: { [key: string]: string } = {
     PRESIDENT: "Hi, I'm Arnav! I'm a third year C.S. major minoring in robotics. I've been making robots going on six years now, and particularly enjoy being somewhere in between the hardware and the software. In other news, I like running, climbing, hiking (motion may be a trend here), and playing music, and just about any sport. Open to song reccomendations, welcome to ECLAIR",
-    VICE_PRESIDENT: "Hey y'all, my name is Cameron! I'm a CS major minoring in robotics. I love combat robotics but my end goal is to make robots that improve our home lives. In my free time I play the piano, sing, ballroom dance, and play chess, D&D, and Zelda games.",
-    CORPORATE: "Hi, I’m Aniket Gupta, a junior majoring in Computer Science at UT Austin, from Bentonville, Arkansas. I previously led ECLAIR’s Beginner’s Track for two semesters and enjoy delivering technical lectures at hackathons. I’m passionate about AI and SWE, and I’m excited to help expand ECLAIR’s corporate footprint this year (please dm me on LinkedIn!)",
-    OUTREACH: "Hi y’all, I’m Anna! I’m a Mathematics and Plan II dual major pursing a minor in SDS and way too many certificates (all related to scientific computing, my hopeful career field!). In my free time, I love to read and write screenplays, develop interactive fiction games, and GM tabletop RPGs. Honk if you love computer vision :)",
+    VICE_PRESIDENT: "Hey y'all my name is Cameron! I'm a CS major minoring in robotics. I love combat robotics and my goal is to one day make robots that improve our home lives. In my free time I play the piano, chess, D&D, Zelda games and I love to sing ang ballroom dance.",
+    CORPORATE: "Hi, my name is Manas. I'm the technology director at ECLAIR. I'm majoring in Computer Science and have a minor in Robotics. I love TTRPGs, swimming, and trying out new foods. I'm super interested in Robot Perception and Computer Vision. Join me in CRACKLE (the best ECLAIR Project). We have tons of fun!",
+    OUTREACH:  "Hi! My name is Noga and I'm major in Computer Science. My interests include software development and cybersecurity. In my free time, I enjoy playing video games, TTRGs, and watching too many movies.",
     EVENT: "Hello friend, My name is Manav and I'm a sophmore in Computer Science here at UT. I've lived in Austin for the past decade, but am from New York originally. I've spent the past two semesters on CRACKLE, but when I'm not doing that or building wacky personal robotics projects, I like to play the drums / guitar (especially rock punk and blues), dabble in photography, drive around windows down with my dog, or just stare at a blank wall and contemplate life.",
     PR: "Hi I'm Zoe and I'm a Mechanical Engineering major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida",
-    TECHNOLOGY: "Hi, my name is Manas. I'm the technology director at ECLAIR. I'm majoring in Computer Science and have a minor in Robotics. I love TTRPGs, swimming, and trying out new foods. I'm super interested in Robot Perception and Computer Vision. Join me in CRACKLE (the best ECLAIR Project). We have tons of fun!",
+    TECHNOLOGY: "Hello! My name is Nuzhat. I am a Computer Science major interested in robotics, AI, and full-stack web development. I mainly do software stuff but hoping to learn more hardware content. I enjoy playing games (board, card, and video games) and hanging out with friends.",
     FINANCIAL: "Hi! I'm Rizky. I'm a 2nd year CS major from Katy, Texas with an interest in Robotics, Computer Vision, and AI. Outside of that, I boulder, play D&D, dance, and eat lots. Never challenge me to a card game.",
+    // FRESHMAN_REP: "Hey, I'm Vishnu! I'm a CS major from New Jersey interested in software, AI, and robotics. In my free time, I like reading, learning new things, and hanging out with friends.",
 }
 
 export const OFFICER_FUN_IMAGES: { [key: string]: any } = {
     PRESIDENT: arnavImg,
     VICE_PRESIDENT: cameronImg,
-    CORPORATE: aniketImg,
-    OUTREACH: annaImg,
+    CORPORATE: manasImg,
+    OUTREACH: nogaImg,
     EVENT: manavImg,
     PR: zoeImg,
-    TECHNOLOGY: manasImg,
+    TECHNOLOGY: nuzhatImg,
     FINANCIAL: rizkyImg,
 }
 
