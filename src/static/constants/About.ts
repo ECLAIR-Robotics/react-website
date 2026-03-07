@@ -50,7 +50,7 @@ export const OFFICER_NAMES: { [key: string]: string } = {
     PRESIDENT: "Arnav Joshi",
     VICE_PRESIDENT: "Cameron Cox",
     CORPORATE: "Manas Agrawal",
-    OUTREACH: "Nosa Rosenberg",
+    OUTREACH: "Noga Rosenberg",
     EVENT: "Manav Karonde",
     PR: "Zoe Vo",
     TECHNOLOGY: "Nuzhat Nabi",
