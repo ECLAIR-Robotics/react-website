@@ -28,10 +28,10 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        'service_lf68y8i',
-        'template_a7v3kjq',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
         formRef.current,
-        'NIC61fRJW1mmr-YPC'
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
       );
       setSent(true);
     } catch (err) {

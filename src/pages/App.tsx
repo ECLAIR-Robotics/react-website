@@ -16,13 +16,13 @@ import '../styles/globals.css';
 
 // ─── Firebase ──────────────────────────────────────────────────────────────
 const firebaseConfig = {
-  apiKey:            'AIzaSyApKv2_Muv15F14Vfuo04rwuqxUcTtMy9o',
-  authDomain:        'eclair-website-387316.firebaseapp.com',
-  projectId:         'eclair-website-387316',
-  storageBucket:     'eclair-website-387316.appspot.com',
-  messagingSenderId: '664767979379',
-  appId:             '1:664767979379:web:7904edda15a1350c3b6f06',
-  measurementId:     'G-XVQ8FB05W1',
+  apiKey:            process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain:        process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId:         process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket:     process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId:             process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId:     process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 initializeApp(firebaseConfig);
