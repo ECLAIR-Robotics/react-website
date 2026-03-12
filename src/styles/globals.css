@@ -1,0 +1,238 @@
+/* ─── DESIGN TOKENS ───────────────────────────────────────────────────────── */
+:root {
+  --black:     #050508;
+  --surface:   #0d0d14;
+  --surface2:  #13131e;
+  --surface3:  #191926;
+  --border:    rgba(255, 255, 255, 0.07);
+  --border-hi: rgba(139, 92, 246, 0.35);
+
+  --purple:    #7c3aed;
+  --violet:    #8b5cf6;
+  --pink:      #ec4899;
+  --magenta:   #d946ef;
+
+  --grad:      linear-gradient(135deg, #7c3aed, #ec4899);
+  --grad2:     linear-gradient(135deg, #8b5cf6, #d946ef);
+
+  --text:      #f0f0f8;
+  --muted:     rgba(240, 240, 248, 0.45);
+  --lo:        rgba(240, 240, 248, 0.18);
+
+  --mono:      'DM Mono', monospace;
+  --display:   'Syne', sans-serif;
+
+  --nav-height: 64px;
+}
+
+/* ─── RESET & BASE ────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: var(--display);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: none;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* ─── CUSTOM CURSOR ───────────────────────────────────────────────────────── */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--magenta);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, width 0.2s, height 0.2s;
+  mix-blend-mode: screen;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(217, 70, 239, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+
+/* ─── GLOBAL ATMOSPHERE ───────────────────────────────────────────────────── */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.035) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+.scanline {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(transparent, rgba(139, 92, 246, 0.06), transparent);
+  z-index: 200;
+  pointer-events: none;
+  animation: scanline 6s linear infinite;
+  opacity: 0.4;
+}
+
+/* ─── SHARED SECTION CHROME ───────────────────────────────────────────────── */
+.section-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--grad);
+}
+
+.section-h2 {
+  font-size: clamp(36px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  max-width: 720px;
+}
+
+/* ─── SHARED BUTTONS ──────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  background: var(--grad);
+  color: white;
+  transition: box-shadow 0.3s, transform 0.2s;
+  cursor: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s, color 0.3s, transform 0.2s;
+  cursor: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hi);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+/* ─── REVEAL ANIMATION ────────────────────────────────────────────────────── */
+.reveal {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js-loaded .reveal {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+.js-loaded .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── SCROLLBAR ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--purple); }
+
+/* ─── ANIMATIONS ──────────────────────────────────────────────────────────── */
+@keyframes scanline {
+  0%   { top: -2px; }
+  100% { top: 100vh; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  from { opacity: 0.6; transform: scale(1); }
+  to   { opacity: 1;   transform: scale(1.08); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  body { cursor: auto; }
+  .cursor, .cursor-ring { display: none; }
+}

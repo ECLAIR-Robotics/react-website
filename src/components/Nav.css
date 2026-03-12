@@ -1,0 +1,213 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  background: rgba(5, 5, 8, 0.7);
+  backdrop-filter: blur(24px) saturate(1.3);
+  transition: background 0.3s;
+}
+
+.nav--scrolled {
+  background: rgba(5, 5, 8, 0.92);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  height: 64px;
+  width: auto;
+}
+
+.nav-logo-text {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.15em;
+  color: var(--text);
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover,
+.nav-link--active {
+  color: var(--text);
+}
+
+.nav-link:hover::after,
+.nav-link--active::after {
+  transform: scaleX(1);
+}
+
+/* CTA */
+.nav-cta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 10px 22px;
+  border: 1px solid rgba(217, 70, 239, 0.45);
+  background: rgba(217, 70, 239, 0.07);
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.nav-cta:hover {
+  border-color: var(--magenta);
+  box-shadow: 0 0 24px rgba(217, 70, 239, 0.2);
+  background: rgba(217, 70, 239, 0.14);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-hamburger--open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger--open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile drawer */
+.nav-drawer {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(5, 5, 8, 0.97);
+  backdrop-filter: blur(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
+  border-top: 1px solid var(--border);
+}
+
+.nav-drawer--open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+}
+
+.nav-drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 40px 24px;
+}
+
+.nav-drawer-link {
+  display: block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(28px, 6vw, 48px);
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  padding: 8px 0;
+  transition: color 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-drawer-link:hover {
+  color: var(--text);
+}
+
+.nav-drawer-cta {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 14px 32px;
+  border: 1px solid rgba(217, 70, 239, 0.5);
+  background: rgba(217, 70, 239, 0.1);
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+}

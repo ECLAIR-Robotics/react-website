@@ -1,229 +1,126 @@
 import React from 'react';
-import Logo from '../static/images/logo/ECLAIR_logo2.webp';
-import '../styles/app.css';
-import ECLAIRButton from '../components/general/ECLAIRButton';
-import Loader from '../components/Loader';
-import { Slide, Fade } from '@mui/material';
-import YoutubeEmbed from '../components/YoutubeEmbed';
-import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import wavesHeader from '../static/vectors/waves-header.svg';
-import headerBackground from '../static/vectors/polygon-header.svg';
-import headerImage_1 from '../static/images/homepage/drone.webp';
-import headerImage_2 from '../static/images/homepage/eclair_group.webp';
-//import CalendarEmbed from '../components/CalendarEmbed';
-import SponsorRow from '../components/sponsors/SponsorRow';
-import JoinUs from '../components/general/JoinUs';
+import { useReveal } from '../hooks/useReveal';
+import './Homepage.css';
 
-function Homepage() {
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-  function getCurrentDimension() {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight
-    }
-  }
-
-  useEffect(() => {
-    const updateDimension = () => {
-      
-      setScreenSize(getCurrentDimension())
-      console.log(screenSize.width);
-    }
-    window.addEventListener('resize', updateDimension);
-
-    return (() => {
-      window.removeEventListener('resize', updateDimension);
-    })
-  }, [])
-
-  const handleClick = () => {
-    navigate('/projects');
-  }
-
+export default function Homepage() {
+  useReveal();
   const navigate = useNavigate();
 
-  const [hBGLoaded, setHBGLoaded] = useState(false);
-  const hBGDivRef = useRef<HTMLDivElement>(null);
-  const hElementRef = useRef<HTMLImageElement>(null);
-
-  const [resize, isResized] = useState(false);
-
-  useEffect(() => {
-    if (hBGDivRef.current && hElementRef.current) {
-      const divHeight = hBGDivRef.current.clientHeight;
-      hElementRef.current.style.height = `${divHeight}px`;
-    }
-  }, [resize]);
-
-
-  function handleResize() {
-    // setHBGLoaded(false);
-    isResized(!resize);
-  }
-  window.addEventListener('resize', handleResize);
-
-  function wrapperFunction() {
-    setHBGLoaded(true);
-  }
-
-  async function handleLoad() {
-    setTimeout(wrapperFunction, 0)
-
-  }
   return (
+    <div className="page-wrapper">
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section className="hero" id="home">
+        <div className="hero-glow" />
+        <div className="hero-glow2" />
 
-    <>
+        <div className="hero-tag">UT Austin · CS Department · Est. 2021</div>
 
-      <section >
-        <div className='box2' style={{
-          paddingTop: '15em',
-          paddingBottom: '15em',
-          background: `url(${headerBackground})  center center no-repeat `,
-          backgroundSize: 'cover',
-        }} >
-          <img className='contactBackground' ref={hElementRef} src={headerBackground} onLoad={handleLoad}></img>
+        <h1 className="hero-h1">
+          Building the<br />
+          <span className="grad-text">machines</span><br />
+          of tomorrow.
+        </h1>
 
-          <div className='box1-left'>
-            <Fade in={true} timeout={2000}>
-              <img className='left-img' src={Logo} alt='logo' />
-            </Fade>
-          </div>
-          <div className='header-right'>
-            <Fade in={true} timeout={1000}>
-              <Slide direction="left" in={true} mountOnEnter unmountOnExit>
-                <h2 className='header-text'>Our mission is to drive innovation in AI and robotics at the undergraduate level.</h2>
-              </Slide>
-            </Fade>
-            
-            <ECLAIRButton handleClick={handleClick} text="PROJECTS" radius='1em' />
-          </div>
+        <p className="hero-sub">
+          ECLAIR is UT Austin's undergraduate robotics organization — where engineers
+          learn state-of-the-art AI and turn ambitious ideas into physical robots.
+        </p>
 
-          <div className="custom-shape-divider-bottom-1684597940">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" className="shape-fill"></path>
-            </svg>
-          </div>
+        <div className="hero-actions">
+          <button className="btn-primary" onClick={() => navigate('/projects')}>
+            View Our Work
+          </button>
+          <button className="btn-secondary" onClick={() => navigate('/contact')}>
+            Get Involved →
+          </button>
         </div>
 
-      </section>
-      <section className='box2 box2-override'>
-        <div className='box1_5-textLeft' id="informationHeading"> Geared Toward Helping Students Pursue Their Passion for Robotics </div>
-        <div className='box1_5-textRight' id="informationSubtext">
-          The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality. We provide the robotics parts and teach members state-of-the-art machine learning techiniques such as neural networks and reinforcement learning to give students the ability to pursue their robotics projects. If you have a cool robot you want to build, come join us!
-        </div>
-      </section>
-      <section className='box2 box2-override2'>
-        <div className='box1_5-textRight' id="infoImageContainer">
-          <img className="infoImage" src={headerImage_1}></img>
-        </div>
-        <div className="box2-encloser">
-          <div className='box1_5-textLeft' id='boldText'>
-            Situated at the Gates-Dell Complex at UT Austin - A leading Robotics and AI Institution
+        <div className="hero-stats">
+          <div className="stat">
+            <div className="stat-num">30+</div>
+            <div className="stat-label">Active Members</div>
           </div>
-          <div className='box1_5-textRight' id="informationText">
-            Come find us every Monday and Thursday from 6 to 8 PM at the Gates-Dell Complex at UT Austin. Here, there is a wide range of robotics research, from surgical robotics to autonomous driving to artificial assistants. In ECLAIR, students can take advantage of all the resources at UT to explore their interests in robotics.
+          <div className="stat">
+            <div className="stat-num">5</div>
+            <div className="stat-label">Active Projects</div>
           </div>
-
+          <div className="stat">
+            <div className="stat-num">500+</div>
+            <div className="stat-label">Alumni Network</div>
+          </div>
+          <div className="stat">
+            <div className="stat-num">1</div>
+            <div className="stat-label">Industry Sponsors</div>
+          </div>
         </div>
       </section>
 
-      <section className='box2 box2-override3'>
-        <div className='box2-encloser'>
-          <div className='box1_5-textLeft' id='boldText'>
-            Our Members enjoy access to State of the Art Facilities!
+      {/* ── MISSION STRIP ────────────────────────────────────── */}
+      <section className="mission-strip">
+        <div className="mission-grid">
+          <div className="mission-item reveal">
+            <div className="mission-icon">🤖</div>
+            <div className="mission-title">Build Real Robots</div>
+            <div className="mission-text">Pitch any project and get it financed and supported by ECLAIR.</div>
           </div>
-          <div className='box1_5-textRight' id="informationText">
-            Partnering with the Anna Hiss Gymnasium and UT Austin Makerspace, ECLAIR helps provide resources that students need to create and test their AI algorithms on physical robots. Our members are free to pitch any project they want to build and get it financed by ECLAIR.
+          <div className="mission-item reveal reveal-delay-1">
+            <div className="mission-icon">🧠</div>
+            <div className="mission-title">Learn Modern ML</div>
+            <div className="mission-text">Workshops on RL, deep learning, computer vision, and ROS2.</div>
+          </div>
+          <div className="mission-item reveal reveal-delay-2">
+            <div className="mission-icon">🔧</div>
+            <div className="mission-title">World-Class Facilities</div>
+            <div className="mission-text">Anna Hiss Gym, UT Makerspace, and GDC labs at your fingertips.</div>
+          </div>
+          <div className="mission-item reveal reveal-delay-3">
+            <div className="mission-icon">🌐</div>
+            <div className="mission-title">Industry Pipeline</div>
+            <div className="mission-text">Direct connections to internships and roles at leading robotics companies.</div>
           </div>
         </div>
-        <div className='box1_5-textRight' id="infoImageContainer">
-          <img className="infoImage" src={headerImage_2}></img>
-        </div>
       </section>
 
-      
-      <JoinUs/>
+      {/* ── WHERE WE MEET ─────────────────────────────────────── */}
+      <section className="meet-section">
+        <div className="meet-inner">
+          <div className="reveal">
+            <div className="section-tag">Find Us</div>
+            <h2 className="section-h2">Gates-Dell Complex,<br />UT Austin.</h2>
+            <p className="meet-body">
+              We meet every <strong>Monday and Thursday, 6–8 PM</strong> in the GDC.
+              Drop in and start building.
+            </p>
+            <div className="meet-actions">
+              <a
+                href="https://discord.gg/tgbvpCjNgV"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary"
+              >
+                Join Discord
+              </a>
+              <button className="btn-secondary" onClick={() => navigate('/contact')}>
+                Contact Us →
+              </button>
+            </div>
+          </div>
 
-      <section className='box2 box2-override4'
-        style={{
-          background: `url(${wavesHeader})  center center no-repeat `,
-          backgroundSize: 'auto 100%',
-        }}
-      >
-        <div className="custom-shape-divider-top-1681028846" style={{ marginTop: '-1px' }}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#191e28"/>
-            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#191e28"/>
-            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#191e28"/>
-          </svg>
-        </div>
-        <div className="animatedBlob"> {/* This entire div is just a vector that contains the blob, a rectangle, and text at the bottom of the homepage */}
-          <svg id="visual" viewBox={`0 0 900 600`} width={`${(screenSize.width / 2) + 100}`} height={`${(screenSize.height / 1.5)+50}`} xmlns="http://www.w3.org/2000/svg"
-            version="1.1">
-            <defs>
-              <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#c675ff" />
-                <stop offset="100%" stopColor="#0050c7" />
-              </linearGradient>
-            </defs>
-            <defs>
-              <filter id="shadow">
-                <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.5" />
-              </filter>
-            </defs>
-            <g transform="translate(425.17812071839586 297.4107165965745)">
-              <path id='pathBefore'
-                d="M140.5 -95C189.2 -50.9 240.9 7.9 239 69.9C237.1 131.9 181.7 197 118.2 216.5C54.7 236.1 -16.9 209.9 -56.2 170.4C-95.6 130.9 -102.6 78 -124.2 18.3C-145.8 -41.3 -182 -107.6 -163.7 -144.8C-145.4 -182 -72.7 -190 -13.4 -179.3C45.9 -168.6 91.7 -139.2 140.5 -95"
-                transform='translate(20,0) scale(1.2)'
-                fill="url(#myGradient)">
-              </path>
-              <rect x="-130" y="-50" rx="5" ry="5" width={270} height={65} fill='white' filter="url(#shadow)" />
-              <text x="-130" y="10" fill="url(#myGradient)" className='vectorText'>
-                ECLAIR
-              </text>
-            </g>
-          </svg>
-        </div>
-        <div className='box2-right'>
-          <YoutubeEmbed />
+          <div className="map-embed reveal reveal-delay-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.273583027798!2d-97.73916802475219!3d30.286272274802734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b59c98544379%3A0x1a0c2b90248ca2ed!2sGates%20Dell%20Complex!5e0!3m2!1sen!2sus!4v1737357273958!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Gates-Dell Complex"
+            />
+          </div>
         </div>
       </section>
-      
-      <section className='box2 box2-override4'
-        style={{
-          backgroundSize: 'cover',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingTop: '2px',
-        }}
-      >
-        <div className='box1_5-textCenter' id='boldText'> Our Sponsors </div>
-        <SponsorRow/>
-      </section>
-
-
-      {/*
-      <section className='box2 box2-override4'
-        style={{
-          background: `url(${wavesHeader})  center center no-repeat `,
-          backgroundSize: 'cover',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-
-        }}
-      >
-        <CalendarEmbed />
-      </section> */}
-      <Loader bGLoaded={hBGLoaded} />
-    </>
+    </div>
   );
 }
-
-export default Homepage;

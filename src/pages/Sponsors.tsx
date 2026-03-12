@@ -1,145 +1,111 @@
+import React from 'react';
+import { useReveal } from '../hooks/useReveal';
+import './Sponsors.css';
 
-import '../styles/sponsors/sponsors.css';
-import spon from '../static/vectors/sponsorsDivider.svg';
-import bg from '../static/vectors/sponsorsBackground.svg'; 
+export default function Sponsors() {
+  useReveal();
 
-import Loader from '../components/Loader';
-
-import phone from '../static/images/sponsor-images/phoneIcon1.webp';
-import email from '../static/images/sponsor-images/emailIcon1.webp';
-import form from '../static/images/sponsor-images/formIcon.webp';
-import React, { useEffect, useRef, useState } from 'react';
-//import SponsorPackageRow from '../components/SponsorPackageRow';
-import SponsorRow from '../components/sponsors/SponsorRow';
-import ContactInformationContainer from '../components/general/ContactInformationContainer';
-
-function Sponsors() {
-  
-  // const [isVisible, setIsVisible] = useState(false);
-  // const elementRef = useRef(null);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     const [entry] = entries;
-  //     setIsVisible(entry.isIntersecting);
-
-  //     if (entry.isIntersecting) {
-  //       observer.unobserve(entry.target);
-  //     }
-  //   });
-  //   if (elementRef.current) {
-  //     observer.observe(elementRef.current);
-  //   }
-  //   return () => {
-  //     if (elementRef.current) {
-  //       observer.unobserve(elementRef.current);
-  //     }
-  //   };
-  // }, []);
-  
-  const [isElementVisible, setElementVisible] = useState(false);
-  const targetElementRef = useRef(null);
-
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const [entry] = entries;
-      setElementVisible(entry.isIntersecting);
-
-      if (entry.isIntersecting) {
-        observer.unobserve(entry.target);
-      }
-    });
-    if (targetElementRef.current) {
-      observer.observe(targetElementRef.current);
-    }
-    return () => {
-      if (targetElementRef.current) {
-        observer.unobserve(targetElementRef.current);
-      }
-    };
-  }, []);
-
-  const [sBGLoaded, setSBGLoaded] = useState(false);
-  const bgDivRef = useRef<HTMLDivElement>(null);
-  const sElementRef = useRef<HTMLImageElement>(null);
-  
-  const[resize, isResized] = useState(false);
-
-  useEffect(() => {
-    if (bgDivRef.current && sElementRef.current) {
-      const divHeight = bgDivRef.current.clientHeight;
-      sElementRef.current.style.height = `${divHeight}px`;
-    }
-  }, [resize]);
-
-  
-  function handleResize() {
-    // setSBGLoaded(false);
-    isResized(!resize);
-  }
-  window.addEventListener('resize', handleResize);
- 
-  function wrapperFunction() {
-    setSBGLoaded(true);
-  }
-
-  async function handleLoad() {
-    setTimeout(wrapperFunction, 0)
-    
-  }
-  
   return (
-    <div>
-      <div className='projectPageHeading'>Current Sponsors</div>
-      <div className='projectHeaderTrans' style={{backgroundImage: `url(${spon})`, height: '12rem', backgroundPosition: 'center', backgroundSize: '200vw', zIndex: '3', position: 'relative'}}></div>
-      <div style={{marginTop: '-12rem', zIndex: '1', position: 'relative'}}>
-        <img className='sponsorBackground' ref={sElementRef}  src={bg} onLoad={handleLoad} alt="load animation"></img>
-        <div style = {{paddingBottom:"12rem"}}/>
-          <SponsorRow/>
+    <div className="page-wrapper">
+      <section className="sponsors-section">
 
-          
-          <div style = {{height:"5rem"}}></div>
-          {/* <div style={{display:'flex', justifyContent:'center', alignContent:'center'}}> */}
-          <div style={{display:'flex', justifyContent:'center', alignContent:'center', width:'100%'}}>
-            <div className={`sponsorTextHolder ${isElementVisible ? 'vis' : ''}`} ref={targetElementRef} style={{}}>
-              {/* <div className={`sponsorText`} style={{color:'black', fontFamily:'poppins', width:'50%', justifySelf:'center', alignSelf:'center', textAlign:'center'}}> */}
-              <div className={`sponsorText`} style={{fontFamily:'montserrat', justifySelf:'center', alignSelf:'center', textAlign:'center'}}>
-                We are always trying to provide our members with the most cutting-edge robotics hardware available and would greatly appreciate any potential sponsorships. If you are interested in sponsoring UT ECLAIR, please contact us at the email below and we can send you our sponsor packet!
-              </div>
+        <div className="sponsors-header">
+          <div className="section-tag">Partner With Us</div>
+          <h1 className="section-h2 reveal">Sponsors &amp;<br />Supporters</h1>
+        </div>
+
+        <div className="sponsor-inner reveal">
+          {/* Left col */}
+          <div>
+            <h3 className="sponsor-pitch">
+              Invest in the next generation of roboticists.
+            </h3>
+            <p>
+              ECLAIR builds a direct pipeline from UT Austin's CS program to the
+              robotics industry. Our sponsors get early access to talented,
+              project-tested engineers before they hit the job market.
+            </p>
+            <p>
+              Your support funds hardware, demos, and the infrastructure that lets
+              students build things that matter.
+            </p>
+            <a
+              href="mailto:eclairrobotics@gmail.com"
+              className="btn-primary"
+              style={{ marginTop: '8px', display: 'inline-block' }}
+            >
+              Become a Sponsor →
+            </a>
+
+            <div className="current-sponsors">
+              <div className="current-sponsors-label">Current Partners</div>
+              <a href="https://www.servicenow.com/" target="_blank" rel="noreferrer" className="sponsor-name">
+                ServiceNow
+              </a>
+              <a href="https://robotics.utexas.edu/" target="_blank" rel="noreferrer" className="sponsor-name">
+                Texas Robotics
+              </a>
+              <a href="https://texel-arts.com/" target="_blank" rel="noreferrer" className="sponsor-name">
+                Texel Arts
+              </a>
             </div>
           </div>
 
-          
-
-          <div style = {{paddingBottom:"5%"}}/>
-          <div className='contactGrid'>
-            <ContactInformationContainer
-              href='mailto:eclairrobotics@gmail.com'
-              altTxt='email button'
-              title='Email'
-              body='eclairrobotics@gmail.com'
-              img={email}
-            />
-            <ContactInformationContainer
-              altTxt='phone icon'
-              title='Phone'
-              body='+1 (513)-237-2165'
-              img={phone}
-            />
-            <ContactInformationContainer
-              href='/contact'
-              title='Form'
-              body='Contact Us Page'
-              img={form}
-            />
+          {/* Right col — tiers */}
+          <div>
+            <div className="sponsor-tiers">
+              <TierCard
+                name="Silver"
+                label="Entry Tier"
+                perks={[
+                  'T-shirt listing (30+ members)',
+                  'Instagram shoutout (150+ followers)',
+                  'Featured on club website',
+                  'Swag & flyers at our meetings',
+                ]}
+              />
+              <TierCard
+                name="Gold"
+                label="Most Popular"
+                perks={[
+                  'All Silver perks',
+                  'Logo on club T-shirt',
+                  'Booth at Demo Days (40+ UT CS students)',
+                  '2× recruiting events per semester',
+                ]}
+              />
+              <TierCard
+                name="Diamond"
+                label="Premier Partner"
+                perks={[
+                  'All Gold perks',
+                  'Full resume book (30+ engineers)',
+                  'Priority recruiting access',
+                  '50 campus flyers (~10K impressions)',
+                  'Discord & mailing list (500+ network)',
+                ]}
+              />
+            </div>
+            <p className="sponsor-note">
+              Custom partnership packages available. Reach out to discuss what works
+              best for your organization.
+            </p>
           </div>
-        <div style = {{paddingBottom:"12%"}} />
-      </div>
-      <Loader bGLoaded={sBGLoaded}/>
+        </div>
+
+      </section>
     </div>
   );
 }
 
-export default Sponsors
-
+function TierCard({ name, label, perks }: { name: string; label: string; perks: string[] }) {
+  return (
+    <div className={`tier tier--${name.toLowerCase()}`}>
+      <div className="tier-name">{name}</div>
+      <div className="tier-label">{label}</div>
+      <ul className="tier-perks">
+        {perks.map((p) => <li key={p}>{p}</li>)}
+      </ul>
+    </div>
+  );
+}

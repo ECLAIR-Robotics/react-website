@@ -1,86 +1,76 @@
-import React, {  useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import About from './About';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { initializeApp } from 'firebase/app';
+
+import Nav      from '../components/Nav';
+import Footer   from '../components/Footer';
 import Homepage from './Homepage';
+import About    from './About';
 import Projects from './Projects';
-import ResponsiveAppBar from '../components/ResponsiveAppBar';
-import Contact from './Contact';
-import Footer from '../components/Footer';
 import Sponsors from './Sponsors';
-import EclairDrawer from '../components/EclairDrawer';
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import Contact  from './Contact';
 
+import { useCursor } from '../hooks/useCursor';
 
+import '../styles/globals.css';
+
+// ─── Firebase ──────────────────────────────────────────────────────────────
 const firebaseConfig = {
-  apiKey: "AIzaSyApKv2_Muv15F14Vfuo04rwuqxUcTtMy9o",
-  authDomain: "eclair-website-387316.firebaseapp.com",
-  projectId: "eclair-website-387316",
-  storageBucket: "eclair-website-387316.appspot.com",
-  messagingSenderId: "664767979379",
-  appId: "1:664767979379:web:7904edda15a1350c3b6f06",
-  measurementId: "G-XVQ8FB05W1"
+  apiKey:            'AIzaSyApKv2_Muv15F14Vfuo04rwuqxUcTtMy9o',
+  authDomain:        'eclair-website-387316.firebaseapp.com',
+  projectId:         'eclair-website-387316',
+  storageBucket:     'eclair-website-387316.appspot.com',
+  messagingSenderId: '664767979379',
+  appId:             '1:664767979379:web:7904edda15a1350c3b6f06',
+  measurementId:     'G-XVQ8FB05W1',
 };
 
+initializeApp(firebaseConfig);
 
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-const homepage = () => {
-  return <Homepage />
-}
-const about = () => {
-  return <About />
-}
-const members = () => {
-  return <Sponsors />
-}
-const projects = () => {
-  return <Projects />
-}
-const contact = () => {
-  return <Contact />
+// ─── Scroll to top on route change ─────────────────────────────────────────
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
 }
 
+// ─── App shell ─────────────────────────────────────────────────────────────
+function AppShell() {
+  useCursor();
 
-const App: React.FC = () => {
+  return (
+    <>
+      {/* Atmosphere layers */}
+      <div className="grid-bg" />
+      <div className="noise" />
+      <div className="scanline" />
 
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isSmol, setIsSmol] = useState<boolean>(false);
+      {/* Custom cursor */}
+      <div className="cursor" id="cursor" />
+      <div className="cursor-ring" id="cursor-ring" />
 
-  useEffect(() => {
-    const handleResize = () => {
+      <Nav />
 
-      setIsSmol(window.innerWidth < 1000);
-    };
-    const userAgent = navigator.userAgent.toLowerCase();
+      <main>
+        <Routes>
+          <Route path="/"         element={<Homepage />} />
+          <Route path="/about"    element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/contact"  element={<Contact />} />
+        </Routes>
+      </main>
 
-    setIsMobile(/iphone|ipad|ipod|android|blackberry|windows phone/.test(userAgent));
-    // Attach event listener for window resize
-    window.addEventListener('resize', handleResize);
+      <Footer />
+    </>
+  );
+}
 
-  }, []);
+export default function App() {
   return (
     <Router>
-
-      <div style={{ position: 'fixed', zIndex: '100', width: '100%' }}>
-
-        {isMobile || isSmol ? (<EclairDrawer />) : (<ResponsiveAppBar />)}
-
-        {/* <ResponsiveAppBar /> */}
-        {/* <EclairDrawer /> */}
-      </div>
-      <Routes>
-        <Route path="/" Component={homepage} />
-        <Route path="/about" Component={about} />
-        <Route path="/sponsors" Component={members} />
-        <Route path="/projects" Component={projects} />
-        <Route path="/contact" Component={contact} />
-      </Routes>
-      <Footer />
+      <ScrollToTop />
+      <AppShell />
     </Router>
-  )
+  );
 }
-
-export default App
