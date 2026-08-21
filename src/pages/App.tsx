@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './About';
 import Homepage from './Homepage';
 import Projects from './Projects';
+import Login from './Login';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Contact from './Contact';
 import Footer from '../components/Footer';
@@ -42,7 +43,9 @@ const projects = () => {
 const contact = () => {
   return <Contact />
 }
-
+const login = () => {
+  return <Login />
+}
 
 const App: React.FC = () => {
 
@@ -51,15 +54,25 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-
       setIsSmol(window.innerWidth < 1000);
     };
+
     const userAgent = navigator.userAgent.toLowerCase();
 
-    setIsMobile(/iphone|ipad|ipod|android|blackberry|windows phone/.test(userAgent));
-    // Attach event listener for window resize
+    setIsMobile(
+      /iphone|ipad|ipod|android|blackberry|windows phone/.test(userAgent)
+    );
+
+    // Check the screen size immediately when the page loads
+    handleResize();
+
+    // Then continue checking whenever the window is resized
     window.addEventListener('resize', handleResize);
 
+    // Clean up the listener when the component is removed
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   return (
     <Router>
@@ -77,6 +90,7 @@ const App: React.FC = () => {
         <Route path="/sponsors" Component={members} />
         <Route path="/projects" Component={projects} />
         <Route path="/contact" Component={contact} />
+        <Route path="/login" Component={login} />
       </Routes>
       <Footer />
     </Router>

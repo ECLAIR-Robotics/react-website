@@ -105,6 +105,11 @@ function ResponsiveAppBar() {
                     <NavbarElement text="CONTACT US" highlighted={false} href="/contact" />
 
                   </div>
+
+                  <div>
+                    <NavbarElement text="LOGIN" highlighted={false} href="/login" />
+                  </div>
+
                 </Box>
               </div>
 

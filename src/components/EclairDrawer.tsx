@@ -24,7 +24,7 @@ function EclairDrawer() {
         '/sponsors': false,
         '/projects': false,
         '/contact': false,
-
+        '/login': false,
     });
 
     const themeDrawer = createTheme({
@@ -194,6 +194,17 @@ function EclairDrawer() {
                             </div>
                         </a>
                         {currentPath['/contact'] && (<span className="divierDrawer"></span>)}
+                        <div className='drawerElement'>
+                            <Link
+                                to='/login'
+                                onClick={() => setDrawerOpen(false)}
+                            >
+                                Login
+                            </Link>
+                        </div>
+                        {currentPath['/login'] && (
+                            <span className="divierDrawer"></span>
+                        )}
                     </div>
 
 
