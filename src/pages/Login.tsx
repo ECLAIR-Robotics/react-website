@@ -1,12 +1,30 @@
 import React from 'react';
 import './Login.css';
 import { FaUser, FaLock } from 'react-icons/fa';
+import { useAuth } from '../auth/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+    const handleSubmit = (
+        event: React.FormEvent<HTMLFormElement>
+    ) => {
+
+        event.preventDefault();
+
+        // TEMPORARY:
+        // Replace this with Firebase authentication later.
+        login();
+
+        navigate('/dashboard');
+    };
+
     return (
         <div className="login-page">
             <div className="login-wrapper">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h1>Login</h1>
 
                     <div className="login-input-box">

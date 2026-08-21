@@ -4,6 +4,8 @@ import About from './About';
 import Homepage from './Homepage';
 import Projects from './Projects';
 import Login from './Login';
+import Dashboard from './Dashboard';
+import ProtectedRoute from '../auth/ProtectedRoute';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import Contact from './Contact';
 import Footer from '../components/Footer';
@@ -91,6 +93,11 @@ const App: React.FC = () => {
         <Route path="/projects" Component={projects} />
         <Route path="/contact" Component={contact} />
         <Route path="/login" Component={login} />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }/>
       </Routes>
       <Footer />
     </Router>

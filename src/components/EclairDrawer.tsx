@@ -7,6 +7,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { createTheme } from '@mui/material/styles';
 import '../styles/eclairdrawer.css';
 import { ThemeProvider } from 'styled-components';
+import { useAuth } from '../auth/AuthContext';
+
 function EclairDrawer() {
 
     const location = useLocation();
@@ -25,6 +27,7 @@ function EclairDrawer() {
         '/projects': false,
         '/contact': false,
         '/login': false,
+        '/dashboard': false,
     });
 
     const themeDrawer = createTheme({
@@ -95,6 +98,8 @@ function EclairDrawer() {
         justifyContent: 'center',
 
     }
+
+    const { isAuthenticated, logout } = useAuth();
 
     return (
 
@@ -194,16 +199,48 @@ function EclairDrawer() {
                             </div>
                         </a>
                         {currentPath['/contact'] && (<span className="divierDrawer"></span>)}
-                        <div className='drawerElement'>
-                            <Link
-                                to='/login'
-                                onClick={() => setDrawerOpen(false)}
+                        {!isAuthenticated && (
+                            <>
+                                <div className='drawerElement'>
+                                    <Link
+                                        to='/login'
+                                        onClick={() => setDrawerOpen(false)}
+                                    >
+                                        Login
+                                    </Link>
+                                </div>
+
+                                {currentPath['/login'] && (
+                                    <span className="divierDrawer"></span>
+                                )}
+                            </>
+                        )}
+                        {isAuthenticated && (
+                            <>
+                                <div className='drawerElement'>
+                                    <Link
+                                        to='/dashboard'
+                                        onClick={() => setDrawerOpen(false)}
+                                    >
+                                        Dashboard
+                                    </Link>
+                                </div>
+
+                                {currentPath['/dashboard'] && (
+                                    <span className="divierDrawer"></span>
+                                )}
+                            </>
+                        )}
+                        {isAuthenticated && (
+                            <div
+                                className="drawerElement"
+                                onClick={() => {
+                                    logout();
+                                    setDrawerOpen(false);
+                                }}
                             >
-                                Login
-                            </Link>
-                        </div>
-                        {currentPath['/login'] && (
-                            <span className="divierDrawer"></span>
+                                Logout
+                            </div>
                         )}
                     </div>
 

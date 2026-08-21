@@ -9,6 +9,7 @@ import NavbarElement from './NavbarElement';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext';
 import '../styles/navbar.css';
 
 
@@ -45,6 +46,8 @@ function ResponsiveAppBar() {
     justifyContent: 'center',
 
   }
+
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <ThemeProvider theme={theme}>
@@ -107,7 +110,40 @@ function ResponsiveAppBar() {
                   </div>
 
                   <div>
-                    <NavbarElement text="LOGIN" highlighted={false} href="/login" />
+                    {!isAuthenticated && (
+                      <div>
+                          <NavbarElement
+                              text="LOGIN"
+                              highlighted={false}
+                              href="/login"
+                          />
+                      </div>
+                  )}
+
+                  {isAuthenticated && (
+                      <div>
+                          <NavbarElement
+                              text="DASHBOARD"
+                              highlighted={false}
+                              href="/dashboard"
+                          />
+                      </div>
+                  )}
+
+                  {isAuthenticated && (
+                    <button
+                        onClick={logout}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: 'inherit',
+                            cursor: 'pointer',
+                            font: 'inherit'
+                        }}
+                    >
+                        LOGOUT
+                    </button>
+                )}
                   </div>
 
                 </Box>
