@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaRobot, FaBrain, FaTools, FaNetworkWired } from 'react-icons/fa';
 import { useReveal } from '../hooks/useReveal';
 import './Homepage.css';
 
@@ -9,7 +10,6 @@ export default function Homepage() {
 
   return (
     <div className="page-wrapper">
-      {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="hero" id="home">
         <div className="hero-glow" />
         <div className="hero-glow2" />
@@ -23,7 +23,7 @@ export default function Homepage() {
         </h1>
 
         <p className="hero-sub">
-          ECLAIR is UT Austin's undergraduate robotics organization — where engineers
+          ECLAIR is UT Austin's undergraduate robotics organization, where engineers
           learn state-of-the-art AI and turn ambitious ideas into physical robots.
         </p>
 
@@ -56,33 +56,31 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* ── MISSION STRIP ────────────────────────────────────── */}
       <section className="mission-strip">
         <div className="mission-grid">
           <div className="mission-item reveal">
-            <div className="mission-icon">🤖</div>
+            <div className="mission-icon"><FaRobot /></div>
             <div className="mission-title">Build Real Robots</div>
             <div className="mission-text">Pitch any project and get it financed and supported by ECLAIR.</div>
           </div>
           <div className="mission-item reveal reveal-delay-1">
-            <div className="mission-icon">🧠</div>
+            <div className="mission-icon"><FaBrain /></div>
             <div className="mission-title">Learn Modern ML</div>
             <div className="mission-text">Workshops on RL, deep learning, computer vision, and ROS2.</div>
           </div>
           <div className="mission-item reveal reveal-delay-2">
-            <div className="mission-icon">🔧</div>
+            <div className="mission-icon"><FaTools /></div>
             <div className="mission-title">World-Class Facilities</div>
             <div className="mission-text">Anna Hiss Gym, UT Makerspace, and GDC labs at your fingertips.</div>
           </div>
           <div className="mission-item reveal reveal-delay-3">
-            <div className="mission-icon">🌐</div>
+            <div className="mission-icon"><FaNetworkWired /></div>
             <div className="mission-title">Industry Pipeline</div>
             <div className="mission-text">Direct connections to internships and roles at leading robotics companies.</div>
           </div>
         </div>
       </section>
 
-      {/* ── WHERE WE MEET ─────────────────────────────────────── */}
       <section className="meet-section">
         <div className="meet-inner">
           <div className="reveal">

@@ -58,7 +58,7 @@
 
 .hero-h1 {
   font-family: var(--display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(58px, 9.5vw, 124px);
   line-height: 0.91;
   letter-spacing: -0.025em;
@@ -67,6 +67,8 @@
 }
 
 .grad-text {
+  font-family: var(--display);
+  font-weight: 700;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -102,8 +104,9 @@
 }
 
 .stat-num {
+  font-family: var(--display);
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   background: var(--grad);
   -webkit-background-clip: text;
@@ -164,6 +167,7 @@
 
 .mission-icon {
   font-size: 1.75rem;
+  color: #8b5cf6;
   margin-bottom: 16px;
 }
 

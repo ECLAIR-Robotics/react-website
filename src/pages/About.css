@@ -149,8 +149,9 @@
 }
 
 .member-initials span {
+  font-family: var(--display);
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 700;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -5,11 +5,22 @@ import './Projects.css';
 
 type Filter = 'all' | 'active' | 'completed';
 
+const ALL_TAGS = Array.from(new Set(PROJECTS.flatMap((p) => p.tags))).sort();
+
 export default function Projects() {
   const [filter, setFilter] = useState<Filter>('all');
+  const [activeTags, setActiveTags] = useState<string[]>([]);
+
+  const toggleTag = (tag: string) => {
+    setActiveTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
 
   const visible = PROJECTS.filter(
-    (p) => filter === 'all' || p.status === filter
+    (p) =>
+      (filter === 'all' || p.status === filter) &&
+      (activeTags.length === 0 || activeTags.some((t) => p.tags.includes(t)))
   );
 
   return (
@@ -34,6 +45,27 @@ export default function Projects() {
           </div>
         </div>
 
+        <div className="tag-filter-bar">
+          {ALL_TAGS.map((tag) => (
+            <button
+              key={tag}
+              className={`tag-filter-btn${activeTags.includes(tag) ? ' tag-filter-btn--active' : ''}`}
+              onClick={() => toggleTag(tag)}
+            >
+              {tag}
+            </button>
+          ))}
+          {activeTags.length > 0 && (
+            <button className="tag-filter-clear" onClick={() => setActiveTags([])}>
+              Clear ×
+            </button>
+          )}
+        </div>
+
+        {visible.length === 0 && (
+          <p className="projects-empty">No projects match the selected filters.</p>
+        )}
+
         <div className="projects-grid">
           {visible.map((project, i) => (
             <ProjectCard key={project.id} project={project} delay={i % 3} />
@@ -48,7 +80,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   return (
     <div className={`reveal reveal-delay-${delay}`}>
       <div className="project-card">
-        <div className="project-num">{project.num} — {project.category}</div>
+        <div className="project-num">{project.num} · {project.category}</div>
       <span className={`project-status project-status--${project.status}`}>
         {project.status === 'active' ? 'In Progress' : 'Completed'}
       </span>

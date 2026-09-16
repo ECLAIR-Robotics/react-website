@@ -9,6 +9,7 @@ import About    from './About';
 import Projects from './Projects';
 import Sponsors from './Sponsors';
 import Contact  from './Contact';
+import News     from './News';
 
 import { useCursor } from '../hooks/useCursor';
 
@@ -40,12 +41,10 @@ function AppShell() {
 
   return (
     <>
-      {/* Atmosphere layers */}
       <div className="grid-bg" />
       <div className="noise" />
       <div className="scanline" />
 
-      {/* Custom cursor */}
       <div className="cursor" id="cursor" />
       <div className="cursor-ring" id="cursor-ring" />
 
@@ -57,6 +56,7 @@ function AppShell() {
           <Route path="/about"    element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/news"     element={<News />} />
           <Route path="/contact"  element={<Contact />} />
         </Routes>
       </main>

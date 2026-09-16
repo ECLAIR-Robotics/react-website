@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: 'Projects', href: '/projects' },
   { label: 'Team',     href: '/about#team' },
   { label: 'Sponsors', href: '/sponsors' },
+  { label: 'News',     href: '/news' },
   { label: 'Contact',  href: '/contact' },
 ];
 
@@ -57,7 +58,6 @@ export default function Nav() {
         </button>
       </nav>
 
-      {/* Mobile drawer */}
       <div className={`nav-drawer${menuOpen ? ' nav-drawer--open' : ''}`}>
         <ul className="nav-drawer-links">
           {NAV_LINKS.map(({ label, href }) => (

@@ -15,7 +15,6 @@ export default function Sponsors() {
         </div>
 
         <div className="sponsor-inner reveal">
-          {/* Left col */}
           <div>
             <h3 className="sponsor-pitch">
               Invest in the next generation of roboticists.
@@ -51,7 +50,6 @@ export default function Sponsors() {
             </div>
           </div>
 
-          {/* Right col — tiers */}
           <div>
             <div className="sponsor-tiers">
               <TierCard

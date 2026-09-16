@@ -18,7 +18,7 @@
 
 .sponsor-pitch {
   font-size: clamp(24px, 3vw, 36px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
 }
@@ -105,8 +105,9 @@
 }
 
 .tier-label {
+  font-family: var(--display);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

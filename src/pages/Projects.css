@@ -35,6 +35,56 @@
   background: rgba(217, 70, 239, 0.06);
 }
 
+.tag-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.tag-filter-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.tag-filter-btn:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  color: var(--violet);
+}
+
+.tag-filter-btn--active {
+  border-color: var(--border-hi);
+  color: white;
+  background: var(--grad);
+}
+
+.tag-filter-clear {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--pink);
+  padding: 6px 8px;
+}
+
+.tag-filter-clear:hover {
+  color: var(--magenta);
+}
+
+.projects-empty {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  padding: 40px 0;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -96,7 +146,7 @@
 
 .project-name {
   font-size: 21px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.15;
 }

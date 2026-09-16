@@ -1,0 +1,30 @@
+.news-section {
+  padding: 120px 48px 100px;
+}
+
+.news-sub {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 24px;
+  max-width: 620px;
+}
+
+.news-sub a {
+  color: var(--violet);
+  transition: color 0.2s;
+}
+
+.news-sub a:hover {
+  color: var(--pink);
+}
+
+.news-embed {
+  margin-top: 56px;
+  min-height: 400px;
+}
+
+@media (max-width: 900px) {
+  .news-section { padding: 80px 24px; }
+}

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaEnvelope, FaInstagram, FaDiscord, FaGithub } from 'react-icons/fa';
 import { useReveal } from '../hooks/useReveal';
 import './Contact.css';
 
@@ -50,18 +51,17 @@ export default function Contact() {
 
         <div className="contact-grid">
 
-          {/* Left — info */}
           <div className="contact-info reveal reveal-delay-1">
             <h3>Join us. Build with us.<br />Support us.</h3>
             <p>
               Whether you're a student looking to get involved, a company interested
-              in partnering, or just curious about what we're building — we want to
+              in partnering, or just curious about what we're building,  we want to
               hear from you.
             </p>
 
             <div className="contact-links">
               <a href="mailto:eclairrobotics@gmail.com" className="contact-link">
-                <div className="contact-link-icon">✉</div>
+                <div className="contact-link-icon"><FaEnvelope /></div>
                 eclairrobotics@gmail.com
               </a>
               <a
@@ -70,7 +70,7 @@ export default function Contact() {
                 rel="noreferrer"
                 className="contact-link"
               >
-                <div className="contact-link-icon">◈</div>
+                <div className="contact-link-icon"><FaInstagram /></div>
                 @eclairrobotics
               </a>
               <a
@@ -79,7 +79,7 @@ export default function Contact() {
                 rel="noreferrer"
                 className="contact-link"
               >
-                <div className="contact-link-icon">⬡</div>
+                <div className="contact-link-icon"><FaDiscord /></div>
                 Join our Discord
               </a>
               <a
@@ -88,13 +88,12 @@ export default function Contact() {
                 rel="noreferrer"
                 className="contact-link"
               >
-                <div className="contact-link-icon">⌥</div>
+                <div className="contact-link-icon"><FaGithub /></div>
                 github.com/ECLAIR-Robotics
               </a>
             </div>
           </div>
 
-          {/* Right — form */}
           <div className="contact-form-wrap reveal reveal-delay-2">
             {sent ? (
               <div className="form-success">

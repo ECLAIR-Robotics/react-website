@@ -20,7 +20,7 @@
   --lo:        rgba(240, 240, 248, 0.18);
 
   --mono:      'DM Mono', monospace;
-  --display:   'Syne', sans-serif;
+  --display:   'Lato', sans-serif;
 
   --nav-height: 64px;
 }
@@ -140,7 +140,7 @@ button {
 
 .section-h2 {
   font-size: clamp(36px, 5vw, 68px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.0;
   letter-spacing: -0.025em;
   max-width: 720px;

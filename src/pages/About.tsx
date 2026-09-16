@@ -20,7 +20,7 @@ export default function About() {
 
             <div className="about-body reveal reveal-delay-1">
               <p>
-                ECLAIR — Engineering &amp; Computational Learning of AI in Robotics —
+                ECLAIR, Engineering &amp; Computational Learning of AI in Robotics,
                 is an undergraduate organization in the Department of Computer Science
                 at the University of Texas at Austin.
               </p>
@@ -36,13 +36,12 @@ export default function About() {
             </div>
           </div>
 
-          {/* Terminal */}
           <div className="terminal-box reveal reveal-delay-2">
             <div className="terminal-header">
               <span className="t-dot" />
               <span className="t-dot" />
               <span className="t-dot" />
-              <span className="terminal-title">eclair — bash</span>
+              <span className="terminal-title">eclair · bash</span>
             </div>
             <div className="terminal-body">
               <div><span className="t-prompt">~</span> ./eclair --init</div>
