@@ -3,10 +3,15 @@ import cameronImg from '../static/images/officer/cameron.webp';
 import manasImg   from '../static/images/officer/manas.webp';
 import manavImg   from '../static/images/officer/manav.webp';
 import nogaImg    from '../static/images/officer/noga.webp';
-import zoeImg     from '../static/images/officer/zoe.webp';
-import nuzhatImg  from '../static/images/officer/nuzhat.webp';
+import yashImg     from '../static/images/officer/yash.webp';
+import devImg  from '../static/images/officer/dev.webp';
 import rizkyImg   from '../static/images/officer/rizky.webp';
-// import vishnuImg  from '../static/images/officer/vishnu.webp';
+// import vidyaImg  from '../static/images/officer/vidya.webp';
+import tanayImg   from '../static/images/officer/tanay.webp';
+import annikaImg   from '../static/images/officer/annika.webp';
+import chrisImg   from '../static/images/officer/chris.webp';
+import ethanImg   from '../static/images/officer/ethan.webp';
+import shreyaImg   from '../static/images/officer/shreya.webp';
 import sahilImg  from '../static/images/officer/sahil.webp';
 import conradImg  from '../static/images/officer/conrad.webp';
 export interface Officer {
@@ -25,7 +30,7 @@ export const OFFICERS: Officer[] = [
     initials: 'AJ',
     name: 'Arnav Joshi',
     role: 'President',
-    bio: "Hi, I'm Arnav! I'm a third year C.S. major minoring in robotics. I've been making robots going on six years now, and particularly enjoy being somewhere in between the hardware and the software. In other news, I like running, climbing, hiking (motion may be a trend here), and playing music, and just about any sport. Open to song recommendations, welcome to ECLAIR",
+    bio: "Hi, I'm Arnav! I'm a fourth year C.S. major minoring in robotics. I've been making robots going on six years now, and particularly enjoy being somewhere in between the hardware and the software. In other news, I like running, climbing, hiking (motion may be a trend here), and playing music, and just about any sport. Open to song recommendations, welcome to ECLAIR",
     email: 'arnavjoshi@utexas.edu',
     img: arnavImg
   },
@@ -48,8 +53,8 @@ export const OFFICERS: Officer[] = [
   {
     initials: 'MK',
     name: 'Manav Karonde',
-    role: 'Events Director · C.R.A.C.K.L.E. Lead',
-    bio: "Hello friend, My name is Manav and I'm a sophmore in Computer Science here at UT. I've lived in Austin for the past decade, but am from New York originally. I've spent the past two semesters on CRACKLE, but when I'm not doing that or building wacky personal robotics projects, I like to play the drums / guitar (especially rock punk and blues), dabble in photography, drive around windows down with my dog, or just stare at a blank wall and contemplate life.",
+    role: 'Events Director',
+    bio: "Hello friend, My name is Manav and I'm a junior in Computer Science here at UT. I've lived in Austin for the past decade, but am from New York originally. I've spent the past two semesters on CRACKLE, but when I'm not doing that or building wacky personal robotics projects, I like to play the drums / guitar (especially rock punk and blues), dabble in photography, drive around windows down with my dog, or just stare at a blank wall and contemplate life.",
     email: 'karonde.manav@gmail.com',
     img : manavImg
   },
@@ -62,36 +67,119 @@ export const OFFICERS: Officer[] = [
     img: nogaImg
   },
   {
-    initials: 'ZV',
-    name: 'Zoe Vo',
+    initials: 'YK',
+    name: 'Yash Karandikar',
     role: 'Public Relations Director',
-    bio: "Hi I'm Zoe and I'm a Mechanical Engineering major. My favorite book series, movie franchise, and religion is The Hunger Games. Please marry me Thida",
-    email: 'zk4thyv@gmail.com',
-    img: zoeImg
+    bio: "Hi! I am a Junior CS major. I am interested in Robotics, Linux, and computing in general.",
+    email: 'yashkarandikar158@gmail.com',
+    img: yashImg
   },
   {
-    initials: 'NN',
-    name: 'Nuzhat Nabi',
+    initials: 'DP',
+    name: 'Dev Patel',
     role: 'Technology Director',
-    bio: "Hello! My name is Nuzhat. I am a Computer Science major interested in robotics, AI, and full-stack web development. I mainly do software stuff but hoping to learn more hardware content. I enjoy playing games (board, card, and video games) and hanging out with friends.",
-    email: 'nuzhat.nabi@utexas.edu',
-    img: nuzhatImg
+    bio: "Hi, I'm Dev! I'm a sophomore biomedical engineering major on the pre-med track. I'm interested in all things that intersect engineering and medicine. Out of class, I enjoy playing tennis and reading.",
+    email: 'dap4675@utexas.edu',
+    img: devImg
   },
   {
     initials: 'RP',
     name: 'Rizky Pratama',
-    role: 'Financial Director · TAKOS Lead',
+    role: 'Financial Director',
     bio: "CS major from Katy, TX. Into robotics, computer vision, and AI. I boulder, dance, play D&D, and eat lots. Never challenge me to a card game.",
     email: 'rapratama2005@gmail.com',
     img: rizkyImg
   },
   {
-    initials: 'VS',
-    name: 'Vishnu Sharma',
+    initials: 'VP',
+    name: 'Vidya Puralasetty',
     role: 'Freshman Representative',
-    bio: "CS major from New Jersey, interested in software, AI, and robotics. I like reading, learning new things, and hanging out with friends.",
-    email: 'vishnuamogha.sharma@gmail.com',
-    // img: vishnuImg
+    bio: "",
+    email: 'vidya.puralasetty@gmail.com',
+    // img: vidyaImg
+  },
+];
+
+export const LEADS: Officer[] = [
+  {
+    initials: 'MK',
+    name: 'Manav Karonde',
+    role: 'ICARUS Lead',
+    bio: "Hello friend, My name is Manav and I'm a junior in Computer Science here at UT. I've lived in Austin for the past decade, but am from New York originally. I've spent the past two semesters on CRACKLE, but when I'm not doing that or building wacky personal robotics projects, I like to play the drums / guitar (especially rock punk and blues), dabble in photography, drive around windows down with my dog, or just stare at a blank wall and contemplate life.",
+    email: 'karonde.manav@gmail.com',
+    img: manavImg
+  },
+  {
+    initials: 'TK',
+    name: 'Tanay Garg',
+    role: 'ICARUS Lead',
+    bio: "Hi! I am Tanay, and I am a CS major at UT Austin. I love Formula 1, soccer, and playing the guitar! I want to use AI to revolutionize educational technology!",
+    email: 'Tanay.garg@utexas.edu',
+    img: tanayImg
+  },
+  {
+    initials: 'DP',
+    name: 'Dev Patel',
+    role: 'EyeTracker Lead',
+    bio: "Hi, I'm Dev! I'm a sophomore biomedical engineering major on the pre-med track. I'm interested in all things that intersect engineering and medicine. Out of class, I enjoy playing tennis and reading.",
+    email: 'dap4675@utexas.edu',
+    img: devImg
+  },
+  {
+    initials: 'AS',
+    name: 'Annika Shivam',
+    role: 'AMAZE Lead',
+    bio: "Hey! I'm Annika, a sophomore majoring in computer science and minoring in robotics. I love engineering projects where I can work with my hands—and no, typing nonstop C code does not count ;). I also enjoy music, bouldering, puns, and anything space-related. I hope to work in mission control or at the intersection of space & robotics!",
+    email: 'dap4675@utexas.edu',
+    img: annikaImg
+  },
+  {
+    initials: 'RP',
+    name: 'Rizky Pratama',
+    role: 'Takos Lead',
+    bio: "CS major from Katy, TX. Into robotics, computer vision, and AI. I boulder, dance, play D&D, and eat lots. Never challenge me to a card game.",
+    email: 'rapratama2005@gmail.com',
+    img: rizkyImg
+  },
+  {
+    initials: 'CE',
+    name: 'Chris Elwood',
+    role: 'Takos Lead',
+    bio: "Hello, I'm Chris. I am a third year CS student. I am from Austin and I enjoy reading, watching films, and basketball. I really enjoy systems programming.",
+    email: 'christopher.elwood2024@gmail.com',
+    img: chrisImg
+  },
+  {
+    initials: 'EG',
+    name: 'Ethan Gopez',
+    role: 'H.A.N.D Lead',
+    bio: "Heyo, I'm Ethan! I'm a third-year Computer Science major minoring in Robotics. I'm very passionate about AI and robot planning. Outside of work, you can find me bouldering, making music with friends, playing games, writing puzzles, and just generally sidequesting.",
+    email: 'ethangopez@gmail.com',
+    img: ethanImg
+  },
+  {
+    initials: 'SG',
+    name: 'Shreya Ganti',
+    role: 'ARGO III Lead',
+    bio: "Hi! I'm Shreya, a senior Biomedical Engineering Major. I love working on cool project ideas especially in medical/laboratory contexts. Outside of robots, I enjoy cooking and baking, trying new restaurants, and board games!",
+    email: 'shreyaganti1@gmail.com',
+    img: shreyaImg
+  },
+  {
+    initials: 'NC',
+    name: 'Nithya Challa',
+    role: 'ARGO III Lead',
+    bio: "",
+    email: 'nithyachalla@utexas.edu',
+    //img: nithyaImg
+  },
+  {
+    initials: 'NS',
+    name: 'Navya Swali',
+    role: 'ARGO III Lead',
+    bio: "",
+    email: 'swalinav000@gmail.com',
+    //img: navyaImg
   },
 ];
 

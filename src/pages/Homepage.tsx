@@ -38,11 +38,11 @@ export default function Homepage() {
 
         <div className="hero-stats">
           <div className="stat">
-            <div className="stat-num">30+</div>
+            <div className="stat-num">75+</div>
             <div className="stat-label">Active Members</div>
           </div>
           <div className="stat">
-            <div className="stat-num">5</div>
+            <div className="stat-num">7</div>
             <div className="stat-label">Active Projects</div>
           </div>
           <div className="stat">
@@ -50,7 +50,7 @@ export default function Homepage() {
             <div className="stat-label">Alumni Network</div>
           </div>
           <div className="stat">
-            <div className="stat-num">1</div>
+            <div className="stat-num">2</div>
             <div className="stat-label">Industry Sponsors</div>
           </div>
         </div>

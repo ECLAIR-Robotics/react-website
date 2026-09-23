@@ -25,7 +25,7 @@ export default function Sponsors() {
               project-tested engineers before they hit the job market.
             </p>
             <p>
-              Your support funds hardware, demos, and the infrastructure that lets
+              Your support funds hardware, demos, and the infrastructure that let
               students build things that matter.
             </p>
             <a
@@ -47,6 +47,9 @@ export default function Sponsors() {
               <a href="https://texel-arts.com/" target="_blank" rel="noreferrer" className="sponsor-name">
                 Texel Arts
               </a>
+              <a href="https://www.janestreet.com/" target="_blank" rel="noreferrer" className="sponsor-name">
+                Jane Street
+              </a>
             </div>
           </div>
 
@@ -56,8 +59,8 @@ export default function Sponsors() {
                 name="Silver"
                 label="Entry Tier"
                 perks={[
-                  'T-shirt listing (30+ members)',
-                  'Instagram shoutout (150+ followers)',
+                  'T-shirt listing (75+ members)',
+                  'Instagram shoutout (1,000+ followers)',
                   'Featured on club website',
                   'Swag & flyers at our meetings',
                 ]}
@@ -77,7 +80,7 @@ export default function Sponsors() {
                 label="Premier Partner"
                 perks={[
                   'All Gold perks',
-                  'Full resume book (30+ engineers)',
+                  'Full resume book (75+ engineers)',
                   'Priority recruiting access',
                   '50 campus flyers (~10K impressions)',
                   'Discord & mailing list (500+ network)',

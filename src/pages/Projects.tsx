@@ -28,10 +28,8 @@ export default function Projects() {
       <section className="projects-section">
 
         <div className="projects-header">
-          <div>
             <div className="section-tag">What We Build</div>
-            <h1 className="section-h2 reveal">Active Projects</h1>
-          </div>
+            <h1 className="section-h2 reveal">Projects</h1>
           <div className="filter-bar">
             {(['all', 'active', 'completed'] as Filter[]).map((f) => (
               <button
@@ -39,7 +37,7 @@ export default function Projects() {
                 className={`filter-btn${filter === f ? ' filter-btn--active' : ''}`}
                 onClick={() => setFilter(f)}
               >
-                {f === 'all' ? 'All' : f === 'active' ? 'In Progress' : 'Completed'}
+                {f === 'all' ? 'All' : f === 'active' ? 'Active' : 'Completed'}
               </button>
             ))}
           </div>
@@ -82,7 +80,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
       <div className="project-card">
         <div className="project-num">{project.num} · {project.category}</div>
       <span className={`project-status project-status--${project.status}`}>
-        {project.status === 'active' ? 'In Progress' : 'Completed'}
+        {project.status === 'active' ? 'Active' : 'Completed'}
       </span>
       <h3 className="project-name">{project.name}</h3>
       <p className="project-desc">{project.description}</p>

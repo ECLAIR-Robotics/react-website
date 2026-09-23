@@ -16,12 +16,37 @@ export default function Nav() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled]  = useState(false);
+  const [aboutSection, setAboutSection] = useState<'about' | 'team'>('about');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+  if (location.pathname !== '/about') return;
+  const updateAboutSection = () => {
+    const teamSection = document.getElementById('team');
+    if (!teamSection) return;
+    if (teamSection.getBoundingClientRect().top <= 120) {
+      setAboutSection('team');
+    } else {
+      setAboutSection('about');
+    }
+  };
+    updateAboutSection();
+    window.addEventListener('scroll', updateAboutSection, { passive: true });
+    return () => window.removeEventListener('scroll', updateAboutSection);
+  }, [location.pathname]);
+
+  const isActive = (label: string, href: string) => {
+  if (location.pathname === '/about') {
+    if (label === 'About') return aboutSection === 'about';
+    if (label === 'Team') return aboutSection === 'team';
+  }
+    return location.pathname === href;
+  };
 
   // Close drawer on route change
   useEffect(() => { setMenuOpen(false); }, [location]);
@@ -39,7 +64,7 @@ export default function Nav() {
             <li key={href}>
               <a
                 href={href}
-                className={`nav-link${location.pathname === href ? ' nav-link--active' : ''}`}
+                className={`nav-link${isActive(label, href) ? ' nav-link--active' : ''}`}
               >
                 {label}
               </a>

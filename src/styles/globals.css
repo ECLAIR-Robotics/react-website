@@ -36,12 +36,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Helps footer stick to bottom */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 body {
   background: var(--black);
   color: var(--text);
   font-family: var(--display);
   overflow-x: hidden;
-  cursor: none;
+  cursor: auto; /*revert to none for custom cursor*/
   -webkit-font-smoothing: antialiased;
 }
 
@@ -51,7 +62,7 @@ a {
 }
 
 button {
-  cursor: none;
+  /*cursor: none; /*disabled-----------------------------------------------------------------------*/ 
   font-family: inherit;
   border: none;
   background: none;
@@ -82,6 +93,13 @@ button {
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, opacity 0.2s;
 }
+
+/* Disabling the custom cursor style -------------------------------------------------------------------*/
+.cursor,
+.cursor-ring {
+  display: none;
+}
+
 
 /* ─── GLOBAL ATMOSPHERE ───────────────────────────────────────────────────── */
 .grid-bg {

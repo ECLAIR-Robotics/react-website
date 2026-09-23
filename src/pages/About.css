@@ -58,12 +58,12 @@
   padding: 20px 22px;
   font-size: 12px;
   line-height: 2;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .t-prompt { color: var(--magenta); }
 .t-hi     { color: var(--violet); }
-.t-dim    { color: var(--lo); }
+.t-dim    { color: var(--muted); }
 
 .t-cursor {
   display: inline-block;
@@ -82,10 +82,10 @@
 
 .team-divider {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--lo);
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -104,6 +104,36 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2px;
+}
+
+/* ── NAVIGATION ─────────────────────────────────────────────────── */
+.team-nav {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 48px;
+}
+
+.team-nav-button {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 14px 24px;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.team-nav-button:hover {
+  border-color: var(--magenta);
+  color: var(--magenta);
+}
+
+.team-group {
+  scroll-margin-top: 100px;
 }
 
 /* ── MEMBER CARD ───────────────────────────────────────────── */
@@ -173,7 +203,7 @@
 }
 
 .member-name {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
   color: #f0f0f8;
@@ -181,8 +211,9 @@
 
 .member-role {
   font-family: var(--mono);
-  font-size: 10px;
-  color: rgba(240, 240, 248, 0.45);
+  font-size: 14px;
+  /*color: rgba(240, 240, 248, 0.45);*/
+  color: var(--magenta);
   margin-top: 4px;
   letter-spacing: 0.06em;
 }

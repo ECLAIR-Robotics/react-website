@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
-import { OFFICERS, FOUNDERS } from '../data/officers';
+import { OFFICERS, LEADS, FOUNDERS } from '../data/officers';
 import type { Officer } from '../data/officers';
 import './About.css';
 
@@ -48,8 +48,8 @@ export default function About() {
               <div className="t-dim">Loading ECLAIR environment...</div>
               <div>&nbsp;</div>
               <div><span className="t-prompt">~</span> status --all</div>
-              <div><span className="t-hi">✓</span> Projects active: <span className="t-hi">5</span></div>
-              <div><span className="t-hi">✓</span> Members: <span className="t-hi">30+ undergrads</span></div>
+              <div><span className="t-hi">✓</span> Projects active: <span className="t-hi">7</span></div>
+              <div><span className="t-hi">✓</span> Members: <span className="t-hi">75+ undergrads</span></div>
               <div><span className="t-hi">✓</span> Stack: <span className="t-hi">ROS2 · PyTorch · OpenCV</span></div>
               <div><span className="t-hi">✓</span> Facilities: <span className="t-hi">GDC · AHG · Makerspace</span></div>
               <div>&nbsp;</div>
@@ -67,18 +67,38 @@ export default function About() {
         <div className="section-tag">The People</div>
         <h2 className="section-h2 reveal">Leadership &amp; Leads</h2>
 
-        <div className="team-divider reveal">Officers</div>
-        <div className="team-grid">
-          {OFFICERS.map((officer, i) => (
-            <MemberCard key={officer.name} officer={officer} delay={(i % 4) + 1} />
-          ))}
+        {/* Navigation buttons */}
+        <div className="team-nav reveal">
+          <a href="#officers" className="team-nav-button">Officers</a>
+          <a href="#leads" className="team-nav-button">Leads</a>
+          <a href="#founders" className="team-nav-button">Founders</a>
         </div>
 
-        <div className="team-divider reveal" style={{ marginTop: '48px' }}>Founders</div>
-        <div className="team-grid">
-          {FOUNDERS.map((founder, i) => (
-            <MemberCard key={founder.name} officer={founder} delay={(i % 4) + 1} />
-          ))}
+        <div id="officers" className="team-group">
+          <div className="team-divider reveal">Officers</div>
+          <div className="team-grid">
+            {OFFICERS.map((officer, i) => (
+              <MemberCard key={officer.name} officer={officer} delay={(i % 4) + 1} />
+            ))}
+          </div>
+        </div>
+
+        <div id="leads" className="team-group">
+          <div className="team-divider reveal" style={{ marginTop: '48px' }}>Tech Leads</div>
+          <div className="team-grid">
+            {LEADS.map((lead, i) => (
+              <MemberCard key={lead.name} officer={lead} delay={(i % 4) + 1} />
+            ))}
+          </div>
+        </div>
+
+        <div id="founders" className="team-group">
+          <div className="team-divider reveal" style={{ marginTop: '48px' }}>Founders</div>
+          <div className="team-grid">
+            {FOUNDERS.map((founder, i) => (
+              <MemberCard key={founder.name} officer={founder} delay={(i % 4) + 1} />
+            ))}
+          </div>
         </div>
       </section>
 
