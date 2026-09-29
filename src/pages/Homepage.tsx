@@ -55,7 +55,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="mission-strip">
         <div className="mission-grid">
           <div className="mission-item reveal">
@@ -80,7 +80,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
+      */}
       <section className="meet-section">
         <div className="meet-inner">
           <div className="reveal">

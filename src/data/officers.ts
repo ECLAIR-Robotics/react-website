@@ -1,17 +1,19 @@
 import arnavImg   from '../static/images/officer/arnav.webp';
-import cameronImg from '../static/images/officer/cameron.webp';
+import cameronImg from '../static/images/officer/cameronProfessional.webp';
 import manasImg   from '../static/images/officer/manas.webp';
 import manavImg   from '../static/images/officer/manav.webp';
 import nogaImg    from '../static/images/officer/noga.webp';
 import yashImg     from '../static/images/officer/yash.webp';
 import devImg  from '../static/images/officer/dev.webp';
 import rizkyImg   from '../static/images/officer/rizky.webp';
-// import vidyaImg  from '../static/images/officer/vidya.webp';
+import vidyaImg  from '../static/images/officer/vidyaProfessional.webp';
 import tanayImg   from '../static/images/officer/tanay.webp';
 import annikaImg   from '../static/images/officer/annika.webp';
 import chrisImg   from '../static/images/officer/chris.webp';
 import ethanImg   from '../static/images/officer/ethan.webp';
 import shreyaImg   from '../static/images/officer/shreya.webp';
+import nithyaImg   from '../static/images/officer/nithya.webp';
+//import navyaImg   from '../static/images/officer/navya.webp';
 import sahilImg  from '../static/images/officer/sahil.webp';
 import conradImg  from '../static/images/officer/conrad.webp';
 export interface Officer {
@@ -38,7 +40,7 @@ export const OFFICERS: Officer[] = [
     initials: 'CC',
     name: 'Cameron Cox',
     role: 'Vice President',
-    bio: "CS major, robotics minor. I love combat robotics and dream of making robots that improve home life. Piano, chess, D&D, Zelda, singing, and ballroom dance when I'm not building.",
+    bio: "Hey y'all, my name is Cameron! I'm a senior in computer science, minoring in robotics. I love combat robotics, systems design, and my goal is to one day make robots that improve our home lives. In my free time I play the piano, chess, D&D, Zelda, sing, country dance, and West Coast swing. My favorite project I've worked on is the CRACKLE drive train! All the power electronics for it were super fun!!!",
     email: 'cameron.cox@utexas.edu',
     img: cameronImg
   },
@@ -46,7 +48,7 @@ export const OFFICERS: Officer[] = [
     initials: 'MA',
     name: 'Manas Agrawal',
     role: 'Corporate Relations Director',
-    bio: "Hi, my name is Manas. I'm the CR director at ECLAIR. I'm majoring in Computer Science and have a minor in Robotics. I love TTRPGs, swimming, and trying out new foods. I'm super interested in Robot Perception and Computer Vision. Join me in CRACKLE (the best ECLAIR Project). We have tons of fun!",
+    bio: "Hi, my name is Manas. I'm the CR director at ECLAIR. I'm majoring in Computer Science and have a minor in Robotics. I love TTRPGs, swimming, and trying out new foods. I'm super interested in Robot Perception and Computer Vision. Join me in ICARUS (the best ECLAIR Project). We have tons of fun!",
     email: 'manas.agrawal2@utexas.edu',
     img: manasImg
   },
@@ -78,7 +80,7 @@ export const OFFICERS: Officer[] = [
     initials: 'DP',
     name: 'Dev Patel',
     role: 'Technology Director',
-    bio: "Hi, I'm Dev! I'm a sophomore biomedical engineering major on the pre-med track. I'm interested in all things that intersect engineering and medicine. Out of class, I enjoy playing tennis and reading.",
+    bio: "Hi, I'm Dev! I'm a sophomore biomedical engineering major on the pre-med track. I'm interested in all things that intersect engineering and medicine. I also enjoy playing tennis and reading!",
     email: 'dap4675@utexas.edu',
     img: devImg
   },
@@ -94,9 +96,9 @@ export const OFFICERS: Officer[] = [
     initials: 'VP',
     name: 'Vidya Puralasetty',
     role: 'Freshman Representative',
-    bio: "",
+    bio: "Hi! My name is Vidya, and I'm a freshman majoring in Informatics. I'm interested in AI, data analytics, software development, and robotics! In my free time, I love playing pickleball, watching shows, and trying new food.",
     email: 'vidya.puralasetty@gmail.com',
-    // img: vidyaImg
+    img: vidyaImg
   },
 ];
 
@@ -169,9 +171,9 @@ export const LEADS: Officer[] = [
     initials: 'NC',
     name: 'Nithya Challa',
     role: 'ARGO III Lead',
-    bio: "",
+    bio: "Hi! My name is Nithya and I'm a senior majoring in Aerospace Engineering and minoring in robotics. I love building legos, watching random shows and anime, and trying new coffee shops. I'm mostly interested in computer vision, controls, and mechatronics!",
     email: 'nithyachalla@utexas.edu',
-    //img: nithyaImg
+    img: nithyaImg
   },
   {
     initials: 'NS',
