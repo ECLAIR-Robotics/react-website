@@ -182,6 +182,7 @@
   color: var(--lo);
   letter-spacing: 0.06em;
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .project-leads::before {
