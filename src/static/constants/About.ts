@@ -31,7 +31,7 @@ export const OFFICER_KEYS = [
   "PR",
   "TECHNOLOGY",
   "FINANCIAL",
-//   "FRESHMAN_REP",
+  "FRESHMAN_REP",
 ];
 
 export const OFFICER_POSITIONS: { [key: string]: string } = {
@@ -43,7 +43,7 @@ export const OFFICER_POSITIONS: { [key: string]: string } = {
     PR: "Public Relations Director",
     TECHNOLOGY: "Technology Director",
     FINANCIAL: "Financial Director",
-    // FRESHMAN_REP: "Freshman Representative"
+    FRESHMAN_REP: "Freshman Representative"
 }
 
 export const OFFICER_NAMES: { [key: string]: string } = {
