@@ -1,9 +1,7 @@
 import React from 'react';
-import { useReveal } from '../hooks/useReveal';
 import './Sponsors.css';
 
 export default function Sponsors() {
-  useReveal();
 
   return (
     <div className="page-wrapper">
@@ -11,10 +9,10 @@ export default function Sponsors() {
 
         <div className="sponsors-header">
           <div className="section-tag">Partner With Us</div>
-          <h1 className="section-h2 reveal">Sponsors &amp;<br />Supporters</h1>
+          <h1 className="section-h2">Sponsors &amp;<br />Supporters</h1>
         </div>
 
-        <div className="sponsor-inner reveal">
+        <div className="partnership-content">
           <div>
             <h3 className="sponsor-pitch">
               Invest in the next generation of roboticists.
