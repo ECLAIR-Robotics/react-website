@@ -10,11 +10,11 @@ const Mailer = () => {
         e.preventDefault();
         if(formSubmitted()) {
             emailjs.sendForm(
-                'service_lf68y8i',
-                'template_a7v3kjq',
-                e.currentTarget,
-                "NIC61fRJW1mmr-YPC"
-            ).then(() => {
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        e.currentTarget,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
+        ).then(() => {
                 console.log("Email sent successfully!")
             }).catch((error) => { console.log("Email failed to send."); console.log(error) });
             
