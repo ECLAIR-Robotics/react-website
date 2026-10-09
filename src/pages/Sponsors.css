@@ -6,7 +6,7 @@
   margin-bottom: 64px;
 }
 
-.sponsor-inner {
+.partnership-content {
   background: var(--surface);
   border: 1px solid var(--border);
   padding: 72px 64px;
@@ -24,7 +24,7 @@
   color: var(--magenta);
 }
 
-.sponsor-inner > div > p:not(.sponsor-note) {
+.partnership-content > div > p:not(.sponsor-note) {
   font-family: var(--mono);
   font-size: 13px;
   color: var(--text);
@@ -149,7 +149,7 @@
 
 @media (max-width: 900px) {
   .sponsors-section { padding: 80px 24px; }
-  .sponsor-inner { grid-template-columns: 1fr; padding: 40px 28px; gap: 40px; }
+  .partnership-content { grid-template-columns: 1fr; padding: 40px 28px; gap: 40px; }
   .sponsor-tiers { grid-template-columns: 1fr 1fr; }
 }
 

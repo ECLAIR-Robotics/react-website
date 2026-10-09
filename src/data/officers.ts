@@ -13,7 +13,7 @@ import chrisImg   from '../static/images/officer/chris.webp';
 import ethanImg   from '../static/images/officer/ethan.webp';
 import shreyaImg   from '../static/images/officer/shreya.webp';
 import nithyaImg   from '../static/images/officer/nithya.webp';
-//import navyaImg   from '../static/images/officer/navya.webp';
+import navyaImg   from '../static/images/officer/navya.webp';
 import sahilImg  from '../static/images/officer/sahil.webp';
 import conradImg  from '../static/images/officer/conrad.webp';
 export interface Officer {
@@ -23,7 +23,7 @@ export interface Officer {
   bio: string;
   email?: string;
   linkedin?: string;
-  img?: string;           // ← add this
+  img?: string;         
 
 }
 
@@ -179,9 +179,9 @@ export const LEADS: Officer[] = [
     initials: 'NS',
     name: 'Navya Swali',
     role: 'ARGO III Lead',
-    bio: "",
+    bio: "Hey, I'm Navya! I'm a senior Aerospace Engineering Major. I'm interested in working on structural analysis, control systems and cool scientific space missions! Apart from building robots I love trying new food, watching tv shows, reading and playing board games.",
     email: 'swalinav000@gmail.com',
-    //img: navyaImg
+    img: navyaImg
   },
 ];
 
