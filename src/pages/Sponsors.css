@@ -1,3 +1,4 @@
+
 .sponsors-section {
   padding: 120px 48px 100px;
 }
@@ -33,35 +34,60 @@
 }
 
 .current-sponsors {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-  align-items: center;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+  align-items: start;
+  justify-items: center;
+  width: 100%;
   margin-top: 36px;
   padding-top: 36px;
   border-top: 1px solid var(--border);
 }
 
 .current-sponsors-label {
+  grid-column: 1 / -1;
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--magenta);
   width: 100%;
+  text-align: center;
+}
+
+.sponsor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sponsor-logo {
+  width: 320px;
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
+  display: block;
 }
 
 .sponsor-name {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--text);
   letter-spacing: 0.05em;
   transition: color 0.2s;
 }
 
-.sponsor-name:hover { color: var(--magenta); }
+.sponsor-item:hover .sponsor-name { color: var(--magenta); }
 
 /* Tiers */
 .sponsor-tiers {
@@ -151,6 +177,10 @@
   .sponsors-section { padding: 80px 24px; }
   .partnership-content { grid-template-columns: 1fr; padding: 40px 28px; gap: 40px; }
   .sponsor-tiers { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .current-sponsors { grid-template-columns: 1fr; gap: 32px; }
 }
 
 @media (max-width: 500px) {

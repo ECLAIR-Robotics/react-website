@@ -175,7 +175,7 @@ button {
   background: var(--grad);
   color: white;
   transition: box-shadow 0.3s, transform 0.2s;
-  cursor: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -194,7 +194,7 @@ button {
   color: var(--muted);
   border: 1px solid var(--border);
   transition: border-color 0.3s, color 0.3s, transform 0.2s;
-  cursor: none;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {

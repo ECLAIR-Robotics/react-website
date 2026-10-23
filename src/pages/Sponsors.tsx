@@ -1,6 +1,10 @@
 import React from 'react';
 import './Sponsors.css';
 
+import serviceNowImg  from '../static/images/sponsor-images/serviceNow.webp';
+import janeStreetImg  from '../static/images/sponsor-images/janeStreet_blue.webp';
+import texasRoboticsImg  from '../static/images/sponsor-images/texasRobotics.webp';
+
 export default function Sponsors() {
 
   return (
@@ -33,63 +37,25 @@ export default function Sponsors() {
             >
               Become a Sponsor →
             </a>
-
-            <div className="current-sponsors">
-              <div className="current-sponsors-label">Current Partners</div>
-              <a href="https://www.servicenow.com/" target="_blank" rel="noreferrer" className="sponsor-name">
-                ServiceNow
-              </a>
-              <a href="https://robotics.utexas.edu/" target="_blank" rel="noreferrer" className="sponsor-name">
-                Texas Robotics
-              </a>
-              <a href="https://texel-arts.com/" target="_blank" rel="noreferrer" className="sponsor-name">
-                Texel Arts
-              </a>
-              <a href="https://www.janestreet.com/" target="_blank" rel="noreferrer" className="sponsor-name">
-                Jane Street
-              </a>
-            </div>
           </div>
 
-          <div>
-            <div className="sponsor-tiers">
-              <TierCard
-                name="Silver"
-                label="Entry Tier"
-                perks={[
-                  'T-shirt listing (75+ members)',
-                  'Instagram shoutout (1,000+ followers)',
-                  'Featured on club website',
-                  'Swag & flyers at our meetings',
-                ]}
-              />
-              <TierCard
-                name="Gold"
-                label="Most Popular"
-                perks={[
-                  'All Silver perks',
-                  'Logo on club T-shirt',
-                  'Booth at Demo Days (40+ UT CS students)',
-                  '2× recruiting events per semester',
-                ]}
-              />
-              <TierCard
-                name="Diamond"
-                label="Premier Partner"
-                perks={[
-                  'All Gold perks',
-                  'Full resume book (75+ engineers)',
-                  'Priority recruiting access',
-                  '50 campus flyers (~10K impressions)',
-                  'Discord & mailing list (500+ network)',
-                ]}
-              />
-            </div>
-            <p className="sponsor-note">
-              Custom partnership packages available. Reach out to discuss what works
-              best for your organization.
-            </p>
-          </div>
+          <div className="current-sponsors">
+            <div className="current-sponsors-label">Current Partners</div>
+
+            <a href="https://www.servicenow.com/" target="_blank" rel="noreferrer" className="sponsor-item">
+              <img src = {serviceNowImg} alt="ServiceNow" className="sponsor-logo" />
+              <span className="sponsor-name">ServiceNow</span>
+            </a>
+            <a href="https://robotics.utexas.edu/" target="_blank" rel="noreferrer" className="sponsor-item">
+              <img src = {texasRoboticsImg} alt="Texas Robotics" className="sponsor-logo" />
+              <span className="sponsor-name">Texas Robotics</span>
+            </a>
+            <a href="https://www.janestreet.com/" target="_blank" rel="noreferrer" className="sponsor-item">
+              <img src = {janeStreetImg} alt="Jane Street" className="sponsor-logo" />
+              <span className="sponsor-name">Jane Street</span>
+            </a>
+
+          </div> 
         </div>
 
       </section>
@@ -97,14 +63,3 @@ export default function Sponsors() {
   );
 }
 
-function TierCard({ name, label, perks }: { name: string; label: string; perks: string[] }) {
-  return (
-    <div className={`tier tier--${name.toLowerCase()}`}>
-      <div className="tier-name">{name}</div>
-      <div className="tier-label">{label}</div>
-      <ul className="tier-perks">
-        {perks.map((p) => <li key={p}>{p}</li>)}
-      </ul>
-    </div>
-  );
-}
